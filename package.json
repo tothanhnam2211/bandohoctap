@@ -1,0 +1,10 @@
+{
+  "name": "bandohoctap",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BANDOHOCTAP.VN - Bản Đồ 30 Ngày Bắt Gốc Toán 9",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "preview": "wrangler preview"
+  }
+}
