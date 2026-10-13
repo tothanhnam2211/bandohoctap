@@ -22,13 +22,15 @@ from parse_notebook_md import parse_markdown_to_day_json
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(PROJECT_ROOT, "data")
-PUBLIC_DIR = os.path.join(PROJECT_ROOT, "public")
-ASSETS_DIR = os.path.join(PUBLIC_DIR, "assets")
+ASSETS_DIR = os.path.join(PROJECT_ROOT, "assets")
+PUBLIC_ASSETS_DIR = os.path.join(PROJECT_ROOT, "public", "assets")
 
 def publish(day, md_path=None, json_path=None, docx_path=None, infographic_path=None, video_path=None, auto_unlock=True):
     day_str = f"day-{day:02d}"
     target_asset_dir = os.path.join(ASSETS_DIR, day_str)
+    target_public_dir = os.path.join(PUBLIC_ASSETS_DIR, day_str)
     os.makedirs(target_asset_dir, exist_ok=True)
+    os.makedirs(target_public_dir, exist_ok=True)
     os.makedirs(DATA_DIR, exist_ok=True)
 
     print(f"🚀 BẮT ĐẦU XUẤT BẢN HỌC LIỆU NGÀY {day:02d}...")
@@ -38,16 +40,19 @@ def publish(day, md_path=None, json_path=None, docx_path=None, infographic_path=
         ext = os.path.splitext(docx_path)[1]
         dest = os.path.join(target_asset_dir, f"Phieu_Hoc_Tap_Ngay_{day}{ext}")
         shutil.copy2(docx_path, dest)
+        shutil.copy2(docx_path, os.path.join(target_public_dir, f"Phieu_Hoc_Tap_Ngay_{day}{ext}"))
         print(f"  📄 Đã sao chép Phiếu học tập -> {dest}")
 
     if infographic_path and os.path.exists(infographic_path):
         dest = os.path.join(target_asset_dir, "infographic.png")
         shutil.copy2(infographic_path, dest)
+        shutil.copy2(infographic_path, os.path.join(target_public_dir, "infographic.png"))
         print(f"  🖼️ Đã sao chép Infographic -> {dest}")
 
     if video_path and os.path.exists(video_path):
         dest = os.path.join(target_asset_dir, "clip1.mp4")
         shutil.copy2(video_path, dest)
+        shutil.copy2(video_path, os.path.join(target_public_dir, "clip1.mp4"))
         print(f"  🎬 Đã sao chép Video bài giảng -> {dest}")
 
     # 2. Xử lý dữ liệu bài học JSON

@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEM 3D Lab: Toàn Diện 5 Dạng Toán Chuyển Động - Giải Bằng Cách Lập PT / HPT</title>
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #080c14;
+            color: #f1f5f9;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            overflow: hidden;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* SIDEBAR ĐIỀU KHIỂN & ĐẠI SỐ HÓA */
+        #sidebar {
+            width: 440px;
+            background: rgba(15, 23, 42, 0.96);
+            border-right: 1px solid #1e293b;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 20;
+            box-shadow: 6px 0 28px rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(16px);
+            overflow-y: auto;
+        }
+
+        /* HEADER THƯƠNG HIỆU & CHUYÊN ĐỀ */
+        .header-box {
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 10px;
+        }
+        .badge-brand {
+            display: inline-block;
+            background: linear-gradient(135deg, #0284c7, #2563eb);
+            color: white;
+            font-size: 0.72rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        h1 {
+            font-size: 1.15rem;
+            color: #38bdf8;
+            font-weight: 700;
+            margin-top: 4px;
+            line-height: 1.3;
+        }
+        .sub-desc {
+            font-size: 0.76rem;
+            color: #94a3b8;
+        }
+
+        /* THANH 5 TABS DẠNG TOÁN */
+        .tabs-nav {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 3px;
+            background: #0f172a;
+            padding: 3px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+        .tab-btn {
+            background: transparent;
+            color: #94a3b8;
+            border: none;
+            padding: 7px 2px;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+            line-height: 1.2;
+        }
+        .tab-btn:hover { color: #f8fafc; background: rgba(56, 189, 248, 0.1); }
+        .tab-btn.active {
+            background: #0284c7;
+            color: white;
+            box-shadow: 0 2px 8px rgba(2, 132, 199, 0.4);
+        }
+
+        /* CHUYỂN ĐỔI CHẾ ĐỘ BIỂU DIỄN ẨN X, Y */
+        .algebra-toggle-box {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid #0284c7;
+            padding: 10px 12px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .switch-label {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #38bdf8;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 42px;
+            height: 22px;
+        }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider-switch {
+            position: absolute; cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #475569;
+            transition: .3s;
+            border-radius: 22px;
+        }
+        .slider-switch:before {
+            position: absolute; content: "";
+            height: 16px; width: 16px;
+            left: 3px; bottom: 3px;
+            background-color: white;
+            transition: .3s;
+            border-radius: 50%;
+        }
+        input:checked + .slider-switch { background-color: #38bdf8; }
+        input:checked + .slider-switch:before { transform: translateX(20px); }
+
+        /* KHUNG THAM SỐ ĐIỀU CHỈNH */
+        .param-section {
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 12px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+        .section-title {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #f1f5f9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .param-row {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .param-label {
+            font-size: 0.78rem;
+            color: #94a3b8;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+        }
+        .param-val { color: #38bdf8; font-weight: 700; }
+        .slider-control {
+            width: 100%;
+            accent-color: #38bdf8;
+            cursor: pointer;
+        }
+
+        /* NÚT THAO TÁC MÔ PHỎNG */
+        .action-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 6px;
+        }
+        .btn-act {
+            border: none;
+            padding: 8px 4px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+        .btn-play { background: linear-gradient(135deg, #0284c7, #2563eb); color: white; }
+        .btn-pause { background: #d97706; color: white; }
+        .btn-reset { background: #475569; color: white; }
+        .btn-act:hover { opacity: 0.9; transform: translateY(-1px); }
+
+        /* BẢNG PHÂN TÍCH ĐẠI SỐ S-v-t & PHƯƠNG TRÌNH */
+        .algebra-card {
+            background: #0f172a;
+            border: 1px solid #38bdf8;
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 0.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .table-svt {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.75rem;
+            margin-top: 4px;
+        }
+        .table-svt th, .table-svt td {
+            border: 1px solid #334155;
+            padding: 5px 6px;
+            text-align: center;
+        }
+        .table-svt th {
+            background: #1e293b;
+            color: #38bdf8;
+            font-weight: 700;
+        }
+        .table-svt td.highlight {
+            background: rgba(56, 189, 248, 0.1);
+            color: #fbbf24;
+            font-weight: 700;
+        }
+        .eq-box {
+            background: rgba(2, 132, 199, 0.12);
+            border-left: 3px solid #38bdf8;
+            padding: 8px 10px;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+            font-size: 0.82rem;
+            color: #f8fafc;
+            line-height: 1.4;
+        }
+        .solution-box {
+            background: #090d16;
+            border: 1px solid #1e293b;
+            padding: 8px 10px;
+            border-radius: 6px;
+            font-size: 0.76rem;
+            color: #4ade80;
+            line-height: 1.45;
+        }
+
+        /* GỢI MỞ SOCRATIC CHO HỌC SINH MẤT GỐC */
+        .socratic-hint-box {
+            background: rgba(245, 158, 11, 0.08);
+            border-left: 3px solid #f59e0b;
+            padding: 8px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: #fde68a;
+            line-height: 1.4;
+        }
+
+        /* KHÔNG GIAN 3D THREE.JS */
+        #canvas-container {
+            flex: 1;
+            position: relative;
+        }
+
+        /* HUD OVERLAY VÀ NHÃN ĐỘNG TRÊN MÔ HÌNH */
+        #hud-top {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 10px 16px;
+            font-size: 0.8rem;
+            color: #e2e8f0;
+            pointer-events: none;
+            backdrop-filter: blur(8px);
+            display: flex;
+            gap: 16px;
+        }
+        .hud-tag { display: flex; align-items: center; gap: 6px; font-weight: 600; }
+        .hud-dot { width: 10px; height: 10px; border-radius: 50%; }
+
+        /* NHÃN ĐẠI SỐ GẮN TRỰC TIẾP TRÊN XE/THUYỀN */
+        .floating-label {
+            position: absolute;
+            background: rgba(15, 23, 42, 0.92);
+            color: #38bdf8;
+            border: 1px solid #38bdf8;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            pointer-events: none;
+            transform: translate(-50%, -100%);
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            transition: all 0.05s linear;
+        }
+        .floating-label.orange { color: #fb923c; border-color: #fb923c; }
+        .floating-label.green { color: #4ade80; border-color: #4ade80; }
+        .floating-label.yellow { color: #facc15; border-color: #facc15; }
+
+        /* CHỈ BÁO GẶP NHAU / THÀNH CÔNG */
+        #banner-meet {
+            position: absolute;
+            top: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, rgba(2, 132, 199, 0.95), rgba(16, 185, 129, 0.95));
+            color: white;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            box-shadow: 0 8px 32px rgba(2, 132, 199, 0.6);
+            display: none;
+            pointer-events: none;
+            animation: pulseBanner 1.5s infinite;
+        }
+        @keyframes pulseBanner {
+            0% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.05); }
+            100% { transform: translateX(-50%) scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SIDEBAR QUẢN TRỊ 5 DẠNG TOÁN -->
+    <div id="sidebar">
+        <div class="header-box">
+            <span class="badge-brand">CHUYÊN ĐỀ ÔN THI VÀO 10 • GDPT 2018</span>
+            <h1>PHÒNG THÍ NGHIỆM STEM CHUYỂN ĐỘNG</h1>
+            <p class="sub-desc">Mô hình hóa 5 Dạng Toán Chuyển Động & Đại Số Hóa Thiết Lập PT/HPT</p>
+        </div>
+
+        <!-- 5 TABS THEO CHUẨN TÀI LIỆU -->
+        <div class="tabs-nav">
+            <button class="tab-btn active" id="tab-btn-1" onclick="switchTab(1)">Dạng 1<br>Đi & Về</button>
+            <button class="tab-btn" id="tab-btn-2" onclick="switchTab(2)">Dạng 2<br>Dự định</button>
+            <button class="tab-btn" id="tab-btn-3" onclick="switchTab(3)">Dạng 3<br>Chia đoạn</button>
+            <button class="tab-btn" id="tab-btn-4" onclick="switchTab(4)">Dạng 4<br>Hai vật</button>
+            <button class="tab-btn" id="tab-btn-5" onclick="switchTab(5)">Dạng 5<br>Dòng nước</button>
+        </div>
+
+        <!-- CÔNG TẮC ĐẶT ẨN X, Y TRÊN MÔ HÌNH -->
+        <div class="algebra-toggle-box">
+            <div class="switch-label">
+                <span>📐 Biểu diễn Ẩn Số [x, y] Trên Mô Hình</span>
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="chk-show-algebra" checked onchange="toggleAlgebraLabels()">
+                <span class="slider-switch"></span>
+            </label>
+        </div>
+
+        <!-- KHUNG THAM SỐ ĐIỀU CHỈNH THEO DẠNG TOÁN HIỆN TẠI -->
+        <div class="param-section" id="params-container">
+            <!-- Nội dung tham số sẽ render động theo Tab -->
+        </div>
+
+        <!-- THANH ĐIỀU KHIỂN PLAY / PAUSE / RESET -->
+        <div class="action-row">
+            <button class="btn-act btn-play" id="btn-play" onclick="playSim()">▶ Chạy</button>
+            <button class="btn-act btn-pause" id="btn-pause" onclick="pauseSim()">⏸ Tạm Dừng</button>
+            <button class="btn-act btn-reset" id="btn-reset" onclick="resetSim()">🔄 Đặt Lại</button>
+        </div>
+
+        <!-- BẢNG PHÂN TÍCH ĐẠI SỐ S-v-t & PHƯƠNG TRÌNH TƯƠNG ỨNG -->
+        <div class="algebra-card" id="algebra-display">
+            <!-- Render động bảng S-v-t và hệ phương trình -->
+        </div>
+
+        <!-- GỢI MỞ SOCRATIC GIẢI PHÁP SÀN THẤP CHO HỌC SINH MẤT GỐC -->
+        <div class="socratic-hint-box" id="socratic-box">
+            <!-- Gợi mở phương pháp tư duy -->
+        </div>
+    </div>
+
+    <!-- KHUNG NHÌN 3D CHÍNH -->
+    <div id="canvas-container">
+        <div id="hud-top">
+            <div class="hud-tag"><span class="hud-dot" style="background: #38bdf8;"></span> <span id="hud-tag-1">Phương tiện A</span></div>
+            <div class="hud-tag"><span class="hud-dot" style="background: #fb923c;"></span> <span id="hud-tag-2">Phương tiện B</span></div>
+            <div class="hud-tag"><span class="hud-dot" style="background: #4ade80;"></span> <span>Mốc hoàn thành</span></div>
+        </div>
+
+        <div id="banner-meet">🎉 HAI XE ĐÃ GẶP NHAU!</div>
+
+        <!-- CÁC NHÃN ĐẠI SỐ NỔI GẮN VÀO TỌA ĐỘ XE/THUYỀN -->
+        <div id="label-car-1" class="floating-label">v₁ = x (km/h)</div>
+        <div id="label-car-2" class="floating-label orange" style="display: none;">v₂ = y (km/h)</div>
+        <div id="label-mid-point" class="floating-label yellow" style="display: none;">Điểm sự cố C</div>
+        <div id="label-current-flow" class="floating-label green" style="display: none;">Dòng nước: y km/h</div>
+    </div>
+
+    <script>
+        // ==========================================
+        // KHỞI TẠO THREE.JS VÀ KHÔNG GIAN 3D
+        // ==========================================
+        const container = document.getElementById('canvas-container');
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x080c14);
+
+        const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
+        camera.position.set(0, 32, 60);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(container.clientWidth, container.clientHeight);
+        renderer.setPixelRatio(window.devicePixelRatio);
+        container.appendChild(renderer.domElement);
+
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+
+        // Ánh sáng
+        scene.add(new THREE.AmbientLight(0xffffff, 0.7));
+        const sunLight = new THREE.DirectionalLight(0xffffff, 0.9);
+        sunLight.position.set(20, 45, 25);
+        scene.add(sunLight);
+
+        // Lưới sàn tọa độ
+        const grid = new THREE.GridHelper(180, 36, 0x1e293b, 0x0f172a);
+        grid.position.y = -0.1;
+        scene.add(grid);
+
+        // ==========================================
+        // CÁC OBJECT HÌNH HỌC 3D DÙNG CHUNG
+        // ==========================================
+        const worldGroup = new THREE.Group();
+        scene.add(worldGroup);
+
+        // Tạo xe 3D
+        function createVehicle(colorHex, name = "Car") {
+            const grp = new THREE.Group();
+            // Thân xe
+            const body = new THREE.Mesh(
+                new THREE.BoxGeometry(3.6, 1.4, 2.2),
+                new THREE.MeshStandardMaterial({ color: colorHex, roughness: 0.3 })
+            );
+            body.position.y = 1.0;
+            grp.add(body);
+
+            // Mui xe
+            const roof = new THREE.Mesh(
+                new THREE.BoxGeometry(2.1, 0.9, 1.8),
+                new THREE.MeshStandardMaterial({ color: 0x0f172a, roughness: 0.2 })
+            );
+            roof.position.set(-0.2, 2.0, 0);
+            grp.add(roof);
+
+            // Bánh xe
+            const wheelMat = new THREE.MeshStandardMaterial({ color: 0x111827 });
+            const wheelGeom = new THREE.CylinderGeometry(0.5, 0.5, 0.4, 16);
+            [ [1.1, 0.5, 1.1], [-1.1, 0.5, 1.1], [1.1, 0.5, -1.1], [-1.1, 0.5, -1.1] ].forEach(pos => {
+                const w = new THREE.Mesh(wheelGeom, wheelMat);
+                w.rotation.x = Math.PI / 2;
+                w.position.set(pos[0], pos[1], pos[2]);
+                grp.add(w);
+            });
+
+            // Đèn pha vàng
+            const lightGeom = new THREE.SphereGeometry(0.2, 12, 12);
+            const lightMat = new THREE.MeshBasicMaterial({ color: 0xfef08a });
+            const l1 = new THREE.Mesh(lightGeom, lightMat);
+            l1.position.set(1.8, 1.0, 0.6);
+            const l2 = new THREE.Mesh(lightGeom, lightMat);
+            l2.position.set(1.8, 1.0, -0.6);
+            grp.add(l1); grp.add(l2);
+
+            return grp;
+        }
+
+        // Tạo thuyền 3D cho Dạng 5
+        function createBoat(colorHex) {
+            const grp = new THREE.Group();
+            const hull = new THREE.Mesh(
+                new THREE.CylinderGeometry(1.6, 1.1, 4.6, 16),
+                new THREE.MeshStandardMaterial({ color: colorHex, roughness: 0.4 })
+            );
+            hull.rotation.z = Math.PI / 2;
+            hull.position.y = 0.5;
+            grp.add(hull);
+
+            // Mui cabin
+            const cabin = new THREE.Mesh(
+                new THREE.BoxGeometry(1.8, 1.2, 1.6),
+                new THREE.MeshStandardMaterial({ color: 0xf8fafc, roughness: 0.2 })
+            );
+            cabin.position.set(-0.2, 1.5, 0);
+            grp.add(cabin);
+            return grp;
+        }
+
+        // Tạo chiếc bè trôi nước
+        function createRaft() {
+            const grp = new THREE.Group();
+            for(let i=-2; i<=2; i++) {
+                const log = new THREE.Mesh(
+                    new THREE.CylinderGeometry(0.35, 0.35, 3.8, 12),
+                    new THREE.MeshStandardMaterial({ color: 0x854d0e })
+                );
+                log.rotation.z = Math.PI / 2;
+                log.position.set(0, 0.35, i * 0.7);
+                grp.add(log);
+            }
+            return grp;
+        }
+
+        // Các đối tượng trong scene
+        let vehicleA = createVehicle(0x0284c7);
+        let vehicleB = createVehicle(0xf97316);
+        let raftMesh = createRaft();
+        worldGroup.add(vehicleA);
+        worldGroup.add(vehicleB);
+        worldGroup.add(raftMesh);
+
+        // Đường cao tốc / Khúc sông
+        const trackMesh = new THREE.Mesh(
+            new THREE.BoxGeometry(120, 0.2, 9),
+            new THREE.MeshStandardMaterial({ color: 0x1e293b, roughness: 0.8 })
+        );
+        worldGroup.add(trackMesh);
+
+        const centerStripe = new THREE.Mesh(
+            new THREE.BoxGeometry(120, 0.22, 0.3),
+            new THREE.MeshBasicMaterial({ color: 0xfacc15 })
+        );
+        centerStripe.position.y = 0.02;
+        worldGroup.add(centerStripe);
+
+        // Cột mốc A, B và C
+        function createPole(colorHex) {
+            return new THREE.Mesh(
+                new THREE.CylinderGeometry(0.3, 0.3, 5, 16),
+                new THREE.MeshStandardMaterial({ color: colorHex })
+            );
+        }
+        const poleA = createPole(0x38bdf8);
+        const poleB = createPole(0xef4444);
+        const poleC = createPole(0xfacc15); // Điểm giữa đường / điểm sự cố
+        worldGroup.add(poleA);
+        worldGroup.add(poleB);
+        worldGroup.add(poleC);
+
+        // Mũi tên chỉ hướng dòng nước
+        const waterArrows = [];
+        for(let i=0; i<8; i++) {
+            const arr = new THREE.ArrowHelper(new THREE.Vector3(1, 0, 0), new THREE.Vector3(0, 0, 0), 4, 0x38bdf8, 1.2, 0.8);
+            waterArrows.push(arr);
+            worldGroup.add(arr);
+        }
+
+        // ==========================================
+        // DỮ LIỆU VÀ TRẠNG THÁI CỦA 5 DẠNG TOÁN
+        // ==========================================
+        let currentTab = 1;
+        let isPlaying = false;
+        let simTime = 0; // giờ
+        let showAlgebra = true;
+
+        // Dữ liệu tham số của từng dạng toán
+        const state = {
+            1: { // Dạng 1: Đi và Về
+                S: 90,           // km
+                v_di: 45,        // km/h (x)
+                v_ve: 30,        // km/h (y = x - 15)
+                t_nghi: 0.5,     // giờ (30 phút)
+                hiddenVar: 'v_di' // Đặt x là vận tốc đi
+            },
+            2: { // Dạng 2: Dự định vs Thực tế trên cả quãng đường
+                S: 120,          // km
+                v_dd: 40,        // km/h (x)
+                delta_v: 10,     // tăng 10 km/h (thực tế x + 10)
+                early_time: 0.6  // đến sớm 36 phút (0.6h)
+            },
+            3: { // Dạng 3: Thay đổi vận tốc từng đoạn / Dừng nghỉ giữa đường
+                S: 120,          // km
+                S1: 40,          // km (đoạn đầu)
+                v1: 40,          // km/h (vận tốc đầu x)
+                t_nghi: 0.25,    // nghỉ 15 phút (0.25h)
+                delta_v2: 8,     // tăng 8 km/h ở đoạn sau
+            },
+            4: { // Dạng 4: Hai vật cùng chiều / ngược chiều
+                subMode: 'opposite', // 'opposite' (gặp nhau) hoặc 'same' (đuổi nhau)
+                S: 140,          // km khoảng cách AB
+                v1: 40,          // km/h xe A (x)
+                v2: 30,          // km/h xe B (y)
+                delta_t_start: 0.5 // Xe A đi trước 30 phút (0.5h)
+            },
+            5: { // Dạng 5: Chuyển động trên dòng nước
+                S: 60,           // km
+                v_rieng: 25,     // km/h ca nô nước yên (x)
+                v_nuoc: 5,       // km/h dòng nước (y)
+                direction: 'round' // đi xuôi rồi ngược về
+            }
+        };
+
+        // ==========================================
+        // HÀM CHUYỂN TAB VÀ RENDER GIAO DIỆN
+        // ==========================================
+        function switchTab(tabId) {
+            currentTab = tabId;
+            document.querySelectorAll('.tab-btn').forEach((b, idx) => {
+                b.classList.toggle('active', idx + 1 === tabId);
+            });
+            resetSim();
+            renderParamsUI();
+            updateAlgebraPanel();
+            setup3DEnvironment();
+        }
+
+        function toggleAlgebraLabels() {
+            showAlgebra = document.getElementById('chk-show-algebra').checked;
+            document.querySelectorAll('.floating-label').forEach(el => {
+                el.style.display = showAlgebra ? 'block' : 'none';
+            });
+            updateFloatingLabels();
+        }
+
+        // ==========================================
+        // RENDER GIAO DIỆN THAM SỐ ĐIỀU CHỈNH
+        // ==========================================
+        function renderParamsUI() {
+            const container = document.getElementById('params-container');
+            let html = '';
+
+            if (currentTab === 1) {
+                const d = state[1];
+                html = `
+                    <div class="section-title">
+                        <span>⚙️ Tham số Dạng 1: Chuyển động Đi & Về</span>
+                        <span class="badge-brand">Ví dụ Trang 131</span>
+                    </div>
+                    <div class="param-row">
+                        <div class="param-label"><span>Quãng đường AB:</span><span class="param-val" id="disp-S">${d.S} km</span></div>
+                        <input type="range" class="slider-control" min="30" max="200" step="5" value="${d.S}" oninput="updateParam(1, 'S', this.value)">
+                    </div>
+                    <div class="param-row">
+                        <div class="param-label"><span>Vận tốc lúc đi (Ẩn x):</span><span class="param-val" id="disp-vdi">${d.v_di} km/h</span></div>
+                        <input type="range" class="slider-control" min="15" max="80" step="5" value="${d.v_di}" oninput="updateParam(1, 'v_di', this.value)">
+                    </div>
+                    <div class="param-row">
+                        <div class="param-label"><span>Vận tốc lúc về (y):</span><span class="param-val" id="disp-vve">${d.v_ve} km/h</span></div>
+                        <input type="range" class="slider-control" min="10" max="80" step="5" value="${d.v_ve}" oninput="updateParam(1, 'v_ve', this.value)">
+                    </div>
+                    <div class="param-row">
+                        <div class="param-label"><span>Thời gian nghỉ tại B:</span><span class="param-val" id="disp-tnghi">${Math.round(d.t_nghi*60)} phút (${d.t_nghi}h)</span></div>
+                        <input type="range" class="slider-control" min="0" max="2" step="0.25" value="${d.t_nghi}" oninput="updateParam(1, 't_nghi', this.value)">
+                    </div>
+                `;
+            } else if (currentTab === 2) {
+                const d = state[2];
+                html = `
+                    <div class="section-title">
+                        <span>⚙️ Tham số Dạng 2: Dự Định vs Thực Tế</span>
+                        <span class="badge-brand">Ví dụ Trang 134</span>
+                    </div>
+                    <div class="param-row">
+                        <div class="param-label"><span>Quãng đường dự định AB:</span><span class="param-val" id="disp-S">${d.S} km</span></div>
+                        <input type="range" class="slider-control" min="40" max="240" step="10" value="${d.S}" oninput="updateParam(2, 'S', this.value)">
+                    </div>
+                    <div class="param-row">
+                        <div class="param-label"><span>Vận tốc dự định (Ẩn x):</span><span class="param-val" id="disp-vdd">${d.v_dd} km/h</span></div>
+                        <input type="range" class="slider-control" min="20" max="70" step="5" value="${d.v_dd}" oninput="updateParam(2, 'v_dd', this.value)">
+                    </div>
+                    <div class="param-row">
+                        <div class="param-label"><span>Vận tốc tăng thêm (Δv):</span><span class="param-val" id="disp-dv">+${d.delta_v} km/h</span></div>
+                        <input type="range" class="slider-control" min="5" max="30" step="5" value="${d.delta_v}" oninput="updateParam(2, 'delta_v', this.value)">
+                    </div>
+                `;
+            } else if (currentTab === 3) {
+                const d = state[3];
+                html = `
+                    <div class="section-title">
+                        <span>⚙️ Tham số Dạng 3: Chia Giai Đoạn & Dừng Nghỉ</span>
+                        <span class="badge-brand">Ví dụ Trang 135</span>
+                    </div>
+                    <div class="param-row">
+                        <div class="param-label"><span>Tổng quãng đường AB:</span><span class="param-val" id="disp-S">${d.S} km</span></div>
+                        <input type="range" class="slider-control" min="60" max="200" step="10" value="${d.S}" oninput="updateParam(3, 'S', this.value)">
+                    </div>
+                    <div class="param-row">
+                        <div class="param-label"><span>Quãng đường GĐ1 (AC):</span><span class="param-val" id="disp-S1">${d.S1} km</span></div>
+                        <input type="range" class="slider-control" min="10" max="${d.S-10}" step="5" value="${d.S1}" oninput="updateParam(3, 'S1', this.value)">
+                    </div>
+                    <div class="param-row">
+                        <div class="param-label"><span>Vận tốc đoạn 1 (Ẩn x):</span><span class="param-val" id="disp-v1">${d.v1} km/h</span></div>
+                        <input type="range" class="slider-control" min="20" max="60" step="5" value="${d.v1}" oninput="updateParam(3, 'v1', this.value)">
+                    </div>
+                    <div class="param-row">
+                        <div class="param-label"><span>Thời gian nghỉ tại C:</span><span class="param-val" id="disp-tnghi">${Math.round(d.t_nghi*60)} phút</span></div>
+                        <input type="range" class="slider-control" min="0.1" max="1" step="0.05" value="${d.t_nghi}" oninput="updateParam(3, 't_nghi', this.value)">
+                    </div>
+                    <div class="param-row">
+                        <div class="param-label"><span>Vận tốc đoạn 2 tăng thêm:</span><span class="param-val" id="disp-dv2">+${d.delta_v2} km/h</span></div>
+                        <input type="range" class="slider-control" min="2" max="20" step="2" value="${d.delta_v2}" oninput="updateParam(3, 'delta_v2', this.value)">
+                    </div>
+                `;
+            } else if (currentTab === 4) {
+                const d = state[4];
+                html = `
+                    <div class="section-title">
+                        <span>⚙️ Tham số Dạng 4: Hai Vật Chuyển Động</span>
+                        <span class="badge-brand">Ví dụ Trang 136</span>
+                    </div>
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-bottom:6px;">
+                        <button class="tab-btn ${d.subMode==='opposite'?'active':''}" style="padding:6px;" onclick="setSubMode4('opposite')">Ngược chiều (Gặp nhau)</button>
+                        <button class="tab-btn ${d.subMode==='same'?'active':''}" style="padding:6px;" onclick="setSubMode4('same')">Cùng chiều (Đuổi nhau)</button>
+                    </div>
+                    <div class="param-row">
+                        <div class="param-label"><span>Khoảng cách ban đầu S:</span><span class="param-val" id="disp-S">${d.S} km</span></div>
+                        <input type="range" class="slider-control" min="50" max="200" step="10" value="${d.S}" oninput="updateParam(4, 'S', this.value)">
+                    </div>
+                    <div class="param-row">
+                        <div class="param-label"><span>Vận tốc Xe A (Ẩn x):</span><span class="param-val" id="disp-v1">${d.v1} km/h</span></div>
+                        <input type="range" class="slider-control" min="20" max="80" step="5" value="${d.v1}" oninput="updateParam(4, 'v1', this.value)">
+                    </div>
+                    <div class="param-row">
+                        <div class="param-label"><span>Vận tốc Xe B (Ẩn y):</span><span class="param-val" id="disp-v2">${d.v2} km/h</span></div>
+                        <input type="range" class="slider-control" min="15" max="80" step="5" value="${d.v2}" oninput="updateParam(4, 'v2', this.value)">
+                    </div>
+                    <div class="param-row">
+                        <div class="param-label"><span>Xe A xuất phát trước:</span><span class="param-val" id="disp-dt">${Math.round(d.delta_t_start*60)} phút</span></div>
+                        <input type="range" class="slider-control" min="0" max="2" step="0.25" value="${d.delta_t_start}" oninput="updateParam(4, 'delta_t_start', this.value)">
+                    </div>
+                `;
+            } else if (currentTab === 5) {
+                const d = state[5];
+                html = `
+                    <div class="section-title">
+                        <span>⚙️ Tham số Dạng 5: Chuyển Động Dòng Nước</span>
+                        <span class="badge-brand">Ví dụ Trang 137</span>
+                    </div>
+                    <div class="param-row">
+                        <div class="param-label"><span>Chiều dài khúc sông AB:</span><span class="param-val" id="disp-S">${d.S} km</span></div>
+                        <input type="range" class="slider-control" min="20" max="120" step="5" value="${d.S}" oninput="updateParam(5, 'S', this.value)">
+                    </div>
+                    <div class="param-row">
+                        <div class="param-label"><span>Vận tốc riêng Ca nô (Ẩn x):</span><span class="param-val" id="disp-vr">${d.v_rieng} km/h</span></div>
+                        <input type="range" class="slider-control" min="15" max="45" step="1" value="${d.v_rieng}" oninput="updateParam(5, 'v_rieng', this.value)">
+                    </div>
+                    <div class="param-row">
+                        <div class="param-label"><span>Vận tốc dòng nước (Ẩn y):</span><span class="param-val" id="disp-vn">${d.v_nuoc} km/h</span></div>
+                        <input type="range" class="slider-control" min="1" max="10" step="0.5" value="${d.v_nuoc}" oninput="updateParam(5, 'v_nuoc', this.value)">
+                    </div>
+                `;
+            }
+            container.innerHTML = html;
+        }
+
+        function updateParam(tab, key, val) {
+            state[tab][key] = parseFloat(val);
+            renderParamsUI();
+            updateAlgebraPanel();
+            resetSim();
+        }
+
+        function setSubMode4(mode) {
+            state[4].subMode = mode;
+            renderParamsUI();
+            updateAlgebraPanel();
+            resetSim();
+        }
+
+        // ==========================================
+        // THIẾT LẬP MÔI TRƯỜNG 3D CHO TỪNG DẠNG
+        // ==========================================
+        function setup3DEnvironment() {
+            // Đặt lại các vật thể
+            poleC.visible = false;
+            raftMesh.visible = false;
+            waterArrows.forEach(a => a.visible = false);
+
+            if (currentTab === 1) { // Đi và về
+                trackMesh.material.color.setHex(0x1e293b);
+                centerStripe.visible = true;
+                vehicleA.visible = true;
+                vehicleB.visible = false;
+                document.getElementById('hud-tag-1').innerText = "Xe A (Lúc đi & về)";
+                document.getElementById('hud-tag-2').innerText = "Mốc quay đầu B";
+            } else if (currentTab === 2) { // Dự định vs thực tế
+                trackMesh.material.color.setHex(0x1e293b);
+                centerStripe.visible = true;
+                vehicleA.visible = true;
+                vehicleB.visible = true;
+                document.getElementById('hud-tag-1').innerText = "Xe Thực tế (Cam)";
+                document.getElementById('hud-tag-2').innerText = "Xe Dự định (Xanh)";
+            } else if (currentTab === 3) { // Chia giai đoạn
+                trackMesh.material.color.setHex(0x1e293b);
+                centerStripe.visible = true;
+                vehicleA.visible = true;
+                vehicleB.visible = false;
+                poleC.visible = true;
+                document.getElementById('hud-tag-1').innerText = "Xe chạy 2 chặng";
+                document.getElementById('hud-tag-2').innerText = "Điểm sự cố C";
+            } else if (currentTab === 4) { // Hai xe
+                trackMesh.material.color.setHex(0x1e293b);
+                centerStripe.visible = true;
+                vehicleA.visible = true;
+                vehicleB.visible = true;
+                document.getElementById('hud-tag-1').innerText = "Xe A (Xanh)";
+                document.getElementById('hud-tag-2').innerText = "Xe B (Cam)";
+            } else if (currentTab === 5) { // Dòng nước
+                trackMesh.material.color.setHex(0x0284c7); // Mặt nước sông xanh
+                centerStripe.visible = false;
+                vehicleA.visible = true; // Thuyền ca nô
+                vehicleB.visible = false;
+                raftMesh.visible = true; // Chiếc bè
+                waterArrows.forEach((a, idx) => {
+                    a.visible = true;
+                    a.position.set(-45 + idx * 13, 0.4, 2.5);
+                });
+                document.getElementById('hud-tag-1').innerText = "Ca nô (x ± y)";
+                document.getElementById('hud-tag-2').innerText = "Chiếc bè trôi (y)";
+            }
+        }
+
+        // ==========================================
+        // CẬP NHẬT BẢNG ĐẠI SỐ S - v - t & PHƯƠNG TRÌNH
+        // ==========================================
+        function updateAlgebraPanel() {
+            const panel = document.getElementById('algebra-display');
+            const socratic = document.getElementById('socratic-box');
+            let tableHtml = '';
+            let eqHtml = '';
+            let solHtml = '';
+            let hintHtml = '';
+
+            if (currentTab === 1) {
+                const d = state[1];
+                const t_di = d.S / d.v_di;
+                const t_ve = d.S / d.v_ve;
+                const delta_t = Math.abs(t_ve - t_di);
+
+                tableHtml = `
+                    <div style="font-weight:700; color:#38bdf8;">📊 Bảng phân tích đại số (Trang 131):</div>
+                    <table class="table-svt">
+                        <tr><th>Đối tượng</th><th>S (km)</th><th>v (km/h)</th><th>t (giờ)</th></tr>
+                        <tr><td>Lúc đi</td><td>${d.S}</td><td class="highlight">x (${d.v_di})</td><td>${d.S}/x (${t_di.toFixed(2)}h)</td></tr>
+                        <tr><td>Lúc về</td><td>${d.S}</td><td class="highlight">y (${d.v_ve})</td><td>${d.S}/y (${t_ve.toFixed(2)}h)</td></tr>
+                    </table>
+                `;
+                eqHtml = `
+                    <div class="eq-box">
+                        <b>Phương trình thiết lập:</b><br>
+                        t_về - t_đi = Δt  ⟺  <b>${d.S} / y - ${d.S} / x = ${(delta_t).toFixed(2)}</b> (giờ)<br>
+                        Tổng thời gian cả đi, về và nghỉ: T = ${d.S}/x + ${d.t_nghi} + ${d.S}/y = <b>${(t_di + d.t_nghi + t_ve).toFixed(2)} giờ</b>
+                    </div>
+                `;
+                solHtml = `
+                    <div class="solution-box">
+                        ✅ <b>Kết quả giải toán:</b> Thời gian đi: ${t_di.toFixed(2)}h (${Math.round(t_di*60)}p) | Thời gian về: ${t_ve.toFixed(2)}h (${Math.round(t_ve*60)}p).<br>
+                        Chênh lệch thời gian lượt đi và về: <b>${Math.round(delta_t*60)} phút</b>.
+                    </div>
+                `;
+                hintHtml = `
+                    💡 <b>Giàn giáo Socratic:</b> Luôn nhớ đổi phút ra giờ (ví dụ 30p = 0.5h). Quãng đường không đổi nên thời gian tỉ lệ nghịch với vận tốc: Vận tốc về nhỏ hơn nên thời gian về lớn hơn thời gian đi.
+                `;
+            } else if (currentTab === 2) {
+                const d = state[2];
+                const v_tt = d.v_dd + d.delta_v;
+                const t_dd = d.S / d.v_dd;
+                const t_tt = d.S / v_tt;
+                const early_h = t_dd - t_tt;
+
+                tableHtml = `
+                    <div style="font-weight:700; color:#38bdf8;">📊 Bảng phân tích Dự định vs Thực tế (Trang 131):</div>
+                    <table class="table-svt">
+                        <tr><th>Trạng thái</th><th>S (km)</th><th>v (km/h)</th><th>t (giờ)</th></tr>
+                        <tr><td>Dự định</td><td>${d.S}</td><td class="highlight">x (${d.v_dd})</td><td>${d.S}/x (${t_dd.toFixed(2)}h)</td></tr>
+                        <tr><td>Thực tế</td><td>${d.S}</td><td class="highlight">x + ${d.delta_v} (${v_tt})</td><td>${d.S}/(x+${d.delta_v}) (${t_tt.toFixed(2)}h)</td></tr>
+                    </table>
+                `;
+                eqHtml = `
+                    <div class="eq-box">
+                        <b>Phương trình theo thời gian đến sớm:</b><br>
+                        t_dự_định - t_thực_tế = Δt  ⟺  <b>${d.S} / x - ${d.S} / (x + ${d.delta_v}) = ${early_h.toFixed(2)}</b> (giờ)
+                    </div>
+                `;
+                solHtml = `
+                    <div class="solution-box">
+                        ✅ <b>Nghiệm:</b> Vận tốc dự định <b>x = ${d.v_dd} km/h</b>.<br>
+                        Đến sớm hơn dự định: <b>${Math.round(early_h*60)} phút</b> (${early_h.toFixed(2)}h).
+                    </div>
+                `;
+                hintHtml = `
+                    💡 <b>Bí kíp:</b> "Đến sớm hơn" nghĩa là thời gian thực tế ít hơn thời gian dự định. Lấy số lớn trừ số bé: t_dự_định - t_thực_tế = thời gian sớm.
+                `;
+            } else if (currentTab === 3) {
+                const d = state[3];
+                const S2 = d.S - d.S1;
+                const v2 = d.v1 + d.delta_v2;
+                const t1 = d.S1 / d.v1;
+                const t2 = S2 / v2;
+                const total_t = t1 + d.t_nghi + t2;
+                const t_dd = d.S / d.v1;
+                const diff_t = total_t - t_dd;
+
+                tableHtml = `
+                    <div style="font-weight:700; color:#38bdf8;">📊 Bảng phân tích Chia giai đoạn (Trang 131):</div>
+                    <table class="table-svt">
+                        <tr><th>Giai đoạn</th><th>S (km)</th><th>v (km/h)</th><th>t (giờ)</th></tr>
+                        <tr><td>Đoạn 1 (AC)</td><td>${d.S1}</td><td class="highlight">x (${d.v1})</td><td>${d.S1}/x (${t1.toFixed(2)}h)</td></tr>
+                        <tr><td>Nghỉ tại C</td><td>0</td><td>0</td><td>${d.t_nghi}h (${Math.round(d.t_nghi*60)}p)</td></tr>
+                        <tr><td>Đoạn 2 (CB)</td><td>${S2}</td><td class="highlight">x+${d.delta_v2} (${v2})</td><td>${S2}/(x+${d.delta_v2}) (${t2.toFixed(2)}h)</td></tr>
+                    </table>
+                `;
+                eqHtml = `
+                    <div class="eq-box">
+                        <b>Phương trình tổng thời gian:</b><br>
+                        T = t₁ + t_nghỉ + t₂ = <b>${d.S1}/x + ${d.t_nghi} + ${S2}/(x+${d.delta_v2})</b><br>
+                        So với dự định: ${diff_t > 0 ? `Đến muộn ${(diff_t*60).toFixed(0)} phút` : diff_t < 0 ? `Đến sớm ${(-diff_t*60).toFixed(0)} phút` : 'Đến đúng giờ!'}
+                    </div>
+                `;
+                solHtml = `
+                    <div class="solution-box">
+                        ✅ <b>Kết quả:</b> Đoạn 1 đi ${t1.toFixed(2)}h, dừng nghỉ ${Math.round(d.t_nghi*60)}p, đoạn 2 đi ${t2.toFixed(2)}h.<br>
+                        Tổng thời gian thực tế: <b>${total_t.toFixed(2)} giờ</b>.
+                    </div>
+                `;
+                hintHtml = `
+                    💡 <b>Quy tắc 3 chặng:</b> Tổng thời gian = (Thời gian chặng 1) + (Thời gian dừng sửa xe/nghỉ) + (Thời gian chặng 2).
+                `;
+            } else if (currentTab === 4) {
+                const d = state[4];
+                let targetT = 0;
+                let meetPos = 0;
+                if (d.subMode === 'opposite') {
+                    // Xe A đi trước delta_t: S_con_lai = S - v1 * delta_t
+                    const s_da_di = d.v1 * d.delta_t_start;
+                    const s_remain = d.S - s_da_di;
+                    const t_cung_di = s_remain / (d.v1 + d.v2);
+                    targetT = d.delta_t_start + t_cung_di;
+                    meetPos = d.v1 * targetT;
+
+                    tableHtml = `
+                        <div style="font-weight:700; color:#38bdf8;">📊 Bảng Hai Xe Ngược Chiều Gặp Nhau (Trang 132):</div>
+                        <table class="table-svt">
+                            <tr><th>Xe</th><th>Vận tốc</th><th>Thời gian</th><th>Quãng đường</th></tr>
+                            <tr><td>Xe A (từ A)</td><td class="highlight">x (${d.v1})</td><td>t + ${d.delta_t_start}</td><td>x · (t + ${d.delta_t_start})</td></tr>
+                            <tr><td>Xe B (từ B)</td><td class="highlight">y (${d.v2})</td><td>t</td><td>y · t</td></tr>
+                        </table>
+                    `;
+                    eqHtml = `
+                        <div class="eq-box">
+                            <b>Phương trình tổng quãng đường:</b><br>
+                            S_A + S_B = S_AB  ⟺  <b>x · (t + ${d.delta_t_start}) + y · t = ${d.S}</b><br>
+                            Hai xe gặp nhau sau: <b>${targetT.toFixed(2)} giờ</b> (${Math.round(targetT*60)} phút).
+                        </div>
+                    `;
+                } else {
+                    // Cùng chiều đuổi nhau: Xe A đuổi Xe B
+                    const s_da_di = d.v2 * d.delta_t_start; // Xe B đi trước hoặc khoảng cách ban đầu
+                    const t_duoi = (d.v1 > d.v2) ? d.S / (d.v1 - d.v2) : Infinity;
+                    meetPos = d.v1 * t_duoi;
+
+                    tableHtml = `
+                        <div style="font-weight:700; color:#38bdf8;">📊 Bảng Hai Xe Cùng Chiều Đuổi Nhau (Trang 132):</div>
+                        <table class="table-svt">
+                            <tr><th>Xe</th><th>Vận tốc</th><th>Thời gian</th><th>Quãng đường</th></tr>
+                            <tr><td>Xe đuổi (A)</td><td class="highlight">x (${d.v1})</td><td>t</td><td>x · t</td></tr>
+                            <tr><td>Xe chạy (B)</td><td class="highlight">y (${d.v2})</td><td>t</td><td>y · t</td></tr>
+                        </table>
+                    `;
+                    eqHtml = `
+                        <div class="eq-box">
+                            <b>Phương trình hiệu quãng đường:</b><br>
+                            S_A - S_B = S_cách  ⟺  <b>x · t - y · t = ${d.S}</b><br>
+                            Thời gian đuổi kịp: t = S / (v₁ - v₂) = <b>${isFinite(t_duoi)?t_duoi.toFixed(2)+' giờ':'Không bao giờ đuổi kịp!'}</b>
+                        </div>
+                    `;
+                }
+                solHtml = `
+                    <div class="solution-box">
+                        ✅ <b>Vị trí gặp:</b> Cách điểm A một đoạn <b>${isFinite(meetPos)?meetPos.toFixed(1)+' km':'Không gặp'}</b>.
+                    </div>
+                `;
+                hintHtml = `
+                    💡 <b>Bản chất:</b> Gặp nhau ngược chiều thì quãng đường cộng lại bằng khoảng cách ban đầu. Đuổi nhau cùng chiều thì quãng đường xe nhanh trừ xe chậm bằng khoảng cách ban đầu.
+                `;
+            } else if (currentTab === 5) {
+                const d = state[5];
+                const v_xuoi = d.v_rieng + d.v_nuoc;
+                const v_nguoc = d.v_rieng - d.v_nuoc;
+                const t_xuoi = d.S / v_xuoi;
+                const t_nguoc = d.S / v_nguoc;
+                const t_tong = t_xuoi + t_nguoc;
+
+                tableHtml = `
+                    <div style="font-weight:700; color:#38bdf8;">📊 Bảng Chuyển Động Dòng Nước (Trang 133):</div>
+                    <table class="table-svt">
+                        <tr><th>Chuyến đi</th><th>S (km)</th><th>Vận tốc (km/h)</th><th>Thời gian (h)</th></tr>
+                        <tr><td>Xuôi dòng</td><td>${d.S}</td><td class="highlight">x + y (${v_xuoi})</td><td>${d.S}/(x+y) (${t_xuoi.toFixed(2)}h)</td></tr>
+                        <tr><td>Ngược dòng</td><td>${d.S}</td><td class="highlight">x - y (${v_nguoc})</td><td>${d.S}/(x-y) (${t_nguoc.toFixed(2)}h)</td></tr>
+                    </table>
+                `;
+                eqHtml = `
+                    <div class="eq-box">
+                        <b>Hệ thức vận tốc chuẩn:</b><br>
+                        • Vận tốc xuôi: v_xuôi = x + y  =  <b>${v_xuoi} km/h</b><br>
+                        • Vận tốc ngược: v_ngược = x - y  =  <b>${v_nguoc} km/h</b><br>
+                        • Tổng thời gian cả đi và về: <b>${d.S}/(x+y) + ${d.S}/(x-y) = ${t_tong.toFixed(2)} giờ</b>
+                    </div>
+                `;
+                solHtml = `
+                    <div class="solution-box">
+                        ✅ <b>Kết quả:</b> Xuôi dòng hết ${t_xuoi.toFixed(2)}h (${Math.round(t_xuoi*60)}p) | Ngược dòng hết ${t_nguoc.toFixed(2)}h (${Math.round(t_nguoc*60)}p).<br>
+                        Vận tốc ca nô khi nước yên <b>x = ${d.v_rieng} km/h</b>, vận tốc nước <b>y = ${d.v_nuoc} km/h</b>.
+                    </div>
+                `;
+                hintHtml = `
+                    💡 <b>Quy tắc vàng:</b> Vận tốc xuôi dòng luôn lớn hơn vận tốc ngược dòng đúng bằng 2 lần vận tốc dòng nước: v_xuôi - v_ngược = 2·v_nước! Chiếc bè thả trôi tự do luôn trôi với đúng vận tốc dòng nước v_bè = v_nước.
+                `;
+            }
+
+            panel.innerHTML = tableHtml + eqHtml + solHtml;
+            socratic.innerHTML = hintHtml;
+        }
+
+        // ==========================================
+        // CẬP NHẬT MÔ HÌNH VÀ VỊ TRÍ 3D THEO THỜI GIAN
+        // ==========================================
+        const trackScale = 0.45; // Tỉ lệ 1 km tương ứng độ dài 3D
+
+        function update3DPositions() {
+            const S_current = state[currentTab].S || 120;
+            const startX = - (S_current * trackScale) / 2;
+            const endX = (S_current * trackScale) / 2;
+
+            poleA.position.set(startX, 2.5, -4);
+            poleB.position.set(endX, 2.5, -4);
+            trackMesh.scale.x = (S_current * trackScale * 1.1) / 120;
+            centerStripe.scale.x = trackMesh.scale.x;
+
+            const banner = document.getElementById('banner-meet');
+
+            if (currentTab === 1) { // Đi và về
+                const d = state[1];
+                const t_di = d.S / d.v_di;
+                const t_nghi = d.t_nghi;
+                const t_ve = d.S / d.v_ve;
+                const total_t = t_di + t_nghi + t_ve;
+
+                let posX = startX;
+                let curV = d.v_di;
+
+                if (simTime <= t_di) { // Đang đi
+                    posX = startX + (simTime * d.v_di) * trackScale;
+                    vehicleA.rotation.y = 0;
+                    curV = d.v_di;
+                    banner.style.display = 'none';
+                } else if (simTime <= t_di + t_nghi) { // Đang nghỉ tại B
+                    posX = endX;
+                    vehicleA.rotation.y = Math.PI;
+                    curV = 0;
+                    banner.style.display = 'block';
+                    banner.innerText = `☕ Đang dừng nghỉ tại B (${Math.round((simTime - t_di)*60)}/${Math.round(t_nghi*60)} phút)`;
+                } else if (simTime <= total_t) { // Đang về
+                    const t_return = simTime - t_di - t_nghi;
+                    posX = endX - (t_return * d.v_ve) * trackScale;
+                    vehicleA.rotation.y = Math.PI;
+                    curV = d.v_ve;
+                    banner.style.display = 'none';
+                } else {
+                    posX = startX;
+                    isPlaying = false;
+                    banner.style.display = 'block';
+                    banner.innerText = '🏁 ĐÃ HOÀN THÀNH CHUYẾN ĐI VÀ VỀ!';
+                }
+                vehicleA.position.set(posX, 0, 0);
+
+            } else if (currentTab === 2) { // Dự định vs Thực tế
+                const d = state[2];
+                const v_tt = d.v_dd + d.delta_v;
+                const posA = Math.min(endX, startX + (simTime * v_tt) * trackScale); // Thực tế (A)
+                const posB = Math.min(endX, startX + (simTime * d.v_dd) * trackScale); // Dự định (B)
+
+                vehicleA.position.set(posA, 0, 1.8);
+                vehicleB.position.set(posB, 0, -1.8);
+                vehicleA.rotation.y = 0;
+                vehicleB.rotation.y = 0;
+
+                const t_tt = d.S / v_tt;
+                const t_dd = d.S / d.v_dd;
+
+                if (simTime >= t_tt && simTime < t_dd) {
+                    banner.style.display = 'block';
+                    banner.innerText = `⚡ XE THỰC TẾ ĐÃ VỀ ĐÍCH TRƯỚC DỰ ĐỊNH ${Math.round((t_dd - t_tt)*60)} PHÚT!`;
+                } else if (simTime >= t_dd) {
+                    banner.style.display = 'block';
+                    banner.innerText = '🏁 CẢ HAI XE ĐỀU ĐÃ ĐẾN B!';
+                    isPlaying = false;
+                } else {
+                    banner.style.display = 'none';
+                }
+
+            } else if (currentTab === 3) { // Chia giai đoạn
+                const d = state[3];
+                const S2 = d.S - d.S1;
+                const v2 = d.v1 + d.delta_v2;
+                const midX = startX + (d.S1 * trackScale);
+                poleC.position.set(midX, 2.5, -4);
+
+                const t1 = d.S1 / d.v1;
+                const t_nghi = d.t_nghi;
+                const t2 = S2 / v2;
+                const total_t = t1 + t_nghi + t2;
+
+                let posX = startX;
+                if (simTime <= t1) { // GĐ 1
+                    posX = startX + (simTime * d.v1) * trackScale;
+                    banner.style.display = 'none';
+                } else if (simTime <= t1 + t_nghi) { // Dừng tại C
+                    posX = midX;
+                    banner.style.display = 'block';
+                    banner.innerText = `⚠️ DỪNG SỰ CỐ / NGHỈ TẠI C (${Math.round((simTime - t1)*60)}/${Math.round(t_nghi*60)}p)`;
+                } else if (simTime <= total_t) { // GĐ 2
+                    posX = midX + ((simTime - t1 - t_nghi) * v2) * trackScale;
+                    banner.style.display = 'none';
+                } else {
+                    posX = endX;
+                    isPlaying = false;
+                    banner.style.display = 'block';
+                    banner.innerText = '🏁 ĐÃ HOÀN THÀNH HÀNH TRÌNH ĐẾN B!';
+                }
+                vehicleA.position.set(posX, 0, 0);
+
+            } else if (currentTab === 4) { // Hai vật
+                const d = state[4];
+                let posA = startX;
+                let posB = endX;
+
+                if (d.subMode === 'opposite') {
+                    // Ngược chiều gặp nhau
+                    const t_A = Math.max(0, simTime);
+                    const t_B = Math.max(0, simTime - d.delta_t_start);
+                    posA = startX + (t_A * d.v1) * trackScale;
+                    posB = endX - (t_B * d.v2) * trackScale;
+                    vehicleA.rotation.y = 0;
+                    vehicleB.rotation.y = Math.PI;
+
+                    if (posA >= posB) {
+                        posA = (posA + posB) / 2;
+                        posB = posA;
+                        isPlaying = false;
+                        banner.style.display = 'block';
+                        banner.innerText = `🎉 HAI XE GẶP NHAU TẠI VỊ TRÍ ${(posA - startX)/trackScale | 0} km!`;
+                    } else {
+                        banner.style.display = 'none';
+                    }
+                } else {
+                    // Cùng chiều đuổi nhau: Xe B xuất phát từ A trước hoặc ở mốc S/2
+                    posB = startX + 25 + (simTime * d.v2) * trackScale;
+                    posA = startX + (simTime * d.v1) * trackScale;
+                    vehicleA.rotation.y = 0;
+                    vehicleB.rotation.y = 0;
+
+                    if (posA >= posB) {
+                        posA = posB;
+                        isPlaying = false;
+                        banner.style.display = 'block';
+                        banner.innerText = '🎉 XE A ĐÃ ĐUỔI KỊP XE B!';
+                    } else {
+                        banner.style.display = 'none';
+                    }
+                }
+                vehicleA.position.set(posA, 0, 1.8);
+                vehicleB.position.set(posB, 0, -1.8);
+
+            } else if (currentTab === 5) { // Dòng nước
+                const d = state[5];
+                const v_xuoi = d.v_rieng + d.v_nuoc;
+                const v_nguoc = d.v_rieng - d.v_nuoc;
+                const t_xuoi = d.S / v_xuoi;
+                const t_nguoc = d.S / v_nguoc;
+                const total_t = t_xuoi + t_nguoc;
+
+                let posX = startX;
+                if (simTime <= t_xuoi) { // Xuôi dòng
+                    posX = startX + (simTime * v_xuoi) * trackScale;
+                    vehicleA.rotation.y = 0;
+                    banner.style.display = 'none';
+                } else if (simTime <= total_t) { // Ngược dòng
+                    posX = endX - ((simTime - t_xuoi) * v_nguoc) * trackScale;
+                    vehicleA.rotation.y = Math.PI;
+                    banner.style.display = 'none';
+                } else {
+                    posX = startX;
+                    isPlaying = false;
+                    banner.style.display = 'block';
+                    banner.innerText = '🏁 CA NÔ ĐÃ HOÀN THÀNH XUÔI VÀ NGƯỢC DÒNG!';
+                }
+                vehicleA.position.set(posX, 0.4, 0);
+
+                // Chiếc bè trôi tự do với vận tốc nước y
+                const raftX = Math.min(endX, startX + (simTime * d.v_nuoc) * trackScale);
+                raftMesh.position.set(raftX, 0.3, 2.5);
+            }
+
+            updateFloatingLabels();
+        }
+
+        // ==========================================
+        // CẬP NHẬT NHÃN ĐẠI SỐ ĐỘNG TRÊN TỌA ĐỘ MÀN HÌNH
+        // ==========================================
+        function toScreenPosition(obj, camera) {
+            const vector = new THREE.Vector3();
+            obj.getWorldPosition(vector);
+            vector.y += 2.8; // Đẩy nhãn cao hơn xe
+            vector.project(camera);
+
+            const halfWidth = container.clientWidth / 2;
+            const halfHeight = container.clientHeight / 2;
+
+            return {
+                x: Math.round(vector.x * halfWidth + halfWidth),
+                y: Math.round(-vector.y * halfHeight + halfHeight)
+            };
+        }
+
+        function updateFloatingLabels() {
+            if (!showAlgebra) return;
+
+            const l1 = document.getElementById('label-car-1');
+            const l2 = document.getElementById('label-car-2');
+            const lMid = document.getElementById('label-mid-point');
+            const lWater = document.getElementById('label-current-flow');
+
+            const p1 = toScreenPosition(vehicleA, camera);
+            l1.style.left = p1.x + 'px';
+            l1.style.top = p1.y + 'px';
+
+            if (currentTab === 1) {
+                l1.innerText = (vehicleA.rotation.y === 0) ? `Lúc đi: [x = ${state[1].v_di} km/h]` : `Lúc về: [y = ${state[1].v_ve} km/h]`;
+                l2.style.display = 'none';
+                lMid.style.display = 'none';
+                lWater.style.display = 'none';
+            } else if (currentTab === 2) {
+                l2.style.display = 'block';
+                lMid.style.display = 'none';
+                lWater.style.display = 'none';
+                l1.innerText = `Thực tế: [x + ${state[2].delta_v} = ${state[2].v_dd + state[2].delta_v} km/h]`;
+                const p2 = toScreenPosition(vehicleB, camera);
+                l2.style.left = p2.x + 'px';
+                l2.style.top = p2.y + 'px';
+                l2.innerText = `Dự định: [x = ${state[2].v_dd} km/h]`;
+            } else if (currentTab === 3) {
+                l2.style.display = 'none';
+                lMid.style.display = 'block';
+                lWater.style.display = 'none';
+                const pMid = toScreenPosition(poleC, camera);
+                lMid.style.left = pMid.x + 'px';
+                lMid.style.top = pMid.y + 'px';
+                lMid.innerText = `Mốc C: [Nghỉ ${Math.round(state[3].t_nghi*60)} phút]`;
+                l1.innerText = `Xe: [Đoạn 1: x=${state[3].v1} | Đoạn 2: x+${state[3].delta_v2}=${state[3].v1+state[3].delta_v2}]`;
+            } else if (currentTab === 4) {
+                l2.style.display = 'block';
+                lMid.style.display = 'none';
+                lWater.style.display = 'none';
+                l1.innerText = `Xe A: [x = ${state[4].v1} km/h]`;
+                const p2 = toScreenPosition(vehicleB, camera);
+                l2.style.left = p2.x + 'px';
+                l2.style.top = p2.y + 'px';
+                l2.innerText = `Xe B: [y = ${state[4].v2} km/h]`;
+            } else if (currentTab === 5) {
+                l2.style.display = 'none';
+                lMid.style.display = 'none';
+                lWater.style.display = 'block';
+                l1.innerText = (vehicleA.rotation.y === 0) ? `Ca nô xuôi: [x + y = ${state[5].v_rieng + state[5].v_nuoc} km/h]` : `Ca nô ngược: [x - y = ${state[5].v_rieng - state[5].v_nuoc} km/h]`;
+                const pRaft = toScreenPosition(raftMesh, camera);
+                lWater.style.left = pRaft.x + 'px';
+                lWater.style.top = pRaft.y + 'px';
+                lWater.innerText = `Bè trôi: [v_nước = y = ${state[5].v_nuoc} km/h]`;
+            }
+        }
+
+        // ==========================================
+        // CÁC HÀM ĐIỀU KHIỂN CHẠY MÔ PHỎNG
+        // ==========================================
+        function playSim() { isPlaying = true; }
+        function pauseSim() { isPlaying = false; }
+        function resetSim() {
+            isPlaying = false;
+            simTime = 0;
+            document.getElementById('banner-meet').style.display = 'none';
+            update3DPositions();
+        }
+
+        // Vòng lặp Animation Frame 60 FPS
+        function animate() {
+            requestAnimationFrame(animate);
+            if (isPlaying) {
+                simTime += 0.012; // Tốc độ thời gian mô phỏng
+                update3DPositions();
+            }
+            controls.update();
+            updateFloatingLabels();
+            renderer.render(scene, camera);
+        }
+
+        // Khởi động ban đầu
+        switchTab(1);
+        animate();
+
+        window.addEventListener('resize', () => {
+            camera.aspect = container.clientWidth / container.clientHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(container.clientWidth, container.clientHeight);
+        });
+    </script>
+</body>
+</html>
