@@ -1,0 +1,152 @@
+{
+  "day": 1,
+  "id": "K9_Toan_C1_N01",
+  "title": "Ngày 01: Quy Tắc Dấu & Phép Tính Số Nguyên",
+  "download_links": {
+    "docx": "assets/day-01/Phieu_Hoc_Tap_Ngay_1.pdf",
+    "infographic": "assets/day-01/infographic.png"
+  },
+  "shorts": {
+    "heading": "BỘ BA MICRO-SHORTS TỰ HỌC (30s - 45s)",
+    "subheading": "Xem ngắn để tháo gỡ từng điểm nghẽn kiến thức trong ngày:",
+    "clips": [
+      {
+        "id": "clip1",
+        "tag": "Clip 1: Zombie Bẫy Lỗi",
+        "title": "Tháo gỡ lỗi nhầm (-7) + (-5) = +12",
+        "video_url": "assets/day-01/clip1.mp4",
+        "thumbnail": "assets/day-01/infographic.png",
+        "badge": "Bẫy Zombie",
+        "desc": "Cảnh báo học sinh hay nhầm phép cộng cùng dấu âm với quy tắc nhân 'âm nhân âm ra dương'."
+      },
+      {
+        "id": "clip2",
+        "tag": "Clip 2: Bí Kíp Tìm X",
+        "title": "Gỡ kẹt bài toán 25 - (x + 10) = -15",
+        "video_url": "",
+        "thumbnail": "",
+        "badge": "Bí kíp 9+",
+        "desc": "Kỹ thuật phá ngoặc đổi dấu chuẩn xác và chuyển vế đổi dấu nhanh không bị vấp."
+      },
+      {
+        "id": "clip3",
+        "tag": "Clip 3: Thực Tế Mẫu Sơn",
+        "title": "Trực quan hóa diễn tiến nhiệt độ bằng trục số",
+        "video_url": "",
+        "thumbnail": "",
+        "badge": "Toán thực tế",
+        "desc": "Hình ảnh hóa nhiệt độ âm đêm Mẫu Sơn và tăng nhiệt độ buổi trưa trên trục số 3D."
+      }
+    ]
+  },
+  "infographic_tab": {
+    "heading": "SƠ ĐỒ TƯ DUY & TÀI LIỆU TẢI VỀ",
+    "subheading": "Tóm tắt Khung công thức vàng & Bộ tài liệu in ấn ra giấy:",
+    "image_url": "assets/day-01/infographic.png",
+    "theory_sections": [
+      {
+        "title": "1. Phép Cộng Số Nguyên",
+        "rules": [
+          "**Cùng dấu âm:** $(-a) + (-b) = -(a + b)$ *(ví dụ: $(-7) + (-5) = -12$)*",
+          "**Khác dấu:** Lấy số lớn trừ số nhỏ rồi mang dấu của số có giá trị tuyệt đối lớn hơn. *(ví dụ: $(-7) + 5 = -(7 - 5) = -2$)*",
+          "**Hai số đối nhau:** $a + (-a) = 0$. Số đối của $0$ là chính nó."
+        ]
+      },
+      {
+        "title": "2. Phép Trừ & Quy Tắc Dấu Ngoặc (Bẫy Zombie)",
+        "rules": [
+          "**Quy tắc trừ:** $a - b = a + (-b)$ *(Trừ một số là cộng với số đối của nó)*.",
+          "**Dấu trừ trước ngoặc:** $-(a + b) = -a - b$ và $-(a - b) = -a + b$ *(Bắt buộc phải đổi dấu toàn bộ hạng tử bên trong)*.",
+          "**Bẫy lỗi phổ biến:** Học sinh thường quên đổi dấu hạng tử thứ 2: viết $-(x + 10) = -x + 10$ là SAI HOÀN TOÀN!"
+        ]
+      }
+    ]
+  },
+  "skeleton_tab": {
+    "heading": "THỬ THÁCH ĐIỀN KHUYẾT SKELETON NOTES",
+    "subheading": "Điền kết quả đúng vào các ô trống dưới đây để hoàn thiện ghi nhớ:",
+    "questions": [
+      {
+        "id": "sk1",
+        "text_before": "Câu 1: Kết quả phép tính (-7) + (-5) bằng",
+        "correct": "-12",
+        "acceptable": ["-12"],
+        "text_after": "(nhớ mang dấu âm).",
+        "hint": "Cùng dấu âm: -(7 + 5) = -12"
+      },
+      {
+        "id": "sk2",
+        "text_before": "Câu 2: Phá ngoặc biểu thức -(x + 10) ta được",
+        "correct": "-x - 10",
+        "acceptable": ["-x - 10", "-x-10", "-10 - x", "-10-x"],
+        "text_after": ".",
+        "hint": "Đổi dấu cả x thành -x và +10 thành -10."
+      },
+      {
+        "id": "sk3",
+        "text_before": "Câu 3 (Mẫu Sơn): Ban đêm nhiệt độ là -3°C, buổi trưa tăng 8°C. Nhiệt độ buổi trưa là",
+        "correct": "5",
+        "acceptable": ["5", "5°C", "5 độ C"],
+        "text_after": "°C.",
+        "hint": "-3 + 8 = +(8 - 3) = 5°C."
+      }
+    ]
+  },
+  "quiz_tab": {
+    "heading": "THỬ THÁCH TRẮC NGHIỆM ĐIỂM 9+",
+    "subheading": "Kiểm tra kiến thức từ nhận biết đến vận dụng thực tế:",
+    "questions": [
+      {
+        "id": "q1",
+        "level": "Nhận biết",
+        "question": "Kết quả của phép tính (-12) . (-5) là:",
+        "options": ["60", "-60", "-17", "600"],
+        "correct_index": 0,
+        "explanation": "Nhân hai số nguyên cùng dấu âm cho kết quả dương: (-12) . (-5) = 12 . 5 = 60."
+      },
+      {
+        "id": "q2",
+        "level": "Thông hiểu - Cảnh báo bẫy",
+        "question": "Phá ngoặc biểu thức A = 25 - (x + 10) đúng là:",
+        "options": [
+          "A = 25 - x + 10",
+          "A = 25 - x - 10",
+          "A = 25 + x - 10",
+          "A = 25 + x + 10"
+        ],
+        "correct_index": 1,
+        "explanation": "⚠️ CẢNH BÁO BẪY ZOMBIE: Trước ngoặc là dấu '-', ta phải đổi dấu cả x và 10. Do đó A = 25 - x - 10."
+      },
+      {
+        "id": "q3",
+        "level": "Vận dụng",
+        "question": "Tìm x, biết 25 - (x + 10) = -15:",
+        "options": [
+          "x = 0",
+          "x = 30",
+          "x = 15",
+          "x = -30"
+        ],
+        "correct_index": 1,
+        "explanation": "25 - x - 10 = -15 => 15 - x = -15 => x = 15 - (-15) = 15 + 15 = 30."
+      },
+      {
+        "id": "q4",
+        "level": "Thực tế Mẫu Sơn",
+        "question": "Đỉnh Mẫu Sơn ban đêm -3°C, trưa tăng 8°C, chiều giảm 6°C. Nhiệt độ lúc chiều là:",
+        "options": [
+          "-1°C",
+          "1°C",
+          "-5°C",
+          "3°C"
+        ],
+        "correct_index": 0,
+        "explanation": "Nhiệt độ chiều = (-3) + 8 - 6 = 5 - 6 = -1°C."
+      }
+    ]
+  },
+  "stem3d_tab": {
+    "title": "Phòng Thí Nghiệm STEM 3D: Trục Số Nguyên",
+    "src": "assets/stem_labs/songuyen.html"
+  }
+}

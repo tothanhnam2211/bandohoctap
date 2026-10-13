@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BANDOHOCTAP.VN - Bản Đồ Học Tập 30 Ngày Bắt Gốc Toán 9</title>
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#075985',
+              800: '#0c4a6e',
+              900: '#0f3152',
+            },
+            zombie: {
+              500: '#ef4444',
+              600: '#dc2626',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- KaTeX for Math Rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" 
+    onload="renderMathInElement(document.body);"></script>
+  <!-- Font Awesome / Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    .tab-btn.active {
+      background-color: #0f2742;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(15, 39, 66, 0.25);
+    }
+    .skeleton-input {
+      border-bottom: 2px solid #0284c7;
+      background: #f8fafc;
+      transition: all 0.2s;
+    }
+    .skeleton-input:focus {
+      outline: none;
+      background: #e0f2fe;
+      border-bottom-color: #0369a1;
+    }
+    .quiz-option:hover {
+      border-color: #0284c7;
+      background-color: #f0f9ff;
+    }
+    .quiz-option.selected {
+      border-color: #0284c7;
+      background-color: #e0f2fe;
+      font-weight: 600;
+    }
+    .quiz-option.correct {
+      border-color: #10b981 !important;
+      background-color: #d1fae5 !important;
+    }
+    .quiz-option.incorrect {
+      border-color: #ef4444 !important;
+      background-color: #fee2e2 !important;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col">
+
+  <!-- TOP HEADER -->
+  <header class="bg-[#0f2a4a] text-white px-4 lg:px-8 py-3 flex items-center justify-between shadow-md sticky top-0 z-50">
+    <div class="flex items-center space-x-3">
+      <button id="toggle-sidebar" class="lg:hidden text-white text-xl p-1 hover:bg-slate-700 rounded">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="flex items-center space-x-2">
+        <i class="fa-solid fa-book-open-reader text-sky-400 text-2xl"></i>
+        <span class="font-extrabold text-xl tracking-wider text-white">BANDOHOCTAP.VN</span>
+      </div>
+      <span class="hidden md:inline-block text-xs uppercase bg-sky-600/40 border border-sky-400/30 px-2 py-0.5 rounded text-sky-200">
+        Khóa 30 Ngày Bắt Gốc Toán 9
+      </span>
+    </div>
+
+    <div class="flex items-center space-x-4">
+      <a href="https://zalo.me/0836686874" target="_blank" 
+         class="flex items-center space-x-2 bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-3 py-1.5 rounded-full text-xs sm:text-sm shadow transition">
+        <i class="fa-solid fa-phone-volume"></i>
+        <span>Zalo hỗ trợ: 0836686874</span>
+      </a>
+      <div class="hidden sm:flex items-center bg-slate-800/80 px-2.5 py-1 rounded-full border border-slate-700 text-xs text-amber-300">
+        <i class="fa-solid fa-fire mr-1 text-orange-400"></i>
+        <span>Streak: <b>1 Ngày</b></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <div class="flex-1 flex overflow-hidden">
+
+    <!-- SIDEBAR: BẢN ĐỒ 30 NGÀY -->
+    <aside id="sidebar" class="fixed inset-y-0 left-0 transform -translate-x-full lg:translate-x-0 lg:static z-40 w-72 bg-white border-r border-slate-200 flex flex-col transition duration-200 ease-in-out">
+      <div class="p-4 bg-slate-50 border-b border-slate-200">
+        <h2 class="text-sm font-bold text-slate-700 uppercase tracking-wider flex items-center">
+          <i class="fa-solid fa-map-location-dot mr-2 text-sky-600"></i>
+          BẢN ĐỒ 30 NGÀY BẮT GỐC
+        </h2>
+        <p class="text-xs text-slate-500 mt-1">Toán Đại Số & Hình Học 9</p>
+      </div>
+
+      <nav id="curriculum-list" class="flex-1 overflow-y-auto p-2 space-y-1 text-sm">
+        <!-- Rendered dynamically via JS -->
+      </nav>
+
+      <div class="p-3 border-t border-slate-200 bg-slate-50 text-xs text-slate-500 text-center">
+        Bản quyền © bandohoctap.vn
+      </div>
+    </aside>
+
+    <!-- CONTENT AREA -->
+    <main class="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 max-w-6xl mx-auto w-full">
+      
+      <!-- LESSON BANNER -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5 sm:p-6 mb-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center space-x-2 text-xs text-slate-500 font-mono mb-1">
+              <span>MÃ ID:</span>
+              <span id="lesson-id" class="font-bold text-sky-700 bg-sky-50 px-2 py-0.5 rounded border border-sky-200">K9_Toan_C1_N01</span>
+            </div>
+            <h1 id="lesson-title" class="text-xl sm:text-2xl font-black text-slate-900 leading-snug">
+              Ngày 01: Quy Tắc Dấu & Phép Tính Số Nguyên
+            </h1>
+          </div>
+
+          <div class="flex items-center space-x-3 shrink-0">
+            <a id="btn-download-docx" href="assets/day-01/Phieu_Hoc_Tap_Ngay_1.pdf" download 
+               class="inline-flex items-center space-x-2 bg-sky-600 hover:bg-sky-700 text-white font-bold px-4 py-2 rounded-lg text-sm shadow transition">
+              <i class="fa-solid fa-file-word"></i>
+              <span>Tải Phiếu Word (.docx)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4 TABS NAVIGATION -->
+        <div class="mt-6 border-b border-slate-200">
+          <div class="flex flex-wrap gap-2 text-sm font-semibold">
+            <button onclick="switchTab('shorts')" id="tab-btn-shorts" 
+                    class="tab-btn active px-4 py-2.5 rounded-t-lg transition flex items-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-700">
+              <i class="fa-solid fa-play text-red-500"></i>
+              <span>1. Video Shorts</span>
+            </button>
+            <button onclick="switchTab('infographic')" id="tab-btn-infographic" 
+                    class="tab-btn px-4 py-2.5 rounded-t-lg transition flex items-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-700">
+              <i class="fa-solid fa-brain text-purple-500"></i>
+              <span>2. Sơ Đồ Tư Duy & Tài Liệu</span>
+            </button>
+            <button onclick="switchTab('skeleton')" id="tab-btn-skeleton" 
+                    class="tab-btn px-4 py-2.5 rounded-t-lg transition flex items-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-700">
+              <i class="fa-solid fa-bolt text-amber-500"></i>
+              <span>3. Điền Khuyết Skeleton</span>
+            </button>
+            <button onclick="switchTab('quiz')" id="tab-btn-quiz" 
+                    class="tab-btn px-4 py-2.5 rounded-t-lg transition flex items-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-700">
+              <i class="fa-solid fa-trophy text-emerald-500"></i>
+              <span>4. Trắc Nghiệm Tương Tác</span>
+            </button>
+            <button onclick="switchTab('stem3d')" id="tab-btn-stem3d" 
+                    class="tab-btn px-4 py-2.5 rounded-t-lg transition flex items-center space-x-2 bg-slate-100 hover:bg-slate-200 text-slate-700">
+              <i class="fa-solid fa-cube text-cyan-500"></i>
+              <span>5. Phòng Thí Nghiệm 3D</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 1: VIDEO SHORTS -->
+      <section id="tab-shorts" class="tab-content bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
+        <div class="border-b border-slate-100 pb-4 mb-6">
+          <h2 id="shorts-heading" class="text-lg font-bold text-slate-900 flex items-center">
+            <i class="fa-solid fa-clapperboard text-red-500 mr-2"></i>
+            BỘ BA MICRO-SHORTS TỰ HỌC (30s - 45s)
+          </h2>
+          <p id="shorts-subheading" class="text-xs sm:text-sm text-slate-500 mt-1">
+            Xem ngắn để tháo gỡ từng điểm nghẽn kiến thức trong ngày:
+          </p>
+        </div>
+
+        <div id="shorts-grid" class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <!-- Clip Cards rendered by JS -->
+        </div>
+
+        <!-- Video Player Modal / Active Player -->
+        <div id="video-player-container" class="mt-8 hidden bg-slate-900 rounded-xl p-4 text-white">
+          <div class="flex justify-between items-center mb-3">
+            <h3 id="current-playing-title" class="font-bold text-sky-400 text-sm"></h3>
+            <button onclick="closeVideoPlayer()" class="text-slate-400 hover:text-white text-lg px-2">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div class="relative aspect-video max-w-2xl mx-auto bg-black rounded-lg overflow-hidden">
+            <video id="main-video-player" controls class="w-full h-full object-contain"></video>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: SƠ ĐỒ TƯ DUY & TÀI LIỆU -->
+      <section id="tab-infographic" class="tab-content hidden bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
+        <div class="border-b border-slate-100 pb-4 mb-6">
+          <h2 class="text-lg font-bold text-slate-900 flex items-center">
+            <i class="fa-solid fa-diagram-project text-purple-600 mr-2"></i>
+            SƠ ĐỒ TƯ DUY & TÀI LIỆU TẢI VỀ
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">
+            Tóm tắt Khung công thức vàng & Bộ tài liệu in ấn ra giấy:
+          </p>
+        </div>
+
+        <!-- Infographic Preview -->
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-6 flex flex-col items-center">
+          <div class="max-h-[500px] overflow-auto border border-slate-300 rounded-lg shadow-inner bg-white">
+            <img id="infographic-img" src="assets/day-01/infographic.png" alt="Sơ Đồ Tư Duy" 
+                 class="max-w-full h-auto object-contain cursor-zoom-in" onclick="zoomImage(this.src)">
+          </div>
+
+          <div class="flex flex-wrap gap-3 mt-4 justify-center">
+            <a id="btn-download-word-box" href="assets/day-01/Phieu_Hoc_Tap_Ngay_1.pdf" download 
+               class="bg-sky-600 hover:bg-sky-700 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-lg shadow transition flex items-center space-x-2">
+              <i class="fa-solid fa-download"></i>
+              <span>Tải Phiếu Word Chuẩn Khung (.docx)</span>
+            </a>
+            <a id="btn-download-png" href="assets/day-01/infographic.png" download 
+               class="bg-amber-600 hover:bg-amber-700 text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-lg shadow transition flex items-center space-x-2">
+              <i class="fa-solid fa-image"></i>
+              <span>Tải Sơ Đồ Tư Duy Chuẩn Nét (PNG)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Theory Blocks -->
+        <div id="theory-container" class="space-y-4">
+          <!-- Injected via JS -->
+        </div>
+      </section>
+
+      <!-- TAB 3: ĐIỀN KHUYẾT SKELETON NOTES -->
+      <section id="tab-skeleton" class="tab-content hidden bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
+        <div class="border-b border-slate-100 pb-4 mb-6">
+          <div class="flex items-center justify-between">
+            <h2 class="text-lg font-bold text-slate-900 flex items-center">
+              <i class="fa-solid fa-pen-fancy text-amber-500 mr-2"></i>
+              THỬ THÁCH ĐIỀN KHUYẾT SKELETON NOTES
+            </h2>
+            <span id="skeleton-score" class="text-xs font-bold text-amber-700 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">
+              Chưa làm
+            </span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1">
+            Điền kết quả đúng vào các ô trống dưới đây để hoàn thiện ghi nhớ:
+          </p>
+        </div>
+
+        <form id="skeleton-form" onsubmit="event.preventDefault(); checkSkeletonAnswers();">
+          <div id="skeleton-questions-list" class="space-y-6">
+            <!-- Questions rendered via JS -->
+          </div>
+
+          <div class="mt-8 pt-4 border-t border-slate-100 flex items-center space-x-4">
+            <button type="submit" 
+                    class="bg-amber-600 hover:bg-amber-700 text-white font-bold px-6 py-2.5 rounded-lg shadow transition">
+              <i class="fa-solid fa-check-double mr-1"></i>
+              Kiểm tra đáp án
+            </button>
+            <button type="button" onclick="resetSkeleton()" 
+                    class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold px-4 py-2.5 rounded-lg transition text-sm">
+              Làm lại
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- TAB 4: TRẮC NGHIỆM TƯƠNG TÁC -->
+      <section id="tab-quiz" class="tab-content hidden bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
+        <div class="border-b border-slate-100 pb-4 mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h2 class="text-lg font-bold text-slate-900 flex items-center">
+              <i class="fa-solid fa-award text-emerald-600 mr-2"></i>
+              THỬ THÁCH TRẮC NGHIỆM ĐIỂM 9+
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-500 mt-1">
+              Phân hóa rõ rệt 4 mức độ tư duy: Nhận biết, Bẫy Zombie, Vận dụng, Thực tế.
+            </p>
+          </div>
+          <div id="quiz-result-badge" class="hidden text-sm font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 px-3 py-1 rounded-full"></div>
+        </div>
+
+        <div id="quiz-questions-list" class="space-y-8">
+          <!-- Quiz questions rendered via JS -->
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-100 flex items-center space-x-4">
+          <button id="btn-submit-quiz" onclick="gradeQuiz()" 
+                  class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-2.5 rounded-lg shadow transition">
+            <i class="fa-solid fa-paper-plane mr-1"></i>
+            Nộp bài & Chấm điểm
+          </button>
+          <button onclick="resetQuiz()" 
+                  class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold px-4 py-2.5 rounded-lg transition text-sm">
+            Làm lại bài
+          </button>
+        </div>
+      </section>
+
+      <!-- TAB 5: STEM 3D LAB -->
+      <section id="tab-stem3d" class="tab-content hidden bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
+        <div class="border-b border-slate-100 pb-4 mb-4 flex items-center justify-between">
+          <h2 class="text-lg font-bold text-slate-900 flex items-center">
+            <i class="fa-solid fa-cube text-cyan-600 mr-2"></i>
+            PHÒNG THÍ NGHIỆM STEM 3D TƯƠNG TÁC
+          </h2>
+          <a href="assets/stem_labs/songuyen.html" target="_blank" class="text-xs text-sky-600 hover:underline">
+            <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> Mở toàn màn hình
+          </a>
+        </div>
+        <p class="text-xs text-slate-500 mb-4">
+          Kéo thanh trượt hoặc tương tác 3D để trực quan hóa quy tắc số nguyên:
+        </p>
+        <div class="w-full h-[600px] border border-slate-300 rounded-xl overflow-hidden shadow-inner bg-slate-900">
+          <iframe id="stem-iframe" src="assets/stem_labs/songuyen.html" class="w-full h-full border-0"></iframe>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- LIGHTBOX MODAL FOR IMAGE ZOOM -->
+  <div id="image-modal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center p-4" onclick="closeImageModal()">
+    <img id="modal-img" src="" class="max-w-full max-h-full rounded-lg shadow-2xl">
+  </div>
+
+  <!-- APP LOGIC SCRIPT -->
+  <script src="app.js"></script>
+</body>
+</html>
