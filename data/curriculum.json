@@ -2,14 +2,14 @@
   {
     "day": 1,
     "id": "K9_Toan_C1_N01",
-    "title": "Ngày 01: Quy Tắc Dấu & Phép Tính Số Nguyên",
+    "title": "Ngày 01: Bài học Toán 9",
     "status": "unlocked",
     "file": "data/day-01.json"
   },
   {
     "day": 2,
     "id": "K9_Toan_C1_N02",
-    "title": "Ngày 01: Quy Tắc Dấu & Phép Tính Số Nguyên",
+    "title": "Ngày 02: Phép Tính Số Hữu Tỉ",
     "status": "unlocked",
     "file": "data/day-02.json"
   },
