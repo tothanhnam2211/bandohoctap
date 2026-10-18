@@ -1,0 +1,212 @@
+[
+  {
+    "day": 1,
+    "id": "K9_Toan_C1_N01",
+    "title": "Ngày 01: Bài học Toán 9",
+    "status": "unlocked",
+    "file": "data/day-01.json"
+  },
+  {
+    "day": 2,
+    "id": "K9_Toan_C1_N02",
+    "title": "Ngày 02: Phép Tính Số Hữu Tỉ",
+    "status": "unlocked",
+    "file": "data/day-02.json"
+  },
+  {
+    "day": 3,
+    "id": "K9_Toan_C1_N03",
+    "title": "Ngày 03: Quy Tắc Lũy Thừa & Thứ Tự Thực Hiện",
+    "status": "locked",
+    "file": "data/day-03.json"
+  },
+  {
+    "day": 4,
+    "id": "K9_Toan_C1_N04",
+    "title": "Ngày 04: Căn Bậc Hai Đại Số & Hằng Đẳng Thức",
+    "status": "locked",
+    "file": "data/day-04.json"
+  },
+  {
+    "day": 5,
+    "id": "K9_Toan_C1_N05",
+    "title": "Ngày 05: Rút Gọn Biểu Thức Chứa Căn",
+    "status": "locked",
+    "file": "data/day-05.json"
+  },
+  {
+    "day": 6,
+    "id": "K9_Toan_C1_N06",
+    "title": "Ngày 06: Phương Trình Bậc Nhất & Quy Về Bậc Nhất",
+    "status": "locked",
+    "file": "data/day-06.json"
+  },
+  {
+    "day": 7,
+    "id": "K9_Toan_C1_N07",
+    "title": "Ngày 07: Hệ Hai Phương Trình Bậc Nhất Hai Ẩn",
+    "status": "locked",
+    "file": "data/day-07.json"
+  },
+  {
+    "day": 8,
+    "id": "K9_Toan_C1_N08",
+    "title": "Ngày 08: Toán Thực Tế Giải Bằng Hệ Phương Trình",
+    "status": "locked",
+    "file": "data/day-08.json"
+  },
+  {
+    "day": 9,
+    "id": "K9_Toan_C1_N09",
+    "title": "Ngày 09: Phương Trình Bậc Hai & Công Thức Nghiệm",
+    "status": "locked",
+    "file": "data/day-09.json"
+  },
+  {
+    "day": 10,
+    "id": "K9_Toan_C1_N10",
+    "title": "Ngày 10: Định Lý Vi-ét & Ứng Dụng",
+    "status": "locked",
+    "file": "data/day-10.json"
+  },
+  {
+    "day": 11,
+    "id": "K9_Toan_C2_N11",
+    "title": "Ngày 11: Chuyên Đề Bài Toán Chuyển Động (STEM 3D)",
+    "status": "locked",
+    "file": "data/day-11.json"
+  },
+  {
+    "day": 12,
+    "id": "K9_Toan_C2_N12",
+    "title": "Ngày 12: Bài Toán Năng Suất & Làm Chung Làm Riêng",
+    "status": "locked",
+    "file": "data/day-12.json"
+  },
+  {
+    "day": 13,
+    "id": "K9_Toan_C2_N13",
+    "title": "Ngày 13: Bài Toán Hình Học & Thực Tế Đo Đạc",
+    "status": "locked",
+    "file": "data/day-13.json"
+  },
+  {
+    "day": 14,
+    "id": "K9_Toan_C2_N14",
+    "title": "Ngày 14: Hệ Thức Lượng Trong Tam Giác Vuông",
+    "status": "locked",
+    "file": "data/day-14.json"
+  },
+  {
+    "day": 15,
+    "id": "K9_Toan_C2_N15",
+    "title": "Ngày 15: Tỉ Số Lượng Giác & Bài Toán Chiều Cao",
+    "status": "locked",
+    "file": "data/day-15.json"
+  },
+  {
+    "day": 16,
+    "id": "K9_Toan_C3_N16",
+    "title": "Ngày 16: Đường Tròn & Dây Cung",
+    "status": "locked",
+    "file": "data/day-16.json"
+  },
+  {
+    "day": 17,
+    "id": "K9_Toan_C3_N17",
+    "title": "Ngày 17: Tiếp Tuyến Của Đường Tròn & Tính Chất",
+    "status": "locked",
+    "file": "data/day-17.json"
+  },
+  {
+    "day": 18,
+    "id": "K9_Toan_C3_N18",
+    "title": "Ngày 18: Góc Ở Tâm & Góc Nội Tiếp",
+    "status": "locked",
+    "file": "data/day-18.json"
+  },
+  {
+    "day": 19,
+    "id": "K9_Toan_C3_N19",
+    "title": "Ngày 19: Góc Tạo Bởi Tia Tiếp Tuyến & Dây Cung",
+    "status": "locked",
+    "file": "data/day-19.json"
+  },
+  {
+    "day": 20,
+    "id": "K9_Toan_C3_N20",
+    "title": "Ngày 20: Tứ Giác Nội Tiếp - 4 Dấu Hiệu Vàng",
+    "status": "locked",
+    "file": "data/day-20.json"
+  },
+  {
+    "day": 21,
+    "id": "K9_Toan_C4_N21",
+    "title": "Ngày 21: Bất Đẳng Thức Cô-si Cơ Bản",
+    "status": "locked",
+    "file": "data/day-21.json"
+  },
+  {
+    "day": 22,
+    "id": "K9_Toan_C4_N22",
+    "title": "Ngày 22: Kỹ Thuật Chọn Điểm Rơi Bất Đẳng Thức",
+    "status": "locked",
+    "file": "data/day-22.json"
+  },
+  {
+    "day": 23,
+    "id": "K9_Toan_C4_N23",
+    "title": "Ngày 23: Hình Nón, Hình Trụ, Hình Cầu Thực Tế",
+    "status": "locked",
+    "file": "data/day-23.json"
+  },
+  {
+    "day": 24,
+    "id": "K9_Toan_C4_N24",
+    "title": "Ngày 24: Bảng Thống Kê & Tần Số",
+    "status": "locked",
+    "file": "data/day-24.json"
+  },
+  {
+    "day": 25,
+    "id": "K9_Toan_C4_N25",
+    "title": "Ngày 25: Xác Suất Của Biến Cố Ngẫu Nhiên",
+    "status": "locked",
+    "file": "data/day-25.json"
+  },
+  {
+    "day": 26,
+    "id": "K9_Toan_C5_N26",
+    "title": "Ngày 26: Luyện Đề Tác Chiến Số 01",
+    "status": "locked",
+    "file": "data/day-26.json"
+  },
+  {
+    "day": 27,
+    "id": "K9_Toan_C5_N27",
+    "title": "Ngày 27: Luyện Đề Tác Chiến Số 02",
+    "status": "locked",
+    "file": "data/day-27.json"
+  },
+  {
+    "day": 28,
+    "id": "K9_Toan_C5_N28",
+    "title": "Ngày 28: Luyện Đề Tác Chiến Số 03",
+    "status": "locked",
+    "file": "data/day-28.json"
+  },
+  {
+    "day": 29,
+    "id": "K9_Toan_C5_N29",
+    "title": "Ngày 29: Rà Soát Bẫy Lỗi Zombie Toàn Tập",
+    "status": "locked",
+    "file": "data/day-29.json"
+  },
+  {
+    "day": 30,
+    "id": "K9_Toan_C5_N30",
+    "title": "Ngày 30: Chiến Lược Phân Bổ 120 Phút Thi Vào 10",
+    "status": "locked",
+    "file": "data/day-30.json"
+  }
+]

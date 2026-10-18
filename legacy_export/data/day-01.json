@@ -1,0 +1,126 @@
+{
+  "day": 1,
+  "id": "K9_Toan_C1_N01",
+  "title": "Ngày 01: Bài học Toán 9",
+  "download_links": {
+    "docx": "assets/day-01/Phieu_Hoc_Tap_Ngay_1.pdf",
+    "infographic": "assets/day-01/infographic.png"
+  },
+  "shorts": {
+    "heading": "BỘ BA MICRO-SHORTS TỰ HỌC (30s - 45s)",
+    "subheading": "Xem ngắn để tháo gỡ từng điểm nghẽn kiến thức trong ngày:",
+    "clips": [
+      {
+        "id": "clip1",
+        "tag": "Clip 1: Zombie Bẫy Lỗi - Tháo gỡ lỗi nhầm (-7) + (-5) = +12",
+        "title": "Zombie Bẫy Lỗi - Tháo gỡ lỗi nhầm (-7) + (-5) = +12",
+        "video_url": "assets/day-01/clip1.mp4",
+        "thumbnail": "assets/day-01/infographic.png",
+        "badge": "Bẫy Zombie",
+        "desc": "Tập trung tháo gỡ điểm nghẽn then chốt của Zombie Bẫy Lỗi - Tháo gỡ lỗi nhầm (-7) + (-5) = +12."
+      },
+      {
+        "id": "clip2",
+        "tag": "Clip 2: Bí Kíp Tìm X - Gỡ kẹt bài toán 25 - (x + 10) = -15",
+        "title": "Bí Kíp Tìm X - Gỡ kẹt bài toán 25 - (x + 10) = -15",
+        "video_url": "assets/day-01/clip2.mp4",
+        "thumbnail": "assets/day-01/infographic.png",
+        "badge": "Bí kíp 9+",
+        "desc": "Tập trung tháo gỡ điểm nghẽn then chốt của Bí Kíp Tìm X - Gỡ kẹt bài toán 25 - (x + 10) = -15."
+      },
+      {
+        "id": "clip3",
+        "tag": "Clip 3: Thực Tế Mẫu Sơn - Trực quan hóa diễn tiến nhiệt độ bằng trục số",
+        "title": "Thực Tế Mẫu Sơn - Trực quan hóa diễn tiến nhiệt độ bằng trục số",
+        "video_url": "assets/day-01/clip3.mp4",
+        "thumbnail": "assets/day-01/infographic.png",
+        "badge": "Bí kíp 9+",
+        "desc": "Tập trung tháo gỡ điểm nghẽn then chốt của Thực Tế Mẫu Sơn - Trực quan hóa diễn tiến nhiệt độ bằng trục số."
+      }
+    ]
+  },
+  "infographic_tab": {
+    "heading": "SƠ ĐỒ TƯ DUY & TÀI LIỆU TẢI VỀ",
+    "subheading": "Tóm tắt Khung công thức vàng & Bộ tài liệu in ấn ra giấy:",
+    "image_url": "assets/day-01/infographic.png",
+    "theory_sections": [
+      {
+        "title": "Kiến Thức Cốt Lõi Cần Nhớ",
+        "rules": [
+          "Clip 1: Zombie Bẫy Lỗi - Tháo gỡ lỗi nhầm (-7) + (-5) = +12",
+          "Clip 2: Bí Kíp Tìm X - Gỡ kẹt bài toán 25 - (x + 10) = -15",
+          "Clip 3: Thực Tế Mẫu Sơn - Trực quan hóa diễn tiến nhiệt độ bằng trục số",
+          "Cùng dấu âm: (-a) + (-b) = -(a + b) (ví dụ: (-7) + (-5) = -12)",
+          "Khác dấu: Lấy số lớn trừ số nhỏ rồi mang dấu của số có giá trị tuyệt đối lớn hơn."
+        ]
+      }
+    ]
+  },
+  "skeleton_tab": {
+    "heading": "THỬ THÁCH ĐIỀN KHUYẾT SKELETON NOTES",
+    "subheading": "Điền kết quả đúng vào các ô trống dưới đây để hoàn thiện ghi nhớ:",
+    "questions": []
+  },
+  "quiz_tab": {
+    "heading": "THỬ THÁCH TRẮC NGHIỆM ĐIỂM 9+",
+    "subheading": "Kiểm tra kiến thức từ nhận biết đến vận dụng thực tế:",
+    "questions": [
+      {
+        "id": "q1",
+        "level": "Nhận biết",
+        "question": "Câu 1: Kết quả của phép tính (-12) . (-5) là:",
+        "options": [
+          "60",
+          "-60",
+          "-17",
+          "600"
+        ],
+        "correct_index": 0,
+        "explanation": "Nhân hai số nguyên cùng dấu âm cho kết quả dương: (-12) . (-5) = 60."
+      },
+      {
+        "id": "q2",
+        "level": "Thông hiểu - Cảnh báo bẫy",
+        "question": "Câu 2: Phá ngoặc biểu thức A = 25 - (x + 10) đúng là:",
+        "options": [
+          "A = 25 - x + 10",
+          "A = 25 - x - 10",
+          "A = 25 + x - 10",
+          "A = 25 + x + 10"
+        ],
+        "correct_index": 1,
+        "explanation": "Cảnh báo bẫy Zombie: trước ngoặc là dấu trừ phải đổi dấu cả x và 10."
+      },
+      {
+        "id": "q3",
+        "level": "Vận dụng",
+        "question": "Câu 3: Tìm x, biết 25 - (x + 10) = -15:",
+        "options": [
+          "x = 0",
+          "x = 30",
+          "x = 15",
+          "x = -30"
+        ],
+        "correct_index": 1,
+        "explanation": "15 - x = -15 => x = 30."
+      },
+      {
+        "id": "q4",
+        "level": "Thực tế",
+        "question": "Câu 4: Đỉnh Mẫu Sơn ban đêm -3°C, trưa tăng 8°C, chiều giảm 6°C. Nhiệt độ lúc chiều là:",
+        "options": [
+          "Nhiệt độ lúc chiều là:",
+          "-1°C",
+          "1°C",
+          "-5°C"
+        ],
+        "correct_index": 0,
+        "explanation": "(-3) + 8 - 6 = -1°C."
+      }
+    ]
+  },
+  "stem3d_tab": {
+    "title": "Phòng Thí Nghiệm STEM 3D - Ngày 01",
+    "src": "assets/stem_labs/songuyen.html"
+  }
+}
