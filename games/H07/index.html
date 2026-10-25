@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#17384a">
+<title>H07 — Tổng Công Trình Sư Hiên Đình | Jules handoff</title>
+<style>
+:root{--ink:#183b48;--jade:#136b57;--gold:#db9b39;--red:#ab3d31;--paper:#fffaf1;--line:#e3d6bd}
+*{box-sizing:border-box}body{margin:0;background:#f1e9d9;color:var(--ink);font:16px/1.5 system-ui,-apple-system,'Segoe UI',sans-serif}
+header{background:linear-gradient(115deg,#163a48,#22665c);color:#fff;padding:20px 18px;border-bottom:5px solid var(--gold)}
+header .wrap{max-width:1160px;margin:auto}header small{letter-spacing:1.8px;color:#f5cf8a;font-weight:750}
+h1{font-size:clamp(23px,3.4vw,36px);line-height:1.2;margin:7px 0}header p{margin:7px 0;max-width:740px;color:#e3eee8}
+main{max-width:1160px;margin:auto;padding:18px 14px 48px}.world{background:var(--paper);border:1px solid var(--line);border-radius:19px;padding:14px;margin-bottom:14px;box-shadow:0 7px 22px #263f3920}
+.tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:13px 0}
+button,input{font:inherit}button{cursor:pointer;border-radius:11px;border:1px solid #c1b39b;padding:11px 13px;color:var(--ink);background:#fffdfa;font-weight:650}
+button:focus-visible,input:focus-visible{outline:3px solid #e1a341;outline-offset:2px}
+button[aria-selected=true],.primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+button:active{transform:translateY(1px)}button:disabled{opacity:.5;cursor:not-allowed}
+.tabs button{min-height:66px}.layout{display:grid;grid-template-columns:1.45fr 1fr;gap:16px}.stage{min-width:0}
+canvas{display:block;background:#fbf6eb;border:2px solid #c9bb9e;border-radius:15px;width:100%;max-width:100%;height:auto;touch-action:none}
+.note{font-size:13px;color:#52665f;padding:6px 2px}.mission{border-left:5px solid var(--gold);padding:9px 12px;background:#fff6df;border-radius:6px;margin-bottom:12px}
+fieldset{border:1px solid var(--line);border-radius:12px;padding:12px;margin:10px 0}legend{font-weight:750}
+.actions{display:flex;gap:8px;flex-wrap:wrap}.actions button{flex:1 1 105px}
+label{display:block;font-weight:680;margin:7px 0}input[type=range]{width:100%;accent-color:var(--jade);height:38px}
+input[type=number]{width:100%;border:1px solid #a9a396;border-radius:9px;padding:10px;background:#fff;font-size:18px}
+.hint{margin-top:13px;background:#ebf4ef;border:1px solid #b1cdbd;border-radius:12px;padding:12px}
+.feedback{min-height:60px;border-radius:12px;background:#f4efe3;margin:12px 0;padding:12px;font-weight:650}
+.feedback.ok{background:#dff2e5;color:#165a3d}.feedback.bad{background:#fae3dd;color:#7c3328}
+.mini{font-size:13px;color:#5d6a65}.progress{font-weight:650;color:#efe0b3}
+@media(max-width:760px){.layout{grid-template-columns:1fr}.tabs button{padding:8px 4px;font-size:13px;min-height:70px}.world{padding:10px}main{padding:12px 9px 28px}}
+@media print{@page{size:A4;margin:13mm}header{color:#111;background:#fff;border:0}header p,.tabs,.controls,.hint,.feedback,.note,.no-print{display:none!important}body{background:#fff}main{padding:0}.world{border:0;box-shadow:none;padding:0}.layout{display:block}.stage{width:100%;max-width:170mm}canvas{width:100%;max-height:100mm;object-fit:contain}.mission{break-inside:avoid;color:#111;background:#fff;border:1px solid #bbb}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<small>YOURDREAM · THẾ GIỚI TOÁN HỌC H07 · BẢN CHUẨN BỊ CHO JULES</small>
+<h1>Đình Viên Bách Nghệ — Tổng Công Trình Sư</h1>
+<p>Không chỉ tìm đáp số. Hãy trực tiếp kiến thiết hiên đình, phân hoạch quảng trường và thiết kế lối đi khu vườn.</p>
+<div class="progress" id="progress" aria-live="polite">0/3 công trình hoàn thành</div>
+</div></header>
+<main>
+<section class="world">
+<nav class="tabs no-print" aria-label="Ba hồi chơi">
+<button id="tab1" aria-selected="true" onclick="openAct(1)">Hồi 1<br>Toán 6 · Lát gạch</button>
+<button id="tab2" aria-selected="false" onclick="openAct(2)">Hồi 2<br>Toán 8 · Chữ L</button>
+<button id="tab3" aria-selected="false" onclick="openAct(3)">Hồi 3<br>Toán 9 · Lối đi</button>
+</nav>
+<div class="layout">
+<div class="stage">
+<div class="mission" id="mission"></div>
+<canvas id="stage" width="800" height="480" role="img" aria-label="Sa bàn tương tác; sử dụng các nút và thanh điều khiển nếu không thể thao tác trực tiếp"></canvas>
+<p class="note" id="stageNote"></p>
+</div>
+<div class="controls">
+<div id="act1">
+<fieldset><legend>Chọn kích thước gạch</legend><div class="actions" id="sizes">
+<button onclick="setTileSide(.25)">25 cm</button><button onclick="setTileSide(.5)">50 cm</button><button onclick="setTileSide(1)">1 m</button></div></fieldset>
+<fieldset><legend>Trực tiếp lát gạch</legend>
+<p class="mini">Chạm hoặc kéo ngón tay trên từng ô trong sa bàn để đặt gạch. Có thể dùng nút bên dưới để điều chỉnh.</p>
+<label>Số gạch đang đặt: <span id="tileCount">0</span></label>
+<div class="actions"><button onclick="changeTileCount(-1)">Bớt một viên</button><button onclick="changeTileCount(1)">Thêm một viên</button><button onclick="clearTiles()">Làm lại sân</button></div>
+</fieldset></div>
+<div id="act2" hidden>
+<fieldset><legend>Biến thể sân chữ L</legend><div class="actions"><button onclick="setG08('V01_38M2')">Nhánh trái cao 6 m</button><button onclick="setG08('V02_33M2')">Nhánh trái cao 5 m</button></div></fieldset>
+<fieldset><legend>Phân hoạch bằng tia laser</legend>
+<p class="mini">Dùng ngón tay vạch đường ngang hoặc dọc trên sa bàn; hoặc chọn cách trừ phần hồ sen.</p>
+<div class="actions"><button onclick="setCut('horizontal')">Cắt ngang</button><button onclick="setCut('vertical')">Cắt dọc</button><button onclick="setCut('subtract')">Bù trừ góc khuyết</button><button onclick="setCut('overlap')">Thử cộng trùng</button></div>
+<label for="areaAnswer">Bạn tính được diện tích sân (m²) là bao nhiêu?</label>
+<input id="areaAnswer" type="number" inputmode="decimal" placeholder="Tự nhập kết quả" oninput="areaChanged()" autocomplete="off">
+</fieldset></div>
+<div id="act3" hidden>
+<fieldset><legend>Thiết kế lối đi bốn phía</legend>
+<p class="mini">Kéo mép sân trên sa bàn hoặc thanh trượt để thay đổi bề rộng x. Thảm cỏ phải còn 60 m² và các kích thước phải dương.</p>
+<label for="xRange">Bề rộng x = <span id="xVal">2,5</span> m</label>
+<input type="range" id="xRange" min=".5" max="9" step=".5" value="2.5" oninput="setG09(this.value)">
+<div class="actions"><button onclick="setG09(4)">Khảo sát biên x = 4</button><button onclick="setG09(9)">Khảo sát nghiệm x = 9</button></div>
+</fieldset></div>
+<button class="primary" style="width:100%;padding:14px;margin-top:8px" onclick="stressTest()">Thử thách Mưa Đầu Mùa</button>
+<div id="feedback" class="feedback" aria-live="polite">Hãy thao tác trên sa bàn, rồi kiểm tra công trình.</div>
+<div class="hint"><b>Cố vấn tư duy · <span id="hintLevel">0/3</span></b>
+<p id="hintText">Bạn có thể yêu cầu gợi ý sau lần thử đầu tiên.</p>
+<button id="hintButton" onclick="hintNext()">Xin gợi ý tiếp theo</button></div>
+<button class="no-print" style="margin-top:12px" onclick="window.print()">In phiếu A4</button>
+</div></div>
+</section>
+<p class="mini">Phiên bản H07 Jules-ready: được tái dựng từ mã H07 v2.1 do Product Owner chuyển trong cuộc trò chuyện, sửa các lỗi logic đã nhận diện. Chưa tích hợp phôi 3D của Argon; đang là Canvas 2D chính xác, không phải bản đã nghiệm thu hoặc phát hành.</p>
+</main>
+<script>
+"use strict";
+const STORE='YOURDREAM_H07_JULES_READY_V01';
+const defaults=()=>({act:1,side:.5,tiles:[],g08:'V01_38M2',cut:null,area:'',x:2.5,pass:{1:false,2:false,3:false},attempt:{1:0,2:0,3:0},hint:0,feedback:''});
+let state=defaults(),drag=false,dragStart=null;
+const C=document.getElementById('stage'),ctx=C.getContext('2d');
+function currentTotal(){return Math.round(8/(state.side*state.side))}
+function safeLoad(){try{const p=JSON.parse(localStorage.getItem(STORE)||'null');if(p&&[1,2,3].includes(p.act)&&[.25,.5,1].includes(p.side)&&Array.isArray(p.tiles)&&p.tiles.every(n=>Number.isInteger(n)&&n>=0&&n<Math.round(8/(p.side*p.side)))&&['V01_38M2','V02_33M2'].includes(p.g08)&&Number.isFinite(p.x)&&p.x>=.5&&p.x<=9){state={...defaults(),...p,pass:{...defaults().pass,...p.pass},attempt:{...defaults().attempt,...p.attempt}}}}catch(e){state=defaults()}}
+function save(){try{localStorage.setItem(STORE,JSON.stringify(state))}catch(e){}}
+function result(msg,ok=null){state.feedback=msg;let e=document.getElementById('feedback');e.textContent=msg;e.className='feedback'+(ok===true?' ok':ok===false?' bad':'');}
+function invalidate(){state.pass[state.act]=false;state.hint=0;result('Dữ kiện đã đổi. Hãy hoàn thành phép thử với công trình hiện tại.');save();refresh();}
+function refresh(){
+document.getElementById('progress').textContent=Object.values(state.pass).filter(Boolean).length+'/3 công trình hoàn thành'+(state.pass[state.act]?' · Hồi này đã đạt ✓':'');
+for(let i=1;i<=3;i++){document.getElementById('tab'+i).setAttribute('aria-selected',String(i===state.act));document.getElementById('act'+i).hidden=i!==state.act}
+document.getElementById('tileCount').textContent=state.tiles.length;
+document.getElementById('xRange').value=state.x;
+document.getElementById('xVal').textContent=String(state.x).replace('.',',');
+document.getElementById('areaAnswer').value=state.area;
+document.getElementById('hintLevel').textContent=state.hint+'/3';
+document.getElementById('hintButton').disabled=state.attempt[state.act]===0||state.hint===3;
+const m={1:'Hồi 1 · Lát kín hiên đình 4 m × 2 m bằng gạch hình vuông. Hãy lựa chọn và tự đặt đủ gạch.',2:'Hồi 2 · Sân hình chữ L có dải dưới dài 9 m, rộng 2 m và nhánh trái rộng 5 m. Hãy chia hình không chồng lấn rồi tính diện tích.',3:'Hồi 3 · Khu vườn ngoài 12 m × 8 m. Thiết kế lối đi rộng x ở cả bốn phía sao cho thảm cỏ giữa có diện tích 60 m².'};
+document.getElementById('mission').textContent=m[state.act];
+document.getElementById('stageNote').textContent=state.act===1?'Mỗi ô là một viên gạch. Chạm hoặc kéo để lát; kéo qua ô đã lát không xóa gạch.':state.act===2?'Tô màu thể hiện các miền phân hoạch; nhập phép tính của bạn ở bảng điều khiển.':'Màu xanh là diện tích thảm cỏ hợp lệ; màu đỏ biểu thị kích thước hình học không hợp lệ.';
+draw();
+}
+function openAct(a){state.act=a;state.hint=0;save();result('Hãy khảo sát và hoàn thành thử thách hồi '+a+'.');refresh()}
+function setTileSide(a){state.side=a;state.tiles=[];invalidate()}
+function clearTiles(){state.tiles=[];invalidate()}
+function changeTileCount(delta){let max=currentTotal();let a=new Set(state.tiles);if(delta>0){for(let i=0;i<max;i++)if(!a.has(i)){a.add(i);break}}else if(a.size){a.delete(Math.max(...a))}state.tiles=[...a].sort((a,b)=>a-b);invalidate()}
+function setG08(v){state.g08=v;state.cut=null;state.area='';invalidate()}
+function setCut(v){state.cut=v;invalidate()}
+function areaChanged(){state.area=document.getElementById('areaAnswer').value;invalidate()}
+function setG09(v){const n=Number(v);if(!Number.isFinite(n))return;state.x=Math.round(Math.min(9,Math.max(.5,n))*2)/2;invalidate()}
+function stressTest(){
+state.attempt[state.act]++;
+let ok=false,msg='';
+if(state.act===1){let n=currentTotal();ok=state.tiles.length===n;msg=ok?'Công trình đạt! Bạn đã lát kín '+n+' ô, không còn vùng trống.':'Mưa đầu mùa làm lộ '+(n-state.tiles.length)+' ô chưa được lát. Hãy kiểm tra số ô theo hàng và cột.';}
+if(state.act===2){const correct=state.g08==='V01_38M2'?38:33;const val=Number(state.area);ok=state.cut!==null&&state.cut!=='overlap'&&state.area.trim()!==''&&Number.isFinite(val)&&Math.abs(val-correct)<1e-9;msg=ok?'Công trình đạt! Cách phân hoạch và kết quả diện tích của bạn khớp nhau.':state.cut==='overlap'?'Vùng góc 5 m × 2 m đã bị tính hai lần. Hãy thử phân hoạch không chồng lấn.':'Chưa đạt. Hãy chọn đường cắt đúng và tự kiểm tra tổng diện tích các miền.';}
+if(state.act===3){ok=state.x>0&&state.x<4&&Math.abs((12-2*state.x)*(8-2*state.x)-60)<1e-9;msg=ok?'Thành công! Lối đi có kích thước hợp lệ và thảm cỏ còn đúng 60 m².':state.x>=4?'Thiết kế bất khả thi: khi x ≥ 4 m, chiều rộng cỏ bằng 0 hoặc âm. Hãy phân biệt nghiệm đại số và nghiệm hình học.':'Diện tích cỏ chưa đúng 60 m². Hãy điều chỉnh x và quan sát kích thước còn lại.';}
+state.pass[state.act]=ok;result(msg,ok);save();refresh();
+}
+const HINTS={
+1:['Một mét vuông chứa bao nhiêu viên gạch? Hãy phân biệt cạnh viên gạch với diện tích viên gạch.','Đếm số viên theo chiều dài 4 m và chiều rộng 2 m, rồi nhân hai kết quả.','Số viên cần lát là N = 8 / a²; với a = 0,5 m thì N = 32 viên.'],
+2:['Hai hình chữ nhật có đang phủ lên cùng một góc sân không?','Nếu cộng cả cột trái và dải ngang dưới, phải trừ miền chung 5 × 2 = 10 m².','Nhánh trái cao 6 m → 38 m²; cao 5 m → 33 m². Dùng một cách cắt không chồng lấn.'],
+3:['Các kích thước thảm cỏ phải dương: 12−2x và 8−2x.','Lập phương trình (12−2x)(8−2x)=60 và xét miền 0 < x < 4.','Phương trình có nghiệm 1 và 9. Chỉ x = 1 m nằm trong miền hình học.']
+};
+function hintNext(){if(state.attempt[state.act]===0||state.hint>=3)return;state.hint++;document.getElementById('hintText').textContent=HINTS[state.act][state.hint-1];save();refresh()}
+function background(){ctx.clearRect(0,0,800,480);const g=ctx.createLinearGradient(0,0,0,480);g.addColorStop(0,'#fef9eb');g.addColorStop(1,'#e6ddc7');ctx.fillStyle=g;ctx.fillRect(0,0,800,480);ctx.fillStyle='#1d4a51';ctx.font='bold 22px system-ui';ctx.fillText('ĐÌNH VIÊN BÁCH NGHỆ',28,40)}
+function line(txt,x,y,size=16,color='#234e53'){ctx.fillStyle=color;ctx.font='bold '+size+'px system-ui';ctx.fillText(txt,x,y)}
+function draw1(){let side=state.side,cols=Math.round(4/side),rows=Math.round(2/side);let x=75,y=115,w=460,h=230,cw=w/cols,ch=h/rows;ctx.fillStyle='#cdb99c';ctx.fillRect(x,y,w,h);
+let placed=new Set(state.tiles);
+for(let r=0;r<rows;r++)for(let c=0;c<cols;c++){let n=r*cols+c;ctx.fillStyle=placed.has(n)?'#ba6545':'#dfd0b7';ctx.fillRect(x+c*cw+1,y+r*ch+1,Math.max(0,cw-2),Math.max(0,ch-2));ctx.strokeStyle='#9a8770';ctx.lineWidth=.5;ctx.strokeRect(x+c*cw,y+r*ch,cw,ch);if(!placed.has(n)&&state.attempt[1]&&state.feedback.includes('Mưa')){ctx.fillStyle='#4db8d783';ctx.fillRect(x+c*cw,y+r*ch,cw,ch)}}
+line('Chiều dài 4 m',228,100);line('Chiều rộng 2 m',72,382);
+ctx.fillStyle='#eee0bf';ctx.fillRect(566,115,190,230);ctx.strokeStyle='#b7985d';ctx.strokeRect(566,115,190,230);line('Kính lúp 1 m²',579,150,18);
+let pm=Math.round(1/side),z=130/pm;for(let r=0;r<pm;r++)for(let c=0;c<pm;c++){ctx.fillStyle='#cb7752';ctx.fillRect(592+c*z+1,173+r*z+1,z-2,z-2)}
+line('Cạnh gạch: '+side+' m',80,424,19);line('Đang lát: '+placed.size+' viên',80,451,19);
+}
+function draw2(){let totalH=state.g08==='V01_38M2'?6:5,topH=totalH-2,scale=47,ox=114,oy=96;let w=9*scale,h=totalH*scale,cut=state.cut;
+ctx.fillStyle='#7cc7d7';ctx.fillRect(ox+5*scale,oy,4*scale,topH*scale);
+ctx.fillStyle='#e5b886';ctx.fillRect(ox,oy,5*scale,h);ctx.fillRect(ox+5*scale,oy+topH*scale,4*scale,2*scale);
+if(cut==='horizontal'){ctx.fillStyle='#a2d6ab';ctx.fillRect(ox,oy,5*scale,topH*scale);ctx.fillStyle='#a2c8ea';ctx.fillRect(ox,oy+topH*scale,w,2*scale)}
+if(cut==='vertical'){ctx.fillStyle='#a2d6ab';ctx.fillRect(ox,oy,5*scale,h);ctx.fillStyle='#a2c8ea';ctx.fillRect(ox+5*scale,oy+topH*scale,4*scale,2*scale)}
+if(cut==='overlap'){ctx.fillStyle='#e76c62ba';ctx.fillRect(ox,oy+topH*scale,5*scale,2*scale)}
+ctx.strokeStyle='#34555b';ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(ox,oy);ctx.lineTo(ox+5*scale,oy);ctx.lineTo(ox+5*scale,oy+topH*scale);ctx.lineTo(ox+w,oy+topH*scale);ctx.lineTo(ox+w,oy+h);ctx.lineTo(ox,oy+h);ctx.closePath();ctx.stroke();
+line('5 m',ox+72,oy-12);line('9 m',ox+190,oy+h+25);line('Cao '+totalH+' m',15,oy+80);line('2 m',ox+w+12,oy+topH*scale+55);
+line('Hồ sen',ox+5*scale+30,oy+topH*scale/2,16,'#1b7083');
+line('Đã chọn: '+({horizontal:'cắt ngang',vertical:'cắt dọc',subtract:'bù trừ',overlap:'cộng trùng'}[cut]||'chưa phân hoạch'),114,440,19);
+}
+function draw3(){let x=state.x,s=36,ox=130,oy=95,w=12*s,h=8*s,iw=12-2*x,ih=8-2*x;ctx.fillStyle='#b9a9a0';ctx.fillRect(ox,oy,w,h);ctx.strokeStyle='#41636a';ctx.lineWidth=4;ctx.strokeRect(ox,oy,w,h);
+if(iw>0&&ih>0){ctx.fillStyle='#75b87b';ctx.fillRect(ox+x*s,oy+x*s,iw*s,ih*s);ctx.strokeStyle='#24734d';ctx.strokeRect(ox+x*s,oy+x*s,iw*s,ih*s)}else{ctx.fillStyle='#df786ca3';ctx.fillRect(ox,oy,w,h);line('HÌNH HỌC KHÔNG HỢP LỆ',ox+50,oy+135,22,'#8e281e')}
+line('12 m',ox+195,oy-14);line('8 m',ox-54,oy+125);
+line('x = '+x.toFixed(1)+' m',610,140,23);
+line('Dài cỏ: '+iw.toFixed(1)+' m',590,200,17,iw>0?'#245a48':'#a52e29');
+line('Rộng cỏ: '+ih.toFixed(1)+' m',590,240,17,ih>0?'#245a48':'#a52e29');
+line('Mục tiêu: 60 m²',130,434,20);
+}
+function draw(){background();if(state.act===1)draw1();else if(state.act===2)draw2();else draw3()}
+function position(e){const r=C.getBoundingClientRect();return{x:(e.clientX-r.left)*C.width/r.width,y:(e.clientY-r.top)*C.height/r.height}}
+function move(e){const p=position(e);if(state.act===1){let cols=Math.round(4/state.side),rows=Math.round(2/state.side);if(p.x>=75&&p.x<535&&p.y>=115&&p.y<345){let c=Math.floor((p.x-75)/(460/cols)),r=Math.floor((p.y-115)/(230/rows)),id=r*cols+c;if(!state.tiles.includes(id)){state.tiles.push(id);state.tiles.sort((a,b)=>a-b);invalidate()}}}
+if(state.act===3){let candidate=(p.x-130)/36;if(candidate>=.5&&candidate<=9){let n=Math.round(candidate*2)/2;if(n!==state.x){state.x=n;invalidate()}}}}
+C.addEventListener('pointerdown',e=>{drag=true;dragStart=position(e);try{C.setPointerCapture(e.pointerId)}catch{}if(state.act!==2)move(e)});
+C.addEventListener('pointermove',e=>{if(drag&&state.act!==2)move(e)});
+C.addEventListener('pointerup',e=>{if(!drag)return;drag=false;if(state.act===2&&dragStart){let p=position(e),dx=p.x-dragStart.x,dy=p.y-dragStart.y;if(Math.hypot(dx,dy)>32){state.cut=Math.abs(dx)>Math.abs(dy)?'horizontal':'vertical';invalidate()}}dragStart=null});
+C.addEventListener('pointercancel',()=>{drag=false;dragStart=null});
+safeLoad();result('Chạm vào sa bàn để bắt đầu.');refresh();
+</script>
+</body></html>

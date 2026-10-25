@@ -1,0 +1,118 @@
+{
+  "contract_version": "2.1.1-jules-staging",
+  "project_code": "YOURDREAM_H07_COURTYARD_ARCHITECT",
+  "status": "IMPLEMENTATION_CANDIDATE_NOT_APPROVED",
+  "provenance": {
+    "user_supplied": "H07 v2.1 HTML and contract pasted in conversation 2026-10-26",
+    "baseline": "https://drive.google.com/file/d/1OCUw_B2xgFh-RL28FMR5HXbi0uCGtN4w/view",
+    "note": "The staged index.html is a newly adapted, code-authored playable candidate, not byte-identical to Argon's V2.1 source."
+  },
+  "governance": {
+    "canonical_id": null,
+    "student_ui_hygiene": true,
+    "student_only_build": true,
+    "paid_api_allowed": false,
+    "teacher_qa_separate": true
+  },
+  "art": {
+    "world_clean_plate": {
+      "path": "assets/H07_Master_Clean_Plate.webp",
+      "status": "MISSING_FROM_BRANCH",
+      "resolution_expected": [
+        2560,
+        1440
+      ]
+    },
+    "spatial_anchors": {
+      "status": "NEEDS_ARGON_ALIGNMENT_TO_NEW_SCENE"
+    }
+  },
+  "acts": [
+    {
+      "id": "G06_H07",
+      "grade": 6,
+      "skill": "S_G06_B20",
+      "provenance": "BIN_PHIEU06_MAU04 / B1-A22 claimed; independently recheck exact exercise",
+      "length_m": 4,
+      "width_m": 2,
+      "allowed_tile_side_m": [
+        0.25,
+        0.5,
+        1
+      ],
+      "expected_tiles": {
+        "1": 8,
+        "0.25": 128,
+        "0.5": 32
+      },
+      "pass": "all grid cells occupied; no surplus"
+    },
+    {
+      "id": "G08_H07",
+      "grade": 8,
+      "skill_codes": [],
+      "skills_pending_map1_review": [
+        "S_G08_B13",
+        "S_G08_B14",
+        "S_G08_B26"
+      ],
+      "scope": "EXAMPLE_ONLY",
+      "version_presets": {
+        "V01_38M2": {
+          "left_width_m": 5,
+          "left_height_m": 6,
+          "bottom_width_m": 9,
+          "bottom_height_m": 2,
+          "cutout_width_m": 4,
+          "cutout_height_m": 4,
+          "area_m2": 38,
+          "overlap_m2": 10,
+          "wrong_overlap_sum_m2": 48
+        },
+        "V02_33M2": {
+          "left_width_m": 5,
+          "left_height_m": 5,
+          "bottom_width_m": 9,
+          "bottom_height_m": 2,
+          "cutout_width_m": 4,
+          "cutout_height_m": 3,
+          "area_m2": 33,
+          "overlap_m2": 10,
+          "wrong_overlap_sum_m2": 43
+        }
+      },
+      "pass": "valid partition choice plus explicit learner-entered area"
+    },
+    {
+      "id": "G09_H07",
+      "grade": 9,
+      "skill": "S_G09_B21",
+      "scope": "EXAMPLE_ONLY",
+      "outer_length_m": 12,
+      "outer_width_m": 8,
+      "target_grass_area_m2": 60,
+      "equation": "(12-2*x)*(8-2*x)=60",
+      "domain": "0<x<4",
+      "roots": [
+        1,
+        9
+      ],
+      "valid_root": 1,
+      "extraneous_root": 9,
+      "pass": "positive dimensions and grass area exactly 60"
+    }
+  ],
+  "quality_gates": [
+    "No winning badge carried over after parameter change",
+    "Student cannot toggle teacher QA or see answers before attempt",
+    "x=4: length 4, width 0; x=5: length 2, width -2; x=9: length -6,width -10",
+    "No unauthorized paid APIs",
+    "No deployed production, merges or self-approval"
+  ],
+  "next_tasks": [
+    "Jules reads staged working game and contract",
+    "Jules repairs mobile canvas clipping and pointer control to high usability",
+    "Jules adds automated math/interaction/accessibility tests and preview verification",
+    "Argon supplies actual clean 3D plate + anchors and separate sprites; integrate after assets verified"
+  ]
+}
