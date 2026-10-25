@@ -19,7 +19,7 @@ button[aria-selected=true],.primary{background:var(--ink);color:#fff;border-colo
 button:active{transform:translateY(1px)}button:disabled{opacity:.5;cursor:not-allowed}
 .tabs button{min-height:66px}.layout{display:grid;grid-template-columns:1.45fr 1fr;gap:16px}.stage{min-width:0}
 canvas{display:block;background:#fbf6eb;border:2px solid #c9bb9e;border-radius:15px;width:100%;max-width:100%;height:auto;touch-action:none}
-.note{font-size:13px;color:#52665f;padding:6px 2px}.mission{border-left:5px solid var(--gold);padding:9px 12px;background:#fff6df;border-radius:6px;margin-bottom:12px}
+.note{font-size:13px;color:#52665f;padding:6px 2px}.dimension-note{font-size:clamp(15px,3.7vw,19px);font-weight:750;line-height:1.45;color:#17384a;background:#f5edda;border-radius:9px;padding:10px 12px;margin:6px 0 0}.mission{border-left:5px solid var(--gold);padding:9px 12px;background:#fff6df;border-radius:6px;margin-bottom:12px}
 fieldset{border:1px solid var(--line);border-radius:12px;padding:12px;margin:10px 0}legend{font-weight:750}
 .actions{display:flex;gap:8px;flex-wrap:wrap}.actions button{flex:1 1 105px}
 label{display:block;font-weight:680;margin:7px 0}input[type=range]{width:100%;accent-color:var(--jade);height:38px}
@@ -50,7 +50,7 @@ input[type=number]{width:100%;border:1px solid #a9a396;border-radius:9px;padding
 <div class="stage">
 <div class="mission" id="mission"></div>
 <canvas id="stage" width="800" height="480" role="img" aria-label="Sa bàn tương tác; sử dụng các nút và thanh điều khiển nếu không thể thao tác trực tiếp"></canvas>
-<p class="note" id="stageNote"></p>
+<p class="note" id="stageNote"></p><p class="dimension-note" id="dimensionNote" aria-live="polite"></p>
 </div>
 <div class="controls">
 <div id="act1">
@@ -105,9 +105,11 @@ document.getElementById('xRange').value=state.x;
 document.getElementById('xVal').textContent=String(state.x).replace('.',',');
 document.getElementById('areaAnswer').value=state.area;
 document.getElementById('hintLevel').textContent=state.hint+'/3';
+document.getElementById('hintText').textContent=state.hint>0 ? HINTS[state.act][state.hint-1] : 'Hãy thử giải trước, sau đó xin gợi ý nếu cần.';
 document.getElementById('hintButton').disabled=state.attempt[state.act]===0||state.hint===3;
 const m={1:'Hồi 1 · Lát kín hiên đình 4 m × 2 m bằng gạch hình vuông. Hãy lựa chọn và tự đặt đủ gạch.',2:'Hồi 2 · Sân hình chữ L có dải dưới dài 9 m, rộng 2 m và nhánh trái rộng 5 m. Hãy chia hình không chồng lấn rồi tính diện tích.',3:'Hồi 3 · Khu vườn ngoài 12 m × 8 m. Thiết kế lối đi rộng x ở cả bốn phía sao cho thảm cỏ giữa có diện tích 60 m².'};
 document.getElementById('mission').textContent=m[state.act];
+document.getElementById('dimensionNote').textContent=state.act===1?'Hiên đình: 4 m × 2 m · Gạch: '+String(state.side).replace('.',',')+' m · Đã đặt: '+state.tiles.length+' viên':state.act===2?'Sân chữ L: đáy 9 m × 2 m · Nhánh trái rộng 5 m, cao '+(state.g08==='V01_38M2'?6:5)+' m':'Vườn: 12 m × 8 m · Lối đi x = '+String(state.x).replace('.',',')+' m';
 document.getElementById('stageNote').textContent=state.act===1?'Mỗi ô là một viên gạch. Chạm hoặc kéo để lát; kéo qua ô đã lát không xóa gạch.':state.act===2?'Tô màu thể hiện các miền phân hoạch; nhập phép tính của bạn ở bảng điều khiển.':'Màu xanh là diện tích thảm cỏ hợp lệ; màu đỏ biểu thị kích thước hình học không hợp lệ.';
 draw();
 }
