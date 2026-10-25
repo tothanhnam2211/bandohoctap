@@ -3,7 +3,7 @@ on:
   pull_request:
     paths:
       - 'games/H07/**'
-      - 'tests/h07.spec.js'
+      - 'tests/**'
       - 'playwright.config.js'
       - 'package*.json'
       - '.github/workflows/h07-playwright.yml'
@@ -20,4 +20,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx playwright install --with-deps chromium
-      - run: npx playwright test --project=chromium
+      - run: npx playwright test
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: h07-mobile-screenshots
+          path: test-results/h07-mobile-*.png
+          if-no-files-found: ignore
