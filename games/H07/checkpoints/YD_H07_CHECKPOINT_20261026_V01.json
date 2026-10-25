@@ -1,0 +1,77 @@
+{
+  "checkpoint_id": "YD-H07-HANDOFF-20261026-0650-V01",
+  "timestamp_local": "2026-10-26T06:50:00+07:00",
+  "project": "YOURDREAM H07 Mathematical Adventure World",
+  "product_first": true,
+  "source_of_truth": "Google Drive YOURDREAM_AI_WORKSPACE; GitHub repository is versioned execution source",
+  "state": "PREVIEW_DEPLOYED_NOT_APPROVED",
+  "approval": "PRODUCT_OWNER_PENDING",
+  "pr": {
+    "repository": "tothanhnam2211/bandohoctap",
+    "number": 2,
+    "url": "https://github.com/tothanhnam2211/bandohoctap/pull/2",
+    "branch": "handoff/h07-v21-jules-ready-20261026-1228571803128561607",
+    "base": "main",
+    "head_sha_before_checkpoint": "a6af3f67cffab10516c751adb71e5813a5cc08a0",
+    "merged": false
+  },
+  "latest_verified": {
+    "cloudflare_build": "SUCCESS",
+    "cloudflare_preview_deployment": "SUCCESS",
+    "github_playwright": "SUCCESS",
+    "check_run_sha": "a6af3f67cffab10516c751adb71e5813a5cc08a0",
+    "preview_hostname": "https://handoff-h07-v21-jules-ready-20261026-12285718031285-bandohoctap.tothanhnam.workers.dev",
+    "preview_game_path": "/games/H07/index.html",
+    "phone_video": "1000007743.mp4 (user-uploaded, observed playable 3 acts at earlier commit 5a00f0e)",
+    "note": "Success of build and automated tests is technical evidence, not pedagogical approval."
+  },
+  "code_locations": [
+    "games/H07/index.html",
+    "games/H07/h07_argon_to_jules_handoff.contract.json",
+    "games/H07/README_HANDOFF.md",
+    "wrangler.json",
+    "tests/h07.spec.js",
+    "playwright.config.js",
+    ".github/workflows/h07-playwright.yml"
+  ],
+  "implemented": [
+    "Cloudflare previews block added to wrangler.json fixing prior deploy error",
+    "H07 three acts playable on Android in video (earlier commit)",
+    "preserve G08 33 and 38 square meter variants",
+    "G09 corrected skill code S_G09_B21 in handoff contract",
+    "Socratic hint stale text reset on act/parameter changes",
+    "mobile-readable DOM geometry dimension note",
+    "automated GitHub Playwright workflow reports success"
+  ],
+  "dependencies": [
+    "Argon final approved clean plate and sprites + spatial anchors not integrated",
+    "Final visual, pedagogical and math independent verification not yet approved",
+    "Product Owner review and merge decision pending"
+  ],
+  "next_actions": [
+    "Open latest preview game on phone and inspect after new commits; do not assume older video verifies current SHA",
+    "Confirm test report and screenshots from CI; check staging accessibility, G06 128/32/8, G08 38/33 and G09 x=1,4,5,9",
+    "Request or integrate Argon H07_Master_Clean_Plate.webp through existing process, no gratuitous rework",
+    "Obtain independent pedagogical QA and product owner approval before merge or production",
+    "Persist this checkpoint in YOURDREAM_AI_WORKSPACE Drive if not already present; verify readback"
+  ],
+  "constraints": [
+    "PRODUCT-FIRST",
+    "REUSE-FIRST",
+    "CHECKPOINT-FIRST",
+    "SOURCE-FIRST",
+    "MATH-VERIFIED",
+    "COST-CONTROLLED",
+    "NO_PAID_API_UNLESS_APPROVED",
+    "DO_NOT_MERGE",
+    "DO_NOT_CHANGE_MAIN",
+    "NO_SELF_APPROVAL"
+  ],
+  "related": {
+    "jules_task": "https://jules.google.com/task/1228571803128561607",
+    "pull_request": "https://github.com/tothanhnam2211/bandohoctap/pull/2",
+    "review_video": "1000007743.mp4",
+    "original_argon_v2_handoff": "https://drive.google.com/file/d/1OCUw_B2xgFh-RL28FMR5HXbi0uCGtN4w/view"
+  },
+  "note": "Checkpoint records observed verifiable links and outstanding work; it does not create a Drive backup unless a separate upload succeeds."
+}
