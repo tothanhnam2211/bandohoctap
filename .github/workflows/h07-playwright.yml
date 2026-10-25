@@ -25,5 +25,5 @@ jobs:
         if: always()
         with:
           name: h07-mobile-screenshots
-          path: test-results/h07-mobile-*.png
+          path: test-results/**/h07-mobile-*.png
           if-no-files-found: ignore
