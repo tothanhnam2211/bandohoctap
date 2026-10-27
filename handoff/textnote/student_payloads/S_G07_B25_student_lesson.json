@@ -1,0 +1,67 @@
+{
+  "worksheet_no": "14",
+  "skill_id": "S_G07_B25",
+  "grade": 7,
+  "strand_code": "SO_VA_DAI_SO",
+  "strand_name": "Số và Đại số",
+  "header_subtitle": "Chương VII: Biểu thức đại số và đa thức một biến — Bài 25–26",
+  "title": "Đa thức một biến & Cộng, trừ đa thức một biến",
+  "objective": "Thu gọn, sắp xếp đa thức một biến theo lũy thừa giảm dần, xác định đúng bậc, hệ số cao nhất, hệ số tự do và thực hiện cộng, trừ hai đa thức.",
+  "knowledge_activation": "Nhắc nhanh: Bậc của đa thức (khác đa thức 0) là số mũ cao nhất của biến trong dạng ĐÃ THU GỌN.",
+  "worked_example": {
+    "problem": "Cho hai đa thức P(x) = 3x³ – 2x² + 5x – 4 và Q(x) = –3x³ + 4x² – x + 6. Tính tổng H(x) = P(x) + Q(x) và tìm bậc của H(x).",
+    "steps": [
+      "<b>Bước 1 (Nhóm các hạng tử cùng bậc):</b> H(x) = (3x³ – 3x³) + (–2x² + 4x²) + (5x – x) + (–4 + 6).",
+      "<b>Bước 2 (Cộng, trừ hệ số từng nhóm):</b> H(x) = 0x³ + 2x² + 4x + 2 = <b>2x² + 4x + 2</b>.",
+      "<b>Bước 3 (Xác định bậc sau khi thu gọn):</b> Vì hạng tử bậc 3 đã triệt tiêu (hệ số bằng 0) nên bậc của H(x) là <b>bậc 2</b>.",
+      "<b>Bước 4 (Kiểm chứng tại x = 1):</b> P(1) = 2, Q(1) = 6  ⇒  H(1) = 2 + 4 + 2 = 8 = P(1) + Q(1) (Đúng!)."
+    ],
+    "diagram_caption": "Cộng hai đa thức theo cột dọc cùng bậc"
+  },
+  "basic_exercises": [
+    {
+      "id": "2a",
+      "label": "a)",
+      "prompt": "Thu gọn và tìm bậc của đa thức:  A(x) = 5x⁴ – 3x² + 7 – 5x⁴ + x² – 2x"
+    },
+    {
+      "id": "2b",
+      "label": "b)",
+      "prompt": "Cho P(x) = 2x² + 3x – 1 và Q(x) = x² – 2x + 4. Tính hiệu P(x) – Q(x)."
+    }
+  ],
+  "advanced_exercise": {
+    "id": "3",
+    "prompt": "Kiểm tra xem x = 2 và x = –1 có phải là nghiệm của đa thức M(x) = x² – x – 2 hay không."
+  },
+  "real_world_problem": {
+    "id": "4",
+    "prompt": "Một bể nước hình hộp chữ nhật có đáy là hình vuông cạnh x (m) và chiều cao là (x + 2) (m). Viết đa thức V(x) biểu thị thể tích của bể theo x và tính thể tích bể khi x = 3 m."
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Luôn <b>thu gọn đa thức</b> và sắp xếp số mũ từ cao xuống thấp trước khi kết luận bậc!"
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "<b>Bẫy bỏ ngoặc trước dấu trừ:</b> Khi tính P(x) – Q(x), phải đổi dấu <b>TẤT CẢ</b> các hạng tử bên trong ngoặc Q(x)!",
+        "<b>Bẫy kết luận bậc vội vàng:</b> Đừng nhìn 5x⁴ ở đầu mà kết luận bậc 4 nếu phía sau có –5x⁴ làm triệt tiêu!"
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Thay thử x = 1 vào P(x), Q(x) và đa thức kết quả xem P(1) ± Q(1) có khớp không."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+      "prompt": "Quy tắc đổi dấu khi bỏ ngoặc trừ đa thức em nhớ nhất:"
+    }
+  },
+  "svg_asset_file": "svg_assets/S_G07_B25_diagram.svg"
+}
