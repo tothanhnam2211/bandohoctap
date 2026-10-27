@@ -1,0 +1,69 @@
+{
+  "worksheet_no": "02",
+  "skill_id": "S_G06_B20",
+  "grade": 6,
+  "strand_code": "HINH_HOC_VA_DO_LUONG",
+  "strand_name": "Hình học và Đo lường",
+  "header_subtitle": "Chương IV: Một số hình phẳng trong thực tiễn — Bài 20",
+  "title": "Chu vi và diện tích của một số tứ giác đã học",
+  "objective": "Vận dụng chính xác công thức chu vi và diện tích hình chữ nhật, hình vuông, hình thang, hình bình hành, hình thoi vào bài toán thực tế.",
+  "knowledge_activation": "Nhắc nhanh: S(chữ nhật) = a·b;  S(hình thang) = (a + b)·h : 2;  S(hình thoi) = m·n : 2 (m, n là hai đường chéo).",
+  "worked_example": {
+    "problem": "Một mảnh vườn hình chữ nhật dài 15 m, rộng 10 m. Ở giữa vườn, người ta xây một bồn hoa hình thang cân có đáy lớn 8 m, đáy nhỏ 4 m và chiều cao 5 m. Tính diện tích phần đất còn lại.",
+    "steps": [
+      "<b>Bước 1 (Tính diện tích mảnh vườn HCN):</b> S<sub>vườn</sub> = 15 · 10 = 150 (m²).",
+      "<b>Bước 2 (Tính diện tích bồn hoa hình thang):</b> S<sub>hoa</sub> = (8 + 4) · 5 : 2 = 12 · 5 : 2 = 30 (m²).",
+      "<b>Bước 3 (Tính diện tích phần đất còn lại):</b> S<sub>còn lại</sub> = 150 – 30 = <b>120 (m²)</b>.",
+      "<b>Kiểm tra hợp lí:</b> 0 &lt; S<sub>hoa</sub> (30 m²) &lt; S<sub>vườn</sub> (150 m²) và cùng đơn vị m²."
+    ],
+    "diagram_caption": "Sơ đồ mảnh vườn HCN và bồn hoa hình thang"
+  },
+  "basic_exercises": [
+    {
+      "id": "2a",
+      "label": "a)",
+      "prompt": "Tính chu vi và diện tích hình chữ nhật có chiều dài 12 cm và chiều rộng 8 cm."
+    },
+    {
+      "id": "2b",
+      "label": "b)",
+      "prompt": "Tính diện tích hình thoi có độ dài hai đường chéo lần lượt là 10 cm và 14 cm."
+    }
+  ],
+  "advanced_exercise": {
+    "id": "3",
+    "prompt": "Một hình thang có diện tích 60 cm², chiều cao 6 cm và đáy lớn hơn đáy nhỏ 4 cm. Tính độ dài mỗi đáy của hình thang."
+  },
+  "real_world_problem": {
+    "id": "4",
+    "prompt": "Bác Bình muốn lát gạch kín nền căn phòng hình chữ nhật dài 8 m, rộng 5 m bằng các viên gạch hình vuông cạnh 50 cm. Hỏi bác Bình cần mua ít nhất bao nhiêu viên gạch (coi mạch vữa không đáng kể)?"
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Đọc kỹ tên hình tứ giác và kiểm tra xem các cạnh đã <b>CÙNG ĐƠN VỊ ĐO</b> chưa.",
+        "Hình thang: Tổng hai đáy nhân chiều cao rồi <b>chia 2</b>."
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "<b>Bẫy quên chia 2:</b> Diện tích hình thang và hình thoi (theo 2 đường chéo) đều phải chia cho 2!",
+        "<b>Bẫy khác đơn vị:</b> Nền phòng tính bằng mét (m) mà viên gạch tính bằng xăng-ti-mét (cm) thì phải đổi về cùng đơn vị trước."
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Đơn vị chu vi là <b>cm, m</b>; đơn vị diện tích phải có số mũ hai (<b>cm², m²</b>).",
+        "Diện tích phần còn lại luôn nhỏ hơn diện tích hình bao ngoài."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+      "prompt": "Công thức diện tích tứ giác em thấy thú vị nhất hôm nay:"
+    }
+  },
+  "svg_asset_file": "svg_assets/S_G06_B20_diagram.svg"
+}

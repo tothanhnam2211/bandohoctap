@@ -1,0 +1,67 @@
+{
+  "worksheet_no": "06",
+  "skill_id": "S_G07_B18",
+  "grade": 7,
+  "strand_code": "THONG_KE_VA_XAC_SUAT",
+  "strand_name": "Thống kê và Xác suất",
+  "header_subtitle": "Chương V: Thu thập và biểu diễn dữ liệu — Bài 18–19",
+  "title": "Biểu đồ hình quạt tròn và phân tích tỉ lệ phần trăm",
+  "objective": "Đọc và phân tích dữ liệu từ biểu đồ hình quạt tròn; quy đổi chính xác từ tỉ lệ phần trăm (%) sang số lượng thực tế khi biết tổng cỡ mẫu N.",
+  "knowledge_activation": "Nhắc nhanh: Cả hình tròn biểu diễn 100% (tương ứng góc 360°). Số lượng của một nhóm = Tổng số N · (Tỉ lệ % của nhóm đó).",
+  "worked_example": {
+    "problem": "Khảo sát 200 học sinh khối 7 về môn thể thao yêu thích nhất thu được biểu đồ quạt tròn: Bóng đá (40%), Cầu lông (25%), Bơi lội (20%), Cờ vua (15%). Tính số học sinh yêu thích mỗi môn.",
+    "steps": [
+      "<b>Bước 1 (Kiểm tra tổng phần trăm):</b> 40% + 25% + 20% + 15% = 100% (Hợp lệ!).",
+      "<b>Bước 2 (Tính số học sinh thích Bóng đá &amp; Cầu lông):</b> Bóng đá = 200 · 40% = <b>80 (HS)</b>;  Cầu lông = 200 · 25% = <b>50 (HS)</b>.",
+      "<b>Bước 3 (Tính số học sinh thích Bơi lội &amp; Cờ vua):</b> Bơi lội = 200 · 20% = <b>40 (HS)</b>;  Cờ vua = 200 · 15% = <b>30 (HS)</b>.",
+      "<b>Bước 4 (Kiểm chứng tổng):</b> 80 + 50 + 40 + 30 = 200 (học sinh)."
+    ],
+    "diagram_caption": "Biểu đồ quạt tròn môn thể thao khối 7"
+  },
+  "basic_exercises": [
+    {
+      "id": "2a",
+      "label": "a)",
+      "prompt": "Từ biểu đồ ở Ví dụ mẫu, số học sinh thích Bóng đá nhiều hơn số học sinh thích Bơi lội là bao nhiêu bạn?"
+    },
+    {
+      "id": "2b",
+      "label": "b)",
+      "prompt": "Một biểu đồ quạt tròn có 3 hình quạt chiếm 50%, 30% và x%. Tìm x và tính số đo góc ở tâm của hình quạt 50%."
+    }
+  ],
+  "advanced_exercise": {
+    "id": "3",
+    "prompt": "Trong một buổi khảo sát khác, biết hình quạt biểu diễn môn Cờ vua chiếm 15% và tương ứng với 45 học sinh. Hỏi tổng cộng có bao nhiêu học sinh đã tham gia khảo sát đó?"
+  },
+  "real_world_problem": {
+    "id": "4",
+    "prompt": "Gia đình bạn Minh có tổng thu nhập hằng tháng là 25 triệu đồng, được phân bổ trên biểu đồ quạt tròn gồm: Chi tiêu thiết yếu (60%), Học tập (20%) và Tiết kiệm (20%). Tính số tiền gia đình Minh dành cho Tiết kiệm mỗi tháng."
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Tìm giá trị của p% của N: Lấy <b>N · p : 100</b>.",
+        "Tìm tổng N khi biết p% bằng A: Lấy <b>A · 100 : p</b>."
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "<b>Bẫy nhầm % với số lượng thực:</b> 40% không phải là 40 học sinh! Phải nhân với tổng cỡ mẫu N = 200."
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Tổng các tỉ lệ phần trăm trên biểu đồ quạt tròn phải luôn đúng bằng <b>100%</b>."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+      "prompt": "Cách em phân biệt bài toán tìm p% của N và tìm N khi biết p%:"
+    }
+  },
+  "svg_asset_file": "svg_assets/S_G07_B18_diagram.svg"
+}

@@ -1,0 +1,66 @@
+{
+  "worksheet_no": "12",
+  "skill_id": "S_G09_B22",
+  "grade": 9,
+  "strand_code": "THONG_KE_VA_XAC_SUAT",
+  "strand_name": "Thống kê và Xác suất",
+  "header_subtitle": "Chương VII: Tần số và tần số tương đối — Bài 22–23",
+  "title": "Bảng tần số, tần số tương đối và biểu đồ tần số",
+  "objective": "Lập được bảng tần số, tính chính xác tần số tương đối f_i = (n_i / N) · 100% và đọc, phân tích biểu đồ tần số từ mẫu số liệu thống kê.",
+  "knowledge_activation": "Nhắc nhanh: Tổng mọi tần số bằng cỡ mẫu N (n₁ + n₂ + ... + n_k = N) và tổng mọi tần số tương đối luôn bằng 100%.",
+  "worked_example": {
+    "problem": "Điểm kiểm tra Toán của một tổ 20 học sinh lớp 9A được thống kê theo 4 mức điểm: Điểm 7 (4 bạn), Điểm 8 (8 bạn), Điểm 9 (5 bạn), Điểm 10 (3 bạn). Tính tần số tương đối của mỗi mức điểm.",
+    "steps": [
+      "<b>Bước 1 (Kiểm tra cỡ mẫu N):</b> N = 4 + 8 + 5 + 3 = 20 (học sinh).",
+      "<b>Bước 2 (Tính tần số tương đối f = n / N · 100%):</b> Điểm 7: f₁ = (4/20)·100% = <b>20%</b>;  Điểm 8: f₂ = (8/20)·100% = <b>40%</b>.",
+      "<b>Bước 3 (Tính tiếp cho Điểm 9 và Điểm 10):</b> Điểm 9: f₃ = (5/20)·100% = <b>25%</b>;  Điểm 10: f₄ = (3/20)·100% = <b>15%</b>.",
+      "<b>Bước 4 (Kiểm chứng tổng):</b> 20% + 40% + 25% + 15% = <b>100%</b> (Chính xác!)."
+    ],
+    "diagram_caption": "Biểu đồ tần số và tần số tương đối (N = 20)"
+  },
+  "basic_exercises": [
+    {
+      "id": "2a",
+      "label": "a)",
+      "prompt": "Từ Ví dụ mẫu, mức điểm nào có tần số lớn nhất? Tính tổng tỉ lệ phần trăm học sinh đạt từ 9 điểm trở lên."
+    },
+    {
+      "id": "2b",
+      "label": "b)",
+      "prompt": "Một mẫu dữ liệu có cỡ mẫu N = 50, trong đó giá trị x = 10 xuất hiện với tần số n = 12. Tính tần số tương đối của giá trị x = 10."
+    }
+  ],
+  "advanced_exercise": {
+    "id": "3",
+    "prompt": "Khảo sát thời gian tự học (giờ/ngày) của 40 học sinh lớp 9B thu được 3 mức: 1 giờ (tần số 10), 2 giờ (tần số x) và 3 giờ (tần số tương đối 30%). Tìm tần số của mức 3 giờ và tìm x."
+  },
+  "real_world_problem": {
+    "id": "4",
+    "prompt": "Kiểm tra ngẫu nhiên 200 sản phẩm của một phân xưởng thấy có 4 sản phẩm bị lỗi. Tính tần số tương đối của sản phẩm đạt chuẩn (không bị lỗi) của phân xưởng đó."
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Phân biệt rõ: <b>Tần số (n<sub>i</sub>)</b> là số lần xuất hiện; <b>Tần số tương đối (f<sub>i</sub>)</b> là tỉ lệ % so với cỡ mẫu N."
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "<b>Bẫy chia nhầm cho số nhóm k:</b> Khi tính tần số tương đối f<sub>i</sub> = n<sub>i</sub> / N, phải chia cho <b>tổng cỡ mẫu N</b> (20 học sinh), không phải chia cho 4 mức điểm!"
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Luôn cộng kiểm tra hai dòng cuối bảng: Tổng n<sub>i</sub> = N và Tổng f<sub>i</sub> = 100%."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+      "prompt": "Điểm khác nhau cốt lõi giữa tần số và tần số tương đối là:"
+    }
+  },
+  "svg_asset_file": "svg_assets/S_G09_B22_diagram.svg"
+}

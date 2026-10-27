@@ -1,0 +1,67 @@
+{
+  "worksheet_no": "05",
+  "skill_id": "S_G07_B12",
+  "grade": 7,
+  "strand_code": "HINH_HOC_VA_DO_LUONG",
+  "strand_name": "Hình học và Đo lường",
+  "header_subtitle": "Chương IV: Hai tam giác bằng nhau — Bài 12–13",
+  "title": "Tổng các góc trong một tam giác & Hai tam giác bằng nhau",
+  "objective": "Vận dụng định lí tổng ba góc của một tam giác bằng 180°, tính chất góc ngoài tam giác và suy ra các cạnh, góc tương ứng của hai tam giác bằng nhau.",
+  "knowledge_activation": "Nhắc nhanh: Trong mọi tam giác ABC, ta luôn có ∠A + ∠B + ∠C = 180°. Trong tam giác vuông, hai góc nhọn phụ nhau (tổng bằng 90°).",
+  "worked_example": {
+    "problem": "Cho tam giác ABC có ∠A = 70°, ∠B = 60°. Tính số đo góc C và góc ngoài tại đỉnh C của tam giác ABC.",
+    "steps": [
+      "<b>Bước 1 (Áp dụng định lí tổng ba góc trong ΔABC):</b> ∠A + ∠B + ∠C = 180°.",
+      "<b>Bước 2 (Thay số và tính góc C):</b> 70° + 60° + ∠C = 180°  ⇒  130° + ∠C = 180°  ⇒  ∠C = <b>50°</b>.",
+      "<b>Bước 3 (Tính góc ngoài tại đỉnh C):</b> Góc ngoài tại đỉnh C bằng tổng hai góc trong không kề với nó: ∠C<sub>ngoài</sub> = ∠A + ∠B = 70° + 60° = <b>130°</b>.",
+      "<b>Kiểm tra:</b> ∠C + ∠C<sub>ngoài</sub> = 50° + 130° = 180° (hai góc kề bù, chính xác!)."
+    ],
+    "diagram_caption": "Minh họa tổng ba góc trong ΔABC"
+  },
+  "basic_exercises": [
+    {
+      "id": "2a",
+      "label": "a)",
+      "prompt": "Cho tam giác MNP vuông tại M, biết ∠N = 35°. Tính số đo góc P."
+    },
+    {
+      "id": "2b",
+      "label": "b)",
+      "prompt": "Biết ΔABC = ΔDEF, có AB = 5 cm, BC = 7 cm và ∠F = 45°. Tìm độ dài DE, EF và số đo ∠C."
+    }
+  ],
+  "advanced_exercise": {
+    "id": "3",
+    "prompt": "Cho tam giác ABC có số đo ba góc A, B, C tỉ lệ với 2 : 3 : 4. Tính số đo mỗi góc của tam giác ABC."
+  },
+  "real_world_problem": {
+    "id": "4",
+    "prompt": "Một vì kèo mái nhà hình tam giác cân ABC tại đỉnh A (có ∠B = ∠C). Biết góc ở đỉnh nóc mái là ∠A = 110°. Tính góc nghiêng ∠B của mái nhà so với thanh ngang BC."
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Tổng ba góc trong mọi tam giác luôn bằng <b>180°</b>.",
+        "Ký hiệu ΔABC = ΔDEF phải viết <b>đúng thứ tự đỉnh tương ứng</b> (A↔D, B↔E, C↔F)."
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "<b>Bẫy sai thứ tự đỉnh:</b> Nếu ΔABC = ΔDEF thì cạnh AB bằng DE (đỉnh 1–2 ứng với đỉnh 1–2), tuyệt đối không ghép nhầm AB = EF!"
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Cộng lại cả 3 góc vừa tìm được xem có đúng bằng 180° và mỗi góc đều dương (&gt; 0°) không."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+      "prompt": "Cách em kiểm tra nhanh thứ tự đỉnh hai tam giác bằng nhau:"
+    }
+  },
+  "svg_asset_file": "svg_assets/S_G07_B12_diagram.svg"
+}

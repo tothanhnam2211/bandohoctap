@@ -1,0 +1,69 @@
+{
+  "worksheet_no": "01",
+  "skill_id": "S_G06_B07",
+  "grade": 6,
+  "strand_code": "SO_VA_DAI_SO",
+  "strand_name": "Số và Đại số",
+  "header_subtitle": "Chương I: Tập hợp các số tự nhiên — Bài 7",
+  "title": "Thứ tự thực hiện các phép tính",
+  "objective": "Thực hiện đúng thứ tự ưu tiên các phép tính (Lũy thừa → Nhân, chia → Cộng, trừ) và dấu ngoặc ( ) → [ ] → { } để tính giá trị biểu thức và tìm x.",
+  "knowledge_activation": "Nhắc nhanh: Khi biểu thức chỉ có cộng và trừ (hoặc chỉ có nhân và chia), ta thực hiện từ TRÁI sang PHẢI.",
+  "worked_example": {
+    "problem": "Tính giá trị biểu thức:  A = 120 – [ 50 – ( 7 – 3 )² · 2 ]",
+    "steps": [
+      "<b>Bước 1 (Trong ngoặc tròn trước):</b> Tính 7 – 3 = 4, khi đó A = 120 – [ 50 – 4² · 2 ].",
+      "<b>Bước 2 (Tính lũy thừa và nhân trong ngoặc vuông):</b> 4² = 16; tiếp tục 16 · 2 = 32.",
+      "<b>Bước 3 (Hoàn tất ngoặc vuông):</b> 50 – 32 = 18.",
+      "<b>Bước 4 (Phép trừ cuối cùng):</b> A = 120 – 18 = <b>102</b>.",
+      "<b>Thử lại nhanh:</b> 18 + 32 = 50 và 102 + 18 = 120 (Đúng!)."
+    ],
+    "diagram_caption": "Tháp ưu tiên thực hiện phép tính"
+  },
+  "basic_exercises": [
+    {
+      "id": "2a",
+      "label": "a)",
+      "prompt": "Tính hợp lí:  36 : 3² + 2³ · 5 – 18"
+    },
+    {
+      "id": "2b",
+      "label": "b)",
+      "prompt": "Tính:  100 – { 2 · [ 30 – ( 5 – 2 )² ] + 14 }"
+    }
+  ],
+  "advanced_exercise": {
+    "id": "3",
+    "prompt": "Tìm số tự nhiên x, biết:  3 · ( x + 2 ) – 2³ = 4²"
+  },
+  "real_world_problem": {
+    "id": "4",
+    "prompt": "Bạn An mua 3 quyển vở giá 12 000 đồng/quyển và 2 chiếc bút bi giá 7 000 đồng/chiếc. An đưa cô bán hàng tờ 100 000 đồng. Hỏi cô bán hàng trả lại An bao nhiêu tiền? (Viết một biểu thức duy nhất và tính kết quả)."
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Không có ngoặc: <b>Lũy thừa → Nhân, Chia → Cộng, Trừ</b>.",
+        "Có dấu ngoặc: Làm từ trong ra ngoài: <b>( ) → [ ] → { }</b>."
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "<b>Bẫy nhân chia ngang hàng:</b> Gặp 36 : 3 · 2 phải tính từ <b>trái sang phải</b> (36 : 3 = 12 rồi nhân 2 = 24), tuyệt đối không lấy 3 · 2 trước!",
+        "<b>Bẫy lũy thừa:</b> 2³ = 2·2·2 = 8 (không phải 2·3 = 6!)."
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Với bài tìm x: Thay giá trị x vừa tìm được vào vế trái xem có đúng bằng vế phải (4² = 16) hay không."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+      "prompt": "Ghi lại 1 quy tắc hoặc 1 lỗi em tự nhủ sẽ không mắc:"
+    }
+  },
+  "svg_asset_file": "svg_assets/S_G06_B07_diagram.svg"
+}

@@ -1,0 +1,68 @@
+{
+  "worksheet_no": "04",
+  "skill_id": "S_G07_B20",
+  "grade": 7,
+  "strand_code": "SO_VA_DAI_SO",
+  "strand_name": "Số và Đại số",
+  "header_subtitle": "Chương VI: Tỉ lệ thức và đại lượng tỉ lệ — Bài 20–21",
+  "title": "Tỉ lệ thức và tính chất của dãy tỉ số bằng nhau",
+  "objective": "Sử dụng tính chất tỉ lệ thức (a/b = c/d ⇔ ad = bc) và tính chất dãy tỉ số bằng nhau để tìm các số chưa biết và giải bài toán chia tỉ lệ.",
+  "knowledge_activation": "Nhắc nhanh: Từ x/a = y/b = z/c ta suy ra x/a = y/b = z/c = (x + y + z)/(a + b + c) (với a + b + c ≠ 0).",
+  "worked_example": {
+    "problem": "Ba lớp 7A, 7B, 7C quyên góp được tổng cộng 180 quyển sách tặng thư viện vùng cao. Biết số sách của ba lớp tỉ lệ với 3 : 4 : 5. Tính số sách mỗi lớp đã quyên góp.",
+    "steps": [
+      "<b>Bước 1 (Gọi ẩn &amp; lập dãy tỉ số):</b> Gọi số sách của 7A, 7B, 7C là x, y, z (quyển; x, y, z ∈ ℕ*). Ta có: x/3 = y/4 = z/5 và x + y + z = 180.",
+      "<b>Bước 2 (Áp dụng tính chất dãy tỉ số bằng nhau):</b> x/3 = y/4 = z/5 = (x + y + z)/(3 + 4 + 5) = 180 / 12 = <b>15</b>.",
+      "<b>Bước 3 (Tính từng đại lượng):</b> x = 3 · 15 = <b>45</b>;  y = 4 · 15 = <b>60</b>;  z = 5 · 15 = <b>75</b>.",
+      "<b>Bước 4 (Kiểm chứng):</b> 45 + 60 + 75 = 180 và 45:60:75 = 3:4:5 (Đúng!)."
+    ],
+    "diagram_caption": "Mô hình thanh tỉ lệ 3 : 4 : 5"
+  },
+  "basic_exercises": [
+    {
+      "id": "2a",
+      "label": "a)",
+      "prompt": "Tìm x trong tỉ lệ thức:  x / 6 = 10 / 3"
+    },
+    {
+      "id": "2b",
+      "label": "b)",
+      "prompt": "Tìm hai số x và y, biết:  x / 5 = y / 3  và  x + y = 32"
+    }
+  ],
+  "advanced_exercise": {
+    "id": "3",
+    "prompt": "Tìm hai số x và y, biết:  x / 4 = y / 7  và  2x – y = 5"
+  },
+  "real_world_problem": {
+    "id": "4",
+    "prompt": "Một mảnh đất hình chữ nhật có chu vi bằng 70 m, tỉ số giữa chiều rộng và chiều dài là 3 : 4. Tính diện tích của mảnh đất hình chữ nhật đó."
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Tìm hệ số tỉ lệ 1 phần: <b>k = Tổng giá trị : Tổng số phần</b>.",
+        "Khi có hệ số (như 2x – y = 5), nhân cả tử và mẫu của x/4 với 2 để được 2x/8."
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "<b>Bẫy chu vi hình chữ nhật:</b> Tổng chiều dài + chiều rộng bằng <b>NỬA CHU VI (P : 2)</b> chứ không phải cả chu vi P!",
+        "<b>Bẫy ngược dấu mẫu số:</b> Trên tử lấy (2x – y) thì dưới mẫu cũng phải lấy (8 – 7)."
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Thử lại cả 2 điều kiện: (1) Tỉ số x/a có bằng y/b không? (2) Tổng/hiệu có đúng bằng đề bài cho không?"
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+      "prompt": "Bí quyết giải nhanh bài toán dãy tỉ số bằng nhau của em:"
+    }
+  },
+  "svg_asset_file": "svg_assets/S_G07_B20_diagram.svg"
+}

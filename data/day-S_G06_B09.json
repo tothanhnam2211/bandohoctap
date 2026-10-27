@@ -1,0 +1,66 @@
+{
+  "worksheet_no": "13",
+  "skill_id": "S_G06_B09",
+  "grade": 6,
+  "strand_code": "SO_VA_DAI_SO",
+  "strand_name": "Số và Đại số",
+  "header_subtitle": "Chương II: Tính chia hết trong tập hợp số tự nhiên — Bài 9",
+  "title": "Dấu hiệu chia hết cho 2, 5, 3 và 9",
+  "objective": "Nhận biết nhanh một số hay một tổng/hiệu có chia hết cho 2, 5, 3, 9 hay không mà không cần thực hiện phép chia.",
+  "knowledge_activation": "Nhắc nhanh: Dấu hiệu chia hết cho 2 và 5 nhìn vào CHỮ SỐ TẬN CÙNG; dấu hiệu chia hết cho 3 và 9 nhìn vào TỔNG CÁC CHỮ SỐ.",
+  "worked_example": {
+    "problem": "Trong các số sau: 245 ; 1 080 ; 2 026 ; 3 411. Tìm số vừa chia hết cho cả 2, 5, 3 và 9.",
+    "steps": [
+      "<b>Bước 1 (Lọc chia hết cho cả 2 và 5):</b> Số đó phải có chữ số tận cùng là 0  ⇒  Chỉ còn <b>1 080</b>.",
+      "<b>Bước 2 (Kiểm tra tổng các chữ số của 1 080):</b> 1 + 0 + 8 + 0 = 9.",
+      "<b>Bước 3 (Xét chia hết cho 9 và 3):</b> Vì 9 ⋮ 9 nên 1 080 chia hết cho 9 (và cũng chia hết cho 3).",
+      "<b>Kết luận:</b> Số thỏa mãn cả 4 dấu hiệu là <b>1 080</b>."
+    ],
+    "diagram_caption": "Bộ lọc kết hợp dấu hiệu chia hết"
+  },
+  "basic_exercises": [
+    {
+      "id": "2a",
+      "label": "a)",
+      "prompt": "Trong các số 156 ; 275 ; 450 ; 819, những số nào chia hết cho 9?"
+    },
+    {
+      "id": "2b",
+      "label": "b)",
+      "prompt": "Không thực hiện phép tính, xét xem tổng A = 1 200 + 45 + 90 có chia hết cho 5 không? Vì sao?"
+    }
+  ],
+  "advanced_exercise": {
+    "id": "3",
+    "prompt": "Tìm chữ số x và y để số tự nhiên bốn chữ số  2x5y  vừa chia hết cho 2, vừa chia hết cho 5 và vừa chia hết cho 9."
+  },
+  "real_world_problem": {
+    "id": "4",
+    "prompt": "Cô giáo có 135 quyển vở và 90 chiếc bút muốn chia đều vào 9 phần quà khen thưởng cuối kì. Hỏi cô giáo có thể chia vừa hết cả vở và bút vào 9 phần quà đó không? Mỗi phần quà có mấy quyển vở, mấy chiếc bút?"
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Nếu bài toán có cả điều kiện ⋮ 2, 5 và ⋮ 9: Luôn tìm <b>chữ số tận cùng trước</b>, rồi mới tính tổng các chữ số!"
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "<b>Bẫy suy luận ngược:</b> Mọi số chia hết cho 9 đều chia hết cho 3, nhưng số chia hết cho 3 (như 12, 15) <b>chưa chắc</b> chia hết cho 9!"
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Chữ số tìm được phải là số tự nhiên từ 0 đến 9 (chữ số hàng cao nhất phải khác 0)."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+      "prompt": "Mẹo phân biệt nhóm (2; 5) và nhóm (3; 9) của em:"
+    }
+  },
+  "svg_asset_file": "svg_assets/S_G06_B09_diagram.svg"
+}

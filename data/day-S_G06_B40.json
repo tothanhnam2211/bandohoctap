@@ -1,0 +1,67 @@
+{
+  "worksheet_no": "03",
+  "skill_id": "S_G06_B40",
+  "grade": 6,
+  "strand_code": "THONG_KE_VA_XAC_SUAT",
+  "strand_name": "Thống kê và Xác suất",
+  "header_subtitle": "Chương IX: Dữ liệu và xác suất thực nghiệm — Bài 40",
+  "title": "Biểu đồ cột và phân tích bảng thống kê",
+  "objective": "Đọc, mô tả và phân tích dữ liệu từ biểu đồ cột; lập được bảng thống kê tương ứng và trả lời các câu hỏi so sánh, tổng hợp.",
+  "knowledge_activation": "Nhắc nhanh: Trên biểu đồ cột, trục ngang ghi tên các đối tượng thống kê, chiều cao mỗi cột ứng với số liệu trên trục đứng.",
+  "worked_example": {
+    "problem": "Biểu đồ cột bên phải biểu diễn số học sinh khối 6 đăng ký 4 Câu lạc bộ (CLB): Toán (14), Văn (10), Tiếng Anh (16), STEM (8). Hỏi tổng cộng có bao nhiêu lượt đăng ký và CLB nào đông nhất?",
+    "steps": [
+      "<b>Bước 1 (Đọc đỉnh từng cột):</b> Toán = 14 HS; Văn = 10 HS; Tiếng Anh = 16 HS; STEM = 8 HS.",
+      "<b>Bước 2 (Tìm cột cao nhất):</b> CLB Tiếng Anh có số học sinh đăng ký nhiều nhất (16 học sinh).",
+      "<b>Bước 3 (Tính tổng số lượt đăng ký):</b> 14 + 10 + 16 + 8 = <b>48 (học sinh)</b>.",
+      "<b>Bước 4 (Tính độ chênh lệch lớn nhất - nhỏ nhất):</b> 16 – 8 = 8 (học sinh)."
+    ],
+    "diagram_caption": "Biểu đồ cột số học sinh đăng ký CLB"
+  },
+  "basic_exercises": [
+    {
+      "id": "2a",
+      "label": "a)",
+      "prompt": "Từ biểu đồ ở Ví dụ mẫu, số học sinh đăng ký CLB Toán nhiều hơn CLB STEM bao nhiêu bạn?"
+    },
+    {
+      "id": "2b",
+      "label": "b)",
+      "prompt": "Tổng số học sinh đăng ký hai CLB Toán và STEM bằng bao nhiêu? So sánh với tổng hai CLB Văn và Anh."
+    }
+  ],
+  "advanced_exercise": {
+    "id": "3",
+    "prompt": "Trong tuần phát động đọc sách, số quyển sách 4 tổ của lớp 6A quyên góp được lần lượt là: Tổ 1 (15 quyển), Tổ 2 (18 quyển), Tổ 3 (12 quyển). Biết cả lớp quyên góp được tất cả 60 quyển. Tính số sách của Tổ 4 và cho biết tổ nào quyên góp nhiều nhất."
+  },
+  "real_world_problem": {
+    "id": "4",
+    "prompt": "Nhà trường dự kiến mở thêm phòng sinh hoạt riêng cho những CLB có từ 12 học sinh đăng ký trở lên (theo biểu đồ Ví dụ mẫu). Hỏi có bao nhiêu CLB đủ điều kiện mở phòng riêng? Đó là những CLB nào?"
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Nhìn tên trục ngang (đối tượng) và vạch chia trục đứng (đơn vị số lượng) trước khi đọc số.",
+        "Ghi ngay số liệu lên đỉnh mỗi cột để không bị gióng nhầm dòng."
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "<b>Bẫy vạch chia trục đứng:</b> Chú ý khoảng cách giữa hai vạch liên tiếp (có thể cách 2, 5 hoặc 6 đơn vị chứ không phải lúc nào cũng cách 1 đơn vị!)."
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Cộng lại toàn bộ các cột xem có khớp với tổng số liệu của bảng thống kê không."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+      "prompt": "Mẹo đọc biểu đồ cột nhanh và chính xác của em là:"
+    }
+  },
+  "svg_asset_file": "svg_assets/S_G06_B40_diagram.svg"
+}

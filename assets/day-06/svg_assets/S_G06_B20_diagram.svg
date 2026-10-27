@@ -1,0 +1,14 @@
+<svg viewBox="0 0 240 165" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="236" height="161" rx="8" fill="#FAFBFD" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="120" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1E293B">MẢNH VƯỜN HCN &amp; BỒN HOA HÌNH THANG</text>
+  <!-- Hình chữ nhật 15m x 10m -->
+  <rect x="28" y="32" width="180" height="108" fill="#DCFCE7" stroke="#15803D" stroke-width="2"/>
+  <!-- Bồn hoa hình thang đáy lớn 8m, đáy nhỏ 4m, cao 5m -->
+  <polygon points="70,115 166,115 142,60 94,60" fill="#FDE047" stroke="#CA8A04" stroke-width="1.8"/>
+  <line x1="94" y1="60" x2="94" y2="115" stroke="#DC2626" stroke-width="1.4" stroke-dasharray="3,2"/>
+  <rect x="94" y="108" width="7" height="7" fill="none" stroke="#DC2626" stroke-width="1"/>
+  <text x="118" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#854D0E">a = 4 m</text>
+  <text x="118" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#854D0E">b = 8 m</text>
+  <text x="108" y="92" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#DC2626">h=5m</text>
+  <text x="118" y="154" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#166534">Chiều dài 15 m × Chiều rộng 10 m</text>
+</svg>
