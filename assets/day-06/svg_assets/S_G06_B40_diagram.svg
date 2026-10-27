@@ -1,0 +1,30 @@
+<svg viewBox="0 0 240 165" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="236" height="161" rx="8" fill="#FAFBFD" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="125" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#1E293B">SỐ HỌC SINH ĐĂNG KÝ CÂU LẠC BỘ</text>
+  <line x1="36" y1="28" x2="36" y2="136" stroke="#334155" stroke-width="1.5"/>
+  <line x1="36" y1="136" x2="226" y2="136" stroke="#334155" stroke-width="1.5"/>
+  <!-- Grid lines -->
+  <line x1="36" y1="106" x2="222" y2="106" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="36" y1="76" x2="222" y2="76" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="36" y1="46" x2="222" y2="46" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="30" y="139" text-anchor="end" font-family="Arial, sans-serif" font-size="8.5" fill="#475569">0</text>
+  <text x="30" y="109" text-anchor="end" font-family="Arial, sans-serif" font-size="8.5" fill="#475569">6</text>
+  <text x="30" y="79" text-anchor="end" font-family="Arial, sans-serif" font-size="8.5" fill="#475569">12</text>
+  <text x="30" y="49" text-anchor="end" font-family="Arial, sans-serif" font-size="8.5" fill="#475569">18</text>
+  <!-- Bars: Toán=14, Văn=10, Anh=16, STEM=8 -->
+  <rect x="48" y="66" width="26" height="70" rx="2" fill="#38BDF8" stroke="#0284C7" stroke-width="1.2"/>
+  <text x="61" y="61" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" font-weight="bold" fill="#0369A1">14</text>
+  <text x="61" y="149" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#1E293B">Toán</text>
+
+  <rect x="92" y="86" width="26" height="50" rx="2" fill="#F472B6" stroke="#DB2777" stroke-width="1.2"/>
+  <text x="105" y="81" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" font-weight="bold" fill="#9D174D">10</text>
+  <text x="105" y="149" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#1E293B">Văn</text>
+
+  <rect x="136" y="56" width="26" height="80" rx="2" fill="#4ADE80" stroke="#16A34A" stroke-width="1.2"/>
+  <text x="149" y="51" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" font-weight="bold" fill="#15803D">16</text>
+  <text x="149" y="149" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#1E293B">Anh</text>
+
+  <rect x="180" y="96" width="26" height="40" rx="2" fill="#FACC15" stroke="#CA8A04" stroke-width="1.2"/>
+  <text x="193" y="91" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" font-weight="bold" fill="#854D0E">8</text>
+  <text x="193" y="149" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#1E293B">STEM</text>
+</svg>

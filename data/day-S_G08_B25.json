@@ -1,0 +1,67 @@
+{
+  "worksheet_no": "15",
+  "skill_id": "S_G08_B25",
+  "grade": 8,
+  "strand_code": "SO_VA_DAI_SO",
+  "strand_name": "Số và Đại số",
+  "header_subtitle": "Chương VII: Phương trình bậc nhất và hàm số bậc nhất — Bài 25–26",
+  "title": "Phương trình bậc nhất một ẩn & Giải toán bằng cách lập phương trình",
+  "objective": "Giải thành thạo phương trình bậc nhất một ẩn ax + b = 0 (a ≠ 0), phương trình quy về bậc nhất và mô hình hóa bài toán thực tế.",
+  "knowledge_activation": "Nhắc nhanh: Quy tắc chuyển vế: Khi chuyển một hạng tử từ vế này sang vế kia của phương trình, ta phải ĐỔI DẤU hạng tử đó.",
+  "worked_example": {
+    "problem": "Giải phương trình:  3(x – 1) – 2 = x + 7",
+    "steps": [
+      "<b>Bước 1 (Nhân phá ngoặc ở vế trái):</b> 3x – 3 – 2 = x + 7  ⇔  3x – 5 = x + 7.",
+      "<b>Bước 2 (Chuyển các hạng tử chứa x sang vế trái, số sang vế phải):</b> 3x – x = 7 + 5.",
+      "<b>Bước 3 (Thu gọn và chia hệ số):</b> 2x = 12  ⇔  <b>x = 6</b>.",
+      "<b>Bước 4 (Thử lại vào phương trình đầu):</b> VT = 3(6 – 1) – 2 = 13; VP = 6 + 7 = 13 (VT = VP). Vậy S = {6}."
+    ],
+    "diagram_caption": "Mô hình cân thăng bằng 3x – 5 = x + 7"
+  },
+  "basic_exercises": [
+    {
+      "id": "2a",
+      "label": "a)",
+      "prompt": "Giải phương trình:  5x – 9 = 2x + 6"
+    },
+    {
+      "id": "2b",
+      "label": "b)",
+      "prompt": "Giải phương trình có mẫu số:  (2x + 1)/3 – 1 = x/2"
+    }
+  ],
+  "advanced_exercise": {
+    "id": "3",
+    "prompt": "Giải phương trình:  (x + 2)/4 – (x – 2)/3 = 1"
+  },
+  "real_world_problem": {
+    "id": "4",
+    "prompt": "Một ô tô đi từ A đến B với vận tốc 50 km/h, rồi từ B quay về A trên cùng quãng đường đó với vận tốc 40 km/h. Tổng thời gian cả đi lẫn về là 4,5 giờ. Tính độ dài quãng đường AB."
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Quy trình 4 bước: <b>Quy đồng khử mẫu → Phá ngoặc → Chuyển vế đổi dấu → Chia hệ số a</b>."
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "<b>Bẫy dấu trừ trước phân thức:</b> Khi khử mẫu biểu thức –4(x – 2), phải đổi dấu thành <b>–4x + 8</b> (rất nhiều bạn viết nhầm thành –4x – 8!).",
+        "<b>Bẫy quên nhân mẫu chung cho số nguyên:</b> Số 1 khi quy đồng mẫu 6 phải nhân thành 6."
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Với bài toán lập phương trình: Kiểm tra nghiệm x có thỏa mãn điều kiện thực tế (x &gt; 0) trước khi kết luận."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+      "prompt": "Bước biến đổi em cần cẩn thận nhất khi giải phương trình có mẫu số:"
+    }
+  },
+  "svg_asset_file": "svg_assets/S_G08_B25_diagram.svg"
+}

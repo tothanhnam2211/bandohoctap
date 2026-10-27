@@ -1,0 +1,16 @@
+<svg viewBox="0 0 240 165" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="236" height="161" rx="8" fill="#FAFBFD" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="120" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#1E293B">TỔNG BA GÓC TRONG TAM GIÁC ABC</text>
+  <polygon points="105,32 32,135 206,135" fill="#EFF6FF" stroke="#1D4ED8" stroke-width="2"/>
+  <!-- Cung góc A, B, C -->
+  <path d="M 94,48 A 18,18 0 0,0 118,47" fill="none" stroke="#DC2626" stroke-width="1.6"/>
+  <path d="M 52,135 A 20,20 0 0,0 44,118" fill="none" stroke="#15803D" stroke-width="1.6"/>
+  <path d="M 188,120 A 22,22 0 0,0 182,135" fill="none" stroke="#D97706" stroke-width="1.6"/>
+  <text x="105" y="27" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E293B">A</text>
+  <text x="20" y="140" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E293B">B</text>
+  <text x="213" y="140" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E293B">C</text>
+  <text x="106" y="64" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#DC2626">70°</text>
+  <text x="64" y="128" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#15803D">60°</text>
+  <text x="165" y="128" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#D97706">x = ?</text>
+  <text x="120" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#1E40AF">∠A + ∠B + ∠C = 180°</text>
+</svg>

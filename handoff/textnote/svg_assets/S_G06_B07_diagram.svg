@@ -1,0 +1,12 @@
+<svg viewBox="0 0 240 165" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="236" height="161" rx="8" fill="#FAFBFD" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="120" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#1E293B">THÁP ƯU TIÊN PHÉP TÍNH</text>
+  <polygon points="120,28 168,58 72,58" fill="#FEF08A" stroke="#CA8A04" stroke-width="1.5"/>
+  <text x="120" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#854D0E">1. Ngoặc ( ) → [ ] → { }</text>
+  <polygon points="68,62 172,62 192,92 48,92" fill="#BAE6FD" stroke="#0284C7" stroke-width="1.5"/>
+  <text x="120" y="81" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#0369A1">2. Lũy thừa: aⁿ</text>
+  <polygon points="44,96 196,96 214,126 26,126" fill="#BBF7D0" stroke="#16A34A" stroke-width="1.5"/>
+  <text x="120" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#166534">3. Nhân (·) và Chia (:)</text>
+  <polygon points="22,130 218,130 230,156 10,156" fill="#FBCFE8" stroke="#DB2777" stroke-width="1.5"/>
+  <text x="120" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#9D174D">4. Cộng (+) và Trừ (–) (Trái → Phải)</text>
+</svg>

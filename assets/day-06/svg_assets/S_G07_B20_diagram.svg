@@ -1,0 +1,26 @@
+<svg viewBox="0 0 240 165" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="236" height="161" rx="8" fill="#FAFBFD" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="120" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#1E293B">MÔ HÌNH DÃY TỈ SỐ BẰNG NHAU</text>
+  <text x="16" y="46" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#0369A1">Lớp 7A (3 phần):</text>
+  <rect x="102" y="34" width="32" height="18" fill="#BAE6FD" stroke="#0284C7" stroke-width="1.3"/>
+  <rect x="134" y="34" width="32" height="18" fill="#BAE6FD" stroke="#0284C7" stroke-width="1.3"/>
+  <rect x="166" y="34" width="32" height="18" fill="#BAE6FD" stroke="#0284C7" stroke-width="1.3"/>
+  <text x="205" y="47" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#0369A1">x</text>
+
+  <text x="16" y="76" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#15803D">Lớp 7B (4 phần):</text>
+  <rect x="102" y="64" width="32" height="18" fill="#BBF7D0" stroke="#16A34A" stroke-width="1.3"/>
+  <rect x="134" y="64" width="32" height="18" fill="#BBF7D0" stroke="#16A34A" stroke-width="1.3"/>
+  <rect x="166" y="64" width="32" height="18" fill="#BBF7D0" stroke="#16A34A" stroke-width="1.3"/>
+  <rect x="198" y="64" width="32" height="18" fill="#BBF7D0" stroke="#16A34A" stroke-width="1.3"/>
+
+  <text x="16" y="106" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#B45309">Lớp 7C (5 phần):</text>
+  <rect x="70" y="94" width="32" height="18" fill="#FDE68A" stroke="#D97706" stroke-width="1.3"/>
+  <rect x="102" y="94" width="32" height="18" fill="#FDE68A" stroke="#D97706" stroke-width="1.3"/>
+  <rect x="134" y="94" width="32" height="18" fill="#FDE68A" stroke="#D97706" stroke-width="1.3"/>
+  <rect x="166" y="94" width="32" height="18" fill="#FDE68A" stroke="#D97706" stroke-width="1.3"/>
+  <rect x="198" y="94" width="32" height="18" fill="#FDE68A" stroke="#D97706" stroke-width="1.3"/>
+
+  <rect x="14" y="122" width="212" height="32" rx="5" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1"/>
+  <text x="120" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#1E293B">Tổng: 3 + 4 + 5 = 12 phần ứng với 180 quyển</text>
+  <text x="120" y="149" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#DC2626">⇒ 1 phần (k) = 180 : 12 = 15 quyển</text>
+</svg>

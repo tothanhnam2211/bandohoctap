@@ -1,0 +1,14 @@
+<svg viewBox="0 0 240 165" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="236" height="161" rx="8" fill="#FAFBFD" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="120" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#1E293B">ĐỊNH LÍ VIÈTE: x² – 5x + 6 = 0 (x₁=2, x₂=3)</text>
+  <line x1="24" y1="108" x2="216" y2="108" stroke="#334155" stroke-width="1.5"/>
+  <line x1="52" y1="142" x2="52" y2="28" stroke="#334155" stroke-width="1.5"/>
+  <!-- Parabola passing through (2,0) at x=108 and (3,0) at x=136, vertex (2.5,-0.25) at (122, 118) -->
+  <path d="M 76,34 Q 122,188 168,34" fill="none" stroke="#2563EB" stroke-width="2.2"/>
+  <circle cx="106" cy="108" r="3.8" fill="#DC2626"/>
+  <circle cx="138" cy="108" r="3.8" fill="#DC2626"/>
+  <text x="100" y="123" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#DC2626">x₁=2</text>
+  <text x="144" y="123" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#DC2626">x₂=3</text>
+  <rect x="20" y="130" width="200" height="26" rx="4" fill="#FEF3C7" stroke="#D97706"/>
+  <text x="120" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#92400E">S = x₁+x₂ = –b/a = 5  |  P = x₁x₂ = c/a = 6</text>
+</svg>

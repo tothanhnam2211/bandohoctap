@@ -1,0 +1,12 @@
+<svg viewBox="0 0 240 165" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="236" height="161" rx="8" fill="#FAFBFD" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="120" y="19" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#1E293B">THU GỌN &amp; CỘNG ĐA THỨC CÙNG BẬC</text>
+  <rect x="16" y="30" width="208" height="34" rx="5" fill="#EFF6FF" stroke="#3B82F6"/>
+  <text x="120" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#1D4ED8">P(x) =  3x³   –   2x²   +   5x   –   4</text>
+  <text x="120" y="59" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#047857">Q(x) = –3x³   +   4x²   –   x    +   6</text>
+  <line x1="26" y1="70" x2="214" y2="70" stroke="#334155" stroke-width="1.5"/>
+  <rect x="16" y="78" width="208" height="32" rx="5" fill="#FEF9C3" stroke="#CA8A04"/>
+  <text x="120" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#991B1B">P(x)+Q(x) = 0x³ + 2x² + 4x + 2 = 2x² + 4x + 2</text>
+  <text x="120" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#1E293B">• Bậc của tổng là 2 (vì 3x³ + (–3x³) = 0 đã triệt tiêu!)</text>
+  <text x="120" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#475569">• Hệ số cao nhất: 2   |   Hệ số tự do: 2</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg viewBox="0 0 240 165" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="236" height="161" rx="8" fill="#FAFBFD" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="120" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#1E293B">TỈ SỐ LƯỢNG GIÁC GÓC NHỌN B</text>
+  <!-- Right triangle at A(42, 132), C(42, 42), B(188, 132) -->
+  <polygon points="42,132 42,42 188,132" fill="#EFF6FF" stroke="#1E3A8A" stroke-width="2"/>
+  <rect x="42" y="120" width="12" height="12" fill="none" stroke="#DC2626" stroke-width="1.4"/>
+  <path d="M 156,132 A 32,32 0 0,0 161,115" fill="none" stroke="#EA580C" stroke-width="1.8"/>
+  <text x="30" y="140" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E293B">A</text>
+  <text x="30" y="44" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E293B">C</text>
+  <text x="195" y="140" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1E293B">B</text>
+
+  <text x="24" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#DC2626">AC = 8</text>
+  <text x="115" y="146" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#0369A1">AB = 6 (Kề)</text>
+  <text x="132" y="78" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#15803D">BC = 10 (Huyền)</text>
+  <text x="120" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" font-weight="bold" fill="#9A3412">sin B = Đối/Huyền = 4/5  |  cos B = Kề/Huyền = 3/5</text>
+</svg>

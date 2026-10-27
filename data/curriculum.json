@@ -208,5 +208,117 @@
     "title": "Ngày 30: Chiến Lược Phân Bổ 120 Phút Thi Vào 10",
     "status": "locked",
     "file": "data/day-30.json"
+  },
+  {
+    "day": 31,
+    "id": "S_G09_B22",
+    "title": "Pilot TextNote: Bảng tần số, tần số tương đối và biểu đồ tần số",
+    "status": "unlocked",
+    "file": "data/day-S_G09_B22.json"
+  },
+  {
+    "day": 32,
+    "id": "S_G09_B19",
+    "title": "Pilot TextNote: Phương trình bậc hai một ẩn & Định lí Viète",
+    "status": "unlocked",
+    "file": "data/day-S_G09_B19.json"
+  },
+  {
+    "day": 33,
+    "id": "S_G09_B11",
+    "title": "Pilot TextNote: Tỉ số lượng giác của góc nhọn & Giải tam giác vuông",
+    "status": "unlocked",
+    "file": "data/day-S_G09_B11.json"
+  },
+  {
+    "day": 34,
+    "id": "S_G09_B02",
+    "title": "Pilot TextNote: Giải hệ hai phương trình bậc nhất hai ẩn",
+    "status": "unlocked",
+    "file": "data/day-S_G09_B02.json"
+  },
+  {
+    "day": 35,
+    "id": "S_G08_B31",
+    "title": "Pilot TextNote: Cách tính xác suất của biến cố bằng tỉ số",
+    "status": "unlocked",
+    "file": "data/day-S_G08_B31.json"
+  },
+  {
+    "day": 36,
+    "id": "S_G08_B25",
+    "title": "Pilot TextNote: Phương trình bậc nhất một ẩn & Giải toán bằng cách lập phương trình",
+    "status": "unlocked",
+    "file": "data/day-S_G08_B25.json"
+  },
+  {
+    "day": 37,
+    "id": "S_G08_B15",
+    "title": "Pilot TextNote: Định lí Thalès trong tam giác và ứng dụng thực tế",
+    "status": "unlocked",
+    "file": "data/day-S_G08_B15.json"
+  },
+  {
+    "day": 38,
+    "id": "S_G08_B06",
+    "title": "Pilot TextNote: Hiệu hai bình phương. Bình phương của một tổng hay một hiệu",
+    "status": "unlocked",
+    "file": "data/day-S_G08_B06.json"
+  },
+  {
+    "day": 39,
+    "id": "S_G07_B25",
+    "title": "Pilot TextNote: Đa thức một biến & Cộng, trừ đa thức một biến",
+    "status": "unlocked",
+    "file": "data/day-S_G07_B25.json"
+  },
+  {
+    "day": 40,
+    "id": "S_G07_B20",
+    "title": "Pilot TextNote: Tỉ lệ thức và tính chất của dãy tỉ số bằng nhau",
+    "status": "unlocked",
+    "file": "data/day-S_G07_B20.json"
+  },
+  {
+    "day": 41,
+    "id": "S_G07_B18",
+    "title": "Pilot TextNote: Biểu đồ hình quạt tròn và phân tích tỉ lệ phần trăm",
+    "status": "unlocked",
+    "file": "data/day-S_G07_B18.json"
+  },
+  {
+    "day": 42,
+    "id": "S_G07_B12",
+    "title": "Pilot TextNote: Tổng các góc trong một tam giác & Hai tam giác bằng nhau",
+    "status": "unlocked",
+    "file": "data/day-S_G07_B12.json"
+  },
+  {
+    "day": 43,
+    "id": "S_G06_B40",
+    "title": "Pilot TextNote: Biểu đồ cột và phân tích bảng thống kê",
+    "status": "unlocked",
+    "file": "data/day-S_G06_B40.json"
+  },
+  {
+    "day": 44,
+    "id": "S_G06_B20",
+    "title": "Pilot TextNote: Chu vi và diện tích của một số tứ giác đã học",
+    "status": "unlocked",
+    "file": "data/day-S_G06_B20.json"
+  },
+  {
+    "day": 45,
+    "id": "S_G06_B09",
+    "title": "Pilot TextNote: Dấu hiệu chia hết cho 2, 5, 3 và 9",
+    "status": "unlocked",
+    "file": "data/day-S_G06_B09.json"
+  },
+  {
+    "day": 46,
+    "id": "S_G06_B07",
+    "title": "Pilot TextNote: Thứ tự thực hiện các phép tính",
+    "status": "unlocked",
+    "file": "data/day-S_G06_B07.json"
   }
 ]

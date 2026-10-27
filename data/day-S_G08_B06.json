@@ -1,0 +1,68 @@
+{
+  "worksheet_no": "07",
+  "skill_id": "S_G08_B06",
+  "grade": 8,
+  "strand_code": "SO_VA_DAI_SO",
+  "strand_name": "Số và Đại số",
+  "header_subtitle": "Chương II: Hằng đẳng thức đáng nhớ và ứng dụng — Bài 6",
+  "title": "Hiệu hai bình phương. Bình phương của một tổng hay một hiệu",
+  "objective": "Khai triển và thu gọn biểu thức bằng 3 hằng đẳng thức bậc hai: (A + B)² = A² + 2AB + B², (A – B)² = A² – 2AB + B² và A² – B² = (A – B)(A + B).",
+  "knowledge_activation": "Nhắc nhanh: Khi bình phương một tích như (2x)², phải bình phương cả hệ số lẫn phần biến: (2x)² = 4x².",
+  "worked_example": {
+    "problem": "Rút gọn biểu thức:  P = (2x + 3)² – (2x – 1)(2x + 1)  và tính giá trị của P tại x = –1.",
+    "steps": [
+      "<b>Bước 1 (Khai triển từng cụm trong ngoặc):</b> (2x + 3)² = (2x)² + 2·2x·3 + 3² = 4x² + 12x + 9.",
+      "<b>Bước 2 (Áp dụng hiệu hai bình phương):</b> (2x – 1)(2x + 1) = (2x)² – 1² = 4x² – 1.",
+      "<b>Bước 3 (Bỏ ngoặc và thu gọn):</b> P = (4x² + 12x + 9) – (4x² – 1) = 4x² + 12x + 9 – 4x² + 1 = <b>12x + 10</b>.",
+      "<b>Bước 4 (Tính giá trị tại x = –1):</b> P(–1) = 12·(–1) + 10 = –12 + 10 = <b>–2</b>."
+    ],
+    "diagram_caption": "Mô hình diện tích (a + b)² = a² + 2ab + b²"
+  },
+  "basic_exercises": [
+    {
+      "id": "2a",
+      "label": "a)",
+      "prompt": "Khai triển các hằng đẳng thức:  (x + 5)²  và  (3x – 2)²"
+    },
+    {
+      "id": "2b",
+      "label": "b)",
+      "prompt": "Tính nhanh không dùng máy tính:  101²  và  65² – 35²"
+    }
+  ],
+  "advanced_exercise": {
+    "id": "3",
+    "prompt": "Tìm x, biết:  (x + 4)² – (x – 2)(x + 2) = 36"
+  },
+  "real_world_problem": {
+    "id": "4",
+    "prompt": "Một sân trường hình vuông cạnh a (m). Khi mở rộng mỗi cạnh thêm 3 m thì diện tích sân mới là (a + 3)² (m²), lớn hơn diện tích sân cũ 69 m². Tìm độ dài cạnh a ban đầu của sân trường."
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Xác định rõ biểu thức thứ nhất <b>A</b> và biểu thức thứ hai <b>B</b> trước khi áp công thức.",
+        "Luôn đặt kết quả sau dấu trừ vào <b>trong dấu ngoặc tròn</b> rồi mới đổi dấu!"
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "<b>Bẫy thiếu 2AB:</b> (A + B)² = A² + <b>2AB</b> + B² (tuyệt đối không viết thành A² + B²!).",
+        "<b>Bẫy quên bình phương hệ số:</b> (2x)² = 4x² (không phải 2x²!)."
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Thay thử x = 1 vào biểu thức ban đầu và biểu thức rút gọn xem hai giá trị có bằng nhau không."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+      "prompt": "Cách em tự nhắc để không bao giờ quên hạng tử 2AB:"
+    }
+  },
+  "svg_asset_file": "svg_assets/S_G08_B06_diagram.svg"
+}

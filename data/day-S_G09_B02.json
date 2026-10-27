@@ -1,0 +1,70 @@
+{
+  "worksheet_no": "10",
+  "skill_id": "S_G09_B02",
+  "grade": 9,
+  "strand_code": "SO_VA_DAI_SO",
+  "strand_name": "Số và Đại số",
+  "header_subtitle": "Chương I: Hệ phương trình bậc nhất hai ẩn — Bài 2",
+  "title": "Giải hệ hai phương trình bậc nhất hai ẩn",
+  "objective": "Giải thành thạo hệ hai phương trình bậc nhất hai ẩn bằng phương pháp thế và phương pháp cộng đại số; vận dụng giải bài toán thực tế.",
+  "knowledge_activation": "Nhắc nhanh: Mục tiêu của cả phương pháp thế và phương pháp cộng đại số là KHỬ MỘT ẨN để quy về phương trình bậc nhất một ẩn.",
+  "worked_example": {
+    "problem": "Giải hệ phương trình:  (1) 2x + y = 5   và   (2) x – y = 1",
+    "steps": [
+      "<b>Bước 1 (Quan sát hệ số của y):</b> Hệ số của y ở hai phương trình là +1 và –1 (hai số đối nhau).",
+      "<b>Bước 2 (Cộng từng vế hai phương trình):</b> (2x + x) + (y – y) = 5 + 1  ⇒  3x = 6  ⇒  <b>x = 2</b>.",
+      "<b>Bước 3 (Thế ngược tìm y):</b> Thay x = 2 vào (2): 2 – y = 1  ⇒  <b>y = 1</b>.",
+      "<b>Bước 4 (Thử lại vào cả 2 phương trình &amp; kết luận):</b> 2·2 + 1 = 5 (đúng) và 2 – 1 = 1 (đúng). Hệ có nghiệm duy nhất <b>(x ; y) = (2 ; 1)</b>."
+    ],
+    "diagram_caption": "Giao điểm M(2 ; 1) của hai đường thẳng"
+  },
+  "basic_exercises": [
+    {
+      "id": "2a",
+      "label": "a)",
+      "prompt": "Giải hệ phương trình:  { x + y = 7  ;  x – y = 1 }"
+    },
+    {
+      "id": "2b",
+      "label": "b)",
+      "prompt": "Giải hệ phương trình:  { 3x + 2y = 12  ;  x – 2y = 4 }"
+    }
+  ],
+  "advanced_exercise": {
+    "id": "3",
+    "prompt": "Giải hệ phương trình (nhân cân bằng hệ số):  { 4x – 3y = 1  ;  2x + y = 3 }"
+  },
+  "real_world_problem": {
+    "id": "4",
+    "prompt": "Hai bạn An và Bình mua vở và bút tại hiệu sách. An mua 2 quyển vở và 1 cây bút hết 25 000 đồng. Bình mua 1 quyển vở và 2 cây bút cùng loại hết 20 000 đồng. Tính giá tiền 1 quyển vở và 1 cây bút."
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Quan sát hệ số của x hoặc y trước:",
+        "<b>Đối nhau (+a và –a):</b> Cộng từng vế hai phương trình.",
+        "<b>Bằng nhau (+a và +a):</b> Trừ từng vế hai phương trình.",
+        "<b>Có hệ số bằng ±1:</b> Rút ẩn đó để thế cũng rất nhanh!"
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "<b>Bẫy quên nhân vế phải:</b> Khi nhân phương trình với một số k để cân bằng hệ số, nhớ nhân <b>CẢ HAI VẾ</b> (cả số tự do bên phải dấu bằng!).",
+        "<b>Bẫy trừ từng vế:</b> Cẩn thận khi trừ đối với hệ số âm: a – (–a) = 2a."
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Thay cặp số (x ; y) vừa tìm được vào <b>CẢ HAI phương trình ban đầu</b>. Cả hai đẳng thức cùng đúng mới chắc chắn 100%!"
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+      "prompt": "Ghi lại 1 mẹo nhỏ hoặc 1 lỗi em tự nhủ sẽ không lặp lại:"
+    }
+  },
+  "svg_asset_file": "svg_assets/S_G09_B02_diagram.svg"
+}

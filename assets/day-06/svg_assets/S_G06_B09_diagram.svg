@@ -1,0 +1,18 @@
+<svg viewBox="0 0 240 165" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="236" height="161" rx="8" fill="#FAFBFD" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="120" y="19" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#1E293B">BỘ LỌC DẤU HIỆU CHIA HẾT</text>
+  <rect x="14" y="30" width="100" height="54" rx="6" fill="#E0F2FE" stroke="#0284C7" stroke-width="1.4"/>
+  <text x="64" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#0369A1">NHÓM CHỮ SỐ TẬN CÙNG</text>
+  <text x="64" y="61" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#0F172A">• Chia hết cho 2: 0,2,4,6,8</text>
+  <text x="64" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#0F172A">• Chia hết cho 5: 0 hoặc 5</text>
+
+  <rect x="126" y="30" width="100" height="54" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-width="1.4"/>
+  <text x="176" y="46" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#B45309">NHÓM TỔNG CÁC CHỮ SỐ</text>
+  <text x="176" y="61" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#0F172A">• Chia hết cho 3: Tổng ⋮ 3</text>
+  <text x="176" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#0F172A">• Chia hết cho 9: Tổng ⋮ 9</text>
+
+  <rect x="24" y="96" width="192" height="54" rx="6" fill="#DCFCE7" stroke="#16A34A" stroke-width="1.5"/>
+  <text x="120" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#166534">GIAO ĐIỂM CẢ 4 DẤU HIỆU (⋮ 2, 5, 3, 9)</text>
+  <text x="120" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#DC2626">Tận cùng là 0  VÀ  Tổng các chữ số chia hết cho 9</text>
+  <text x="120" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#15803D">Ví dụ: 1 350 → 1 + 3 + 5 + 0 = 9 ⋮ 9</text>
+</svg>

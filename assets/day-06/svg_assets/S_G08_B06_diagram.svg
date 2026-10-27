@@ -1,0 +1,22 @@
+<svg viewBox="0 0 240 165" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="236" height="161" rx="8" fill="#FAFBFD" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="120" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#1E293B">MÔ HÌNH DIỆN TÍCH (a + b)² = a² + 2ab + b²</text>
+  <!-- a = 68, b = 36 -->
+  <rect x="42" y="34" width="68" height="68" fill="#BAE6FD" stroke="#0284C7" stroke-width="1.5"/>
+  <text x="76" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#0369A1">a²</text>
+
+  <rect x="110" y="34" width="36" height="68" fill="#FEF08A" stroke="#CA8A04" stroke-width="1.5"/>
+  <text x="128" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#854D0E">ab</text>
+
+  <rect x="42" y="102" width="68" height="36" fill="#FEF08A" stroke="#CA8A04" stroke-width="1.5"/>
+  <text x="76" y="124" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#854D0E">ab</text>
+
+  <rect x="110" y="102" width="36" height="36" fill="#FBCFE8" stroke="#DB2777" stroke-width="1.5"/>
+  <text x="128" y="124" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#9D174D">b²</text>
+
+  <text x="76" y="29" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#0369A1">a</text>
+  <text x="128" y="29" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#9D174D">b</text>
+  <text x="156" y="75" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#1E293B">Đừng quên</text>
+  <text x="156" y="90" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#DC2626">hạng tử 2ab!</text>
+  <text x="120" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#0F172A">Hiệu hai bình phương: a² – b² = (a – b)(a + b)</text>
+</svg>

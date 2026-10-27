@@ -1,0 +1,67 @@
+{
+  "worksheet_no": "08",
+  "skill_id": "S_G08_B15",
+  "grade": 8,
+  "strand_code": "HINH_HOC_VA_DO_LUONG",
+  "strand_name": "Hình học và Đo lường",
+  "header_subtitle": "Chương IV: Định lí Thalès — Bài 15",
+  "title": "Định lí Thalès trong tam giác và ứng dụng thực tế",
+  "objective": "Vận dụng định lí Thalès thuận và đảo trong tam giác để tính độ dài đoạn thẳng chưa biết và kiểm tra hai đường thẳng song song.",
+  "knowledge_activation": "Nhắc nhanh: Trong ΔABC, nếu DE // BC (D ∈ AB, E ∈ AC) thì AD/DB = AE/EC và AD/AB = AE/AC.",
+  "worked_example": {
+    "problem": "Cho tam giác ABC có điểm D thuộc cạnh AB, điểm E thuộc cạnh AC sao cho DE // BC. Biết AD = 4 cm, DB = 6 cm và AE = 5 cm. Tính độ dài đoạn thẳng EC và AC.",
+    "steps": [
+      "<b>Bước 1 (Kiểm tra điều kiện áp dụng):</b> Trong ΔABC có DE // BC (D ∈ AB, E ∈ AC) và các đoạn cùng đơn vị cm.",
+      "<b>Bước 2 (Áp dụng định lí Thalès):</b> AD / DB = AE / EC  ⇒  4 / 6 = 5 / EC.",
+      "<b>Bước 3 (Tính EC bằng nhân chéo):</b> 4 · EC = 6 · 5 = 30  ⇒  EC = 30 : 4 = <b>7,5 (cm)</b>.",
+      "<b>Bước 4 (Tính AC &amp; thử lại):</b> AC = AE + EC = 5 + 7,5 = <b>12,5 (cm)</b>. Thử lại: 4/6 = 2/3 và 5/7,5 = 2/3 (Đúng!)."
+    ],
+    "diagram_caption": "Tam giác ABC có DE // BC theo định lí Thalès"
+  },
+  "basic_exercises": [
+    {
+      "id": "2a",
+      "label": "a)",
+      "prompt": "Cho ΔABC có MN // BC (M ∈ AB, N ∈ AC). Biết AM = 3 cm, MB = 6 cm, AN = 4 cm. Tính NC."
+    },
+    {
+      "id": "2b",
+      "label": "b)",
+      "prompt": "Cho ΔMNP có E ∈ MN, F ∈ MP với ME = 2 cm, EN = 4 cm, MF = 3 cm, FP = 6 cm. Chứng minh EF // NP."
+    }
+  ],
+  "advanced_exercise": {
+    "id": "3",
+    "prompt": "Cho tam giác ABC có DE // BC (D ∈ AB, E ∈ AC). Biết AD = 6 cm, DB = 9 cm và tổng độ dài cạnh AC = 20 cm. Tính độ dài hai đoạn thẳng AE và EC."
+  },
+  "real_world_problem": {
+    "id": "4",
+    "prompt": "Để đo khoảng cách giữa hai vị trí B và C bị ngăn bởi một hồ nước, người ta chọn điểm A trên bờ và lấy D ∈ AB, E ∈ AC sao cho DE // BC. Đo được AD = 10 m, AB = 40 m và DE = 12 m. Tính khoảng cách BC (sử dụng hệ quả Thalès DE/BC = AD/AB)."
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Ghi rõ câu dẫn: <i>“Xét ΔABC có DE // BC, theo định lí Thalès ta có...”</i> trước khi lập tỉ số.",
+        "Lập tỉ số theo đúng cặp đoạn thẳng tương ứng trên hai cạnh AB và AC."
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "<b>Bẫy đoạn phần và cả cạnh:</b> Khi tính tỉ số đoạn song song DE / BC thì phải bằng <b>AD / AB</b> (đoạn nhỏ chia CẢ CẠNH lớn), không được viết bằng AD / DB!"
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Kiểm tra xem hai phân số AD/DB và AE/EC sau khi rút gọn có bằng nhau và cùng đơn vị đo không."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+      "prompt": "Cách em phân biệt tỉ số AD/DB và AD/AB khi dùng Thalès:"
+    }
+  },
+  "svg_asset_file": "svg_assets/S_G08_B15_diagram.svg"
+}
