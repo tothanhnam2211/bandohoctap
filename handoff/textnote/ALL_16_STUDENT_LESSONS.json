@@ -1,0 +1,1085 @@
+{
+  "source": "YOURDREAM Antigravity student_payloads Drive snapshot 2026-10-26",
+  "status": "DRAFT_FOR_JULES_TEST_ONLY",
+  "lessons": [
+    {
+      "worksheet_no": "12",
+      "skill_id": "S_G09_B22",
+      "grade": 9,
+      "strand_code": "THONG_KE_VA_XAC_SUAT",
+      "strand_name": "Thống kê và Xác suất",
+      "header_subtitle": "Chương VII: Tần số và tần số tương đối — Bài 22–23",
+      "title": "Bảng tần số, tần số tương đối và biểu đồ tần số",
+      "objective": "Lập được bảng tần số, tính chính xác tần số tương đối f_i = (n_i / N) · 100% và đọc, phân tích biểu đồ tần số từ mẫu số liệu thống kê.",
+      "knowledge_activation": "Nhắc nhanh: Tổng mọi tần số bằng cỡ mẫu N (n₁ + n₂ + ... + n_k = N) và tổng mọi tần số tương đối luôn bằng 100%.",
+      "worked_example": {
+        "problem": "Điểm kiểm tra Toán của một tổ 20 học sinh lớp 9A được thống kê theo 4 mức điểm: Điểm 7 (4 bạn), Điểm 8 (8 bạn), Điểm 9 (5 bạn), Điểm 10 (3 bạn). Tính tần số tương đối của mỗi mức điểm.",
+        "steps": [
+          "<b>Bước 1 (Kiểm tra cỡ mẫu N):</b> N = 4 + 8 + 5 + 3 = 20 (học sinh).",
+          "<b>Bước 2 (Tính tần số tương đối f = n / N · 100%):</b> Điểm 7: f₁ = (4/20)·100% = <b>20%</b>;  Điểm 8: f₂ = (8/20)·100% = <b>40%</b>.",
+          "<b>Bước 3 (Tính tiếp cho Điểm 9 và Điểm 10):</b> Điểm 9: f₃ = (5/20)·100% = <b>25%</b>;  Điểm 10: f₄ = (3/20)·100% = <b>15%</b>.",
+          "<b>Bước 4 (Kiểm chứng tổng):</b> 20% + 40% + 25% + 15% = <b>100%</b> (Chính xác!)."
+        ],
+        "diagram_caption": "Biểu đồ tần số và tần số tương đối (N = 20)"
+      },
+      "basic_exercises": [
+        {
+          "id": "2a",
+          "label": "a)",
+          "prompt": "Từ Ví dụ mẫu, mức điểm nào có tần số lớn nhất? Tính tổng tỉ lệ phần trăm học sinh đạt từ 9 điểm trở lên."
+        },
+        {
+          "id": "2b",
+          "label": "b)",
+          "prompt": "Một mẫu dữ liệu có cỡ mẫu N = 50, trong đó giá trị x = 10 xuất hiện với tần số n = 12. Tính tần số tương đối của giá trị x = 10."
+        }
+      ],
+      "advanced_exercise": {
+        "id": "3",
+        "prompt": "Khảo sát thời gian tự học (giờ/ngày) của 40 học sinh lớp 9B thu được 3 mức: 1 giờ (tần số 10), 2 giờ (tần số x) và 3 giờ (tần số tương đối 30%). Tìm tần số của mức 3 giờ và tìm x."
+      },
+      "real_world_problem": {
+        "id": "4",
+        "prompt": "Kiểm tra ngẫu nhiên 200 sản phẩm của một phân xưởng thấy có 4 sản phẩm bị lỗi. Tính tần số tương đối của sản phẩm đạt chuẩn (không bị lỗi) của phân xưởng đó."
+      },
+      "text_notes": {
+        "note1_start": {
+          "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+          "bullets": [
+            "Phân biệt rõ: <b>Tần số (n<sub>i</sub>)</b> là số lần xuất hiện; <b>Tần số tương đối (f<sub>i</sub>)</b> là tỉ lệ % so với cỡ mẫu N."
+          ]
+        },
+        "note2_watchout": {
+          "title": "2. CẨN THẬN LỖI NÀY!",
+          "bullets": [
+            "<b>Bẫy chia nhầm cho số nhóm k:</b> Khi tính tần số tương đối f<sub>i</sub> = n<sub>i</sub> / N, phải chia cho <b>tổng cỡ mẫu N</b> (20 học sinh), không phải chia cho 4 mức điểm!"
+          ]
+        },
+        "note3_check": {
+          "title": "3. KIỂM TRA LẠI NHÉ!",
+          "bullets": [
+            "Luôn cộng kiểm tra hai dòng cuối bảng: Tổng n<sub>i</sub> = N và Tổng f<sub>i</sub> = 100%."
+          ]
+        },
+        "note4_reflection": {
+          "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+          "prompt": "Điểm khác nhau cốt lõi giữa tần số và tần số tương đối là:"
+        }
+      },
+      "svg_asset_file": "svg_assets/S_G09_B22_diagram.svg"
+    },
+    {
+      "worksheet_no": "16",
+      "skill_id": "S_G09_B19",
+      "grade": 9,
+      "strand_code": "SO_VA_DAI_SO",
+      "strand_name": "Số và Đại số",
+      "header_subtitle": "Chương VI: Hàm số y = ax² và phương trình bậc hai một ẩn — Bài 19–20",
+      "title": "Phương trình bậc hai một ẩn & Định lí Viète",
+      "objective": "Giải phương trình bậc hai bằng biệt thức Δ (hoặc nhẩm nghiệm a+b+c=0, a–b+c=0) và vận dụng hệ thức Viète để tính giá trị biểu thức đối xứng giữa hai nghiệm.",
+      "knowledge_activation": "Nhắc nhanh: Khi Δ ≥ 0, hai nghiệm x₁, x₂ của ax² + bx + c = 0 (a ≠ 0) thỏa mãn hệ thức Viète: S = x₁ + x₂ = –b/a và P = x₁·x₂ = c/a.",
+      "worked_example": {
+        "problem": "Cho phương trình:  x² – 5x + 6 = 0. Giải phương trình và tính giá trị biểu thức A = x₁² + x₂² theo hệ thức Viète.",
+        "steps": [
+          "<b>Bước 1 (Xác định hệ số &amp; tính biệt thức Δ):</b> a = 1, b = –5, c = 6  ⇒  Δ = (–5)² – 4·1·6 = 25 – 24 = <b>1 &gt; 0</b>.",
+          "<b>Bước 2 (Tìm hai nghiệm phân biệt):</b> x₁ = (5 – 1)/2 = <b>2</b>;  x₂ = (5 + 1)/2 = <b>3</b>.",
+          "<b>Bước 3 (Áp dụng hệ thức Viète tính A = x₁² + x₂²):</b> S = x₁ + x₂ = –b/a = 5;  P = x₁x₂ = c/a = 6.",
+          "<b>Bước 4 (Biến đổi đối xứng):</b> A = x₁² + x₂² = (x₁ + x₂)² – 2x₁x₂ = S² – 2P = 5² – 2·6 = 25 – 12 = <b>13</b> (Khớp với 2² + 3² = 13!)."
+        ],
+        "diagram_caption": "Đồ thị parabol và hai nghiệm x₁ = 2, x₂ = 3"
+      },
+      "basic_exercises": [
+        {
+          "id": "2a",
+          "label": "a)",
+          "prompt": "Giải phương trình bằng cách nhẩm nghiệm:  2x² – 7x + 5 = 0"
+        },
+        {
+          "id": "2b",
+          "label": "b)",
+          "prompt": "Không giải phương trình x² – 6x + 4 = 0, hãy tính tổng S = x₁ + x₂ và tích P = x₁x₂."
+        }
+      ],
+      "advanced_exercise": {
+        "id": "3",
+        "prompt": "Gọi x₁, x₂ là hai nghiệm của phương trình x² – 4x + 1 = 0. Không giải phương trình, hãy tính giá trị của biểu thức:  B = 1/x₁ + 1/x₂  và  C = x₁² + x₂²."
+      },
+      "real_world_problem": {
+        "id": "4",
+        "prompt": "Tìm kích thước của một mảnh vườn hình chữ nhật, biết mảnh vườn có chu vi bằng 28 m và diện tích bằng 48 m²."
+      },
+      "text_notes": {
+        "note1_start": {
+          "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+          "bullets": [
+            "Trước khi dùng hệ thức Viète, luôn kiểm tra điều kiện có nghiệm: <b>Δ ≥ 0</b> (hoặc a và c trái dấu).",
+            "Thuộc lòng: <b>x₁² + x₂² = (x₁ + x₂)² – 2x₁x₂ = S² – 2P</b>."
+          ]
+        },
+        "note2_watchout": {
+          "title": "2. CẨN THẬN LỖI NÀY!",
+          "bullets": [
+            "<b>Bẫy dấu của tổng S:</b> Tổng hai nghiệm là <b>S = –b/a</b> (có dấu trừ phía trước!). Với x² – 5x + 6 = 0 thì b = –5 nên S = –(–5)/1 = +5."
+          ]
+        },
+        "note3_check": {
+          "title": "3. KIỂM TRA LẠI NHÉ!",
+          "bullets": [
+            "Nhẩm nhanh: a + b + c = 0 ⇒ x₁ = 1, x₂ = c/a;  a – b + c = 0 ⇒ x₁ = –1, x₂ = –c/a."
+          ]
+        },
+        "note4_reflection": {
+          "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+          "prompt": "Biểu thức đối xứng Viète em tâm đắc nhất hôm nay:"
+        }
+      },
+      "svg_asset_file": "svg_assets/S_G09_B19_diagram.svg"
+    },
+    {
+      "worksheet_no": "11",
+      "skill_id": "S_G09_B11",
+      "grade": 9,
+      "strand_code": "HINH_HOC_VA_DO_LUONG",
+      "strand_name": "Hình học và Đo lường",
+      "header_subtitle": "Chương IV: Hệ thức lượng trong tam giác vuông — Bài 11–12",
+      "title": "Tỉ số lượng giác của góc nhọn & Giải tam giác vuông",
+      "objective": "Tính đúng 4 tỉ số lượng giác (sin, cos, tan, cot) của góc nhọn trong tam giác vuông, vận dụng hai góc phụ nhau và ứng dụng đo chiều cao thực tế.",
+      "knowledge_activation": "Nhắc nhanh: sin = Đối / Huyền;  cos = Kề / Huyền;  tan = Đối / Kề;  cot = Kề / Đối. Nếu α + β = 90° thì sin α = cos β và tan α = cot β.",
+      "worked_example": {
+        "problem": "Cho tam giác ABC vuông tại A có AB = 6 cm, AC = 8 cm. Tính độ dài cạnh huyền BC và các tỉ số lượng giác sin B, cos B, tan B.",
+        "steps": [
+          "<b>Bước 1 (Tính cạnh huyền BC theo định lí Pythagore):</b> BC = √(AB² + AC²) = √(6² + 8²) = √100 = <b>10 (cm)</b>.",
+          "<b>Bước 2 (Xác định cạnh đối, cạnh kề của góc B):</b> Cạnh đối của góc B là AC = 8 cm; cạnh kề là AB = 6 cm.",
+          "<b>Bước 3 (Tính các tỉ số lượng giác):</b> sin B = AC / BC = 8/10 = <b>4/5</b>;  cos B = AB / BC = 6/10 = <b>3/5</b>;  tan B = AC / AB = 8/6 = <b>4/3</b>.",
+          "<b>Kiểm tra:</b> sin²B + cos²B = (4/5)² + (3/5)² = 16/25 + 9/25 = 1 (Chính xác!)."
+        ],
+        "diagram_caption": "Tam giác vuông ABC (6 – 8 – 10) và góc nhọn B"
+      },
+      "basic_exercises": [
+        {
+          "id": "2a",
+          "label": "a)",
+          "prompt": "Từ kết quả Ví dụ mẫu (ΔABC vuông tại A), hãy suy ra ngay sin C, cos C và cot C."
+        },
+        {
+          "id": "2b",
+          "label": "b)",
+          "prompt": "Tính giá trị biểu thức:  M = sin 30° + cos 60° – tan 45°"
+        }
+      ],
+      "advanced_exercise": {
+        "id": "3",
+        "prompt": "Cho tam giác DEF vuông tại D có cạnh huyền EF = 13 cm và cạnh DE = 5 cm. Tính độ dài cạnh DF và tính sin E, tan F."
+      },
+      "real_world_problem": {
+        "id": "4",
+        "prompt": "Một chiếc thang dài 6 m tựa vào bức tường thẳng đứng tạo với mặt đất nằm ngang một góc 60°. Tính độ cao từ chân tường lên đến điểm đầu thang chạm tường (kết quả viết dưới dạng căn thức chính xác)."
+      },
+      "text_notes": {
+        "note1_start": {
+          "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+          "bullets": [
+            "Ghi ngay lên hình vẽ chữ <b>Huyền, Đối, Kề</b> ứng với góc nhọn đang xét trước khi viết công thức.",
+            "Nhớ câu thơ: <i>Sin đi học (Đ/H) – Cos không hư (K/H) – Tan đoàn kết (Đ/K)</i>."
+          ]
+        },
+        "note2_watchout": {
+          "title": "2. CẨN THẬN LỖI NÀY!",
+          "bullets": [
+            "<b>Bẫy đổi góc nhọn nhưng quên đổi Đối – Kề:</b> Cạnh AC là cạnh <b>đối</b> của góc B nhưng lại là cạnh <b>kề</b> của góc C!"
+          ]
+        },
+        "note3_check": {
+          "title": "3. KIỂM TRA LẠI NHÉ!",
+          "bullets": [
+            "Vì cạnh huyền là cạnh lớn nhất nên <b>sin α và cos α luôn nhỏ hơn 1</b> (0 &lt; sin α, cos α &lt; 1)."
+          ]
+        },
+        "note4_reflection": {
+          "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+          "prompt": "Cách em phân biệt nhanh dùng sin, cos hay tan trong bài toán thực tế:"
+        }
+      },
+      "svg_asset_file": "svg_assets/S_G09_B11_diagram.svg"
+    },
+    {
+      "worksheet_no": "10",
+      "skill_id": "S_G09_B02",
+      "grade": 9,
+      "strand_code": "SO_VA_DAI_SO",
+      "strand_name": "Số và Đại số",
+      "header_subtitle": "Chương I: Hệ phương trình bậc nhất hai ẩn — Bài 2",
+      "title": "Giải hệ hai phương trình bậc nhất hai ẩn",
+      "objective": "Giải thành thạo hệ hai phương trình bậc nhất hai ẩn bằng phương pháp thế và phương pháp cộng đại số; vận dụng giải bài toán thực tế.",
+      "knowledge_activation": "Nhắc nhanh: Mục tiêu của cả phương pháp thế và phương pháp cộng đại số là KHỬ MỘT ẨN để quy về phương trình bậc nhất một ẩn.",
+      "worked_example": {
+        "problem": "Giải hệ phương trình:  (1) 2x + y = 5   và   (2) x – y = 1",
+        "steps": [
+          "<b>Bước 1 (Quan sát hệ số của y):</b> Hệ số của y ở hai phương trình là +1 và –1 (hai số đối nhau).",
+          "<b>Bước 2 (Cộng từng vế hai phương trình):</b> (2x + x) + (y – y) = 5 + 1  ⇒  3x = 6  ⇒  <b>x = 2</b>.",
+          "<b>Bước 3 (Thế ngược tìm y):</b> Thay x = 2 vào (2): 2 – y = 1  ⇒  <b>y = 1</b>.",
+          "<b>Bước 4 (Thử lại vào cả 2 phương trình &amp; kết luận):</b> 2·2 + 1 = 5 (đúng) và 2 – 1 = 1 (đúng). Hệ có nghiệm duy nhất <b>(x ; y) = (2 ; 1)</b>."
+        ],
+        "diagram_caption": "Giao điểm M(2 ; 1) của hai đường thẳng"
+      },
+      "basic_exercises": [
+        {
+          "id": "2a",
+          "label": "a)",
+          "prompt": "Giải hệ phương trình:  { x + y = 7  ;  x – y = 1 }"
+        },
+        {
+          "id": "2b",
+          "label": "b)",
+          "prompt": "Giải hệ phương trình:  { 3x + 2y = 12  ;  x – 2y = 4 }"
+        }
+      ],
+      "advanced_exercise": {
+        "id": "3",
+        "prompt": "Giải hệ phương trình (nhân cân bằng hệ số):  { 4x – 3y = 1  ;  2x + y = 3 }"
+      },
+      "real_world_problem": {
+        "id": "4",
+        "prompt": "Hai bạn An và Bình mua vở và bút tại hiệu sách. An mua 2 quyển vở và 1 cây bút hết 25 000 đồng. Bình mua 1 quyển vở và 2 cây bút cùng loại hết 20 000 đồng. Tính giá tiền 1 quyển vở và 1 cây bút."
+      },
+      "text_notes": {
+        "note1_start": {
+          "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+          "bullets": [
+            "Quan sát hệ số của x hoặc y trước:",
+            "<b>Đối nhau (+a và –a):</b> Cộng từng vế hai phương trình.",
+            "<b>Bằng nhau (+a và +a):</b> Trừ từng vế hai phương trình.",
+            "<b>Có hệ số bằng ±1:</b> Rút ẩn đó để thế cũng rất nhanh!"
+          ]
+        },
+        "note2_watchout": {
+          "title": "2. CẨN THẬN LỖI NÀY!",
+          "bullets": [
+            "<b>Bẫy quên nhân vế phải:</b> Khi nhân phương trình với một số k để cân bằng hệ số, nhớ nhân <b>CẢ HAI VẾ</b> (cả số tự do bên phải dấu bằng!).",
+            "<b>Bẫy trừ từng vế:</b> Cẩn thận khi trừ đối với hệ số âm: a – (–a) = 2a."
+          ]
+        },
+        "note3_check": {
+          "title": "3. KIỂM TRA LẠI NHÉ!",
+          "bullets": [
+            "Thay cặp số (x ; y) vừa tìm được vào <b>CẢ HAI phương trình ban đầu</b>. Cả hai đẳng thức cùng đúng mới chắc chắn 100%!"
+          ]
+        },
+        "note4_reflection": {
+          "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+          "prompt": "Ghi lại 1 mẹo nhỏ hoặc 1 lỗi em tự nhủ sẽ không lặp lại:"
+        }
+      },
+      "svg_asset_file": "svg_assets/S_G09_B02_diagram.svg"
+    },
+    {
+      "worksheet_no": "09",
+      "skill_id": "S_G08_B31",
+      "grade": 8,
+      "strand_code": "THONG_KE_VA_XAC_SUAT",
+      "strand_name": "Thống kê và Xác suất",
+      "header_subtitle": "Chương VIII: Mở đầu về tính xác suất của biến cố — Bài 31",
+      "title": "Cách tính xác suất của biến cố bằng tỉ số",
+      "objective": "Xác định tổng số kết quả đồng khả năng, liệt kê chính xác các kết quả thuận lợi cho biến cố E và tính xác suất P(E) = n(E) / n.",
+      "knowledge_activation": "Nhắc nhanh: Khi các kết quả có cùng khả năng xảy ra, xác suất P(E) = (Số kết quả thuận lợi cho E) / (Tổng số kết quả có thể). Luôn có 0 ≤ P(E) ≤ 1.",
+      "worked_example": {
+        "problem": "Một hộp có 12 chiếc thẻ cùng loại được đánh số từ 1 đến 12. Rút ngẫu nhiên 1 thẻ trong hộp. Tính xác suất của biến cố A: “Số ghi trên thẻ rút được là số nguyên tố”.",
+        "steps": [
+          "<b>Bước 1 (Xác định tổng số kết quả đồng khả năng):</b> Có n = 12 kết quả có thể xảy ra {1; 2; ...; 12}.",
+          "<b>Bước 2 (Liệt kê các kết quả thuận lợi cho A):</b> Các số nguyên tố từ 1 đến 12 là: {2 ; 3 ; 5 ; 7 ; 11}  ⇒  Có n(A) = 5 kết quả thuận lợi.",
+          "<b>Bước 3 (Tính xác suất bằng tỉ số):</b> P(A) = n(A) / n = <b>5 / 12</b>.",
+          "<b>Kiểm tra:</b> Số 1 không phải số nguyên tố, số 9 = 3·3 là hợp số; 0 ≤ 5/12 ≤ 1 (Chính xác!)."
+        ],
+        "diagram_caption": "12 thẻ đồng chất đánh số 1..12 (5 thẻ số nguyên tố)"
+      },
+      "basic_exercises": [
+        {
+          "id": "2a",
+          "label": "a)",
+          "prompt": "Gieo một con xúc xắc 6 mặt cân đối. Tính xác suất của biến cố B: “Số chấm xuất hiện là số chia hết cho 3”."
+        },
+        {
+          "id": "2b",
+          "label": "b)",
+          "prompt": "Với hộp 12 thẻ ở Ví dụ mẫu, tính xác suất của biến cố C: “Số ghi trên thẻ là số chính phương”."
+        }
+      ],
+      "advanced_exercise": {
+        "id": "3",
+        "prompt": "Chọn ngẫu nhiên một số tự nhiên có hai chữ số nhỏ hơn 30 (tức là từ 10 đến 29). Tính xác suất của biến cố D: “Số được chọn chia hết cho 5”."
+      },
+      "real_world_problem": {
+        "id": "4",
+        "prompt": "Một túi quà lớp 8A có 6 huy hiệu màu Đỏ, 5 huy hiệu màu Xanh và 4 huy hiệu màu Vàng cùng kích thước. Chọn ngẫu nhiên 1 huy hiệu. Tính xác suất để chọn được huy hiệu KHÔNG phải màu Vàng."
+      },
+      "text_notes": {
+        "note1_start": {
+          "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+          "bullets": [
+            "Luôn trình bày đủ 3 dòng: (1) Tổng số kết quả có thể; (2) Liệt kê kết quả thuận lợi; (3) Tỉ số P(E) và rút gọn tối giản."
+          ]
+        },
+        "note2_watchout": {
+          "title": "2. CẨN THẬN LỖI NÀY!",
+          "bullets": [
+            "<b>Bẫy số nguyên tố:</b> Số <b>1 KHÔNG phải</b> số nguyên tố; số <b>2 là số nguyên tố chẵn duy nhất</b>!",
+            "<b>Bẫy đếm số từ a đến b:</b> Số lượng các số từ 10 đến 29 là (29 – 10) + 1 = 20 số (đừng quên cộng 1!)."
+          ]
+        },
+        "note3_check": {
+          "title": "3. KIỂM TRA LẠI NHÉ!",
+          "bullets": [
+            "Xác suất P(E) phải luôn nằm trong đoạn từ 0 đến 1 (tử số không bao giờ lớn hơn mẫu số)."
+          ]
+        },
+        "note4_reflection": {
+          "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+          "prompt": "Các loại số đặc biệt (nguyên tố, chính phương) em cần nhớ khi tính xác suất:"
+        }
+      },
+      "svg_asset_file": "svg_assets/S_G08_B31_diagram.svg"
+    },
+    {
+      "worksheet_no": "15",
+      "skill_id": "S_G08_B25",
+      "grade": 8,
+      "strand_code": "SO_VA_DAI_SO",
+      "strand_name": "Số và Đại số",
+      "header_subtitle": "Chương VII: Phương trình bậc nhất và hàm số bậc nhất — Bài 25–26",
+      "title": "Phương trình bậc nhất một ẩn & Giải toán bằng cách lập phương trình",
+      "objective": "Giải thành thạo phương trình bậc nhất một ẩn ax + b = 0 (a ≠ 0), phương trình quy về bậc nhất và mô hình hóa bài toán thực tế.",
+      "knowledge_activation": "Nhắc nhanh: Quy tắc chuyển vế: Khi chuyển một hạng tử từ vế này sang vế kia của phương trình, ta phải ĐỔI DẤU hạng tử đó.",
+      "worked_example": {
+        "problem": "Giải phương trình:  3(x – 1) – 2 = x + 7",
+        "steps": [
+          "<b>Bước 1 (Nhân phá ngoặc ở vế trái):</b> 3x – 3 – 2 = x + 7  ⇔  3x – 5 = x + 7.",
+          "<b>Bước 2 (Chuyển các hạng tử chứa x sang vế trái, số sang vế phải):</b> 3x – x = 7 + 5.",
+          "<b>Bước 3 (Thu gọn và chia hệ số):</b> 2x = 12  ⇔  <b>x = 6</b>.",
+          "<b>Bước 4 (Thử lại vào phương trình đầu):</b> VT = 3(6 – 1) – 2 = 13; VP = 6 + 7 = 13 (VT = VP). Vậy S = {6}."
+        ],
+        "diagram_caption": "Mô hình cân thăng bằng 3x – 5 = x + 7"
+      },
+      "basic_exercises": [
+        {
+          "id": "2a",
+          "label": "a)",
+          "prompt": "Giải phương trình:  5x – 9 = 2x + 6"
+        },
+        {
+          "id": "2b",
+          "label": "b)",
+          "prompt": "Giải phương trình có mẫu số:  (2x + 1)/3 – 1 = x/2"
+        }
+      ],
+      "advanced_exercise": {
+        "id": "3",
+        "prompt": "Giải phương trình:  (x + 2)/4 – (x – 2)/3 = 1"
+      },
+      "real_world_problem": {
+        "id": "4",
+        "prompt": "Một ô tô đi từ A đến B với vận tốc 50 km/h, rồi từ B quay về A trên cùng quãng đường đó với vận tốc 40 km/h. Tổng thời gian cả đi lẫn về là 4,5 giờ. Tính độ dài quãng đường AB."
+      },
+      "text_notes": {
+        "note1_start": {
+          "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+          "bullets": [
+            "Quy trình 4 bước: <b>Quy đồng khử mẫu → Phá ngoặc → Chuyển vế đổi dấu → Chia hệ số a</b>."
+          ]
+        },
+        "note2_watchout": {
+          "title": "2. CẨN THẬN LỖI NÀY!",
+          "bullets": [
+            "<b>Bẫy dấu trừ trước phân thức:</b> Khi khử mẫu biểu thức –4(x – 2), phải đổi dấu thành <b>–4x + 8</b> (rất nhiều bạn viết nhầm thành –4x – 8!).",
+            "<b>Bẫy quên nhân mẫu chung cho số nguyên:</b> Số 1 khi quy đồng mẫu 6 phải nhân thành 6."
+          ]
+        },
+        "note3_check": {
+          "title": "3. KIỂM TRA LẠI NHÉ!",
+          "bullets": [
+            "Với bài toán lập phương trình: Kiểm tra nghiệm x có thỏa mãn điều kiện thực tế (x &gt; 0) trước khi kết luận."
+          ]
+        },
+        "note4_reflection": {
+          "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+          "prompt": "Bước biến đổi em cần cẩn thận nhất khi giải phương trình có mẫu số:"
+        }
+      },
+      "svg_asset_file": "svg_assets/S_G08_B25_diagram.svg"
+    },
+    {
+      "worksheet_no": "08",
+      "skill_id": "S_G08_B15",
+      "grade": 8,
+      "strand_code": "HINH_HOC_VA_DO_LUONG",
+      "strand_name": "Hình học và Đo lường",
+      "header_subtitle": "Chương IV: Định lí Thalès — Bài 15",
+      "title": "Định lí Thalès trong tam giác và ứng dụng thực tế",
+      "objective": "Vận dụng định lí Thalès thuận và đảo trong tam giác để tính độ dài đoạn thẳng chưa biết và kiểm tra hai đường thẳng song song.",
+      "knowledge_activation": "Nhắc nhanh: Trong ΔABC, nếu DE // BC (D ∈ AB, E ∈ AC) thì AD/DB = AE/EC và AD/AB = AE/AC.",
+      "worked_example": {
+        "problem": "Cho tam giác ABC có điểm D thuộc cạnh AB, điểm E thuộc cạnh AC sao cho DE // BC. Biết AD = 4 cm, DB = 6 cm và AE = 5 cm. Tính độ dài đoạn thẳng EC và AC.",
+        "steps": [
+          "<b>Bước 1 (Kiểm tra điều kiện áp dụng):</b> Trong ΔABC có DE // BC (D ∈ AB, E ∈ AC) và các đoạn cùng đơn vị cm.",
+          "<b>Bước 2 (Áp dụng định lí Thalès):</b> AD / DB = AE / EC  ⇒  4 / 6 = 5 / EC.",
+          "<b>Bước 3 (Tính EC bằng nhân chéo):</b> 4 · EC = 6 · 5 = 30  ⇒  EC = 30 : 4 = <b>7,5 (cm)</b>.",
+          "<b>Bước 4 (Tính AC &amp; thử lại):</b> AC = AE + EC = 5 + 7,5 = <b>12,5 (cm)</b>. Thử lại: 4/6 = 2/3 và 5/7,5 = 2/3 (Đúng!)."
+        ],
+        "diagram_caption": "Tam giác ABC có DE // BC theo định lí Thalès"
+      },
+      "basic_exercises": [
+        {
+          "id": "2a",
+          "label": "a)",
+          "prompt": "Cho ΔABC có MN // BC (M ∈ AB, N ∈ AC). Biết AM = 3 cm, MB = 6 cm, AN = 4 cm. Tính NC."
+        },
+        {
+          "id": "2b",
+          "label": "b)",
+          "prompt": "Cho ΔMNP có E ∈ MN, F ∈ MP với ME = 2 cm, EN = 4 cm, MF = 3 cm, FP = 6 cm. Chứng minh EF // NP."
+        }
+      ],
+      "advanced_exercise": {
+        "id": "3",
+        "prompt": "Cho tam giác ABC có DE // BC (D ∈ AB, E ∈ AC). Biết AD = 6 cm, DB = 9 cm và tổng độ dài cạnh AC = 20 cm. Tính độ dài hai đoạn thẳng AE và EC."
+      },
+      "real_world_problem": {
+        "id": "4",
+        "prompt": "Để đo khoảng cách giữa hai vị trí B và C bị ngăn bởi một hồ nước, người ta chọn điểm A trên bờ và lấy D ∈ AB, E ∈ AC sao cho DE // BC. Đo được AD = 10 m, AB = 40 m và DE = 12 m. Tính khoảng cách BC (sử dụng hệ quả Thalès DE/BC = AD/AB)."
+      },
+      "text_notes": {
+        "note1_start": {
+          "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+          "bullets": [
+            "Ghi rõ câu dẫn: <i>“Xét ΔABC có DE // BC, theo định lí Thalès ta có...”</i> trước khi lập tỉ số.",
+            "Lập tỉ số theo đúng cặp đoạn thẳng tương ứng trên hai cạnh AB và AC."
+          ]
+        },
+        "note2_watchout": {
+          "title": "2. CẨN THẬN LỖI NÀY!",
+          "bullets": [
+            "<b>Bẫy đoạn phần và cả cạnh:</b> Khi tính tỉ số đoạn song song DE / BC thì phải bằng <b>AD / AB</b> (đoạn nhỏ chia CẢ CẠNH lớn), không được viết bằng AD / DB!"
+          ]
+        },
+        "note3_check": {
+          "title": "3. KIỂM TRA LẠI NHÉ!",
+          "bullets": [
+            "Kiểm tra xem hai phân số AD/DB và AE/EC sau khi rút gọn có bằng nhau và cùng đơn vị đo không."
+          ]
+        },
+        "note4_reflection": {
+          "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+          "prompt": "Cách em phân biệt tỉ số AD/DB và AD/AB khi dùng Thalès:"
+        }
+      },
+      "svg_asset_file": "svg_assets/S_G08_B15_diagram.svg"
+    },
+    {
+      "worksheet_no": "07",
+      "skill_id": "S_G08_B06",
+      "grade": 8,
+      "strand_code": "SO_VA_DAI_SO",
+      "strand_name": "Số và Đại số",
+      "header_subtitle": "Chương II: Hằng đẳng thức đáng nhớ và ứng dụng — Bài 6",
+      "title": "Hiệu hai bình phương. Bình phương của một tổng hay một hiệu",
+      "objective": "Khai triển và thu gọn biểu thức bằng 3 hằng đẳng thức bậc hai: (A + B)² = A² + 2AB + B², (A – B)² = A² – 2AB + B² và A² – B² = (A – B)(A + B).",
+      "knowledge_activation": "Nhắc nhanh: Khi bình phương một tích như (2x)², phải bình phương cả hệ số lẫn phần biến: (2x)² = 4x².",
+      "worked_example": {
+        "problem": "Rút gọn biểu thức:  P = (2x + 3)² – (2x – 1)(2x + 1)  và tính giá trị của P tại x = –1.",
+        "steps": [
+          "<b>Bước 1 (Khai triển từng cụm trong ngoặc):</b> (2x + 3)² = (2x)² + 2·2x·3 + 3² = 4x² + 12x + 9.",
+          "<b>Bước 2 (Áp dụng hiệu hai bình phương):</b> (2x – 1)(2x + 1) = (2x)² – 1² = 4x² – 1.",
+          "<b>Bước 3 (Bỏ ngoặc và thu gọn):</b> P = (4x² + 12x + 9) – (4x² – 1) = 4x² + 12x + 9 – 4x² + 1 = <b>12x + 10</b>.",
+          "<b>Bước 4 (Tính giá trị tại x = –1):</b> P(–1) = 12·(–1) + 10 = –12 + 10 = <b>–2</b>."
+        ],
+        "diagram_caption": "Mô hình diện tích (a + b)² = a² + 2ab + b²"
+      },
+      "basic_exercises": [
+        {
+          "id": "2a",
+          "label": "a)",
+          "prompt": "Khai triển các hằng đẳng thức:  (x + 5)²  và  (3x – 2)²"
+        },
+        {
+          "id": "2b",
+          "label": "b)",
+          "prompt": "Tính nhanh không dùng máy tính:  101²  và  65² – 35²"
+        }
+      ],
+      "advanced_exercise": {
+        "id": "3",
+        "prompt": "Tìm x, biết:  (x + 4)² – (x – 2)(x + 2) = 36"
+      },
+      "real_world_problem": {
+        "id": "4",
+        "prompt": "Một sân trường hình vuông cạnh a (m). Khi mở rộng mỗi cạnh thêm 3 m thì diện tích sân mới là (a + 3)² (m²), lớn hơn diện tích sân cũ 69 m². Tìm độ dài cạnh a ban đầu của sân trường."
+      },
+      "text_notes": {
+        "note1_start": {
+          "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+          "bullets": [
+            "Xác định rõ biểu thức thứ nhất <b>A</b> và biểu thức thứ hai <b>B</b> trước khi áp công thức.",
+            "Luôn đặt kết quả sau dấu trừ vào <b>trong dấu ngoặc tròn</b> rồi mới đổi dấu!"
+          ]
+        },
+        "note2_watchout": {
+          "title": "2. CẨN THẬN LỖI NÀY!",
+          "bullets": [
+            "<b>Bẫy thiếu 2AB:</b> (A + B)² = A² + <b>2AB</b> + B² (tuyệt đối không viết thành A² + B²!).",
+            "<b>Bẫy quên bình phương hệ số:</b> (2x)² = 4x² (không phải 2x²!)."
+          ]
+        },
+        "note3_check": {
+          "title": "3. KIỂM TRA LẠI NHÉ!",
+          "bullets": [
+            "Thay thử x = 1 vào biểu thức ban đầu và biểu thức rút gọn xem hai giá trị có bằng nhau không."
+          ]
+        },
+        "note4_reflection": {
+          "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+          "prompt": "Cách em tự nhắc để không bao giờ quên hạng tử 2AB:"
+        }
+      },
+      "svg_asset_file": "svg_assets/S_G08_B06_diagram.svg"
+    },
+    {
+      "worksheet_no": "14",
+      "skill_id": "S_G07_B25",
+      "grade": 7,
+      "strand_code": "SO_VA_DAI_SO",
+      "strand_name": "Số và Đại số",
+      "header_subtitle": "Chương VII: Biểu thức đại số và đa thức một biến — Bài 25–26",
+      "title": "Đa thức một biến & Cộng, trừ đa thức một biến",
+      "objective": "Thu gọn, sắp xếp đa thức một biến theo lũy thừa giảm dần, xác định đúng bậc, hệ số cao nhất, hệ số tự do và thực hiện cộng, trừ hai đa thức.",
+      "knowledge_activation": "Nhắc nhanh: Bậc của đa thức (khác đa thức 0) là số mũ cao nhất của biến trong dạng ĐÃ THU GỌN.",
+      "worked_example": {
+        "problem": "Cho hai đa thức P(x) = 3x³ – 2x² + 5x – 4 và Q(x) = –3x³ + 4x² – x + 6. Tính tổng H(x) = P(x) + Q(x) và tìm bậc của H(x).",
+        "steps": [
+          "<b>Bước 1 (Nhóm các hạng tử cùng bậc):</b> H(x) = (3x³ – 3x³) + (–2x² + 4x²) + (5x – x) + (–4 + 6).",
+          "<b>Bước 2 (Cộng, trừ hệ số từng nhóm):</b> H(x) = 0x³ + 2x² + 4x + 2 = <b>2x² + 4x + 2</b>.",
+          "<b>Bước 3 (Xác định bậc sau khi thu gọn):</b> Vì hạng tử bậc 3 đã triệt tiêu (hệ số bằng 0) nên bậc của H(x) là <b>bậc 2</b>.",
+          "<b>Bước 4 (Kiểm chứng tại x = 1):</b> P(1) = 2, Q(1) = 6  ⇒  H(1) = 2 + 4 + 2 = 8 = P(1) + Q(1) (Đúng!)."
+        ],
+        "diagram_caption": "Cộng hai đa thức theo cột dọc cùng bậc"
+      },
+      "basic_exercises": [
+        {
+          "id": "2a",
+          "label": "a)",
+          "prompt": "Thu gọn và tìm bậc của đa thức:  A(x) = 5x⁴ – 3x² + 7 – 5x⁴ + x² – 2x"
+        },
+        {
+          "id": "2b",
+          "label": "b)",
+          "prompt": "Cho P(x) = 2x² + 3x – 1 và Q(x) = x² – 2x + 4. Tính hiệu P(x) – Q(x)."
+        }
+      ],
+      "advanced_exercise": {
+        "id": "3",
+        "prompt": "Kiểm tra xem x = 2 và x = –1 có phải là nghiệm của đa thức M(x) = x² – x – 2 hay không."
+      },
+      "real_world_problem": {
+        "id": "4",
+        "prompt": "Một bể nước hình hộp chữ nhật có đáy là hình vuông cạnh x (m) và chiều cao là (x + 2) (m). Viết đa thức V(x) biểu thị thể tích của bể theo x và tính thể tích bể khi x = 3 m."
+      },
+      "text_notes": {
+        "note1_start": {
+          "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+          "bullets": [
+            "Luôn <b>thu gọn đa thức</b> và sắp xếp số mũ từ cao xuống thấp trước khi kết luận bậc!"
+          ]
+        },
+        "note2_watchout": {
+          "title": "2. CẨN THẬN LỖI NÀY!",
+          "bullets": [
+            "<b>Bẫy bỏ ngoặc trước dấu trừ:</b> Khi tính P(x) – Q(x), phải đổi dấu <b>TẤT CẢ</b> các hạng tử bên trong ngoặc Q(x)!",
+            "<b>Bẫy kết luận bậc vội vàng:</b> Đừng nhìn 5x⁴ ở đầu mà kết luận bậc 4 nếu phía sau có –5x⁴ làm triệt tiêu!"
+          ]
+        },
+        "note3_check": {
+          "title": "3. KIỂM TRA LẠI NHÉ!",
+          "bullets": [
+            "Thay thử x = 1 vào P(x), Q(x) và đa thức kết quả xem P(1) ± Q(1) có khớp không."
+          ]
+        },
+        "note4_reflection": {
+          "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+          "prompt": "Quy tắc đổi dấu khi bỏ ngoặc trừ đa thức em nhớ nhất:"
+        }
+      },
+      "svg_asset_file": "svg_assets/S_G07_B25_diagram.svg"
+    },
+    {
+      "worksheet_no": "04",
+      "skill_id": "S_G07_B20",
+      "grade": 7,
+      "strand_code": "SO_VA_DAI_SO",
+      "strand_name": "Số và Đại số",
+      "header_subtitle": "Chương VI: Tỉ lệ thức và đại lượng tỉ lệ — Bài 20–21",
+      "title": "Tỉ lệ thức và tính chất của dãy tỉ số bằng nhau",
+      "objective": "Sử dụng tính chất tỉ lệ thức (a/b = c/d ⇔ ad = bc) và tính chất dãy tỉ số bằng nhau để tìm các số chưa biết và giải bài toán chia tỉ lệ.",
+      "knowledge_activation": "Nhắc nhanh: Từ x/a = y/b = z/c ta suy ra x/a = y/b = z/c = (x + y + z)/(a + b + c) (với a + b + c ≠ 0).",
+      "worked_example": {
+        "problem": "Ba lớp 7A, 7B, 7C quyên góp được tổng cộng 180 quyển sách tặng thư viện vùng cao. Biết số sách của ba lớp tỉ lệ với 3 : 4 : 5. Tính số sách mỗi lớp đã quyên góp.",
+        "steps": [
+          "<b>Bước 1 (Gọi ẩn &amp; lập dãy tỉ số):</b> Gọi số sách của 7A, 7B, 7C là x, y, z (quyển; x, y, z ∈ ℕ*). Ta có: x/3 = y/4 = z/5 và x + y + z = 180.",
+          "<b>Bước 2 (Áp dụng tính chất dãy tỉ số bằng nhau):</b> x/3 = y/4 = z/5 = (x + y + z)/(3 + 4 + 5) = 180 / 12 = <b>15</b>.",
+          "<b>Bước 3 (Tính từng đại lượng):</b> x = 3 · 15 = <b>45</b>;  y = 4 · 15 = <b>60</b>;  z = 5 · 15 = <b>75</b>.",
+          "<b>Bước 4 (Kiểm chứng):</b> 45 + 60 + 75 = 180 và 45:60:75 = 3:4:5 (Đúng!)."
+        ],
+        "diagram_caption": "Mô hình thanh tỉ lệ 3 : 4 : 5"
+      },
+      "basic_exercises": [
+        {
+          "id": "2a",
+          "label": "a)",
+          "prompt": "Tìm x trong tỉ lệ thức:  x / 6 = 10 / 3"
+        },
+        {
+          "id": "2b",
+          "label": "b)",
+          "prompt": "Tìm hai số x và y, biết:  x / 5 = y / 3  và  x + y = 32"
+        }
+      ],
+      "advanced_exercise": {
+        "id": "3",
+        "prompt": "Tìm hai số x và y, biết:  x / 4 = y / 7  và  2x – y = 5"
+      },
+      "real_world_problem": {
+        "id": "4",
+        "prompt": "Một mảnh đất hình chữ nhật có chu vi bằng 70 m, tỉ số giữa chiều rộng và chiều dài là 3 : 4. Tính diện tích của mảnh đất hình chữ nhật đó."
+      },
+      "text_notes": {
+        "note1_start": {
+          "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+          "bullets": [
+            "Tìm hệ số tỉ lệ 1 phần: <b>k = Tổng giá trị : Tổng số phần</b>.",
+            "Khi có hệ số (như 2x – y = 5), nhân cả tử và mẫu của x/4 với 2 để được 2x/8."
+          ]
+        },
+        "note2_watchout": {
+          "title": "2. CẨN THẬN LỖI NÀY!",
+          "bullets": [
+            "<b>Bẫy chu vi hình chữ nhật:</b> Tổng chiều dài + chiều rộng bằng <b>NỬA CHU VI (P : 2)</b> chứ không phải cả chu vi P!",
+            "<b>Bẫy ngược dấu mẫu số:</b> Trên tử lấy (2x – y) thì dưới mẫu cũng phải lấy (8 – 7)."
+          ]
+        },
+        "note3_check": {
+          "title": "3. KIỂM TRA LẠI NHÉ!",
+          "bullets": [
+            "Thử lại cả 2 điều kiện: (1) Tỉ số x/a có bằng y/b không? (2) Tổng/hiệu có đúng bằng đề bài cho không?"
+          ]
+        },
+        "note4_reflection": {
+          "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+          "prompt": "Bí quyết giải nhanh bài toán dãy tỉ số bằng nhau của em:"
+        }
+      },
+      "svg_asset_file": "svg_assets/S_G07_B20_diagram.svg"
+    },
+    {
+      "worksheet_no": "06",
+      "skill_id": "S_G07_B18",
+      "grade": 7,
+      "strand_code": "THONG_KE_VA_XAC_SUAT",
+      "strand_name": "Thống kê và Xác suất",
+      "header_subtitle": "Chương V: Thu thập và biểu diễn dữ liệu — Bài 18–19",
+      "title": "Biểu đồ hình quạt tròn và phân tích tỉ lệ phần trăm",
+      "objective": "Đọc và phân tích dữ liệu từ biểu đồ hình quạt tròn; quy đổi chính xác từ tỉ lệ phần trăm (%) sang số lượng thực tế khi biết tổng cỡ mẫu N.",
+      "knowledge_activation": "Nhắc nhanh: Cả hình tròn biểu diễn 100% (tương ứng góc 360°). Số lượng của một nhóm = Tổng số N · (Tỉ lệ % của nhóm đó).",
+      "worked_example": {
+        "problem": "Khảo sát 200 học sinh khối 7 về môn thể thao yêu thích nhất thu được biểu đồ quạt tròn: Bóng đá (40%), Cầu lông (25%), Bơi lội (20%), Cờ vua (15%). Tính số học sinh yêu thích mỗi môn.",
+        "steps": [
+          "<b>Bước 1 (Kiểm tra tổng phần trăm):</b> 40% + 25% + 20% + 15% = 100% (Hợp lệ!).",
+          "<b>Bước 2 (Tính số học sinh thích Bóng đá &amp; Cầu lông):</b> Bóng đá = 200 · 40% = <b>80 (HS)</b>;  Cầu lông = 200 · 25% = <b>50 (HS)</b>.",
+          "<b>Bước 3 (Tính số học sinh thích Bơi lội &amp; Cờ vua):</b> Bơi lội = 200 · 20% = <b>40 (HS)</b>;  Cờ vua = 200 · 15% = <b>30 (HS)</b>.",
+          "<b>Bước 4 (Kiểm chứng tổng):</b> 80 + 50 + 40 + 30 = 200 (học sinh)."
+        ],
+        "diagram_caption": "Biểu đồ quạt tròn môn thể thao khối 7"
+      },
+      "basic_exercises": [
+        {
+          "id": "2a",
+          "label": "a)",
+          "prompt": "Từ biểu đồ ở Ví dụ mẫu, số học sinh thích Bóng đá nhiều hơn số học sinh thích Bơi lội là bao nhiêu bạn?"
+        },
+        {
+          "id": "2b",
+          "label": "b)",
+          "prompt": "Một biểu đồ quạt tròn có 3 hình quạt chiếm 50%, 30% và x%. Tìm x và tính số đo góc ở tâm của hình quạt 50%."
+        }
+      ],
+      "advanced_exercise": {
+        "id": "3",
+        "prompt": "Trong một buổi khảo sát khác, biết hình quạt biểu diễn môn Cờ vua chiếm 15% và tương ứng với 45 học sinh. Hỏi tổng cộng có bao nhiêu học sinh đã tham gia khảo sát đó?"
+      },
+      "real_world_problem": {
+        "id": "4",
+        "prompt": "Gia đình bạn Minh có tổng thu nhập hằng tháng là 25 triệu đồng, được phân bổ trên biểu đồ quạt tròn gồm: Chi tiêu thiết yếu (60%), Học tập (20%) và Tiết kiệm (20%). Tính số tiền gia đình Minh dành cho Tiết kiệm mỗi tháng."
+      },
+      "text_notes": {
+        "note1_start": {
+          "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+          "bullets": [
+            "Tìm giá trị của p% của N: Lấy <b>N · p : 100</b>.",
+            "Tìm tổng N khi biết p% bằng A: Lấy <b>A · 100 : p</b>."
+          ]
+        },
+        "note2_watchout": {
+          "title": "2. CẨN THẬN LỖI NÀY!",
+          "bullets": [
+            "<b>Bẫy nhầm % với số lượng thực:</b> 40% không phải là 40 học sinh! Phải nhân với tổng cỡ mẫu N = 200."
+          ]
+        },
+        "note3_check": {
+          "title": "3. KIỂM TRA LẠI NHÉ!",
+          "bullets": [
+            "Tổng các tỉ lệ phần trăm trên biểu đồ quạt tròn phải luôn đúng bằng <b>100%</b>."
+          ]
+        },
+        "note4_reflection": {
+          "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+          "prompt": "Cách em phân biệt bài toán tìm p% của N và tìm N khi biết p%:"
+        }
+      },
+      "svg_asset_file": "svg_assets/S_G07_B18_diagram.svg"
+    },
+    {
+      "worksheet_no": "05",
+      "skill_id": "S_G07_B12",
+      "grade": 7,
+      "strand_code": "HINH_HOC_VA_DO_LUONG",
+      "strand_name": "Hình học và Đo lường",
+      "header_subtitle": "Chương IV: Hai tam giác bằng nhau — Bài 12–13",
+      "title": "Tổng các góc trong một tam giác & Hai tam giác bằng nhau",
+      "objective": "Vận dụng định lí tổng ba góc của một tam giác bằng 180°, tính chất góc ngoài tam giác và suy ra các cạnh, góc tương ứng của hai tam giác bằng nhau.",
+      "knowledge_activation": "Nhắc nhanh: Trong mọi tam giác ABC, ta luôn có ∠A + ∠B + ∠C = 180°. Trong tam giác vuông, hai góc nhọn phụ nhau (tổng bằng 90°).",
+      "worked_example": {
+        "problem": "Cho tam giác ABC có ∠A = 70°, ∠B = 60°. Tính số đo góc C và góc ngoài tại đỉnh C của tam giác ABC.",
+        "steps": [
+          "<b>Bước 1 (Áp dụng định lí tổng ba góc trong ΔABC):</b> ∠A + ∠B + ∠C = 180°.",
+          "<b>Bước 2 (Thay số và tính góc C):</b> 70° + 60° + ∠C = 180°  ⇒  130° + ∠C = 180°  ⇒  ∠C = <b>50°</b>.",
+          "<b>Bước 3 (Tính góc ngoài tại đỉnh C):</b> Góc ngoài tại đỉnh C bằng tổng hai góc trong không kề với nó: ∠C<sub>ngoài</sub> = ∠A + ∠B = 70° + 60° = <b>130°</b>.",
+          "<b>Kiểm tra:</b> ∠C + ∠C<sub>ngoài</sub> = 50° + 130° = 180° (hai góc kề bù, chính xác!)."
+        ],
+        "diagram_caption": "Minh họa tổng ba góc trong ΔABC"
+      },
+      "basic_exercises": [
+        {
+          "id": "2a",
+          "label": "a)",
+          "prompt": "Cho tam giác MNP vuông tại M, biết ∠N = 35°. Tính số đo góc P."
+        },
+        {
+          "id": "2b",
+          "label": "b)",
+          "prompt": "Biết ΔABC = ΔDEF, có AB = 5 cm, BC = 7 cm và ∠F = 45°. Tìm độ dài DE, EF và số đo ∠C."
+        }
+      ],
+      "advanced_exercise": {
+        "id": "3",
+        "prompt": "Cho tam giác ABC có số đo ba góc A, B, C tỉ lệ với 2 : 3 : 4. Tính số đo mỗi góc của tam giác ABC."
+      },
+      "real_world_problem": {
+        "id": "4",
+        "prompt": "Một vì kèo mái nhà hình tam giác cân ABC tại đỉnh A (có ∠B = ∠C). Biết góc ở đỉnh nóc mái là ∠A = 110°. Tính góc nghiêng ∠B của mái nhà so với thanh ngang BC."
+      },
+      "text_notes": {
+        "note1_start": {
+          "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+          "bullets": [
+            "Tổng ba góc trong mọi tam giác luôn bằng <b>180°</b>.",
+            "Ký hiệu ΔABC = ΔDEF phải viết <b>đúng thứ tự đỉnh tương ứng</b> (A↔D, B↔E, C↔F)."
+          ]
+        },
+        "note2_watchout": {
+          "title": "2. CẨN THẬN LỖI NÀY!",
+          "bullets": [
+            "<b>Bẫy sai thứ tự đỉnh:</b> Nếu ΔABC = ΔDEF thì cạnh AB bằng DE (đỉnh 1–2 ứng với đỉnh 1–2), tuyệt đối không ghép nhầm AB = EF!"
+          ]
+        },
+        "note3_check": {
+          "title": "3. KIỂM TRA LẠI NHÉ!",
+          "bullets": [
+            "Cộng lại cả 3 góc vừa tìm được xem có đúng bằng 180° và mỗi góc đều dương (&gt; 0°) không."
+          ]
+        },
+        "note4_reflection": {
+          "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+          "prompt": "Cách em kiểm tra nhanh thứ tự đỉnh hai tam giác bằng nhau:"
+        }
+      },
+      "svg_asset_file": "svg_assets/S_G07_B12_diagram.svg"
+    },
+    {
+      "worksheet_no": "03",
+      "skill_id": "S_G06_B40",
+      "grade": 6,
+      "strand_code": "THONG_KE_VA_XAC_SUAT",
+      "strand_name": "Thống kê và Xác suất",
+      "header_subtitle": "Chương IX: Dữ liệu và xác suất thực nghiệm — Bài 40",
+      "title": "Biểu đồ cột và phân tích bảng thống kê",
+      "objective": "Đọc, mô tả và phân tích dữ liệu từ biểu đồ cột; lập được bảng thống kê tương ứng và trả lời các câu hỏi so sánh, tổng hợp.",
+      "knowledge_activation": "Nhắc nhanh: Trên biểu đồ cột, trục ngang ghi tên các đối tượng thống kê, chiều cao mỗi cột ứng với số liệu trên trục đứng.",
+      "worked_example": {
+        "problem": "Biểu đồ cột bên phải biểu diễn số học sinh khối 6 đăng ký 4 Câu lạc bộ (CLB): Toán (14), Văn (10), Tiếng Anh (16), STEM (8). Hỏi tổng cộng có bao nhiêu lượt đăng ký và CLB nào đông nhất?",
+        "steps": [
+          "<b>Bước 1 (Đọc đỉnh từng cột):</b> Toán = 14 HS; Văn = 10 HS; Tiếng Anh = 16 HS; STEM = 8 HS.",
+          "<b>Bước 2 (Tìm cột cao nhất):</b> CLB Tiếng Anh có số học sinh đăng ký nhiều nhất (16 học sinh).",
+          "<b>Bước 3 (Tính tổng số lượt đăng ký):</b> 14 + 10 + 16 + 8 = <b>48 (học sinh)</b>.",
+          "<b>Bước 4 (Tính độ chênh lệch lớn nhất - nhỏ nhất):</b> 16 – 8 = 8 (học sinh)."
+        ],
+        "diagram_caption": "Biểu đồ cột số học sinh đăng ký CLB"
+      },
+      "basic_exercises": [
+        {
+          "id": "2a",
+          "label": "a)",
+          "prompt": "Từ biểu đồ ở Ví dụ mẫu, số học sinh đăng ký CLB Toán nhiều hơn CLB STEM bao nhiêu bạn?"
+        },
+        {
+          "id": "2b",
+          "label": "b)",
+          "prompt": "Tổng số học sinh đăng ký hai CLB Toán và STEM bằng bao nhiêu? So sánh với tổng hai CLB Văn và Anh."
+        }
+      ],
+      "advanced_exercise": {
+        "id": "3",
+        "prompt": "Trong tuần phát động đọc sách, số quyển sách 4 tổ của lớp 6A quyên góp được lần lượt là: Tổ 1 (15 quyển), Tổ 2 (18 quyển), Tổ 3 (12 quyển). Biết cả lớp quyên góp được tất cả 60 quyển. Tính số sách của Tổ 4 và cho biết tổ nào quyên góp nhiều nhất."
+      },
+      "real_world_problem": {
+        "id": "4",
+        "prompt": "Nhà trường dự kiến mở thêm phòng sinh hoạt riêng cho những CLB có từ 12 học sinh đăng ký trở lên (theo biểu đồ Ví dụ mẫu). Hỏi có bao nhiêu CLB đủ điều kiện mở phòng riêng? Đó là những CLB nào?"
+      },
+      "text_notes": {
+        "note1_start": {
+          "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+          "bullets": [
+            "Nhìn tên trục ngang (đối tượng) và vạch chia trục đứng (đơn vị số lượng) trước khi đọc số.",
+            "Ghi ngay số liệu lên đỉnh mỗi cột để không bị gióng nhầm dòng."
+          ]
+        },
+        "note2_watchout": {
+          "title": "2. CẨN THẬN LỖI NÀY!",
+          "bullets": [
+            "<b>Bẫy vạch chia trục đứng:</b> Chú ý khoảng cách giữa hai vạch liên tiếp (có thể cách 2, 5 hoặc 6 đơn vị chứ không phải lúc nào cũng cách 1 đơn vị!)."
+          ]
+        },
+        "note3_check": {
+          "title": "3. KIỂM TRA LẠI NHÉ!",
+          "bullets": [
+            "Cộng lại toàn bộ các cột xem có khớp với tổng số liệu của bảng thống kê không."
+          ]
+        },
+        "note4_reflection": {
+          "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+          "prompt": "Mẹo đọc biểu đồ cột nhanh và chính xác của em là:"
+        }
+      },
+      "svg_asset_file": "svg_assets/S_G06_B40_diagram.svg"
+    },
+    {
+      "worksheet_no": "02",
+      "skill_id": "S_G06_B20",
+      "grade": 6,
+      "strand_code": "HINH_HOC_VA_DO_LUONG",
+      "strand_name": "Hình học và Đo lường",
+      "header_subtitle": "Chương IV: Một số hình phẳng trong thực tiễn — Bài 20",
+      "title": "Chu vi và diện tích của một số tứ giác đã học",
+      "objective": "Vận dụng chính xác công thức chu vi và diện tích hình chữ nhật, hình vuông, hình thang, hình bình hành, hình thoi vào bài toán thực tế.",
+      "knowledge_activation": "Nhắc nhanh: S(chữ nhật) = a·b;  S(hình thang) = (a + b)·h : 2;  S(hình thoi) = m·n : 2 (m, n là hai đường chéo).",
+      "worked_example": {
+        "problem": "Một mảnh vườn hình chữ nhật dài 15 m, rộng 10 m. Ở giữa vườn, người ta xây một bồn hoa hình thang cân có đáy lớn 8 m, đáy nhỏ 4 m và chiều cao 5 m. Tính diện tích phần đất còn lại.",
+        "steps": [
+          "<b>Bước 1 (Tính diện tích mảnh vườn HCN):</b> S<sub>vườn</sub> = 15 · 10 = 150 (m²).",
+          "<b>Bước 2 (Tính diện tích bồn hoa hình thang):</b> S<sub>hoa</sub> = (8 + 4) · 5 : 2 = 12 · 5 : 2 = 30 (m²).",
+          "<b>Bước 3 (Tính diện tích phần đất còn lại):</b> S<sub>còn lại</sub> = 150 – 30 = <b>120 (m²)</b>.",
+          "<b>Kiểm tra hợp lí:</b> 0 &lt; S<sub>hoa</sub> (30 m²) &lt; S<sub>vườn</sub> (150 m²) và cùng đơn vị m²."
+        ],
+        "diagram_caption": "Sơ đồ mảnh vườn HCN và bồn hoa hình thang"
+      },
+      "basic_exercises": [
+        {
+          "id": "2a",
+          "label": "a)",
+          "prompt": "Tính chu vi và diện tích hình chữ nhật có chiều dài 12 cm và chiều rộng 8 cm."
+        },
+        {
+          "id": "2b",
+          "label": "b)",
+          "prompt": "Tính diện tích hình thoi có độ dài hai đường chéo lần lượt là 10 cm và 14 cm."
+        }
+      ],
+      "advanced_exercise": {
+        "id": "3",
+        "prompt": "Một hình thang có diện tích 60 cm², chiều cao 6 cm và đáy lớn hơn đáy nhỏ 4 cm. Tính độ dài mỗi đáy của hình thang."
+      },
+      "real_world_problem": {
+        "id": "4",
+        "prompt": "Bác Bình muốn lát gạch kín nền căn phòng hình chữ nhật dài 8 m, rộng 5 m bằng các viên gạch hình vuông cạnh 50 cm. Hỏi bác Bình cần mua ít nhất bao nhiêu viên gạch (coi mạch vữa không đáng kể)?"
+      },
+      "text_notes": {
+        "note1_start": {
+          "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+          "bullets": [
+            "Đọc kỹ tên hình tứ giác và kiểm tra xem các cạnh đã <b>CÙNG ĐƠN VỊ ĐO</b> chưa.",
+            "Hình thang: Tổng hai đáy nhân chiều cao rồi <b>chia 2</b>."
+          ]
+        },
+        "note2_watchout": {
+          "title": "2. CẨN THẬN LỖI NÀY!",
+          "bullets": [
+            "<b>Bẫy quên chia 2:</b> Diện tích hình thang và hình thoi (theo 2 đường chéo) đều phải chia cho 2!",
+            "<b>Bẫy khác đơn vị:</b> Nền phòng tính bằng mét (m) mà viên gạch tính bằng xăng-ti-mét (cm) thì phải đổi về cùng đơn vị trước."
+          ]
+        },
+        "note3_check": {
+          "title": "3. KIỂM TRA LẠI NHÉ!",
+          "bullets": [
+            "Đơn vị chu vi là <b>cm, m</b>; đơn vị diện tích phải có số mũ hai (<b>cm², m²</b>).",
+            "Diện tích phần còn lại luôn nhỏ hơn diện tích hình bao ngoài."
+          ]
+        },
+        "note4_reflection": {
+          "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+          "prompt": "Công thức diện tích tứ giác em thấy thú vị nhất hôm nay:"
+        }
+      },
+      "svg_asset_file": "svg_assets/S_G06_B20_diagram.svg"
+    },
+    {
+      "worksheet_no": "13",
+      "skill_id": "S_G06_B09",
+      "grade": 6,
+      "strand_code": "SO_VA_DAI_SO",
+      "strand_name": "Số và Đại số",
+      "header_subtitle": "Chương II: Tính chia hết trong tập hợp số tự nhiên — Bài 9",
+      "title": "Dấu hiệu chia hết cho 2, 5, 3 và 9",
+      "objective": "Nhận biết nhanh một số hay một tổng/hiệu có chia hết cho 2, 5, 3, 9 hay không mà không cần thực hiện phép chia.",
+      "knowledge_activation": "Nhắc nhanh: Dấu hiệu chia hết cho 2 và 5 nhìn vào CHỮ SỐ TẬN CÙNG; dấu hiệu chia hết cho 3 và 9 nhìn vào TỔNG CÁC CHỮ SỐ.",
+      "worked_example": {
+        "problem": "Trong các số sau: 245 ; 1 080 ; 2 026 ; 3 411. Tìm số vừa chia hết cho cả 2, 5, 3 và 9.",
+        "steps": [
+          "<b>Bước 1 (Lọc chia hết cho cả 2 và 5):</b> Số đó phải có chữ số tận cùng là 0  ⇒  Chỉ còn <b>1 080</b>.",
+          "<b>Bước 2 (Kiểm tra tổng các chữ số của 1 080):</b> 1 + 0 + 8 + 0 = 9.",
+          "<b>Bước 3 (Xét chia hết cho 9 và 3):</b> Vì 9 ⋮ 9 nên 1 080 chia hết cho 9 (và cũng chia hết cho 3).",
+          "<b>Kết luận:</b> Số thỏa mãn cả 4 dấu hiệu là <b>1 080</b>."
+        ],
+        "diagram_caption": "Bộ lọc kết hợp dấu hiệu chia hết"
+      },
+      "basic_exercises": [
+        {
+          "id": "2a",
+          "label": "a)",
+          "prompt": "Trong các số 156 ; 275 ; 450 ; 819, những số nào chia hết cho 9?"
+        },
+        {
+          "id": "2b",
+          "label": "b)",
+          "prompt": "Không thực hiện phép tính, xét xem tổng A = 1 200 + 45 + 90 có chia hết cho 5 không? Vì sao?"
+        }
+      ],
+      "advanced_exercise": {
+        "id": "3",
+        "prompt": "Tìm chữ số x và y để số tự nhiên bốn chữ số  2x5y  vừa chia hết cho 2, vừa chia hết cho 5 và vừa chia hết cho 9."
+      },
+      "real_world_problem": {
+        "id": "4",
+        "prompt": "Cô giáo có 135 quyển vở và 90 chiếc bút muốn chia đều vào 9 phần quà khen thưởng cuối kì. Hỏi cô giáo có thể chia vừa hết cả vở và bút vào 9 phần quà đó không? Mỗi phần quà có mấy quyển vở, mấy chiếc bút?"
+      },
+      "text_notes": {
+        "note1_start": {
+          "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+          "bullets": [
+            "Nếu bài toán có cả điều kiện ⋮ 2, 5 và ⋮ 9: Luôn tìm <b>chữ số tận cùng trước</b>, rồi mới tính tổng các chữ số!"
+          ]
+        },
+        "note2_watchout": {
+          "title": "2. CẨN THẬN LỖI NÀY!",
+          "bullets": [
+            "<b>Bẫy suy luận ngược:</b> Mọi số chia hết cho 9 đều chia hết cho 3, nhưng số chia hết cho 3 (như 12, 15) <b>chưa chắc</b> chia hết cho 9!"
+          ]
+        },
+        "note3_check": {
+          "title": "3. KIỂM TRA LẠI NHÉ!",
+          "bullets": [
+            "Chữ số tìm được phải là số tự nhiên từ 0 đến 9 (chữ số hàng cao nhất phải khác 0)."
+          ]
+        },
+        "note4_reflection": {
+          "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+          "prompt": "Mẹo phân biệt nhóm (2; 5) và nhóm (3; 9) của em:"
+        }
+      },
+      "svg_asset_file": "svg_assets/S_G06_B09_diagram.svg"
+    },
+    {
+      "worksheet_no": "01",
+      "skill_id": "S_G06_B07",
+      "grade": 6,
+      "strand_code": "SO_VA_DAI_SO",
+      "strand_name": "Số và Đại số",
+      "header_subtitle": "Chương I: Tập hợp các số tự nhiên — Bài 7",
+      "title": "Thứ tự thực hiện các phép tính",
+      "objective": "Thực hiện đúng thứ tự ưu tiên các phép tính (Lũy thừa → Nhân, chia → Cộng, trừ) và dấu ngoặc ( ) → [ ] → { } để tính giá trị biểu thức và tìm x.",
+      "knowledge_activation": "Nhắc nhanh: Khi biểu thức chỉ có cộng và trừ (hoặc chỉ có nhân và chia), ta thực hiện từ TRÁI sang PHẢI.",
+      "worked_example": {
+        "problem": "Tính giá trị biểu thức:  A = 120 – [ 50 – ( 7 – 3 )² · 2 ]",
+        "steps": [
+          "<b>Bước 1 (Trong ngoặc tròn trước):</b> Tính 7 – 3 = 4, khi đó A = 120 – [ 50 – 4² · 2 ].",
+          "<b>Bước 2 (Tính lũy thừa và nhân trong ngoặc vuông):</b> 4² = 16; tiếp tục 16 · 2 = 32.",
+          "<b>Bước 3 (Hoàn tất ngoặc vuông):</b> 50 – 32 = 18.",
+          "<b>Bước 4 (Phép trừ cuối cùng):</b> A = 120 – 18 = <b>102</b>.",
+          "<b>Thử lại nhanh:</b> 18 + 32 = 50 và 102 + 18 = 120 (Đúng!)."
+        ],
+        "diagram_caption": "Tháp ưu tiên thực hiện phép tính"
+      },
+      "basic_exercises": [
+        {
+          "id": "2a",
+          "label": "a)",
+          "prompt": "Tính hợp lí:  36 : 3² + 2³ · 5 – 18"
+        },
+        {
+          "id": "2b",
+          "label": "b)",
+          "prompt": "Tính:  100 – { 2 · [ 30 – ( 5 – 2 )² ] + 14 }"
+        }
+      ],
+      "advanced_exercise": {
+        "id": "3",
+        "prompt": "Tìm số tự nhiên x, biết:  3 · ( x + 2 ) – 2³ = 4²"
+      },
+      "real_world_problem": {
+        "id": "4",
+        "prompt": "Bạn An mua 3 quyển vở giá 12 000 đồng/quyển và 2 chiếc bút bi giá 7 000 đồng/chiếc. An đưa cô bán hàng tờ 100 000 đồng. Hỏi cô bán hàng trả lại An bao nhiêu tiền? (Viết một biểu thức duy nhất và tính kết quả)."
+      },
+      "text_notes": {
+        "note1_start": {
+          "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+          "bullets": [
+            "Không có ngoặc: <b>Lũy thừa → Nhân, Chia → Cộng, Trừ</b>.",
+            "Có dấu ngoặc: Làm từ trong ra ngoài: <b>( ) → [ ] → { }</b>."
+          ]
+        },
+        "note2_watchout": {
+          "title": "2. CẨN THẬN LỖI NÀY!",
+          "bullets": [
+            "<b>Bẫy nhân chia ngang hàng:</b> Gặp 36 : 3 · 2 phải tính từ <b>trái sang phải</b> (36 : 3 = 12 rồi nhân 2 = 24), tuyệt đối không lấy 3 · 2 trước!",
+            "<b>Bẫy lũy thừa:</b> 2³ = 2·2·2 = 8 (không phải 2·3 = 6!)."
+          ]
+        },
+        "note3_check": {
+          "title": "3. KIỂM TRA LẠI NHÉ!",
+          "bullets": [
+            "Với bài tìm x: Thay giá trị x vừa tìm được vào vế trái xem có đúng bằng vế phải (4² = 16) hay không."
+          ]
+        },
+        "note4_reflection": {
+          "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+          "prompt": "Ghi lại 1 quy tắc hoặc 1 lỗi em tự nhủ sẽ không mắc:"
+        }
+      },
+      "svg_asset_file": "svg_assets/S_G06_B07_diagram.svg"
+    }
+  ]
+}
