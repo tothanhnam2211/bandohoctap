@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "YOURDREAM_Jules_TextNote_Lesson_Contract_v1_0",
+  "description": "Hợp đồng dữ liệu chuẩn giữa Nhà máy TextNote Toán 6-9 và WebApp tương tác (Jules).",
+  "type": "object",
+  "required": [
+    "worksheet_no",
+    "skill_id",
+    "grade",
+    "strand_code",
+    "title",
+    "objective",
+    "worked_example",
+    "basic_exercises",
+    "advanced_exercise",
+    "real_world_problem",
+    "text_notes",
+    "svg_asset_file"
+  ],
+  "properties": {
+    "worksheet_no": {
+      "type": "string"
+    },
+    "skill_id": {
+      "type": "string",
+      "pattern": "^S_G0[6-9]_"
+    },
+    "grade": {
+      "type": "integer",
+      "enum": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "strand_code": {
+      "type": "string",
+      "enum": [
+        "SO_VA_DAI_SO",
+        "HINH_HOC_VA_DO_LUONG",
+        "THONG_KE_VA_XAC_SUAT"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "objective": {
+      "type": "string"
+    },
+    "text_notes": {
+      "type": "object",
+      "required": [
+        "note1_start",
+        "note2_watchout",
+        "note3_check",
+        "note4_reflection"
+      ]
+    }
+  },
+  "security_boundary": "Student payloads in student_payloads/ MUST NEVER contain final_answer or teacher_solution fields."
+}
