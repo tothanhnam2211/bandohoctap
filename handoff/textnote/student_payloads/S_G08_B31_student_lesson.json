@@ -1,0 +1,67 @@
+{
+  "worksheet_no": "09",
+  "skill_id": "S_G08_B31",
+  "grade": 8,
+  "strand_code": "THONG_KE_VA_XAC_SUAT",
+  "strand_name": "Thống kê và Xác suất",
+  "header_subtitle": "Chương VIII: Mở đầu về tính xác suất của biến cố — Bài 31",
+  "title": "Cách tính xác suất của biến cố bằng tỉ số",
+  "objective": "Xác định tổng số kết quả đồng khả năng, liệt kê chính xác các kết quả thuận lợi cho biến cố E và tính xác suất P(E) = n(E) / n.",
+  "knowledge_activation": "Nhắc nhanh: Khi các kết quả có cùng khả năng xảy ra, xác suất P(E) = (Số kết quả thuận lợi cho E) / (Tổng số kết quả có thể). Luôn có 0 ≤ P(E) ≤ 1.",
+  "worked_example": {
+    "problem": "Một hộp có 12 chiếc thẻ cùng loại được đánh số từ 1 đến 12. Rút ngẫu nhiên 1 thẻ trong hộp. Tính xác suất của biến cố A: “Số ghi trên thẻ rút được là số nguyên tố”.",
+    "steps": [
+      "<b>Bước 1 (Xác định tổng số kết quả đồng khả năng):</b> Có n = 12 kết quả có thể xảy ra {1; 2; ...; 12}.",
+      "<b>Bước 2 (Liệt kê các kết quả thuận lợi cho A):</b> Các số nguyên tố từ 1 đến 12 là: {2 ; 3 ; 5 ; 7 ; 11}  ⇒  Có n(A) = 5 kết quả thuận lợi.",
+      "<b>Bước 3 (Tính xác suất bằng tỉ số):</b> P(A) = n(A) / n = <b>5 / 12</b>.",
+      "<b>Kiểm tra:</b> Số 1 không phải số nguyên tố, số 9 = 3·3 là hợp số; 0 ≤ 5/12 ≤ 1 (Chính xác!)."
+    ],
+    "diagram_caption": "12 thẻ đồng chất đánh số 1..12 (5 thẻ số nguyên tố)"
+  },
+  "basic_exercises": [
+    {
+      "id": "2a",
+      "label": "a)",
+      "prompt": "Gieo một con xúc xắc 6 mặt cân đối. Tính xác suất của biến cố B: “Số chấm xuất hiện là số chia hết cho 3”."
+    },
+    {
+      "id": "2b",
+      "label": "b)",
+      "prompt": "Với hộp 12 thẻ ở Ví dụ mẫu, tính xác suất của biến cố C: “Số ghi trên thẻ là số chính phương”."
+    }
+  ],
+  "advanced_exercise": {
+    "id": "3",
+    "prompt": "Chọn ngẫu nhiên một số tự nhiên có hai chữ số nhỏ hơn 30 (tức là từ 10 đến 29). Tính xác suất của biến cố D: “Số được chọn chia hết cho 5”."
+  },
+  "real_world_problem": {
+    "id": "4",
+    "prompt": "Một túi quà lớp 8A có 6 huy hiệu màu Đỏ, 5 huy hiệu màu Xanh và 4 huy hiệu màu Vàng cùng kích thước. Chọn ngẫu nhiên 1 huy hiệu. Tính xác suất để chọn được huy hiệu KHÔNG phải màu Vàng."
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Luôn trình bày đủ 3 dòng: (1) Tổng số kết quả có thể; (2) Liệt kê kết quả thuận lợi; (3) Tỉ số P(E) và rút gọn tối giản."
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "<b>Bẫy số nguyên tố:</b> Số <b>1 KHÔNG phải</b> số nguyên tố; số <b>2 là số nguyên tố chẵn duy nhất</b>!",
+        "<b>Bẫy đếm số từ a đến b:</b> Số lượng các số từ 10 đến 29 là (29 – 10) + 1 = 20 số (đừng quên cộng 1!)."
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Xác suất P(E) phải luôn nằm trong đoạn từ 0 đến 1 (tử số không bao giờ lớn hơn mẫu số)."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+      "prompt": "Các loại số đặc biệt (nguyên tố, chính phương) em cần nhớ khi tính xác suất:"
+    }
+  },
+  "svg_asset_file": "svg_assets/S_G08_B31_diagram.svg"
+}
