@@ -1,35 +1,34 @@
-# YOURDREAM TextNote -> Jules source handoff (2026-10-27)
+# YOURDREAM TextNote → Jules: ALL 16 Lessons (2026-10-27)
 
-**Status:** SOURCES_TRANSFERRED_FOR_DEVELOPMENT_ONLY; not pedagogically approved. This branch is isolated from main and H07 PR #2.
+## Immediately usable source on THIS GitHub branch
 
-## Source files now available to Jules
+- `ALL_16_STUDENT_LESSONS.json`: original 16 lesson payloads across grades 6–9 and all 3 strands.
+- `ALL_16_SVG_DIAGRAMS.json`: original SVG diagrams for all 16 lessons.
+- `student_payloads/S_G06_B07_student_lesson.json`, `svg_assets/S_G06_B07_diagram.svg`: standalone pilot input.
+- `jules_textnote_contract.schema.json`: original *draft* schema, validate/extend it rather than trusting it blindly.
 
-- `ALL_16_STUDENT_LESSONS.json` contains 16 authentic, student-facing lesson JSON objects across Grades 6-9. No fabricated replacements.
-- `ALL_16_SVG_DIAGRAMS.json` maps the original 16 SVG filenames to their SVG markup.
-- `student_payloads/S_G06_B07_student_lesson.json` is a standalone Grade 6 pilot lesson.
-- `svg_assets/S_G06_B07_diagram.svg` is the original matching SVG.
-- `jules_textnote_contract.schema.json` is the original, INCOMPLETE draft schema: validate and extend rather than treating as an approval gate.
+**Use ALL 16 lessons for architecture, QA and cross-topic learning; do not reduce to one hardcoded lesson.** A first vertical slice can be implemented in grade 6, then independently verify all 16 and at least one learning flow per strand.
 
-## Original A4 PDF files
+## Full 32 A4 PDFs and 311 generated TextNote Packs
 
-The original 16 student PDFs are on private Google Drive:
-https://drive.google.com/drive/folders/1_zVL6GS_sA8_rAXucqWPNz4JwQHEVmPg
+Original premium-print assets remain in private Google Drive, and MASTER has persisted three optimized handoff ZIPs there:
+https://drive.google.com/drive/folders/1Q71zN-8Ctx89lp8GN0DRcjoJmj0lk8zd
 
-Pilot `S_G06_B07` PDF:
-https://drive.google.com/file/d/1EEwtyh3jsAvxcvh15DySOcWj1v_FIzSD/view
+- 16 learner PDFs + 16 restricted teacher PDFs.
+- 16 lesson JSON payloads, 16 SVGs, four blank Real Paper sticky-note visual assets.
+- 311 generated TextNote packs and 326-skill registry, plus verification ledger.
+- SHA-256 manifest for both original and optimized PDF versions.
 
-PDF files are not copied into this Git branch (originals are ~7 MB each and private). If Jules cannot access Drive URLs, **do not claim that the PDFs are locally available**. Implement the interactive pilot from the actual lesson JSON and SVG, and report `ORIGINAL_PDF_ACCESS_PENDING` for PDF parity/print checks. Ask the Product Owner to attach the PDF to the Jules session, or request an approved binary handoff route. Do not generate a fake PDF and call it the source.
+**IMPORTANT: This GitHub repository is PUBLIC, so raw teacher solutions and unapproved complete PDFs have deliberately NOT been committed here. Jules does not have authenticated access to private Drive by default. Report `PDF_ASSET_ACCESS_PENDING` if it cannot open these. Never claim PDF comparison tests PASS without the actual files.**
 
-## Pilot implementation expectations
+For teacher-only QA, maintain strict separation: never ship teacher PDFs, raw answers or grading keys to browser/public folders.
 
-Inspect current repository and existing Jules session branch before cherry-picking/merging content. Read these files from `handoff/textnote-20261027-jules-source` without overriding Jules's existing work.
+## Scope, safety and ambition
 
-Avoid teacher-only answers in client bundles. Some worked examples contain solutions intended for teaching; that is different from exposing private teacher-only exercises.
+Continue the existing Jules TextNote session/branch: do not restart from zero. The final target is a reusable learner experience across 16 verified-format pilot worksheets; scaling up to 311 TextNote packs, then thousands of skill-specific materials should use one data-driven engine, not hundreds of hardcoded pages.
 
-Keep Vietnamese learner-facing strings. Test the grade-6 S_G06_B07 example plus cross-grade/cross-strand generalization.
+Do not alter H07 PR #2, merge into main, deploy production, or use paid APIs without permission.
 
-Never modify PR #2, merge to main, or deploy production without explicit approval.
+## Evidence
 
-## Data fidelity
-
-Input content and SVGs were copied from Antigravity's private Drive handoff. No changes to mathematics or pedagogical language have been made in this source branch. Source transfer does **not** certify mathematical accuracy, live app behavior, or release readiness.
+This handoff branch is source-data staging, not Product Owner approval. Status: learner/teacher PDFs captured and deposited in PRIVATE Drive; Jules copy/pull of binary archive remains pending access approval.
