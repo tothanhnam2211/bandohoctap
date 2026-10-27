@@ -1,0 +1,67 @@
+{
+  "worksheet_no": "16",
+  "skill_id": "S_G09_B19",
+  "grade": 9,
+  "strand_code": "SO_VA_DAI_SO",
+  "strand_name": "Số và Đại số",
+  "header_subtitle": "Chương VI: Hàm số y = ax² và phương trình bậc hai một ẩn — Bài 19–20",
+  "title": "Phương trình bậc hai một ẩn & Định lí Viète",
+  "objective": "Giải phương trình bậc hai bằng biệt thức Δ (hoặc nhẩm nghiệm a+b+c=0, a–b+c=0) và vận dụng hệ thức Viète để tính giá trị biểu thức đối xứng giữa hai nghiệm.",
+  "knowledge_activation": "Nhắc nhanh: Khi Δ ≥ 0, hai nghiệm x₁, x₂ của ax² + bx + c = 0 (a ≠ 0) thỏa mãn hệ thức Viète: S = x₁ + x₂ = –b/a và P = x₁·x₂ = c/a.",
+  "worked_example": {
+    "problem": "Cho phương trình:  x² – 5x + 6 = 0. Giải phương trình và tính giá trị biểu thức A = x₁² + x₂² theo hệ thức Viète.",
+    "steps": [
+      "<b>Bước 1 (Xác định hệ số &amp; tính biệt thức Δ):</b> a = 1, b = –5, c = 6  ⇒  Δ = (–5)² – 4·1·6 = 25 – 24 = <b>1 &gt; 0</b>.",
+      "<b>Bước 2 (Tìm hai nghiệm phân biệt):</b> x₁ = (5 – 1)/2 = <b>2</b>;  x₂ = (5 + 1)/2 = <b>3</b>.",
+      "<b>Bước 3 (Áp dụng hệ thức Viète tính A = x₁² + x₂²):</b> S = x₁ + x₂ = –b/a = 5;  P = x₁x₂ = c/a = 6.",
+      "<b>Bước 4 (Biến đổi đối xứng):</b> A = x₁² + x₂² = (x₁ + x₂)² – 2x₁x₂ = S² – 2P = 5² – 2·6 = 25 – 12 = <b>13</b> (Khớp với 2² + 3² = 13!)."
+    ],
+    "diagram_caption": "Đồ thị parabol và hai nghiệm x₁ = 2, x₂ = 3"
+  },
+  "basic_exercises": [
+    {
+      "id": "2a",
+      "label": "a)",
+      "prompt": "Giải phương trình bằng cách nhẩm nghiệm:  2x² – 7x + 5 = 0"
+    },
+    {
+      "id": "2b",
+      "label": "b)",
+      "prompt": "Không giải phương trình x² – 6x + 4 = 0, hãy tính tổng S = x₁ + x₂ và tích P = x₁x₂."
+    }
+  ],
+  "advanced_exercise": {
+    "id": "3",
+    "prompt": "Gọi x₁, x₂ là hai nghiệm của phương trình x² – 4x + 1 = 0. Không giải phương trình, hãy tính giá trị của biểu thức:  B = 1/x₁ + 1/x₂  và  C = x₁² + x₂²."
+  },
+  "real_world_problem": {
+    "id": "4",
+    "prompt": "Tìm kích thước của một mảnh vườn hình chữ nhật, biết mảnh vườn có chu vi bằng 28 m và diện tích bằng 48 m²."
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Trước khi dùng hệ thức Viète, luôn kiểm tra điều kiện có nghiệm: <b>Δ ≥ 0</b> (hoặc a và c trái dấu).",
+        "Thuộc lòng: <b>x₁² + x₂² = (x₁ + x₂)² – 2x₁x₂ = S² – 2P</b>."
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "<b>Bẫy dấu của tổng S:</b> Tổng hai nghiệm là <b>S = –b/a</b> (có dấu trừ phía trước!). Với x² – 5x + 6 = 0 thì b = –5 nên S = –(–5)/1 = +5."
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Nhẩm nhanh: a + b + c = 0 ⇒ x₁ = 1, x₂ = c/a;  a – b + c = 0 ⇒ x₁ = –1, x₂ = –c/a."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU...",
+      "prompt": "Biểu thức đối xứng Viète em tâm đắc nhất hôm nay:"
+    }
+  },
+  "svg_asset_file": "svg_assets/S_G09_B19_diagram.svg"
+}
