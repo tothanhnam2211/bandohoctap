@@ -1,0 +1,55 @@
+{
+  "queue_version": "2.2.0",
+  "generated_at": "2026-10-31T05:35:39.304196+00:00",
+  "target_repository": "https://github.com/tothanhnam2211/bandohoctap",
+  "dispatch_status": "JULES_HANDOFF_READY",
+  "branch_protection_rule": "Không ghi đè PR #2 của H07; không tự động merge vào main/production khi chưa qua QA và phê duyệt của MASTER.",
+  "parallel_tasks": [
+    {
+      "task_id": "JULES_LA_TASK_01_SDK_AND_CONTRACT_QA",
+      "branch_name": "test/living-asset-sdk-contract-qa",
+      "scope": "Kiểm thử hợp đồng SDK 9 năng lực, Zero Answer Leak trên 16 student_payloads & bất biến giả thiết",
+      "owned_paths": [
+        "tests/living_asset/test_sdk_contract.py",
+        "src/lib/living-asset/sdkAdapter.ts"
+      ],
+      "acceptance_criteria": "Pass 100% kiểm thử không lộ đáp án thô và không tự sửa giả thiết đề bài khi thử nghiệm sai số."
+    },
+    {
+      "task_id": "JULES_LA_TASK_02_PRIMITIVE_COMPOSER_INTEGRATION",
+      "branch_name": "feat/living-asset-8-primitives-engine",
+      "scope": "Tích hợp 8 Composable Interactive Primitives vào WebApp React/TypeScript",
+      "owned_paths": [
+        "src/components/living-asset/primitives/"
+      ],
+      "acceptance_criteria": "Render mượt 8 primitive trên Desktop & Tablet (768x1024), không tràn khung HUD."
+    },
+    {
+      "task_id": "JULES_LA_TASK_03_GENERATIVE_TRANSFER_STRESS_TEST",
+      "branch_name": "test/living-asset-generative-transfer",
+      "scope": "Kiểm thử khả năng tổng quát hóa trên các bài toán chưa hardcode (Tests A, B, C, D + tập bài mới)",
+      "owned_paths": [
+        "tests/living_asset/transfer_generalization.spec.ts"
+      ],
+      "acceptance_criteria": "Tổ hợp đúng primitive cho bài toán mới cùng họ/đa họ và từ chối trung thực cấu trúc ngoài phạm vi."
+    },
+    {
+      "task_id": "JULES_LA_TASK_04_CROSS_DEVICE_PLAYWRIGHT_E2E",
+      "branch_name": "test/living-asset-playwright-multi-device",
+      "scope": "Kiểm thử hồi quy trình duyệt (Desktop 1440x900, iPad 768x1024, Mobile 390x844) cho 16 Living Assets",
+      "owned_paths": [
+        "tests/e2e/living_asset_16_experiences.spec.ts"
+      ],
+      "acceptance_criteria": "0 lỗi console/WebGL, 100% thanh trượt và nút Learner A/B/C phản hồi tức thời."
+    },
+    {
+      "task_id": "JULES_LA_TASK_05_STUDIO_AND_A4_PRINT_SYNC",
+      "branch_name": "feat/living-asset-studio-a4-sync",
+      "scope": "Tích hợp Living Asset Studio & trình xuất Phiếu A4 1 trang vào cổng giáo viên",
+      "owned_paths": [
+        "src/pages/studio/LivingAssetStudioPage.tsx"
+      ],
+      "acceptance_criteria": "Đồng bộ số liệu 1:1 giữa mô hình tương tác trên màn hình và bản in PDF A4."
+    }
+  ]
+}

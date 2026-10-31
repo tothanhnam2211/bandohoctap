@@ -1,0 +1,13 @@
+handoff/living-asset-v22/
+node_modules/
+__pycache__/
+__pycache__/
+output/
+handoff/living-asset-v22/png_previews/
+handoff/living-asset-v22/pdf_student/
+handoff/living-asset-v22/pdf_teacher/
+handoff/living-asset-v22/interactive_experiences/
+handoff/living-asset-v22/svg_assets/
+handoff/living-asset-v22/student_payloads/
+handoff/living-asset-v22/teacher_vault/
+handoff/living-asset-v22/studio/

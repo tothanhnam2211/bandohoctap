@@ -1,0 +1,257 @@
+{
+  "ledger_version": "2.2.0",
+  "total_assets_verified": 16,
+  "all_16_assets_passed": true,
+  "all_transfer_benchmarks_passed": true,
+  "all_passed": true,
+  "honest_evidence_policy": "Phân biệt rõ EXACT_ARITHMETIC_VERIFIED, SYMBOLIC_SYMPY_VERIFIED, RULE_BOUNDED_GEOMETRY_VERIFIED và THEORETICAL_DISTRIBUTION_VERIFIED. Không tự gán nhãn PROVEN từ mô phỏng số.",
+  "asset_verifications": [
+    {
+      "asset_id": "YD-LA-NUM-G6-01",
+      "skill_id": "S_G06_B09",
+      "grade": 6,
+      "strand_code": "SO_HOC_VA_TAP_HOP",
+      "verification_tier": "EXACT_ARITHMETIC_VERIFIED",
+      "checks": [
+        {
+          "check": "gcd(24,18)=6, tiles=12, gcd(36,24)=12, gcd(48,32)=16",
+          "passed": true
+        }
+      ],
+      "verified": true
+    },
+    {
+      "asset_id": "YD-LA-NUM-G6-02",
+      "skill_id": "S_G06_B14",
+      "grade": 6,
+      "strand_code": "SO_HOC_VA_TAP_HOP",
+      "verification_tier": "EXACT_ARITHMETIC_VERIFIED",
+      "checks": [
+        {
+          "check": "-120-(-45)=-75, B1=-70, x-(-28)=-12 => x=-40",
+          "passed": true
+        }
+      ],
+      "verified": true
+    },
+    {
+      "asset_id": "YD-LA-NUM-G6-03",
+      "skill_id": "S_G06_B25",
+      "grade": 6,
+      "strand_code": "SO_HOC_VA_TAP_HOP",
+      "verification_tier": "EXACT_ARITHMETIC_VERIFIED",
+      "checks": [
+        {
+          "check": "invariant_solute=100ml, new_conc=20%, adv_water=100g",
+          "passed": true
+        }
+      ],
+      "verified": true
+    },
+    {
+      "asset_id": "YD-LA-NUM-G7-04",
+      "skill_id": "S_G07_B05",
+      "grade": 7,
+      "strand_code": "SO_HOC_VA_TAP_HOP",
+      "verification_tier": "SYMBOLIC_SYMPY_VERIFIED",
+      "checks": [
+        {
+          "check": "d=sqrt(2), sqrt(49)+sqrt(25)-2*sqrt(9)=6, 5>sqrt(23)",
+          "passed": true
+        }
+      ],
+      "verified": true
+    },
+    {
+      "asset_id": "YD-LA-ALG-G7-05",
+      "skill_id": "S_G07_B12",
+      "grade": 7,
+      "strand_code": "DAI_SO_VA_HAM_SO",
+      "verification_tier": "SYMBOLIC_SYMPY_VERIFIED",
+      "checks": [
+        {
+          "check": "x/3=y/2 & x+y=150 => (90,60); B1 => (16,20)",
+          "passed": true
+        }
+      ],
+      "verified": true
+    },
+    {
+      "asset_id": "YD-LA-ALG-G8-06",
+      "skill_id": "S_G08_B25",
+      "grade": 8,
+      "strand_code": "DAI_SO_VA_HAM_SO",
+      "verification_tier": "SYMBOLIC_SYMPY_VERIFIED",
+      "checks": [
+        {
+          "check": "12x+10=10x+20 => (5,70); 2x+1=x+4 => x=3",
+          "passed": true
+        }
+      ],
+      "verified": true
+    },
+    {
+      "asset_id": "YD-LA-ALG-G8-07",
+      "skill_id": "S_G08_B23",
+      "grade": 8,
+      "strand_code": "DAI_SO_VA_HAM_SO",
+      "verification_tier": "SYMBOLIC_SYMPY_VERIFIED",
+      "checks": [
+        {
+          "check": "Rational equations & extraneous roots verified via SymPy",
+          "passed": true
+        }
+      ],
+      "verified": true
+    },
+    {
+      "asset_id": "YD-LA-ALG-G9-08",
+      "skill_id": "S_G09_B03",
+      "grade": 9,
+      "strand_code": "DAI_SO_VA_HAM_SO",
+      "verification_tier": "SYMBOLIC_SYMPY_VERIFIED",
+      "checks": [
+        {
+          "check": "1/4+1/6=5/12 => T=2.4h; 1/x+1/(x+2)=5/12 => x=4",
+          "passed": true
+        }
+      ],
+      "verified": true
+    },
+    {
+      "asset_id": "YD-LA-ALG-G9-09",
+      "skill_id": "S_G09_B18",
+      "grade": 9,
+      "strand_code": "DAI_SO_VA_HAM_SO",
+      "verification_tier": "SYMBOLIC_SYMPY_VERIFIED",
+      "checks": [
+        {
+          "check": "a=-1/16, clearance(4)=8m>6m, x^2=2x+3 => {-1,3}",
+          "passed": true
+        }
+      ],
+      "verified": true
+    },
+    {
+      "asset_id": "YD-LA-GEO-G6-10",
+      "skill_id": "S_G06_B20",
+      "grade": 6,
+      "strand_code": "HINH_HOC_VA_DO_LUONG",
+      "verification_tier": "RULE_BOUNDED_GEOMETRY_VERIFIED",
+      "checks": [
+        {
+          "check": "Symbolic L-shape perimeter invariant P=44 independent of cut c; S=104",
+          "passed": true
+        }
+      ],
+      "verified": true
+    },
+    {
+      "asset_id": "YD-LA-GEO-G8-11",
+      "skill_id": "S_G08_B15",
+      "grade": 8,
+      "strand_code": "HINH_HOC_VA_DO_LUONG",
+      "verification_tier": "RULE_BOUNDED_GEOMETRY_VERIFIED",
+      "checks": [
+        {
+          "check": "(a+b)^2 - 4*(ab/2) == a^2+b^2; sqrt(6^2+8^2)=10",
+          "passed": true
+        }
+      ],
+      "verified": true
+    },
+    {
+      "asset_id": "YD-LA-GEO-G8-12",
+      "skill_id": "S_G08_B31",
+      "grade": 8,
+      "strand_code": "HINH_HOC_VA_DO_LUONG",
+      "verification_tier": "RULE_BOUNDED_GEOMETRY_VERIFIED",
+      "checks": [
+        {
+          "check": "Thales tower h=24m, EC=7.5cm",
+          "passed": true
+        }
+      ],
+      "verified": true
+    },
+    {
+      "asset_id": "YD-LA-GEO-G9-13",
+      "skill_id": "S_G09_B30",
+      "grade": 9,
+      "strand_code": "HINH_HOC_VA_DO_LUONG",
+      "verification_tier": "RULE_BOUNDED_GEOMETRY_VERIFIED",
+      "checks": [
+        {
+          "check": "Cylinder S_xq=80*pi, V=160*pi",
+          "passed": true
+        }
+      ],
+      "verified": true
+    },
+    {
+      "asset_id": "YD-LA-STAT-G7-14",
+      "skill_id": "S_G07_B18",
+      "grade": 7,
+      "strand_code": "THONG_KE_VA_XAC_SUAT",
+      "verification_tier": "THEORETICAL_DISTRIBUTION_VERIFIED",
+      "checks": [
+        {
+          "check": "Mean=10, Torque sum(x_i - mean)==0, Median=6",
+          "passed": true
+        }
+      ],
+      "verified": true
+    },
+    {
+      "asset_id": "YD-LA-STAT-G8-15",
+      "skill_id": "S_G09_B22",
+      "grade": 9,
+      "strand_code": "THONG_KE_VA_XAC_SUAT",
+      "verification_tier": "THEORETICAL_DISTRIBUTION_VERIFIED",
+      "checks": [
+        {
+          "check": "P(even)=1/2, P(prime_10)=2/5, P(at_least_1_head)=3/4",
+          "passed": true
+        }
+      ],
+      "verified": true
+    },
+    {
+      "asset_id": "YD-LA-APPL-G9-16",
+      "skill_id": "S_G09_B19",
+      "grade": 9,
+      "strand_code": "THONG_KE_VA_XAC_SUAT",
+      "verification_tier": "SYMBOLIC_SYMPY_VERIFIED",
+      "checks": [
+        {
+          "check": "(20-2x)(14-2x)=160 => x=2 (reject 15); frame => x=2",
+          "passed": true
+        }
+      ],
+      "verified": true
+    }
+  ],
+  "transfer_benchmark_verifications": {
+    "TRANSFER_TEST_A": {
+      "solved_T": "3",
+      "passed": true
+    },
+    "TRANSFER_TEST_B": {
+      "valid_roots": [
+        3
+      ],
+      "extraneous": [
+        22
+      ],
+      "passed": true
+    },
+    "TRANSFER_TEST_C": {
+      "break_even_months": "12",
+      "passed": true
+    },
+    "TRANSFER_TEST_D": {
+      "status": "UNSUPPORTED_STRUCTURE_HONESTLY_DECLINED",
+      "passed": true
+    }
+  }
+}

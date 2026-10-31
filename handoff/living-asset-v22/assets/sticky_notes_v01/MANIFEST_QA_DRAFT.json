@@ -1,0 +1,61 @@
+{
+  "asset_pilot": "01",
+  "status": "TECHNICAL_DRAFT",
+  "notes": {
+    "yellow": {
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent_pixels": 508625,
+      "near_transparent_1_11": 58678,
+      "opaque_220_255": 925008,
+      "sha256": "eeba32fa8c3cc563649ca39cc7b4f31ed2a93a63c8afb1d452634e79bce0e415"
+    },
+    "pink": {
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent_pixels": 447677,
+      "near_transparent_1_11": 59016,
+      "opaque_220_255": 987717,
+      "sha256": "1a22289e316cd7c0ae329a05b5fc076f7ead7bac2500a091c464eaea7404a33a"
+    },
+    "blue": {
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent_pixels": 481100,
+      "near_transparent_1_11": 65153,
+      "opaque_220_255": 958577,
+      "sha256": "de1c568a99608105d298a04a9d7d7c5eed041b79ee78638bb3a84b0d584e8205"
+    },
+    "sage": {
+      "size": [
+        1254,
+        1254
+      ],
+      "transparent_pixels": 343686,
+      "near_transparent_1_11": 104541,
+      "opaque_220_255": 1045854,
+      "sha256": "c06a1ff02502ef94a840acc81c8a1e8b2442f269fc302f5822be0e1f2125145f"
+    }
+  },
+  "pdf": "YOURDREAM_Phieu_B_TextNote_AssetPilot_Toan9_A4.pdf",
+  "math_independent_check": {
+    "equations": [
+      "x+y=48",
+      "x-y=8"
+    ],
+    "solution": {
+      "x": 28,
+      "y": 20
+    },
+    "check": [
+      "28+20=48",
+      "28-20=8"
+    ]
+  }
+}
