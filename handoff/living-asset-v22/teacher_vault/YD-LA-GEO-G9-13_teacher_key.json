@@ -1,0 +1,35 @@
+{
+  "asset_id": "YD-LA-GEO-G9-13",
+  "skill_id": "S_G09_B30",
+  "grade": 9,
+  "target_interactive_solution": 100,
+  "math_semantics": {
+    "unknown_symbol": "S_xq",
+    "domain_constraint": "R > 0, h > 0",
+    "invariant_relation": "Chiều dài hình chữ nhật trải phẳng = Chu vi đường tròn đáy = 2πR",
+    "target_equation": "S_xq = (2πR) · h = 2π · 4 · 10 = 80π (cm²); V = πR²h = 160π (cm³)",
+    "verification_type": "RULE_BOUNDED_GEOMETRY_VERIFIED"
+  },
+  "basic_answers": [
+    {
+      "id": "B1",
+      "final_answer": "S_xq = 80π cm²; S_tp = 130π cm²",
+      "teacher_solution": "S_xq = 2πRh = 2π·5·8 = 80π (cm²). S_tp = 80π + 2·π·5² = 130π (cm²)."
+    },
+    {
+      "id": "B2",
+      "final_answer": "108π cm³",
+      "teacher_solution": "Bán kính R = 6 : 2 = 3 (cm). Thể tích V = πR²h = π · 3² · 12 = 108π (cm³)."
+    }
+  ],
+  "advanced_answer": {
+    "id": "ADV",
+    "final_answer": "R = 6 cm",
+    "teacher_solution": "Chu vi đáy thùng bằng chiều dài tấm tôn: 2πR = 12π ⇒ R = 6 (cm)."
+  },
+  "real_world_answer": {
+    "id": "RW",
+    "final_answer": "2500π cm²",
+    "teacher_solution": "Bán kính R = 5 cm. Diện tích 1 vòng lăn là S_xq = 2π·5·25 = 250π (cm²). Sau 10 vòng: 10 × 250π = 2500π (cm²)."
+  }
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" width="100%" height="100%">
+  <g id="art-layer">
+    <rect x="0" y="0" width="560" height="220" rx="12" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="28" y="32" width="180" height="138" rx="6" fill="#78350F" opacity="0.12"/>
+    <rect x="34" y="38" width="40" height="40" rx="3" fill="#FDE68A" stroke="#B45309" stroke-width="1.5"/><rect x="76" y="38" width="40" height="40" rx="3" fill="#FCD34D" stroke="#B45309" stroke-width="1.5"/><rect x="118" y="38" width="40" height="40" rx="3" fill="#FDE68A" stroke="#B45309" stroke-width="1.5"/><rect x="160" y="38" width="40" height="40" rx="3" fill="#FCD34D" stroke="#B45309" stroke-width="1.5"/><rect x="34" y="80" width="40" height="40" rx="3" fill="#FCD34D" stroke="#B45309" stroke-width="1.5"/><rect x="76" y="80" width="40" height="40" rx="3" fill="#FDE68A" stroke="#B45309" stroke-width="1.5"/><rect x="118" y="80" width="40" height="40" rx="3" fill="#FCD34D" stroke="#B45309" stroke-width="1.5"/><rect x="160" y="80" width="40" height="40" rx="3" fill="#FDE68A" stroke="#B45309" stroke-width="1.5"/><rect x="34" y="122" width="40" height="40" rx="3" fill="#FDE68A" stroke="#B45309" stroke-width="1.5"/><rect x="76" y="122" width="40" height="40" rx="3" fill="#FCD34D" stroke="#B45309" stroke-width="1.5"/><rect x="118" y="122" width="40" height="40" rx="3" fill="#FDE68A" stroke="#B45309" stroke-width="1.5"/><rect x="160" y="122" width="40" height="40" rx="3" fill="#FCD34D" stroke="#B45309" stroke-width="1.5"/>
+    <rect x="310" y="38" width="220" height="132" rx="10" fill="#FEF2F2" stroke="#EF4444" stroke-dasharray="5,4" stroke-width="1.5"/>
+  </g>
+  <g id="math-layer" font-family="Segoe UI, sans-serif">
+    <text x="125" y="24" font-size="11.5" font-weight="700" fill="#92400E" text-anchor="middle">Sân 24×18 dm (Gạch d = ƯCLN = 6 dm)</text>
+    <text x="125" y="188" font-size="11" font-weight="700" fill="#15803D" text-anchor="middle">✓ Khít: (24:6) × (18:6) = 4 × 3 = 12 viên</text>
+    <text x="420" y="60" font-size="12" font-weight="700" fill="#B91C1C" text-anchor="middle">Phản ví dụ khi chọn gạch cạnh d = 5 dm:</text>
+    <rect x="330" y="72" width="140" height="70" fill="#FCA5A5" stroke="#B91C1C" stroke-width="1.5"/>
+    <rect x="470" y="72" width="38" height="70" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <text x="400" y="112" font-size="11.5" font-weight="700" fill="#7F1D1D" text-anchor="middle">4 viên × 5 = 20 dm</text>
+    <text x="489" y="112" font-size="10.5" font-weight="700" fill="#DC2626" text-anchor="middle">Dư 4!</text>
+    <text x="420" y="160" font-size="11" font-weight="600" fill="#991B1B" text-anchor="middle">24 chia 5 dư 4 dm → Phải chặt gạch!</text>
+  </g>
+</svg>

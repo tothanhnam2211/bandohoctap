@@ -1,0 +1,87 @@
+{
+  "asset_id": "YD-LA-NUM-G6-03",
+  "asset_no": "03",
+  "skill_id": "S_G06_B25",
+  "grade": 6,
+  "strand_code": "SO_HOC_VA_TAP_HOP",
+  "strand_name": "Số học & Tập hợp",
+  "title": "Phòng Pha Chế Cam Tươi: Phân Số, Tỉ Số Phần Trăm & Đại Lượng Bất Biến",
+  "story_hook": "Một bình nước cam 400 ml có chứa 25% cốt cam nguyên chất. Khi bạn rót thêm 100 ml nước lọc vào bình, nồng độ cốt cam thay đổi thế nào và đại lượng nào tuyệt đối không đổi?",
+  "objective": "Nắm vững mối liên hệ giữa phân số, tỉ số phần trăm và phát hiện 'đại lượng bất biến' (lượng chất tan không đổi khi chỉ thêm nước).",
+  "artistic_world": "WARM_STORYBOOK_TACTILE",
+  "primitives_used": [
+    "PRIM_RATIO_MIXTURE_LAB"
+  ],
+  "interactive_engine": {
+    "engine_type": "RATIO_MIXTURE_BEAKER",
+    "control_label": "Lượng nước lọc rót thêm vào bình ΔV (ml):",
+    "min_val": 0,
+    "max_val": 400,
+    "step_val": 25,
+    "default_trial": 50,
+    "unit": "ml"
+  },
+  "learner_scaffolding": {
+    "A": "Hãy nhìn vạch màu cam đậm dưới đáy bình: dù bạn đổ thêm bao nhiêu nước lọc trong suốt, lượng cốt cam nguyên chất vẫn giữ nguyên 100 ml!",
+    "B": "Tính lượng cốt cam ban đầu: 400 × 25% = 100 ml. Sau khi thêm 100 ml nước, tổng thể tích mới là 500 ml ⇒ Tỉ số phần trăm mới là 100/500 = 20%.",
+    "C": "Ngược lại: Muốn bình nước cam 400 ml (25%) tăng độ đậm đặc lên 40% bằng cách pha thêm cốt cam nguyên chất x (ml), phương trình bất biến lượng nước lọc là gì?"
+  },
+  "misconceptions": [
+    "Lấy tỉ số phần trăm trừ trực tiếp hoặc quên cộng thêm lượng nước mới vào mẫu số (tổng thể tích dung dịch).",
+    "Nhầm lẫn giữa bài toán 'thêm nước lọc' (cốt cam bất biến) và 'thêm cốt cam' (nước lọc bất biến)."
+  ],
+  "worked_example": {
+    "problem": "Một bình nước cam dung tích 400 ml có tỉ lệ cốt cam nguyên chất là 25%. Người ta pha thêm 100 ml nước lọc vào bình. Tính tỉ số phần trăm cốt cam trong bình sau khi pha.",
+    "steps": [
+      "Bước 1 (Tìm đại lượng bất biến): Lượng cốt cam nguyên chất trong bình ban đầu là: 400 × 25% = 400 × (1/4) = 100 (ml).",
+      "Bước 2 (Tính tổng thể tích mới): Sau khi thêm 100 ml nước lọc, thể tích nước cam trong bình là: 400 + 100 = 500 (ml).",
+      "Bước 3 (Tính tỉ số phần trăm mới): Tỉ lệ cốt cam lúc sau là: (100 / 500) × 100% = 20%."
+    ]
+  },
+  "basic_exercises": [
+    {
+      "id": "B1",
+      "label": "Câu 2a (Cơ bản)",
+      "prompt": "Trong 200 g dung dịch nước muối có chứa 10 g muối tinh. Tính tỉ số phần trăm của muối trong dung dịch."
+    },
+    {
+      "id": "B2",
+      "label": "Câu 2b (Thực hành)",
+      "prompt": "Một lớp học có 40 học sinh, trong đó 3/5 số học sinh tham gia câu lạc bộ STEM. Hỏi có bao nhiêu học sinh tham gia câu lạc bộ STEM?"
+    }
+  ],
+  "advanced_exercise": {
+    "id": "ADV",
+    "prompt": "Có 300 g dung dịch đường nồng độ 20%. Cần pha thêm bao nhiêu gam nước lọc để được dung dịch đường mới có nồng độ 15%?"
+  },
+  "real_world_problem": {
+    "id": "RW",
+    "prompt": "Một chiếc balo có giá niêm yết 350 000 đồng. Nhân dịp khai giảng, cửa hàng giảm giá 20%. Hỏi bạn Minh cần trả bao nhiêu tiền để mua chiếc balo đó?"
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Tìm của một số: Lấy số đó NHÂN với phân số (hoặc tỉ số %).",
+        "Bài toán pha chế: Hỏi xem cái gì KHÔNG ĐỔI (cốt cam hay nước lọc) để tính nó trước tiên!"
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "Khi thêm nước hoặc thêm chất tan, mẫu số (tổng khối lượng dung dịch) BẮT BUỘC phải cộng thêm lượng vừa đổ vào."
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Pha thêm nước lọc thì dung dịch loãng ra → Tỉ số % mới (20%) phải nhỏ hơn ban đầu (25%)."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU..."
+    }
+  },
+  "svg_file": "svg_assets/YD-LA-NUM-G6-03.svg",
+  "interactive_html_file": "interactive_experiences/YD-LA-NUM-G6-03.html"
+}

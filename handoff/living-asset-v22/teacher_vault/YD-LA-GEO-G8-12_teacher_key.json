@@ -1,0 +1,35 @@
+{
+  "asset_id": "YD-LA-GEO-G8-12",
+  "skill_id": "S_G08_B31",
+  "grade": 8,
+  "target_interactive_solution": 18,
+  "math_semantics": {
+    "unknown_symbol": "h",
+    "domain_constraint": "h > 0",
+    "invariant_relation": "h_tháp / s_tháp = h_cọc / s_cọc = tan(α)",
+    "target_equation": "h / 18 = 2 / 1,5 ⇔ h = (18 × 2) / 1,5 = 24 (m)",
+    "verification_type": "RULE_BOUNDED_GEOMETRY_VERIFIED"
+  },
+  "basic_answers": [
+    {
+      "id": "B1",
+      "final_answer": "EC = 7,5 cm",
+      "teacher_solution": "Theo định lý Thales: AD/DB = AE/EC ⇒ 4/6 = 5/EC ⇒ EC = (6 × 5)/4 = 7,5 (cm)."
+    },
+    {
+      "id": "B2",
+      "final_answer": "9 m",
+      "teacher_solution": "h / 12 = 1,5 / 2 ⇒ h = (12 × 1,5) / 2 = 9 (m)."
+    }
+  ],
+  "advanced_answer": {
+    "id": "ADV",
+    "final_answer": "DE = 5 cm",
+    "teacher_solution": "Theo hệ quả định lý Thales: DE/BC = AD/AB ⇒ DE/15 = 3/9 = 1/3 ⇒ DE = 5 (cm)."
+  },
+  "real_world_answer": {
+    "id": "RW",
+    "final_answer": "64 m",
+    "teacher_solution": "AB / 16 = 4 ⇒ AB = 16 × 4 = 64 (m)."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "asset_id": "YD-LA-GEO-G8-11",
+  "skill_id": "S_G08_B15",
+  "grade": 8,
+  "target_interactive_solution": 100,
+  "math_semantics": {
+    "unknown_symbol": "c",
+    "domain_constraint": "a, b, c > 0",
+    "invariant_relation": "S_trống = (a + b)² - 4·(1/2·a·b) = c² = a² + b²",
+    "target_equation": "Với a = 6, b = 8 ⇒ c² = 6² + 8² = 36 + 64 = 100 ⇒ c = 10",
+    "verification_type": "RULE_BOUNDED_GEOMETRY_VERIFIED"
+  },
+  "basic_answers": [
+    {
+      "id": "B1",
+      "final_answer": "BC = 13 cm",
+      "teacher_solution": "BC² = AB² + AC² = 5² + 12² = 25 + 144 = 169 ⇒ BC = √169 = 13 (cm)."
+    },
+    {
+      "id": "B2",
+      "final_answer": "DF = 12 cm",
+      "teacher_solution": "DF² = EF² - DE² = 15² - 9² = 225 - 81 = 144 ⇒ DF = √144 = 12 (cm)."
+    }
+  ],
+  "advanced_answer": {
+    "id": "ADV",
+    "final_answer": "Là tam giác vuông",
+    "teacher_solution": "Ta có 9² + 12² = 81 + 144 = 225 và 15² = 225. Vì 9² + 12² = 15² nên theo định lý Pythagore đảo, tam giác đó vuông."
+  },
+  "real_world_answer": {
+    "id": "RW",
+    "final_answer": "4 m",
+    "teacher_solution": "Áp dụng định lý Pythagore: h² = 5² - 3² = 25 - 9 = 16 ⇒ h = 4 (m)."
+  }
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" width="100%" height="100%">
+  <g id="art-layer">
+    <rect x="0" y="0" width="560" height="220" rx="12" fill="#F0FDF4" stroke="#16A34A" stroke-width="1.5"/>
+    <!-- L-shaped garden -->
+    <polygon points="45,40 225,40 225,105 155,105 155,175 45,175" fill="#86EFAC" stroke="#15803D" stroke-width="2.5"/>
+    <!-- Cut corner ghost -->
+    <rect x="155" y="105" width="70" height="70" fill="#FEE2E2" stroke="#DC2626" stroke-width="2" stroke-dasharray="5,4"/>
+  </g>
+  <g id="math-layer" font-family="Segoe UI, sans-serif">
+    <text x="135" y="30" font-size="12" font-weight="700" fill="#166534" text-anchor="middle">Chiều dài 12 m</text>
+    <text x="25" y="110" font-size="12" font-weight="700" fill="#166534" text-anchor="middle" transform="rotate(-90 25 110)">Rộng 10 m</text>
+    <text x="190" y="142" font-size="11" font-weight="700" fill="#B91C1C" text-anchor="middle">Khoét 4m×4m</text>
+    <rect x="275" y="35" width="260" height="150" rx="10" fill="#FFFFFF" stroke="#16A34A" stroke-width="1.5"/>
+    <text x="405" y="60" font-size="12.5" font-weight="800" fill="#166534" text-anchor="middle">BẤT BIẾN CHU VI HÌNH CHỮ L (H07)</text>
+    <text x="405" y="88" font-size="12" fill="#0F172A" text-anchor="middle">• Diện tích GIẢM phần khoét:</text>
+    <text x="405" y="108" font-size="12.5" font-weight="700" fill="#0369A1" text-anchor="middle">S = 12×10 - 4×4 = 104 m²</text>
+    <text x="405" y="136" font-size="12" fill="#0F172A" text-anchor="middle">• Chu vi KHÔNG ĐỔI (dời cạnh ra góc):</text>
+    <text x="405" y="158" font-size="12.5" font-weight="800" fill="#15803D" text-anchor="middle">P = 2 × (12 + 10) = 44 m!</text>
+  </g>
+</svg>

@@ -1,0 +1,88 @@
+{
+  "asset_id": "YD-LA-APPL-G9-16",
+  "asset_no": "16",
+  "skill_id": "S_G09_B19",
+  "grade": 9,
+  "strand_code": "THONG_KE_VA_XAC_SUAT",
+  "strand_name": "Thống kê, Xác suất & Toán Ứng dụng",
+  "title": "Quy Hoạch Lối Đi Khu Vườn Sinh Thái: Tổ Hợp Hình Học H07 & Đại Số Bậc Hai",
+  "story_hook": "Một khu đất hình chữ nhật dài 20 m, rộng 14 m được làm một lối đi lát đá có bề rộng x (m) đều cả 4 phía bao quanh thảm hoa ở giữa. Muốn diện tích thảm hoa đúng bằng 160 m² thì lối đi rộng bao nhiêu mét? Vì sao chiều dài thảm hoa là (20 - 2x) chứ không phải (20 - x)?",
+  "objective": "Kết hợp trực quan Hình học (lối đi bao quanh cả hai đầu làm mỗi chiều giảm đi 2x) với Đại số (giải phương trình bậc hai (20 - 2x)(14 - 2x) = 160 và loại nghiệm ngoại lai vượt quá một nửa chiều rộng).",
+  "artistic_world": "WARM_STORYBOOK_TACTILE",
+  "primitives_used": [
+    "PRIM_GEOMETRY_CUT_FOLD_RAY",
+    "PRIM_RATE_BALANCE_3D",
+    "PRIM_STAT_PROB_SIMULATOR"
+  ],
+  "interactive_engine": {
+    "engine_type": "COMPOSITE_GARDEN_PATH_QUADRATIC",
+    "control_label": "Kéo thử bề rộng lối đi bốn phía x (m) [0 < x < 7]:",
+    "min_val": 0.5,
+    "max_val": 6.0,
+    "step_val": 0.5,
+    "default_trial": 3.0,
+    "unit": "m"
+  },
+  "learner_scaffolding": {
+    "A": "Nhìn kỹ sơ đồ khu vườn nhé: lối đi nằm ở CẢ BÊN TRÁI lẫn BÊN PHẢI thảm hoa! Vì thế chiều dài 20 m bị bớt đi x mét ở đầu trái và x mét ở đầu phải, còn lại (20 - 2x) mét! Kéo thử x = 2 m, thảm hoa sẽ có kích thước 16 m × 10 m = 160 m² vừa khít!",
+    "B": "Biểu diễn kích thước hình chữ nhật bên trong là (20 - 2x) và (14 - 2x) với điều kiện 0 < x < 7. Lập phương trình diện tích (20 - 2x)(14 - 2x) = 160.",
+    "C": "Giải thích ý nghĩa hình học của nghiệm ngoại lai x₂ = 15 m: tại x = 15 m, biểu thức đại số (-10) × (-16) vẫn bằng +160 nhưng độ dài hình học bị âm!"
+  },
+  "misconceptions": [
+    "Trừ thiếu một bên lối đi: viết chiều dài còn lại là (20 - x) và chiều rộng là (14 - x).",
+    "Chỉ đặt điều kiện x > 0 mà quên điều kiện chặn trên 14 - 2x > 0 ⇔ x < 7, dẫn đến nhận cả nghiệm x = 15 m."
+  ],
+  "worked_example": {
+    "problem": "Một mảnh đất hình chữ nhật dài 20 m, rộng 14 m. Người ta làm một lối đi có bề rộng x (m) đều khắp 4 phía xung quanh, phần đất hình chữ nhật ở chính giữa dùng để trồng hoa có diện tích 160 m². Tính bề rộng x của lối đi.",
+    "steps": [
+      "Bước 1 (Biểu diễn hình học & ĐKXĐ): Do lối đi bao quanh cả 4 phía nên thảm hoa ở giữa có chiều dài (20 - 2x) (m) và chiều rộng (14 - 2x) (m). Điều kiện: 14 - 2x > 0 ⇔ 0 < x < 7.",
+      "Bước 2 (Lập phương trình bậc hai): Diện tích thảm hoa là 160 m² nên: (20 - 2x)(14 - 2x) = 160 ⇔ 4(10 - x)(7 - x) = 160 ⇔ x² - 17x + 30 = 0.",
+      "Bước 3 (Giải & Lọc nghiệm hình học): Ta có (x - 2)(x - 15) = 0 ⇒ x = 2 (thỏa mãn 0 < x < 7) hoặc x = 15 (loại vì 15 > 7). Vậy bề rộng lối đi là 2 m."
+    ]
+  },
+  "basic_exercises": [
+    {
+      "id": "B1",
+      "label": "Câu 2a (Cơ bản)",
+      "prompt": "Giải phương trình bậc hai: x² - 9x + 14 = 0."
+    },
+    {
+      "id": "B2",
+      "label": "Câu 2b (Thực hành)",
+      "prompt": "Một mảnh vườn hình chữ nhật có chiều dài hơn chiều rộng 5 m và diện tích bằng 150 m². Tính chiều rộng và chiều dài của mảnh vườn."
+    }
+  ],
+  "advanced_exercise": {
+    "id": "ADV",
+    "prompt": "Một bức tranh hình chữ nhật kích thước 30 cm × 20 cm được lồng vào một khung gỗ có bản rộng x (cm) đều cả 4 phía. Biết tổng diện tích cả khung và tranh là 816 cm². Tìm độ rộng x của khung gỗ."
+  },
+  "real_world_problem": {
+    "id": "RW",
+    "prompt": "Với lối đi khu vườn ở Ví dụ minh họa (diện tích lối đi là 20×14 - 160 = 120 m²), nếu chi phí lát đá lối đi là 250 000 đồng/m² thì tổng kinh phí lát lối đi là bao nhiêu triệu đồng?"
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Lối đi nằm BÊN TRONG 4 phía → Trừ 2x: (Dài - 2x)(Rộng - 2x). Khung viền bọc BÊN NGOÀI 4 phía → Cộng 2x: (Dài + 2x)(Rộng + 2x)!"
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "Bắt buộc đặt điều kiện chiều rộng phần trong dương: Rộng - 2x > 0 ⇔ x < Rộng/2 để loại nghiệm dương quá lớn!"
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Thử lại với x = 2 m: (20 - 4) × (14 - 4) = 16 × 10 = 160 m² (Khớp tuyệt đối!)."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU..."
+    }
+  },
+  "svg_file": "svg_assets/YD-LA-APPL-G9-16.svg",
+  "interactive_html_file": "interactive_experiences/YD-LA-APPL-G9-16.html"
+}

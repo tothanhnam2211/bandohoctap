@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" width="100%" height="100%">
+  <g id="art-layer">
+    <rect x="0" y="0" width="560" height="220" rx="12" fill="#F0F9FF" stroke="#0284C7" stroke-width="1.5"/>
+    <!-- Hydro Tank -->
+    <rect x="65" y="55" width="130" height="130" rx="8" fill="#FFFFFF" stroke="#0369A1" stroke-width="2.5"/>
+    <rect x="68" y="95" width="124" height="87" rx="5" fill="#38BDF8" opacity="0.75"/>
+    <!-- Pipe 1 & Pipe 2 -->
+    <rect x="25" y="65" width="45" height="12" fill="#0284C7"/>
+    <rect x="190" y="65" width="45" height="12" fill="#0D9488"/>
+  </g>
+  <g id="math-layer" font-family="Segoe UI, sans-serif">
+    <text x="130" y="36" font-size="12" font-weight="800" fill="#0369A1" text-anchor="middle">Bể chứa 1 đơn vị thể tích</text>
+    <text x="130" y="142" font-size="12" font-weight="800" fill="#0F172A" text-anchor="middle">Năng suất cộng hưởng</text>
+    <rect x="255" y="34" width="280" height="154" rx="10" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.5"/>
+    <text x="395" y="58" font-size="12.5" font-weight="800" fill="#0369A1" text-anchor="middle">BẢN CHẤT BÀI TOÁN HAI VÒI NƯỚC</text>
+    <text x="395" y="84" font-size="11.5" fill="#B91C1C" font-anchor="middle" text-anchor="middle">✗ Sai lầm: Cộng thời gian x + y = T</text>
+    <text x="395" y="110" font-size="12.5" font-weight="800" fill="#15803D" text-anchor="middle">✓ Đúng: Cộng phần bể chảy trong 1 giờ!</text>
+    <text x="395" y="138" font-size="13.5" font-weight="800" fill="#0F172A" text-anchor="middle">1/x + 1/y = 1/T</text>
+    <text x="395" y="166" font-size="11.5" font-weight="700" fill="#0369A1" text-anchor="middle">Với x = 4h, y = 6h ⇒ 1/4 + 1/6 = 5/12 ⇒ T = 2,4h</text>
+  </g>
+</svg>

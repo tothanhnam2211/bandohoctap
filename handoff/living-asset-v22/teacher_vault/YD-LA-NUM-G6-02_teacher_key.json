@@ -1,0 +1,35 @@
+{
+  "asset_id": "YD-LA-NUM-G6-02",
+  "skill_id": "S_G06_B14",
+  "grade": 6,
+  "target_interactive_solution": 3,
+  "math_semantics": {
+    "unknown_symbol": "k",
+    "domain_constraint": "k ∈ ℤ",
+    "invariant_relation": "h_moi = h_cu - k * (-15) = -120 + 15k",
+    "target_equation": "(-120) - (-45) = -120 + 45 = -75 (m)",
+    "verification_type": "EXACT_ARITHMETIC_VERIFIED"
+  },
+  "basic_answers": [
+    {
+      "id": "B1",
+      "final_answer": "-70",
+      "teacher_solution": "A = (-85) + 35 + (-20) = (-50) + (-20) = -70."
+    },
+    {
+      "id": "B2",
+      "final_answer": "-6°C",
+      "teacher_solution": "Nhiệt độ lúc nửa đêm là: (-2) - 4 = (-2) + (-4) = -6 (°C)."
+    }
+  ],
+  "advanced_answer": {
+    "id": "ADV",
+    "final_answer": "x = -40",
+    "teacher_solution": "x + 28 = -12 ⇒ x = -12 - 28 = -40."
+  },
+  "real_world_answer": {
+    "id": "RW",
+    "final_answer": "-55 m",
+    "teacher_solution": "Độ cao cuối cùng: (-30) - 50 + 25 = -80 + 25 = -55 (m)."
+  }
+}

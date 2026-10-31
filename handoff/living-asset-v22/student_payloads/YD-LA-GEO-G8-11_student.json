@@ -1,0 +1,87 @@
+{
+  "asset_id": "YD-LA-GEO-G8-11",
+  "asset_no": "11",
+  "skill_id": "S_G08_B15",
+  "grade": 8,
+  "strand_code": "HINH_HOC_VA_DO_LUONG",
+  "strand_name": "Hình học, Đo lường & Không gian",
+  "title": "Bằng Chứng Không Lời: Trượt 4 Tam Giác Vuông Chứng Minh a² + b² = c²",
+  "story_hook": "Trong cùng một khung hình vuông cạnh (a + b), khi bạn đặt 4 tam giác vuông bằng nhau theo Cách 1 thì phần trống ở giữa là hình vuông cạnh huyền c². Khi trượt nhẹ 4 tam giác đó về góc theo Cách 2, phần trống tách thành đúng hai hình vuông a² và b²!",
+  "objective": "Hiểu tại sao trong mọi tam giác vuông, bình phương cạnh huyền luôn bằng tổng bình phương hai cạnh góc vuông (a² + b² = c²) thông qua bảo toàn diện tích phần trống.",
+  "artistic_world": "EUCLIDEAN_ATELIER_PRO",
+  "primitives_used": [
+    "PRIM_GEOMETRY_CUT_FOLD_RAY"
+  ],
+  "interactive_engine": {
+    "engine_type": "PYTHAGORAS_SLIDE_PROOF",
+    "control_label": "Kéo thanh trượt tịnh tiến 4 tam giác vuông (0% → 100%):",
+    "min_val": 0,
+    "max_val": 100,
+    "step_val": 10,
+    "default_trial": 0,
+    "unit": "%"
+  },
+  "learner_scaffolding": {
+    "A": "Khung gỗ bên ngoài không đổi và 4 miếng gỗ hình tam giác vuông bên trong cũng không đổi! Vậy phần diện tích màu vàng ở trạng thái 1 (c²) BẮT BUỘC phải bằng tổng diện tích hai ô vuông ở trạng thái 2 (a² + b²)!",
+    "B": "Khai triển đại số đồng thời với hình học: (a + b)² - 2ab = a² + b² = c².",
+    "C": "Áp dụng Định lý Pythagore đảo để kiểm tra xem bộ ba đoạn thẳng (a, b, c) bất kỳ có tạo thành góc vuông của người thợ xây hay không."
+  },
+  "misconceptions": [
+    "Nhầm công thức tìm cạnh góc vuông với cạnh huyền: khi tìm cạnh góc vuông a lại lấy c² + b² thay vì c² - b².",
+    "Quên khai căn bậc hai ở bước cuối (tính ra c² = 100 rồi kết luận luôn c = 100)."
+  ],
+  "worked_example": {
+    "problem": "Một cánh buồm hình tam giác vuông có hai cạnh góc vuông dài a = 6 m và b = 8 m. Tính độ dài cạnh huyền c của cánh buồm và giải thích bằng bảo toàn diện tích trong hình vuông cạnh (a + b) = 14 m.",
+    "steps": [
+      "Bước 1 (Áp dụng định lý Pythagore): Trong tam giác vuông, ta có c² = a² + b² = 6² + 8² = 36 + 64 = 100.",
+      "Bước 2 (Khai căn bậc hai): Vì c > 0 nên c = √100 = 10 (m).",
+      "Bước 3 (Đối chiếu diện tích khung 14 m × 14 m): Diện tích khung lớn là 14² = 196 m². Tổng diện tích 4 tam giác vuông là 4 × (6×8/2) = 96 m². Phần trống còn lại: 196 - 96 = 100 m² = c² = 36 + 64."
+    ]
+  },
+  "basic_exercises": [
+    {
+      "id": "B1",
+      "label": "Câu 2a (Cơ bản)",
+      "prompt": "Cho tam giác ABC vuông tại A có AB = 5 cm, AC = 12 cm. Tính độ dài cạnh huyền BC."
+    },
+    {
+      "id": "B2",
+      "label": "Câu 2b (Thực hành)",
+      "prompt": "Cho tam giác DEF vuông tại D có cạnh huyền EF = 15 cm và cạnh góc vuông DE = 9 cm. Tính độ dài cạnh DF."
+    }
+  ],
+  "advanced_exercise": {
+    "id": "ADV",
+    "prompt": "Tam giác có độ dài ba cạnh là 9 cm, 12 cm và 15 cm có phải là tam giác vuông không? Vì sao?"
+  },
+  "real_world_problem": {
+    "id": "RW",
+    "prompt": "Một chiếc thang dài 5 m được đặt dựa vào bức tường thẳng đứng. Để an toàn, chân thang phải cách chân tường 3 m. Hỏi đầu trên của thang chạm tường ở độ cao bao nhiêu mét?"
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Xác định góc vuông trước tiên → Cạnh đối diện góc vuông là CẠNH HUYỀN (dài nhất).",
+        "Tìm cạnh huyền: CỘNG bình phương (c² = a² + b²). Tìm cạnh góc vuông: TRỪ bình phương (a² = c² - b²)."
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "Tính xong c² nhớ lấy CĂN BẬC HAI √(c²) để ra độ dài cạnh c!"
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Ghi nhớ 3 bộ số Pythagore vàng: (3; 4; 5), (6; 8; 10), (5; 12; 13)."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU..."
+    }
+  },
+  "svg_file": "svg_assets/YD-LA-GEO-G8-11.svg",
+  "interactive_html_file": "interactive_experiences/YD-LA-GEO-G8-11.html"
+}

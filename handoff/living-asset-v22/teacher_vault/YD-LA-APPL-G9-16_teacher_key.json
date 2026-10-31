@@ -1,0 +1,35 @@
+{
+  "asset_id": "YD-LA-APPL-G9-16",
+  "skill_id": "S_G09_B19",
+  "grade": 9,
+  "target_interactive_solution": 2.0,
+  "math_semantics": {
+    "unknown_symbol": "x",
+    "domain_constraint": "0 < x < 7 (vì 14 - 2x > 0)",
+    "invariant_relation": "S_hoa(x) = (20 - 2x)(14 - 2x) = 160; S_lối_đi = 280 - 160 = 120 m²",
+    "target_equation": "(20 - 2x)(14 - 2x) = 160 ⇔ x² - 17x + 30 = 0 ⇒ x₁ = 2 (Nhận); x₂ = 15 (Loại vì x < 7)",
+    "verification_type": "SYMBOLIC_SYMPY_VERIFIED"
+  },
+  "basic_answers": [
+    {
+      "id": "B1",
+      "final_answer": "x = 2 hoặc x = 7",
+      "teacher_solution": "(x - 2)(x - 7) = 0 ⇔ x = 2 hoặc x = 7."
+    },
+    {
+      "id": "B2",
+      "final_answer": "Rộng 10 m; Dài 15 m",
+      "teacher_solution": "x(x + 5) = 150 (x > 0) ⇔ x² + 5x - 150 = 0 ⇒ x = 10 (nhận) hoặc x = -15 (loại). Vậy rộng 10 m, dài 15 m."
+    }
+  ],
+  "advanced_answer": {
+    "id": "ADV",
+    "final_answer": "x = 2 cm",
+    "teacher_solution": "(30 + 2x)(20 + 2x) = 816 (x > 0) ⇔ 4(15 + x)(10 + x) = 816 ⇔ x² + 25x - 54 = 0 ⇒ x = 2 (cm, nhận)."
+  },
+  "real_world_answer": {
+    "id": "RW",
+    "final_answer": "30 triệu đồng",
+    "teacher_solution": "Tổng kinh phí lát đá lối đi là: 120 × 250 000 = 30 000 000 (đồng) = 30 triệu đồng."
+  }
+}

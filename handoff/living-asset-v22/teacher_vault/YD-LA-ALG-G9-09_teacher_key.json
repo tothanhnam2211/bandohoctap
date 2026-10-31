@@ -1,0 +1,35 @@
+{
+  "asset_id": "YD-LA-ALG-G9-09",
+  "skill_id": "S_G09_B18",
+  "grade": 9,
+  "target_interactive_solution": 8,
+  "math_semantics": {
+    "unknown_symbol": "a",
+    "domain_constraint": "-12 ≤ x ≤ 12; a < 0",
+    "invariant_relation": "y = (-1/16)·x²; h_thoáng(x) = 9 - x²/16",
+    "target_equation": "Tại mép tàu x = 8/2 = 4: h_thoáng(4) = 9 - 16/16 = 8 (m) > 6 (m) ⇒ Tàu qua an toàn!",
+    "verification_type": "SYMBOLIC_SYMPY_VERIFIED"
+  },
+  "basic_answers": [
+    {
+      "id": "B1",
+      "final_answer": "a = 3",
+      "teacher_solution": "Thay x = 2, y = 12 vào y = ax²: 12 = a · 2² ⇒ 4a = 12 ⇒ a = 3."
+    },
+    {
+      "id": "B2",
+      "final_answer": "(3; 18) và (-3; 18)",
+      "teacher_solution": "2x² = 18 ⇔ x² = 9 ⇔ x = 3 hoặc x = -3. Vậy có hai điểm (3; 18) và (-3; 18)."
+    }
+  ],
+  "advanced_answer": {
+    "id": "ADV",
+    "final_answer": "A(-1; 1) và B(3; 9)",
+    "teacher_solution": "Phương trình hoành độ giao điểm: x² - 2x - 3 = 0 ⇔ x = -1 (y = 1) hoặc x = 3 (y = 9)."
+  },
+  "real_world_answer": {
+    "id": "RW",
+    "final_answer": "6 m",
+    "teacher_solution": "Chọn O tại đỉnh cổng: chân cổng (4; -8) ⇒ -8 = a·4² ⇒ a = -1/2. Tại mép băng rôn x = 2 ⇒ y = (-1/2)·2² = -2 ⇒ Độ cao từ đất: 8 - 2 = 6 (m)."
+  }
+}

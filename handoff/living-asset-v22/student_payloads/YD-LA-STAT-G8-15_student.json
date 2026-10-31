@@ -1,0 +1,87 @@
+{
+  "asset_id": "YD-LA-STAT-G8-15",
+  "asset_no": "15",
+  "skill_id": "S_G09_B22",
+  "grade": 9,
+  "strand_code": "THONG_KE_VA_XAC_SUAT",
+  "strand_name": "Thống kê, Xác suất & Toán Ứng dụng",
+  "title": "Phòng Thí Nghiệm Monte Carlo: Hội Tụ Xác Suất Thực Nghiệm Về Xác Suất Lý Thuyết",
+  "story_hook": "Khi gieo một con xúc xắc cân đối chỉ 10 lần, biến cố 'Xuất hiện mặt số chẵn' có thể chỉ xảy ra 3 lần (30%) hoặc tới 7 lần (70%). Nhưng điều kỳ diệu gì sẽ xảy ra khi máy tính gieo liên tiếp 1000 lần?",
+  "objective": "Trực tiếp trải nghiệm Luật Số Lớn: khi số phép thử N tăng lớn (10 → 100 → 1000), xác suất thực nghiệm k/N sẽ dao động hẹp dần và hội tụ sát về xác suất lý thuyết P(A) = n(A)/n(Ω).",
+  "artistic_world": "DATA_OBSERVATORY_LAB",
+  "primitives_used": [
+    "PRIM_STAT_PROB_SIMULATOR"
+  ],
+  "interactive_engine": {
+    "engine_type": "MONTE_CARLO_PROBABILITY",
+    "control_label": "Chọn số lần thực hiện phép thử ngẫu nhiên N (lần gieo):",
+    "min_val": 10,
+    "max_val": 1000,
+    "step_val": 50,
+    "default_trial": 100,
+    "unit": "lần"
+  },
+  "learner_scaffolding": {
+    "A": "Bấm thử 'Gieo 10 lần': đường biểu diễn còn nhảy lên xuống thất thường. Nhưng khi bạn kéo lên 'Gieo 1000 lần', đường màu xanh sẽ bám sát vào vạch đích màu đỏ P(A) = 0,50!",
+    "B": "Liệt kê không gian mẫu Ω gồm các kết quả đồng khả năng, đếm số kết quả thuận lợi n(A) và tính tỉ số P(A) = n(A)/n(Ω).",
+    "C": "Ứng dụng xác suất thực nghiệm để ước lượng số lượng cá thể trong hồ hoặc kiểm định xem một con xúc xắc có bị làm lệch trọng tâm hay không."
+  },
+  "misconceptions": [
+    "Ngộ nhận của con bạc (Gambler's Fallacy): tưởng rằng sau 3 lần ra mặt lẻ liên tiếp thì lần thứ 4 chắc chắn phải ra mặt chẵn.",
+    "Đếm thiếu kết quả trong không gian mẫu khi gieo đồng thời 2 đồng xu hoặc 2 xúc xắc."
+  ],
+  "worked_example": {
+    "problem": "Gieo một con xúc xắc cân đối và đồng chất 1 lần. Tính xác suất lý thuyết của biến cố A: 'Số chấm xuất hiện là một số chẵn'. Nếu gieo xúc xắc 600 lần thì dự đoán biến cố A xuất hiện khoảng bao nhiêu lần?",
+    "steps": [
+      "Bước 1 (Xác định không gian mẫu): Tập hợp các kết quả có thể xảy ra là Ω = {1; 2; 3; 4; 5; 6} ⇒ n(Ω) = 6 kết quả đồng khả năng.",
+      "Bước 2 (Đếm kết quả thuận lợi & Tính xác suất): Các kết quả thuận lợi cho biến cố A (số chẵn) là {2; 4; 6} ⇒ n(A) = 3. Vậy P(A) = 3/6 = 1/2 = 0,5.",
+      "Bước 3 (Dự đoán bằng xác suất): Khi số phép thử N = 600 đủ lớn, k/600 ≈ P(A) = 0,5 ⇒ Số lần xuất hiện mặt chẵn khoảng k ≈ 600 × 0,5 = 300 (lần)."
+    ]
+  },
+  "basic_exercises": [
+    {
+      "id": "B1",
+      "label": "Câu 2a (Cơ bản)",
+      "prompt": "Một hộp có 10 quả bóng cùng kích thước được đánh số từ 1 đến 10. Lấy ngẫu nhiên 1 quả bóng. Tính xác suất để lấy được quả bóng ghi số nguyên tố."
+    },
+    {
+      "id": "B2",
+      "label": "Câu 2b (Thực hành)",
+      "prompt": "Tung một đồng xu cân đối 200 lần thấy có 96 lần xuất hiện mặt Ngửa (N). Tính xác suất thực nghiệm của biến cố xuất hiện mặt Ngửa."
+    }
+  ],
+  "advanced_exercise": {
+    "id": "ADV",
+    "prompt": "Gieo đồng thời hai đồng xu cân đối và đồng chất. Tính xác suất của biến cố B: 'Có ít nhất một đồng xu xuất hiện mặt Ngửa'."
+  },
+  "real_world_problem": {
+    "id": "RW",
+    "prompt": "Kiểm tra ngẫu nhiên 500 sản phẩm của một dây chuyền thấy có 10 sản phẩm bị lỗi. Trong một lô hàng 3000 sản phẩm của dây chuyền đó, hãy ước lượng có khoảng bao nhiêu sản phẩm đạt chuẩn (không lỗi)?"
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "3 bước chuẩn tính xác suất cổ điển: (1) Đếm tổng số kết quả đồng khả năng n(Ω) → (2) Liệt kê và đếm kết quả thuận lợi n(A) → (3) Lập tỉ số P(A) = n(A)/n(Ω)."
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "Số 1 KHÔNG phải là số nguyên tố! Các số nguyên tố đầu tiên là: 2; 3; 5; 7; 11...",
+        "Xác suất P(A) luôn nằm trong đoạn từ 0 đến 1 (0 ≤ P(A) ≤ 1). Nếu tính ra P > 1 là chắc chắn sai!"
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Tổng xác suất của biến cố A và biến cố đối Ā luôn bằng 1: P(A) + P(Ā) = 1."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU..."
+    }
+  },
+  "svg_file": "svg_assets/YD-LA-STAT-G8-15.svg",
+  "interactive_html_file": "interactive_experiences/YD-LA-STAT-G8-15.html"
+}

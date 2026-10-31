@@ -1,0 +1,86 @@
+{
+  "asset_id": "YD-LA-GEO-G8-12",
+  "asset_no": "12",
+  "skill_id": "S_G08_B31",
+  "grade": 8,
+  "strand_code": "HINH_HOC_VA_DO_LUONG",
+  "strand_name": "Hình học, Đo lường & Không gian",
+  "title": "Nhà Đo Đạc Cổ Đại: Đo Chiều Cao Tháp Cổ Bằng Bóng Nắng & Định Lý Thales",
+  "story_hook": "Làm sao nhà toán học Thales đo được chiều cao Kim Tự Tháp khổng lồ mà không cần trèo lên đỉnh? Ông chỉ cần cắm một chiếc cọc gỗ cao 2 m xuống cát và đo bóng nắng của cọc cùng lúc với bóng của tháp!",
+  "objective": "Hiểu rằng các tia nắng mặt trời song song tạo ra hai tam giác vuông đồng dạng, giữ cho tỉ số (Chiều cao vật / Độ dài bóng nắng) là một đại lượng bất biến tại cùng một thời điểm.",
+  "artistic_world": "EUCLIDEAN_ATELIER_PRO",
+  "primitives_used": [
+    "PRIM_GEOMETRY_CUT_FOLD_RAY"
+  ],
+  "interactive_engine": {
+    "engine_type": "THALES_SHADOW_RAY",
+    "control_label": "Thay đổi độ dài bóng nắng của tháp theo góc Mặt Trời (m):",
+    "min_val": 9,
+    "max_val": 36,
+    "step_val": 3,
+    "default_trial": 18,
+    "unit": "m"
+  },
+  "learner_scaffolding": {
+    "A": "Cọc cao 2 m có bóng dài 1,5 m. Bóng của tháp dài 18 m — tức là dài gấp 18 : 1,5 = 12 lần bóng cọc! Vậy chiều cao của tháp cũng phải cao gấp 12 lần cây cọc: 2 × 12 = 24 m!",
+    "B": "Vì các tia sáng mặt trời song song nên hai tam giác vuông tạo bởi (Tháp – Bóng tháp) và (Cọc – Bóng cọc) đồng dạng (g.g) ⇒ h / 2 = 18 / 1,5.",
+    "C": "Mở rộng phương pháp ngắm qua gương phẳng đặt trên mặt đất (góc tới bằng góc phản xạ) khi trời râm không có bóng nắng."
+  },
+  "misconceptions": [
+    "Lập tỉ số lệch đơn vị đo (cọc tính bằng cm nhưng bóng tháp tính bằng m mà quên đổi về cùng đơn vị).",
+    "Ghép nhầm cặp cạnh tương ứng: lấy (Chiều cao tháp / Chiều cao cọc) = (Bóng cọc / Bóng tháp)."
+  ],
+  "worked_example": {
+    "problem": "Cùng một thời điểm trong ngày, một tòa tháp cổ có bóng trên mặt đất dài 18 m, còn một thanh cọc thẳng đứng cao 2 m cắm gần đó có bóng dài 1,5 m. Tính chiều cao h của tòa tháp.",
+    "steps": [
+      "Bước 1 (Mô hình hóa hình học): Vì tháp và cọc cùng vuông góc với mặt đất và các tia nắng mặt trời song song nên hai tam giác vuông tạo thành đồng dạng với nhau.",
+      "Bước 2 (Lập tỉ lệ thức đồng dạng): Ta có tỉ số giữa chiều cao và độ dài bóng nắng là không đổi: h / 18 = 2 / 1,5.",
+      "Bước 3 (Tính chiều cao h): Suy ra h = (18 × 2) / 1,5 = 36 / 1,5 = 24 (m)."
+    ]
+  },
+  "basic_exercises": [
+    {
+      "id": "B1",
+      "label": "Câu 2a (Cơ bản)",
+      "prompt": "Cho tam giác ABC có DE // BC (D ∈ AB, E ∈ AC). Biết AD = 4 cm, DB = 6 cm, AE = 5 cm. Tính độ dài đoạn EC."
+    },
+    {
+      "id": "B2",
+      "label": "Câu 2b (Thực hành)",
+      "prompt": "Một cột cờ có bóng trên sân trường dài 12 m. Cùng lúc đó, một học sinh cao 1,5 m đứng gần cột cờ có bóng dài 2 m. Tính chiều cao cột cờ."
+    }
+  ],
+  "advanced_exercise": {
+    "id": "ADV",
+    "prompt": "Cho tam giác ABC có DE // BC (D ∈ AB, E ∈ AC). Biết AD = 3 cm, AB = 9 cm và BC = 15 cm. Tính độ dài đoạn thẳng DE."
+  },
+  "real_world_problem": {
+    "id": "RW",
+    "prompt": "Để đo chiều rộng AB của một khúc sông mà không cần sang bờ bên kia, người ta ngắm tạo hai tam giác đồng dạng trên bờ với tỉ số đồng dạng k = 4 và cạnh tương ứng trên bờ đo được dài 16 m. Tính chiều rộng khúc sông AB."
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Bài toán bóng nắng: Luôn lập tỉ số (Cao lớn / Cao nhỏ) = (Bóng lớn / Bóng nhỏ)!"
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "Khi tính cạnh đáy song song DE/BC, mẫu số phải là CẢ CẠNH LỚN AB (DE/BC = AD/AB), tuyệt đối không dùng AD/DB!"
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Kiểm tra xem đơn vị đo (cm, m) của cả 4 đoạn thẳng trong tỉ lệ thức đã đồng nhất chưa."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU..."
+    }
+  },
+  "svg_file": "svg_assets/YD-LA-GEO-G8-12.svg",
+  "interactive_html_file": "interactive_experiences/YD-LA-GEO-G8-12.html"
+}

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" width="100%" height="100%">
+  <g id="art-layer">
+    <rect x="0" y="0" width="560" height="220" rx="12" fill="#FFF7ED" stroke="#FB923C" stroke-width="1.5"/>
+    <!-- Beaker 1 -->
+    <rect x="60" y="50" width="90" height="120" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="2.5"/>
+    <rect x="63" y="86" width="84" height="81" rx="4" fill="#FDBA74"/>
+    <rect x="63" y="135" width="84" height="32" rx="4" fill="#F97316"/>
+    <!-- Beaker 2 -->
+    <rect x="230" y="40" width="100" height="130" rx="8" fill="#FFFFFF" stroke="#475569" stroke-width="2.5"/>
+    <rect x="233" y="62" width="94" height="105" rx="4" fill="#FED7AA"/>
+    <rect x="233" y="135" width="94" height="32" rx="4" fill="#F97316"/>
+  </g>
+  <g id="math-layer" font-family="Segoe UI, sans-serif">
+    <text x="105" y="36" font-size="12" font-weight="700" fill="#9A3412" text-anchor="middle">Bình ban đầu: 400 ml</text>
+    <text x="105" y="155" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle">Cam nguyên chất: 100 ml</text>
+    <text x="105" y="192" font-size="12" font-weight="700" fill="#C2410C" text-anchor="middle">Tỉ lệ: 100/400 = 25%</text>
+    <text x="190" y="110" font-size="18" font-weight="800" fill="#EA580C" text-anchor="middle">+ 100 ml nước</text>
+    <text x="280" y="28" font-size="12" font-weight="700" fill="#9A3412" text-anchor="middle">Bình sau pha: 500 ml</text>
+    <text x="280" y="155" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle">Bất biến: 100 ml cam</text>
+    <text x="280" y="192" font-size="12" font-weight="700" fill="#15803D" text-anchor="middle">Tỉ lệ mới: 100/500 = 20%</text>
+    <rect x="360" y="55" width="180" height="115" rx="10" fill="#FFFFFF" stroke="#F97316" stroke-width="1.5"/>
+    <text x="450" y="80" font-size="12" font-weight="800" fill="#9A3412" text-anchor="middle">ĐẠI LƯỢNG BẤT BIẾN</text>
+    <text x="450" y="104" font-size="11.5" fill="#334155" text-anchor="middle">Thêm nước lọc làm tăng</text>
+    <text x="450" y="122" font-size="11.5" fill="#334155" text-anchor="middle">tổng thể tích dung dịch,</text>
+    <text x="450" y="140" font-size="11.5" font-weight="700" fill="#EA580C" text-anchor="middle">nhưng lượng cốt cam</text>
+    <text x="450" y="156" font-size="11.5" font-weight="700" fill="#EA580C" text-anchor="middle">giữ nguyên = 100 ml!</text>
+  </g>
+</svg>

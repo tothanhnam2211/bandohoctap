@@ -1,0 +1,35 @@
+{
+  "asset_id": "YD-LA-STAT-G8-15",
+  "skill_id": "S_G09_B22",
+  "grade": 9,
+  "target_interactive_solution": 1000,
+  "math_semantics": {
+    "unknown_symbol": "P_A",
+    "domain_constraint": "0 ≤ P(A) ≤ 1; n(Ω) = 6",
+    "invariant_relation": "P(A) = n(A) / n(Ω) = 3 / 6 = 0,5; lim_{N→∞} (k/N) = P(A)",
+    "target_equation": "Ω = {1; 2; 3; 4; 5; 6} ⇒ n(Ω) = 6; A = {2; 4; 6} ⇒ n(A) = 3 ⇒ P(A) = 3/6 = 1/2",
+    "verification_type": "THEORETICAL_DISTRIBUTION_VERIFIED"
+  },
+  "basic_answers": [
+    {
+      "id": "B1",
+      "final_answer": "2/5 (hay 0,4)",
+      "teacher_solution": "Các số nguyên tố từ 1 đến 10 là {2; 3; 5; 7} (4 kết quả thuận lợi). Xác suất P = 4/10 = 2/5."
+    },
+    {
+      "id": "B2",
+      "final_answer": "12/25 (hay 0,48)",
+      "teacher_solution": "Xác suất thực nghiệm là: k/N = 96 / 200 = 12/25 = 0,48."
+    }
+  ],
+  "advanced_answer": {
+    "id": "ADV",
+    "final_answer": "3/4 (hay 0,75)",
+    "teacher_solution": "Không gian mẫu Ω = {NN, NS, SN, SS} gồm 4 kết quả đồng khả năng. Biến cố B = {NN, NS, SN} có 3 kết quả ⇒ P(B) = 3/4."
+  },
+  "real_world_answer": {
+    "id": "RW",
+    "final_answer": "2940 sản phẩm",
+    "teacher_solution": "Xác suất thực nghiệm sản phẩm đạt chuẩn là (500 - 10)/500 = 490/500 = 0,98. Trong 3000 sản phẩm có khoảng 3000 × 0,98 = 2940 sản phẩm đạt chuẩn."
+  }
+}

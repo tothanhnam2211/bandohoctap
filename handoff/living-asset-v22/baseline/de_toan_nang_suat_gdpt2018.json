@@ -1,0 +1,283 @@
+{
+  "lesson_meta": {
+    "title": "Chuyên đề §4: Giải bài toán bằng cách lập phương trình - Toán Năng Suất",
+    "grade": 9,
+    "curriculum": "GDPT 2018 - Kết nối tri thức"
+  },
+  "dataState": {
+    "1": { "Q": 60, "x": 12, "k": 3, "delta_m": 1, "C": 4.5 },
+    "2": { "Q": 360, "x": 36, "dx": 4, "early_d": 1 },
+    "3": { "Q": 300, "x": 30, "k_absent": 5, "extra_c": 2 },
+    "4": { "Q": 120, "x": 12, "dx": 3, "early_h": 1 }
+  },
+  "problems": [
+    {
+      "id": "VD5_Tr117",
+      "tab": 1,
+      "badge": "VD5 • Trang 117",
+      "title": "[VD5_Tr117] Đội xe chở 60 tấn hàng, thêm 3 xe, giảm 1 tấn/xe",
+      "params": { "Q": 60, "x": 12, "k": 3, "delta_m": 1, "C": 4.5 },
+      "cargoName": "tấn hàng",
+      "questionTarget": "Hỏi lúc đầu đội có bao nhiêu chiếc xe tải (biết các xe chở khối lượng hàng như nhau)?"
+    },
+    {
+      "id": "Cau8_Tr119",
+      "tab": 1,
+      "badge": "Câu 8 • Trang 119",
+      "title": "[Cau8_Tr119] Cứu trợ miền Trung 120 tấn, thêm 5 xe, giảm 2 tấn/xe",
+      "params": { "Q": 120, "x": 15, "k": 5, "delta_m": 2, "C": 6.5 },
+      "cargoName": "tấn hàng cứu trợ đồng bào miền Trung",
+      "questionTarget": "Hỏi lúc đầu đoàn xe dự định dùng bao nhiêu chiếc xe?"
+    },
+    {
+      "id": "Cau9_Tr119",
+      "tab": 1,
+      "badge": "Câu 9 • Trang 119",
+      "title": "[Cau9_Tr119] Vận chuyển 160 tấn gạo, thêm 4 xe, giảm 2 tấn/xe",
+      "params": { "Q": 160, "x": 16, "k": 4, "delta_m": 2, "C": 8.5 },
+      "cargoName": "tấn gạo",
+      "questionTarget": "Tính số xe dự định lúc đầu của đội vận chuyển?"
+    },
+    {
+      "id": "Cau10_Tr119",
+      "tab": 1,
+      "badge": "Câu 10 • Trang 119",
+      "title": "[Cau10_Tr119] Đội xe chở 24 tấn hàng, thêm 4 xe, giảm 1 tấn/xe",
+      "params": { "Q": 24, "x": 8, "k": 4, "delta_m": 1, "C": 2.5 },
+      "cargoName": "tấn hàng nhu yếu phẩm",
+      "questionTarget": "Hỏi theo kế hoạch ban đầu đội xe có bao nhiêu chiếc?"
+    },
+    {
+      "id": "Cau5_Tr118",
+      "tab": 2,
+      "badge": "Câu 5 • Trang 118",
+      "title": "[Cau5_Tr118] Xưởng may 360 bộ áo, tăng 4 bộ/ngày, sớm 1 ngày",
+      "params": { "Q": 360, "x": 36, "dx": 4, "early_d": 1 },
+      "unitProd": "bộ quần áo",
+      "unitTime": "ngày",
+      "questionTarget": "Hỏi theo kế hoạch, mỗi ngày xưởng phải may bao nhiêu bộ quần áo?"
+    },
+    {
+      "id": "Cau1_Tr118",
+      "tab": 2,
+      "badge": "Câu 1 • Trang 118",
+      "title": "[Cau1_Tr118] Sản xuất 240 sản phẩm, tăng 6 sp/giờ, sớm 2 giờ",
+      "params": { "Q": 240, "x": 24, "dx": 6, "early_d": 2 },
+      "unitProd": "sản phẩm",
+      "unitTime": "ngày (ca sản xuất)",
+      "questionTarget": "Hỏi theo kế hoạch, mỗi đơn vị thời gian tổ sản xuất phải làm bao nhiêu sản phẩm?"
+    },
+    {
+      "id": "VD7_Tr117",
+      "tab": 3,
+      "badge": "VD7 • Trang 117",
+      "title": "[VD7_Tr117] Lớp 9A trồng 300 cây, vắng 5 bạn, trồng thêm 2 cây",
+      "params": { "Q": 300, "x": 30, "k_absent": 5, "extra_c": 2 },
+      "className": "Lớp 9A",
+      "questionTarget": "Hỏi lớp 9A có bao nhiêu học sinh (biết mỗi bạn trồng số cây như nhau)?"
+    },
+    {
+      "id": "Cau18_Tr120",
+      "tab": 3,
+      "badge": "Câu 18 • Trang 120",
+      "title": "[Cau18_Tr120] Lớp 9B Hồng Hà trồng 480 cây, vắng 8 bạn, thêm 3 cây",
+      "params": { "Q": 480, "x": 40, "k_absent": 8, "extra_c": 3 },
+      "className": "Chi đoàn lớp 9B trường THCS Hồng Hà",
+      "questionTarget": "Tính tổng số học sinh của lớp 9B ban đầu?"
+    },
+    {
+      "id": "Cau21_Tr121",
+      "tab": 4,
+      "badge": "Câu 21 • Trang 121",
+      "title": "[Cau21_Tr121] Giao khoán 120 sp, nửa sau tăng 3 sp/h, sớm 1 giờ",
+      "params": { "Q": 120, "x": 12, "dx": 3, "early_h": 1 },
+      "questionTarget": "Tính năng suất dự định ban đầu (số sản phẩm làm trong mỗi giờ) của công nhân đó?"
+    }
+  ],
+  "questions_by_tab": {
+    "1": {
+      "NB": {
+        "question": "Gọi $x$ (xe) là số xe dự định ban đầu ($x \\in \\mathbb{N}^*$). Nếu tổng lượng hàng cần chở là $Q = 60$ tấn thì theo dự định, mỗi xe phải chở bao nhiêu tấn hàng?",
+        "options": [
+          "A. $\\frac{60}{x}$ (tấn)",
+          "B. $60x$ (tấn)",
+          "C. $\\frac{x}{60}$ (tấn)",
+          "D. $60 - x$ (tấn)"
+        ],
+        "correct": 0,
+        "explanation": "Lượng hàng mỗi xe chở bằng Tổng lượng hàng chia cho Số xe: $\\frac{Q}{x} = \\frac{60}{x}$ (tấn)."
+      },
+      "TH": {
+        "question": "Thực tế đội xe được điều thêm $k = 3$ xe nên mỗi xe chở nhẹ hơn dự định $1$ tấn. Khẳng định nào sau đây đúng khi đặt lên 'Cân lập luận'?",
+        "options": [
+          "A. Tải trọng 1 xe dự định lớn hơn tải trọng 1 xe thực tế là 1 tấn.",
+          "B. Tải trọng 1 xe thực tế lớn hơn tải trọng 1 xe dự định là 1 tấn.",
+          "C. Tổng số hàng thực tế nhiều hơn dự định 3 tấn.",
+          "D. Hai bên đĩa cân bằng nhau mà không cần thêm quả cân."
+        ],
+        "correct": 0,
+        "explanation": "Vì có thêm xe chia sẻ hàng nên mỗi xe thực tế chở nhẹ hơn: $\\frac{60}{x} > \\frac{60}{x+3}$ và độ chênh lệch đúng bằng $1$ tấn."
+      },
+      "VD": {
+        "question": "Phương trình chính xác biểu diễn bài toán ở Dạng 1 với $Q = 60, k = 3, \\Delta m = 1$ là:",
+        "options": [
+          "A. $\\frac{60}{x} - \\frac{60}{x+3} = 1$",
+          "B. $\\frac{60}{x+3} - \\frac{60}{x} = 1$",
+          "C. $\\frac{60}{x} + \\frac{60}{x+3} = 3$",
+          "D. $60x - 60(x+3) = 1$"
+        ],
+        "correct": 0,
+        "explanation": "Lấy tải trọng 1 xe dự định trừ đi tải trọng 1 xe thực tế ta được phần giảm nhẹ: $\\frac{60}{x} - \\frac{60}{x+3} = 1$ (Nghiệm $x = 12$ xe)."
+      },
+      "VDNC": {
+        "question": "Giả sử trần tải trọng an toàn của mỗi xe là $C = 4.5$ tấn/xe. Nếu ban đầu chỉ có $x = 12$ xe thì phương án dự kiến có vượt tải không? Cần điều thêm tối thiểu bao nhiêu xe nguyên dương để không xe nào vượt trần $4.5$ tấn?",
+        "options": [
+          "A. Dự kiến bị vượt tải ($5.0 > 4.5$); cần điều thêm ít nhất $2$ xe (tổng $14$ xe).",
+          "B. Dự kiến đạt tải; không cần điều thêm xe.",
+          "C. Dự kiến bị vượt tải; cần điều thêm ít nhất $1$ xe (tổng $13$ xe).",
+          "D. Dự kiến bị vượt tải; cần điều thêm ít nhất $4$ xe (tổng $16$ xe)."
+        ],
+        "correct": 0,
+        "explanation": "Với $12$ xe, mỗi xe chở $60/12 = 5$ tấn ($> 4.5$ tấn $\\rightarrow$ Vượt tải). Để $\\frac{60}{12+k} \\le 4.5 \\Rightarrow 12+k \\ge 13.33 \\Rightarrow 12+k \\ge 14 \\Rightarrow k \\ge 2$ xe."
+      }
+    },
+    "2": {
+      "NB": {
+        "question": "Gọi $x$ (bộ/ngày) là năng suất may dự định của xưởng ($x \\in \\mathbb{N}^*$). Khi cải tiến kỹ thuật tăng thêm $\\Delta x = 4$ bộ/ngày, năng suất thực tế là:",
+        "options": [
+          "A. $x + 4$ (bộ/ngày)",
+          "B. $x - 4$ (bộ/ngày)",
+          "C. $4x$ (bộ/ngày)",
+          "D. $\\frac{360}{x}$ (bộ/ngày)"
+        ],
+        "correct": 0,
+        "explanation": "Mỗi ngày may thêm được $4$ bộ áo so với dự định $x$ nên năng suất thực tế là $x + 4$ (bộ/ngày)."
+      },
+      "TH": {
+        "question": "Với tổng chỉ tiêu $Q = 360$ bộ áo, thời gian hoàn thành theo dự định và theo thực tế lần lượt là:",
+        "options": [
+          "A. Dự định $\\frac{360}{x}$ (ngày); Thực tế $\\frac{360}{x + 4}$ (ngày)",
+          "B. Dự định $\\frac{x}{360}$ (ngày); Thực tế $\\frac{x + 4}{360}$ (ngày)",
+          "C. Dự định $360x$ (ngày); Thực tế $360(x + 4)$ (ngày)",
+          "D. Dự định $\\frac{360}{x + 4}$ (ngày); Thực tế $\\frac{360}{x}$ (ngày)"
+        ],
+        "correct": 0,
+        "explanation": "Thời gian hoàn thành bằng Tổng sản phẩm chia cho Năng suất 1 ngày: dự định $\\frac{360}{x}$ ngày, thực tế $\\frac{360}{x+4}$ ngày."
+      },
+      "VD": {
+        "question": "Biết phân xưởng hoàn thành kế hoạch sớm hơn dự định $1$ ngày. Phương trình biểu diễn bài toán là:",
+        "options": [
+          "A. $\\frac{360}{x} - \\frac{360}{x + 4} = 1$",
+          "B. $\\frac{360}{x + 4} - \\frac{360}{x} = 1$",
+          "C. $\\frac{360}{x} + \\frac{360}{x + 4} = 1$",
+          "D. $360(x + 4) - 360x = 1$"
+        ],
+        "correct": 0,
+        "explanation": "Thời gian thực tế ít hơn thời gian dự định $1$ ngày nên ta lấy $t_{\\text{dự định}} - t_{\\text{thực tế}} = 1 \\iff \\frac{360}{x} - \\frac{360}{x+4} = 1$ (Nghiệm $x = 36$ bộ/ngày)."
+      },
+      "VDNC": {
+        "question": "Khi làn cải tiến ($40$ bộ/ngày) vừa may đủ $360$ bộ áo sau $9$ ngày, làn kế hoạch ($36$ bộ/ngày) còn thiếu bao nhiêu bộ áo?",
+        "options": [
+          "A. Còn thiếu $36$ bộ áo (mới may được $324/360$ bộ)",
+          "B. Còn thiếu $40$ bộ áo",
+          "C. Đã may xong $360$ bộ áo",
+          "D. Còn thiếu $4$ bộ áo"
+        ],
+        "correct": 0,
+        "explanation": "Trong $9$ ngày, làn kế hoạch may được $36 \\times 9 = 324$ bộ áo, nên còn thiếu $360 - 324 = 36$ bộ áo (đúng bằng $1$ ngày làm việc theo kế hoạch)."
+      }
+    },
+    "3": {
+      "NB": {
+        "question": "Gọi $x$ (học sinh) là sĩ số ban đầu của lớp 9A ($x > 5, x \\in \\mathbb{N}^*$). Khi có $5$ bạn vắng mặt đi làm công tác khác, số học sinh thực tế trồng cây là:",
+        "options": [
+          "A. $x - 5$ (học sinh)",
+          "B. $x + 5$ (học sinh)",
+          "C. $\\frac{300}{x}$ (học sinh)",
+          "D. $5x$ (học sinh)"
+        ],
+        "correct": 0,
+        "explanation": "Ban đầu có $x$ học sinh, vắng $5$ bạn nên thực tế còn $x - 5$ học sinh tham gia trồng cây."
+      },
+      "TH": {
+        "question": "Để trồng đủ $Q = 300$ cây xanh, số cây mỗi học sinh trồng theo dự định và theo thực tế lần lượt là:",
+        "options": [
+          "A. Dự định $\\frac{300}{x}$ (cây); Thực tế $\\frac{300}{x - 5}$ (cây)",
+          "B. Dự định $\\frac{300}{x - 5}$ (cây); Thực tế $\\frac{300}{x}$ (cây)",
+          "C. Dự định $\\frac{x}{300}$ (cây); Thực tế $\\frac{x - 5}{300}$ (cây)",
+          "D. Dự định $300x$ (cây); Thực tế $300(x - 5)$ (cây)"
+        ],
+        "correct": 0,
+        "explanation": "Chia đều $300$ cây cho số học sinh: dự định mỗi bạn trồng $\\frac{300}{x}$ cây; thực tế mỗi bạn còn lại trồng $\\frac{300}{x - 5}$ cây."
+      },
+      "VD": {
+        "question": "Vì mỗi bạn còn lại phải trồng thêm $2$ cây so với dự định nên phương trình của bài toán là:",
+        "options": [
+          "A. $\\frac{300}{x - 5} - \\frac{300}{x} = 2$",
+          "B. $\\frac{300}{x} - \\frac{300}{x - 5} = 2$",
+          "C. $\\frac{300}{x - 5} + \\frac{300}{x} = 2$",
+          "D. $\\frac{300}{x + 5} - \\frac{300}{x} = 2$"
+        ],
+        "correct": 0,
+        "explanation": "Số cây thực tế mỗi bạn trồng nhiều hơn dự định $2$ cây nên $\\frac{300}{x - 5} - \\frac{300}{x} = 2$ (Nghiệm $x = 30$ học sinh)."
+      },
+      "VDNC": {
+        "question": "Với nghiệm $x = 30$ học sinh, tổng số cây mà $5$ bạn vắng mặt để lại cho $25$ bạn còn lại gánh thêm là bao nhiêu cây?",
+        "options": [
+          "A. $50$ cây (chia đều cho $25$ bạn, mỗi bạn trồng thêm $2$ cây)",
+          "B. $30$ cây",
+          "C. $25$ cây",
+          "D. $10$ cây"
+        ],
+        "correct": 0,
+        "explanation": "Theo dự định mỗi bạn trồng $300 / 30 = 10$ cây. $5$ bạn vắng để lại $5 \\times 10 = 50$ cây; chia đều cho $25$ bạn còn lại thì mỗi bạn trồng thêm $50 / 25 = 2$ cây."
+      }
+    },
+    "4": {
+      "NB": {
+        "question": "Một công nhân được giao làm $Q = 120$ sản phẩm. Nửa khối lượng công việc đầu tiên và nửa khối lượng công việc còn lại mỗi chặng là bao nhiêu sản phẩm?",
+        "options": [
+          "A. Mỗi nửa chặng là $\\frac{120}{2} = 60$ (sản phẩm)",
+          "B. Nửa đầu $80$ sản phẩm, nửa sau $40$ sản phẩm",
+          "C. Mỗi nửa chặng là $120$ (sản phẩm)",
+          "D. Mỗi nửa chặng là $30$ (sản phẩm)"
+        ],
+        "correct": 0,
+        "explanation": "Chia đôi tổng định mức $Q = 120$ sản phẩm thành hai giai đoạn bằng nhau, mỗi giai đoạn gồm $60$ sản phẩm."
+      },
+      "TH": {
+        "question": "Gọi $x$ (sp/giờ) là năng suất dự định ($x > 0$). Biểu thức tổng thời gian thực tế hoàn thành cả hai nửa chặng (nửa sau tăng thêm $3$ sp/giờ) là:",
+        "options": [
+          "A. $\\frac{60}{x} + \\frac{60}{x + 3}$ (giờ)",
+          "B. $\\frac{120}{x + 3}$ (giờ)",
+          "C. $\\frac{60}{x} - \\frac{60}{x + 3}$ (giờ)",
+          "D. $\\frac{120}{2x + 3}$ (giờ)"
+        ],
+        "correct": 0,
+        "explanation": "Nửa đầu ($60$ sp) làm với năng suất $x$ hết $\\frac{60}{x}$ giờ; nửa sau ($60$ sp) làm với năng suất $x + 3$ hết $\\frac{60}{x + 3}$ giờ."
+      },
+      "VD": {
+        "question": "Do cải tiến ở nửa chặng sau nên người công nhân hoàn thành sớm hơn dự định $1$ giờ. Phương trình lập được là:",
+        "options": [
+          "A. $\\frac{120}{x} - \\left(\\frac{60}{x} + \\frac{60}{x + 3}\\right) = 1 \\iff \\frac{60}{x} - \\frac{60}{x + 3} = 1$",
+          "B. $\\frac{120}{x} - \\frac{120}{x + 3} = 1$",
+          "C. $\\frac{60}{x + 3} - \\frac{60}{x} = 1$",
+          "D. $\\frac{60}{x} + \\frac{60}{x + 3} = 1$"
+        ],
+        "correct": 0,
+        "explanation": "Lấy thời gian dự định $\\frac{120}{x}$ trừ tổng thời gian thực tế $\\left(\\frac{60}{x} + \\frac{60}{x+3}\\right)$ bằng $1$ giờ, rút gọn còn $\\frac{60}{x} - \\frac{60}{x+3} = 1$ (Nghiệm $x = 12$ sp/giờ)."
+      },
+      "VDNC": {
+        "question": "Với năng suất ban đầu $x = 12$ sp/giờ, thời gian làm nửa chặng đầu và nửa chặng sau lần lượt là bao nhiêu giờ?",
+        "options": [
+          "A. Nửa đầu hết $5$ giờ, nửa sau hết $4$ giờ (tổng $9$ giờ, sớm $1$ giờ so với dự định $10$ giờ)",
+          "B. Nửa đầu hết $6$ giờ, nửa sau hết $3$ giờ",
+          "C. Nửa đầu hết $5$ giờ, nửa sau hết $5$ giờ",
+          "D. Nửa đầu hết $4$ giờ, nửa sau hết $5$ giờ"
+        ],
+        "correct": 0,
+        "explanation": "Nửa đầu: $60 / 12 = 5$ giờ. Nửa sau tăng tốc $12 + 3 = 15$ sp/giờ nên mất $60 / 15 = 4$ giờ. Tổng cộng $5 + 4 = 9$ giờ, sớm hơn dự định ($120/12 = 10$ giờ) đúng $1$ giờ."
+      }
+    }
+  }
+}

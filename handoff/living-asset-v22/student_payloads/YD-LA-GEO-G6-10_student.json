@@ -1,0 +1,86 @@
+{
+  "asset_id": "YD-LA-GEO-G6-10",
+  "asset_no": "10",
+  "skill_id": "S_G06_B20",
+  "grade": 6,
+  "strand_code": "HINH_HOC_VA_DO_LUONG",
+  "strand_name": "Hình học, Đo lường & Không gian",
+  "title": "Kiến Trúc Sư Sân Vườn H07: Bẫy Chu Vi Khi Khoét Góc Hình Chữ Nhật",
+  "story_hook": "Một mảnh vườn hình chữ nhật dài 12 m, rộng 10 m bị khoét đi một góc hình vuông 4 m × 4 m để làm hồ nước, tạo thành mảnh vườn hình chữ L. Diện tích giảm đi, nhưng vì sao chiều dài hàng rào bao quanh vườn (chu vi) lại KHÔNG HỀ GIẢM?",
+  "objective": "Phá bỏ ngộ nhận kinh điển 'diện tích giảm thì chu vi cũng giảm' thông qua phép tịnh tiến hai cạnh góc khuyết ra viền ngoài (Bất biến Chu vi H07).",
+  "artistic_world": "WARM_STORYBOOK_TACTILE",
+  "primitives_used": [
+    "PRIM_GEOMETRY_CUT_FOLD_RAY"
+  ],
+  "interactive_engine": {
+    "engine_type": "L_SHAPE_PERIMETER_INVARIANT",
+    "control_label": "Kéo thay đổi cạnh góc vuông bị khoét c (m):",
+    "min_val": 1,
+    "max_val": 8,
+    "step_val": 1,
+    "default_trial": 4,
+    "unit": "m"
+  },
+  "learner_scaffolding": {
+    "A": "Hãy bấm nút 'Đẩy Cạnh Khuyết Ra Ngoài': đoạn ngang 4 m và đoạn dọc 4 m ở góc lõm khi đẩy ra ngoài sẽ ghép vừa khít lại thành hình chữ nhật ban đầu! Vậy hàng rào vẫn dài đúng 44 m!",
+    "B": "Tính diện tích bằng phương pháp trừ (S_lớn - S_khoét = 120 - 16 = 104 m²) và tính chu vi bằng tổng 6 đoạn thẳng bao quanh.",
+    "C": "Khi nào khoét hình chữ nhật mà chu vi lại TĂNG? (Gợi ý: Khoét một hốc ở giữa cạnh thay vì khoét ở góc!)."
+  },
+  "misconceptions": [
+    "Lấy chu vi hình chữ nhật lớn trừ đi chu vi hình vuông nhỏ bị khoét (44 - 16 = 28 m — sai bản chất đường biên!).",
+    "Cộng thiếu 2 đoạn thẳng nằm ở góc lõm bên trong hình chữ L khi tính chu vi."
+  ],
+  "worked_example": {
+    "problem": "Một mảnh vườn hình chữ nhật có chiều dài 12 m, chiều rộng 10 m. Người ta chừa lại một góc hình vuông cạnh 4 m ở một đỉnh để đặt bể nước, phần còn lại có dạng hình chữ L để trồng rau. Tính diện tích phần trồng rau và chu vi của phần vườn hình chữ L đó.",
+    "steps": [
+      "Bước 1 (Tính diện tích bằng cách trừ): Diện tích hình chữ nhật ban đầu là 12 × 10 = 120 (m²). Diện tích góc hình vuông là 4 × 4 = 16 (m²) ⇒ Diện tích trồng rau: S = 120 - 16 = 104 (m²).",
+      "Bước 2 (Phân tích 6 cạnh đường biên hình chữ L): Các cạnh bao quanh gồm: 12 m, 10 m, (12 - 4) = 8 m, (10 - 4) = 6 m, và hai cạnh góc lõm 4 m, 4 m.",
+      "Bước 3 (Tính chu vi bất biến): Chu vi hình chữ L là P = 12 + 10 + 8 + 6 + 4 + 4 = 44 (m) — đúng bằng chu vi hình chữ nhật ban đầu 2 × (12 + 10) = 44 (m)."
+    ]
+  },
+  "basic_exercises": [
+    {
+      "id": "B1",
+      "label": "Câu 2a (Cơ bản)",
+      "prompt": "Một tấm bìa hình chữ nhật dài 15 cm, rộng 8 cm. Tính chu vi và diện tích của tấm bìa."
+    },
+    {
+      "id": "B2",
+      "label": "Câu 2b (Thực hành)",
+      "prompt": "Từ tấm bìa 15 cm × 8 cm ở câu a, bạn An cắt bỏ một hình vuông cạnh 3 cm ở một góc. Hỏi diện tích và chu vi tấm bìa còn lại là bao nhiêu?"
+    }
+  ],
+  "advanced_exercise": {
+    "id": "ADV",
+    "prompt": "Một bậc thang gỗ nhìn ngang có dạng hình bậc thang gồm 4 bậc, tổng chiều rộng đáy là 120 cm và tổng chiều cao là 80 cm (các góc đều vuông). Tính chu vi của mặt cắt ngang bậc thang đó."
+  },
+  "real_world_problem": {
+    "id": "RW",
+    "prompt": "Sân nhà bác Minh hình chữ nhật dài 10 m, rộng 8 m. Bác làm một lối đi lát sỏi rộng 1 m chạy dọc theo một chiều dài và một chiều rộng của sân (hình chữ L). Tính diện tích phần lối đi lát sỏi."
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Tính DIỆN TÍCH hình chữ L: Chia thành 2 hình chữ nhật nhỏ để cộng, hoặc lấy Hình chữ nhật lớn TRỪ góc bị khuyết."
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "Bẫy kinh điển: Khoét một góc hình chữ nhật làm GIẢM diện tích nhưng CHU VI KHÔNG ĐỔI (tuyệt đối không lấy chu vi trừ chu vi)!"
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Đếm đủ 6 cạnh của hình chữ L trước khi cộng chu vi."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU..."
+    }
+  },
+  "svg_file": "svg_assets/YD-LA-GEO-G6-10.svg",
+  "interactive_html_file": "interactive_experiences/YD-LA-GEO-G6-10.html"
+}

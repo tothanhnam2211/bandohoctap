@@ -1,0 +1,87 @@
+{
+  "asset_id": "YD-LA-STAT-G7-14",
+  "asset_no": "14",
+  "skill_id": "S_G07_B18",
+  "grade": 7,
+  "strand_code": "THONG_KE_VA_XAC_SUAT",
+  "strand_name": "Thống kê, Xác suất & Toán Ứng dụng",
+  "title": "Đòn Bẩy Dữ Liệu: Số Trung Bình Cộng vs. Trung Vị Khi Có Giá Trị Ngoại Lai",
+  "story_hook": "Năm nhân viên trong quán có mức thưởng là 4, 5, 6, 7 và 8 triệu đồng (Trung bình = 6, Trung vị = 6). Nhưng khi người thứ 5 trúng thưởng đột biến 28 triệu đồng, số Trung bình vọt lên 10 triệu (không ai trong 4 người đầu đạt tới!), trong khi Trung vị vẫn đứng vững ở mức 6 triệu!",
+  "objective": "Hiểu số Trung bình cộng (x̄) đóng vai trò là TÂM KHỐI LƯỢNG VẬT LÝ trên thanh đòn bẩy (rất nhạy cảm với giá trị ngoại lai), còn Trung vị (M_e) là mốc đứng giữa nên đại diện tốt hơn khi dữ liệu có độ lệch lớn.",
+  "artistic_world": "DATA_OBSERVATORY_LAB",
+  "primitives_used": [
+    "PRIM_STAT_PROB_SIMULATOR"
+  ],
+  "interactive_engine": {
+    "engine_type": "SEESAW_MEAN_MEDIAN_OUTLIER",
+    "control_label": "Kéo thay đổi giá trị thứ 5 (Điểm ngoại lai x₅) trên thanh đòn bẩy:",
+    "min_val": 8,
+    "max_val": 38,
+    "step_val": 5,
+    "default_trial": 28,
+    "unit": "triệu"
+  },
+  "learner_scaffolding": {
+    "A": "Hãy kéo khối màu đỏ (x₅) chạy ra xa về bên phải: chiếc gối tựa màu vàng (Số trung bình cộng x̄) phải dịch chuyển theo sang phải để thanh gỗ không bị lật! Nhưng viên gạch màu xanh lá đứng ở vị trí số 3 chính giữa (Trung vị M_e = 6) thì không hề nhúc nhích!",
+    "B": "Sắp xếp mẫu số liệu theo thứ tự không giảm. Tính số trung bình x̄ = Tổng / N và tìm số đứng chính giữa (Trung vị M_e).",
+    "C": "Giải thích đẳng thức vật lý ∑(x_i - x̄) = 0: Tổng độ lệch bên trái số trung bình luôn triệt tiêu đúng bằng tổng độ lệch bên phải."
+  },
+  "misconceptions": [
+    "Tìm Trung vị M_e mà QUÊN SẮP XẾP dãy số liệu theo thứ tự từ bé đến lớn trước khi lấy số ở giữa.",
+    "Dùng số Trung bình cộng để đại diện cho mẫu số liệu có chứa giá trị bất thường (ngoại lai) quá lớn hoặc quá nhỏ."
+  ],
+  "worked_example": {
+    "problem": "Điểm kiểm tra của một nhóm 5 học sinh là: 6; 4; 28; 7; 5 (thang điểm 30). Hãy tìm số trung bình cộng, trung vị của mẫu số liệu và cho biết số nào đại diện tốt hơn cho mặt bằng chung của nhóm.",
+    "steps": [
+      "Bước 1 (Tính số trung bình cộng): x̄ = (6 + 4 + 28 + 7 + 5) / 5 = 50 / 5 = 10.",
+      "Bước 2 (Sắp xếp & Tìm trung vị): Sắp xếp dãy theo thứ tự tăng dần: 4; 5; 6; 7; 28. Số đứng chính giữa (vị trí thứ 3) là Trung vị M_e = 6.",
+      "Bước 3 (Nhận xét ý nghĩa): Vì có giá trị ngoại lai 28 chênh lệch rất lớn so với các giá trị còn lại (4; 5; 6; 7 đều nhỏ hơn 10) nên Trung vị M_e = 6 đại diện tốt hơn số trung bình cộng."
+    ]
+  },
+  "basic_exercises": [
+    {
+      "id": "B1",
+      "label": "Câu 2a (Cơ bản)",
+      "prompt": "Tìm số trung bình cộng và trung vị của mẫu số liệu sau: 12; 8; 15; 10; 20."
+    },
+    {
+      "id": "B2",
+      "label": "Câu 2b (Thực hành)",
+      "prompt": "Tìm trung vị của mẫu số liệu gồm 6 giá trị đã sắp xếp: 3; 5; 7; 9; 11; 19."
+    }
+  ],
+  "advanced_exercise": {
+    "id": "ADV",
+    "prompt": "Một mẫu số liệu gồm 4 số tự nhiên có số trung bình cộng bằng 9. Khi thêm số thứ năm là 29 vào mẫu thì số trung bình cộng mới bằng bao nhiêu?"
+  },
+  "real_world_problem": {
+    "id": "RW",
+    "prompt": "Thời gian chạy 100m (tính bằng giây) của 5 vận động viên là: 13; 14; 12; 15; 36 (vận động viên thứ 5 bị vấp ngã). Nên dùng số trung bình cộng hay trung vị để đánh giá tốc độ chung của đội?"
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Tìm Trung vị M_e: Bước số 1 BẮT BUỘC là SẮP XẾP dãy số từ bé đến lớn!"
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "Khi dãy có số phần tử CHẴN, Trung vị bằng trung bình cộng của HAI số đứng chính giữa.",
+        "Khi có giá trị ngoại lai (quá lớn/quá bé), phải chọn TRUNG VỊ thay vì Số trung bình."
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Số trung bình cộng luôn nằm giữa giá trị nhỏ nhất (Min) và giá trị lớn nhất (Max) của dãy."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU..."
+    }
+  },
+  "svg_file": "svg_assets/YD-LA-STAT-G7-14.svg",
+  "interactive_html_file": "interactive_experiences/YD-LA-STAT-G7-14.html"
+}

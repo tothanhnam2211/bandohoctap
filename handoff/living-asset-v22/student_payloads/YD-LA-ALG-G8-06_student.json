@@ -1,0 +1,87 @@
+{
+  "asset_id": "YD-LA-ALG-G8-06",
+  "asset_no": "06",
+  "skill_id": "S_G08_B25",
+  "grade": 8,
+  "strand_code": "DAI_SO_VA_HAM_SO",
+  "strand_name": "Đại số, Phương trình & Hàm số",
+  "title": "Bản Đồ Giao Điểm Chi Phí: Hàm Số Bậc Nhất y = ax + b & Chọn Hãng Taxi",
+  "story_hook": "Hãng Taxi Xanh mở cửa 10 nghìn đồng, mỗi km tiếp theo giá 12 nghìn. Hãng Taxi Cam mở cửa 20 nghìn đồng, nhưng mỗi km chỉ lấy 10 nghìn. Đi bao nhiêu km thì hai hãng bằng tiền nhau?",
+  "objective": "Đọc hiểu ý nghĩa thực tế của hệ số góc a (đơn giá mỗi km), tung độ gốc b (phí mở cửa) và hoành độ giao điểm x₀ (quãng đường hòa vốn).",
+  "artistic_world": "STEM_COMMAND_3D",
+  "primitives_used": [
+    "PRIM_FUNCTION_GRAPH_PORTAL"
+  ],
+  "interactive_engine": {
+    "engine_type": "TAXI_LINEAR_INTERSECTION",
+    "control_label": "Kéo chọn quãng đường di chuyển x (km):",
+    "min_val": 0,
+    "max_val": 12,
+    "step_val": 0.5,
+    "default_trial": 3.0,
+    "unit": "km"
+  },
+  "learner_scaffolding": {
+    "A": "Khi xe chưa lăn bánh (x = 0 km), vạch xuất phát trên trục đứng chính là phí mở cửa b! Kéo xe chạy đến đúng mốc x = 5 km, hai đường thẳng cắt nhau tại 70 nghìn đồng.",
+    "B": "Lập hai hàm số bậc nhất y₁ = 12x + 10 và y₂ = 10x + 20. Giải phương trình hoành độ giao điểm y₁ = y₂ để tìm điểm cắt nhau.",
+    "C": "Phân tích miền tối ưu: Vì sao với quãng đường ngắn (0 < x < 5) nên chọn hãng có b nhỏ, còn đi đường dài (x > 5) lại phải chọn hãng có hệ số góc a nhỏ?"
+  },
+  "misconceptions": [
+    "Gán nhầm hệ số a và b: lấy phí mở cửa nhân với x (viết nhầm thành y = 10x + 12).",
+    "Tìm được x = 5 nhưng quên thay lại vào một trong hai hàm số để tính tung độ giao điểm y = 70."
+  ],
+  "worked_example": {
+    "problem": "Hãng xe A tính phí mở cửa 10 nghìn đồng và 12 nghìn đồng cho mỗi km di chuyển (y₁ = 12x + 10). Hãng xe B tính phí mở cửa 20 nghìn đồng và 10 nghìn đồng cho mỗi km (y₂ = 10x + 20). Hỏi đi quãng đường bao nhiêu km thì chi phí hai hãng bằng nhau?",
+    "steps": [
+      "Bước 1 (Thiết lập phương trình giao điểm): Để chi phí hai hãng bằng nhau, ta cho y₁ = y₂ ⇔ 12x + 10 = 10x + 20.",
+      "Bước 2 (Giải phương trình bậc nhất): Chuyển vế ta được 12x - 10x = 20 - 10 ⇔ 2x = 10 ⇔ x = 5 (km).",
+      "Bước 3 (Tính chi phí tại điểm cắt): Thay x = 5 vào y₁ = 12·5 + 10 = 70 (nghìn đồng). Vậy đi 5 km thì cả hai hãng đều hết 70 nghìn đồng."
+    ]
+  },
+  "basic_exercises": [
+    {
+      "id": "B1",
+      "label": "Câu 2a (Cơ bản)",
+      "prompt": "Cho hàm số bậc nhất y = 3x - 2. Tính giá trị của y khi x = 4 và tìm giao điểm của đồ thị với trục tung Oy."
+    },
+    {
+      "id": "B2",
+      "label": "Câu 2b (Thực hành)",
+      "prompt": "Tìm tọa độ giao điểm của hai đường thẳng (d₁): y = 2x + 1 và (d₂): y = x + 4."
+    }
+  ],
+  "advanced_exercise": {
+    "id": "ADV",
+    "prompt": "Xác định hàm số bậc nhất y = ax + b biết đồ thị của nó song song với đường thẳng y = 2x - 5 và đi qua điểm K(1; 6)."
+  },
+  "real_world_problem": {
+    "id": "RW",
+    "prompt": "Một bể nước đang có sẵn 150 lít nước. Mỗi phút vòi bơm thêm vào bể 25 lít nước. Viết công thức biểu thị lượng nước y (lít) trong bể sau x (phút) và tính thời gian để bể đạt 400 lít."
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Cái gì cố định ban đầu → là số cộng thêm b. Cái gì lặp lại theo mỗi km, mỗi phút → là hệ số nhân a·x!",
+        "Tìm giao điểm của hai đường thẳng y = a₁x + b₁ và y = a₂x + b₂: Giải phương trình a₁x + b₁ = a₂x + b₂."
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "Hai đường thẳng song song khi a₁ = a₂ VÀ b₁ ≠ b₂."
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Thay x₀ vừa tìm được vào CẢ HAI công thức y₁ và y₂ xem kết quả có bằng nhau khít không."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU..."
+    }
+  },
+  "svg_file": "svg_assets/YD-LA-ALG-G8-06.svg",
+  "interactive_html_file": "interactive_experiences/YD-LA-ALG-G8-06.html"
+}

@@ -1,0 +1,35 @@
+{
+  "asset_id": "YD-LA-NUM-G7-04",
+  "skill_id": "S_G07_B05",
+  "grade": 7,
+  "target_interactive_solution": 1.4142,
+  "math_semantics": {
+    "unknown_symbol": "d",
+    "domain_constraint": "d > 0",
+    "invariant_relation": "d² = 1² + 1² = 2 ⇒ d = √2 ≈ 1,41421356...",
+    "target_equation": "d² = 2 (d > 0) ⇔ d = √2 ∈ I (Số vô tỉ)",
+    "verification_type": "SYMBOLIC_SYMPY_VERIFIED"
+  },
+  "basic_answers": [
+    {
+      "id": "B1",
+      "final_answer": "6",
+      "teacher_solution": "M = 7 + 5 - 2·3 = 12 - 6 = 6."
+    },
+    {
+      "id": "B2",
+      "final_answer": "Cạnh 9 m; Chu vi 36 m",
+      "teacher_solution": "Độ dài cạnh tấm thảm: a = √81 = 9 (m). Chu vi tấm thảm: 4 × 9 = 36 (m)."
+    }
+  ],
+  "advanced_answer": {
+    "id": "ADV",
+    "final_answer": "5 > √23",
+    "teacher_solution": "Ta có 5 = √25. Vì 25 > 23 > 0 nên √25 > √23, tức là 5 > √23."
+  },
+  "real_world_answer": {
+    "id": "RW",
+    "final_answer": "4,2 m",
+    "teacher_solution": "Độ dài cạnh bồn hoa là √18 ≈ 4,2426... Làm tròn đến hàng phần mười được 4,2 (m)."
+  }
+}

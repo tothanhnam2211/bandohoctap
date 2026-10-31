@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YD-LA-ALG-G9-08 — Hệ Thống Hồ Chứa Thủy Điện: Bài Toán Hai Vòi Nước Cùng Chảy (1/x + 1/y = 1/T) | YOURDREAM Living Asset</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="if(window.renderMathInElement)renderMathInElement(document.body);"></script>
+<style>
+
+/* --- YOURDREAM Mathematical Typography Styles --- */
+.m-math {
+  font-family: "Cambria Math", "Latin Modern Math", "STIX Two Math", "Georgia", serif;
+  font-size: 1.02em;
+  letter-spacing: 0.015em;
+  display: inline-block;
+}
+.m-var {
+  font-family: "Cambria Math", "Latin Modern Math", "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 500;
+  padding: 0 1px;
+}
+.m-op {
+  font-style: normal;
+  font-weight: 600;
+  margin: 0 3px;
+  color: #0F172A;
+}
+.m-set {
+  font-weight: 700;
+  font-family: "Cambria Math", "STIX Two Math", serif;
+}
+.m-frac {
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: -0.48em;
+  text-align: center;
+  padding: 0 2.5px;
+  font-size: 0.88em;
+  line-height: 1.05;
+}
+.m-num {
+  border-bottom: 1.25px solid currentColor;
+  padding-bottom: 1.5px;
+  display: block;
+}
+.m-den {
+  padding-top: 1.5px;
+  display: block;
+}
+.m-root {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: -0.1em;
+  margin: 0 1px;
+}
+.m-radic {
+  font-size: 1.18em;
+  font-family: "Cambria Math", serif;
+  line-height: 1;
+  margin-right: 1px;
+}
+.m-radicand {
+  border-top: 1.25px solid currentColor;
+  padding-top: 1px;
+  display: inline-block;
+}
+
+  :root {
+    --bg-main: #0F172A;
+    --bg-panel: #1E293B;
+    --ink: #F8FAFC;
+    --muted: #94A3B8;
+    --accent: #38BDF8;
+    --accent2: #10B981;
+    --border: #334155;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: var(--bg-main);
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.25s, color 0.25s;
+  }
+  .top-bar {
+    padding: 12px 20px;
+    background: #0F172A;
+    color: #F8FAFC;
+    border-bottom: 2px solid var(--accent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .brand-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .badge {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 800;
+    background: var(--accent);
+    color: #0F172A;
+  }
+  .badge-strand {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    background: rgba(56, 189, 248, 0.18);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+  }
+  .controls-top { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .btn-pill {
+    padding: 6px 12px;
+    border-radius: 7px;
+    border: 1px solid var(--border);
+    background: var(--bg-panel);
+    color: var(--ink);
+    font-size: 12.5px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .btn-pill.active {
+    background: var(--accent);
+    color: #0F172A;
+    border-color: var(--accent);
+  }
+  .workspace {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 18px;
+    padding: 18px;
+    max-width: 1560px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  @media (max-width: 1080px) {
+    .workspace {
+      grid-template-columns: 1fr;
+    }
+  }
+  .stage-column {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-width: 0;
+  }
+  .story-banner {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--accent);
+    border-radius: 12px;
+    padding: 14px 18px;
+  }
+  .story-banner h1 { font-size: 19px; font-weight: 800; margin-bottom: 6px; }
+  .story-banner p { font-size: 13.8px; line-height: 1.5; opacity: 0.92; }
+  .canvas-card {
+    background: var(--bg-panel);
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .canvas-viewport {
+    width: 100%;
+    height: 350px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: 1.5px solid #CBD5E1;
+    overflow: hidden;
+    position: relative;
+  }
+  canvas#simCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .slider-deck {
+    background: rgba(15, 23, 42, 0.06);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+  }
+  .slider-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  input[type=range] {
+    width: 100%;
+    accent-color: var(--accent);
+    cursor: pointer;
+    height: 8px;
+  }
+  .status-banner {
+    padding: 11px 14px;
+    border-radius: 9px;
+    font-weight: 700;
+    font-size: 13.5px;
+    border: 1.5px solid transparent;
+  }
+  .status-ok {
+    background: rgba(16, 185, 129, 0.16);
+    border-color: #10B981;
+    color: #10B981;
+  }
+  .status-warn {
+    background: rgba(245, 158, 11, 0.16);
+    border-color: #F59E0B;
+    color: #F59E0B;
+  }
+  .pedagogy-column {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-width: 0;
+  }
+  .panel-card {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 15px 18px;
+  }
+  .panel-card h3 {
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .math-box {
+    font-family: "Cambria Math", "Segoe UI", serif;
+    font-size: 14.5px;
+    background: rgba(15, 23, 42, 0.22);
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    margin-top: 6px;
+    line-height: 1.55;
+  }
+  .scaffold-box {
+    font-size: 13.5px;
+    line-height: 1.55;
+    padding: 12px;
+    border-radius: 8px;
+    background: rgba(56, 189, 248, 0.1);
+    border-left: 4px solid var(--accent);
+  }
+  .trap-list {
+    padding-left: 18px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .trap-list li { margin-bottom: 6px; }
+  .quiz-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .quiz-input-row {
+    display: flex;
+    gap: 8px;
+  }
+  .quiz-input-row input {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 7px;
+    border: 1px solid var(--border);
+    font-size: 13.5px;
+  }
+</style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="brand-row">
+      <span class="badge">LỚP 9 • YD-LA-ALG-G9-08</span>
+      <span class="badge-strand">Đại số, Phương trình & Hàm số</span>
+      <span style="font-size:12.5px; font-weight:700; opacity:0.85;">Kỹ năng: S_G09_B03 (SYMBOLIC_SYMPY_VERIFIED)</span>
+    </div>
+    <div class="controls-top">
+      <span style="font-size:12px; font-weight:700;">Hồ sơ người học:</span>
+      <button class="btn-pill active" id="btnProfA" onclick="setProfile('A')">Learner A (Mất gốc/Trực quan)</button>
+      <button class="btn-pill" id="btnProfB" onclick="setProfile('B')">Learner B (Chuẩn)</button>
+      <button class="btn-pill" id="btnProfC" onclick="setProfile('C')">Learner C (Mở rộng)</button>
+      <select class="btn-pill" id="worldSelect" onchange="setWorld(this.value)">
+        <option value="WARM_STORYBOOK_TACTILE">Theme: Storybook Ấm Áp</option>
+        <option value="STEM_COMMAND_3D">Theme: Đài Chỉ Huy STEM</option>
+        <option value="EUCLIDEAN_ATELIER_PRO">Theme: Xưởng Hình Học</option>
+        <option value="DATA_OBSERVATORY_LAB">Theme: Đài Dữ Liệu</option>
+        <option value="REAL_PAPER_HYBRID_V04">Theme: Giấy Thật A4</option>
+      </select>
+      <a class="btn-pill" href="../pdf_student/YOURDREAM_LivingAsset_G9_08_YD-LA-ALG-G9-08_HocSinh.pdf" target="_blank" style="background:#10B981; color:#0F172A; border-color:#10B981;">📄 Mở Phiếu A4 (PDF)</a>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <section class="stage-column">
+      <div class="story-banner">
+        <h1>Hệ Thống Hồ Chứa Thủy Điện: Bài Toán Hai Vòi Nước Cùng Chảy (1/x + 1/y = 1/T)</h1>
+        <p><strong>Câu chuyện dẫn nhập:</strong> Vòi I chảy riêng đầy bể trong 4 giờ, vòi II chảy riêng đầy bể trong 6 giờ. Nếu mở cả hai vòi cùng lúc thì sau bao lâu đầy bể? Vì sao không bao giờ được lấy 4 + 6 = 10 giờ?</p>
+      </div>
+
+      <div class="canvas-card">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+          <span style="font-weight:800; font-size:14px;">MÔ HÌNH NHÂN - QUẢ &amp; CÁN CÂN THĂNG BẰNG (PRIM_DUAL_FLOW_ACCUMULATOR, PRIM_RATE_BALANCE_3D)</span>
+          <div style="display:flex; gap:6px;">
+            <button class="btn-pill" onclick="setTrialToDefault()">↺ Thử Nghiệm Ban Đầu</button>
+            <button class="btn-pill" onclick="resetTrial()">Đặt Lại</button>
+            <button class="btn-pill" onclick="checkCausalBalance()" style="background:#0284C7; color:#FFFFFF; border-color:#0284C7;">⚖ Kiểm Tra Cân Bằng Cán Cân</button>
+          </div>
+        </div>
+        <div class="canvas-viewport">
+          <canvas id="simCanvas" width="820" height="350"></canvas>
+        </div>
+
+        <div class="slider-deck">
+          <div class="slider-head">
+            <label for="trialSlider">Điều chỉnh thời gian vòi II chảy một mình đầy bể y (giờ):</label>
+            <span id="trialValueDisplay" style="font-size:16px; font-weight:800; color:var(--accent);"></span>
+          </div>
+          <input type="range" id="trialSlider"
+                 min="2"
+                 max="12"
+                 step="1"
+                 value="8"
+                 oninput="onSliderChange(this.value)">
+        </div>
+
+        <div id="statusBanner" class="status-banner status-warn"></div>
+      </div>
+
+      <div class="panel-card">
+        <h3>Sơ Đồ Cấu Trúc Chuẩn (Layered Vector SVG)</h3>
+        <div style="background:#FFFFFF; border-radius:10px; padding:8px; border:1px solid #CBD5E1;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" width="100%" height="100%">
+  <g id="art-layer">
+    <rect x="0" y="0" width="560" height="220" rx="12" fill="#F0F9FF" stroke="#0284C7" stroke-width="1.5"/>
+    <!-- Hydro Tank -->
+    <rect x="65" y="55" width="130" height="130" rx="8" fill="#FFFFFF" stroke="#0369A1" stroke-width="2.5"/>
+    <rect x="68" y="95" width="124" height="87" rx="5" fill="#38BDF8" opacity="0.75"/>
+    <!-- Pipe 1 & Pipe 2 -->
+    <rect x="25" y="65" width="45" height="12" fill="#0284C7"/>
+    <rect x="190" y="65" width="45" height="12" fill="#0D9488"/>
+  </g>
+  <g id="math-layer" font-family="Segoe UI, sans-serif">
+    <text x="130" y="36" font-size="12" font-weight="800" fill="#0369A1" text-anchor="middle">Bể chứa 1 đơn vị thể tích</text>
+    <text x="130" y="142" font-size="12" font-weight="800" fill="#0F172A" text-anchor="middle">Năng suất cộng hưởng</text>
+    <rect x="255" y="34" width="280" height="154" rx="10" fill="#FFFFFF" stroke="#0284C7" stroke-width="1.5"/>
+    <text x="395" y="58" font-size="12.5" font-weight="800" fill="#0369A1" text-anchor="middle">BẢN CHẤT BÀI TOÁN HAI VÒI NƯỚC</text>
+    <text x="395" y="84" font-size="11.5" fill="#B91C1C" font-anchor="middle" text-anchor="middle">✗ Sai lầm: Cộng thời gian x + y = T</text>
+    <text x="395" y="110" font-size="12.5" font-weight="800" fill="#15803D" text-anchor="middle">✓ Đúng: Cộng phần bể chảy trong 1 giờ!</text>
+    <text x="395" y="138" font-size="13.5" font-weight="800" fill="#0F172A" text-anchor="middle">1/x + 1/y = 1/T</text>
+    <text x="395" y="166" font-size="11.5" font-weight="700" fill="#0369A1" text-anchor="middle">Với x = 4h, y = 6h ⇒ 1/4 + 1/6 = 5/12 ⇒ T = 2,4h</text>
+  </g>
+</svg>
+        </div>
+      </div>
+    </section>
+
+    <aside class="pedagogy-column">
+      <div class="panel-card">
+        <h3>1. Trợ Lý Sư Phạm Thích Ứng (Learner Profile A / B / C)</h3>
+        <div id="scaffoldText" class="scaffold-box"></div>
+      </div>
+
+      <div class="panel-card">
+        <h3>2. Bất Biến Toán Học &amp; Mô Hình Bài Toán</h3>
+        <div style="font-size:13px; margin-bottom:6px;"><strong>Mục tiêu:</strong> Hiểu sâu sắc bản chất bài toán công việc chung–riêng: ta không cộng thời gian hoàn thành (x + y), mà phải quy về cộng NĂNG SUẤT trong 1 đơn vị thời gian (<span class="m-frac"><span class="m-num">1</span><span class="m-den"><span class="m-var">x</span></span></span> + <span class="m-frac"><span class="m-num">1</span><span class="m-den"><span class="m-var">y</span></span></span> = <span class="m-frac"><span class="m-num">1</span><span class="m-den"><span class="m-var">T</span></span></span>).</div>
+        <div class="math-box">
+          <div>• <strong>Miền xác định:</strong> <span class="m-math">x, y > T > 0</span></div>
+          <div>• <strong>Quan hệ bất biến:</strong> <span class="m-math"><span class="m-frac"><span class="m-num">1</span><span class="m-den"><span class="m-var">x</span></span></span> + <span class="m-frac"><span class="m-num">1</span><span class="m-den"><span class="m-var">y</span></span></span> = <span class="m-frac"><span class="m-num">1</span><span class="m-den"><span class="m-var">T</span></span></span> (Tổng phần bể chảy được trong 1 giờ)</span></div>
+          <div style="color:#F59E0B; margin-top:5px; font-size:12.8px;">• <strong>Nhiệm vụ:</strong> Điều chỉnh thanh trượt để đưa Cán Cân Nhân - Quả về trạng thái thăng bằng tuyệt đối!</div>
+          <div id="unlockedSolutionCard" style="display:none; margin-top:8px; padding:6px 9px; background:rgba(16,185,129,0.2); border-left:3px solid #10B981; border-radius:4px;">
+            <div style="font-weight:800; color:#10B981; font-size:12.5px;">★ ĐÃ GIẢI MÃ THÀNH CÔNG:</div>
+            <div style="font-size:13px; color:#F8FAFC; margin-top:3px;" class="m-math"><span class="m-frac"><span class="m-num">1</span><span class="m-den">4</span></span> + <span class="m-frac"><span class="m-num">1</span><span class="m-den">6</span></span> = <span class="m-frac"><span class="m-num">5</span><span class="m-den">12</span></span> (bể/giờ) <span class="m-op">&rArr;</span> T = <span class="m-frac"><span class="m-num">12</span><span class="m-den">5</span></span> = 2,4 (giờ) = 2 giờ 24 phút</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-card">
+        <h3>3. Chốt Chặn Sai Lầm Điển Hình</h3>
+        <ul class="trap-list">
+          <li>Cộng trực tiếp thời gian hoàn thành của hai vòi: &times; + y = T.</li><li>Tìm được năng suất chung trong 1 giờ là <span class="m-frac"><span class="m-num">5</span><span class="m-den">12</span></span> (bể) nhưng quên nghịch đảo lại để ra thời gian T = <span class="m-frac"><span class="m-num">12</span><span class="m-den">5</span></span> giờ.</li>
+        </ul>
+      </div>
+
+      <div class="panel-card">
+        <h3>4. Thử Thách Tự Kiểm Tra Nhanh</h3>
+        <div class="quiz-box">
+          <div style="font-size:13.2px; font-weight:600;">Vòi A chảy riêng 3 giờ đầy bể, vòi B chảy riêng 6 giờ đầy bể. Hỏi cả hai vòi cùng chảy thì sau mấy giờ đầy bể?</div>
+          <div class="quiz-input-row">
+            <input type="text" id="selfCheckInput" placeholder="Nhập câu trả lời của bạn...">
+            <button class="btn-pill active" onclick="checkQuickAnswer()">Kiểm tra</button>
+          </div>
+          <div id="selfCheckFeedback" style="font-size:13px; font-weight:700; min-height:20px;"></div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+<script>
+const ASSET = {"asset_id": "YD-LA-ALG-G9-08", "asset_no": "08", "skill_id": "S_G09_B03", "grade": 9, "strand_code": "DAI_SO_VA_HAM_SO", "strand_name": "Đại số, Phương trình & Hàm số", "header_subtitle": "TOÁN 9 • HỆ PHƯƠNG TRÌNH & PHƯƠNG TRÌNH QUY VỀ BẬC NHẤT/BẬC HAI • BÀI TOÁN CHUNG – RIÊNG", "title": "Hệ Thống Hồ Chứa Thủy Điện: Bài Toán Hai Vòi Nước Cùng Chảy (1/x + 1/y = 1/T)", "story_hook": "Vòi I chảy riêng đầy bể trong 4 giờ, vòi II chảy riêng đầy bể trong 6 giờ. Nếu mở cả hai vòi cùng lúc thì sau bao lâu đầy bể? Vì sao không bao giờ được lấy 4 + 6 = 10 giờ?", "objective": "Hiểu sâu sắc bản chất bài toán công việc chung–riêng: ta không cộng thời gian hoàn thành (x + y), mà phải quy về cộng NĂNG SUẤT trong 1 đơn vị thời gian (1/x + 1/y = 1/T).", "artistic_world": "STEM_COMMAND_3D", "primitives_used": ["PRIM_DUAL_FLOW_ACCUMULATOR", "PRIM_RATE_BALANCE_3D"], "interaction_level": 3, "interactive_engine": {"engine_type": "DUAL_PIPE_HARMONIC", "control_label": "Điều chỉnh thời gian vòi II chảy một mình đầy bể y (giờ):", "min_val": 2, "max_val": 12, "step_val": 1, "default_trial": 8, "target_solution": 6, "unit": "giờ", "parameters": {"pipe1_hours": 4, "target_solution": 6, "target_joint_T": 2.4}}, "math_semantics": {"unknown_symbol": "y", "domain_constraint": "x, y > T > 0", "invariant_relation": "1/x + 1/y = 1/T (Tổng phần bể chảy được trong 1 giờ)", "target_equation": "1/4 + 1/6 = 5/12 (bể/giờ) ⇒ T = 12/5 = 2,4 (giờ) = 2 giờ 24 phút", "verification_type": "SYMBOLIC_SYMPY_VERIFIED"}, "learner_scaffolding": {"A": "Nếu một mình vòi I chảy mất 4 giờ đã đầy bể, thì khi có thêm vòi II phụ giúp, bể PHẢI ĐẦY NHANH HƠN 4 GIỜ (chứ không thể lâu tới 4 + 6 = 10 giờ!). Hãy nhìn vạch nước trong 1 giờ: vòi I chảy 1/4 bể, vòi II chảy 1/6 bể.", "B": "Coi toàn bộ bể nước là 1 đơn vị. Trong 1 giờ: vòi I chảy được 1/x (bể), vòi II chảy được 1/y (bể), cả hai vòi chảy được 1/T (bể) ⇒ Phương trình: 1/x + 1/y = 1/T.", "C": "Liên hệ Trung bình điều hòa (Harmonic Mean) và giải hệ phương trình đặt ẩn phụ u = 1/x, v = 1/y khi hai vòi mở lệch thời gian t₁·u + t₂·v = k."}, "misconceptions": ["Cộng trực tiếp thời gian hoàn thành của hai vòi: x + y = T.", "Tìm được năng suất chung trong 1 giờ là 5/12 (bể) nhưng quên nghịch đảo lại để ra thời gian T = 12/5 giờ."], "knowledge_activation": "Nếu một vòi chảy riêng trong x giờ thì đầy bể (x > 0), thì trong 1 giờ vòi đó chảy được 1/x (bể).", "worked_example": {"problem": "Hai vòi nước cùng chảy vào một bể cạn thì sau 2 giờ 24 phút (tức 12/5 giờ) đầy bể. Nếu chảy riêng thì vòi thứ nhất làm đầy bể nhanh hơn vòi thứ hai là 2 giờ. Hỏi nếu chảy riêng thì mỗi vòi chảy bao lâu đầy bể?", "steps": ["Bước 1 (Chọn ẩn & ĐKXĐ): Gọi thời gian vòi I chảy riêng đầy bể là x (giờ, x > 12/5). Thời gian vòi II chảy riêng đầy bể là x + 2 (giờ).", "Bước 2 (Quy về năng suất 1 giờ): Trong 1 giờ, vòi I chảy được 1/x (bể), vòi II chảy được 1/(x+2) (bể), cả hai vòi chảy được 1 : (12/5) = 5/12 (bể). Ta có phương trình: 1/x + 1/(x + 2) = 5/12.", "Bước 3 (Giải & Kết luận): Quy đồng khử mẫu: 12(2x + 2) = 5x(x + 2) ⇔ 5x² - 14x - 24 = 0 ⇒ x = 4 (nhận) hoặc x = -6/5 (loại). Vậy vòi I chảy 4 giờ, vòi II chảy 6 giờ."]}, "basic_exercises": [{"id": "B1", "label": "Câu 2a (Cơ bản)", "prompt": "Vòi A chảy riêng 3 giờ đầy bể, vòi B chảy riêng 6 giờ đầy bể. Hỏi cả hai vòi cùng chảy thì sau mấy giờ đầy bể?", "final_answer": "2 giờ", "teacher_solution": "Trong 1 giờ cả hai vòi chảy được: 1/3 + 1/6 = 1/2 (bể) ⇒ Thời gian đầy bể là 1 : (1/2) = 2 (giờ)."}, {"id": "B2", "label": "Câu 2b (Thực hành)", "prompt": "Hai tổ công nhân cùng làm một công việc trong 4 giờ thì xong. Nếu tổ I làm một mình mất 12 giờ mới xong thì tổ II làm một mình mất bao lâu?", "final_answer": "6 giờ", "teacher_solution": "1/12 + 1/y = 1/4 ⇒ 1/y = 1/4 - 1/12 = 1/6 ⇒ y = 6 (giờ)."}], "advanced_exercise": {"id": "ADV", "prompt": "Hai vòi nước cùng chảy vào bể sau 6 giờ thì đầy. Nếu mở vòi I chảy trong 2 giờ rồi mở tiếp vòi II chảy trong 3 giờ thì được 2/5 bể. Tìm thời gian mỗi vòi chảy riêng đầy bể.", "final_answer": "Vòi I: 10 giờ; Vòi II: 15 giờ", "teacher_solution": "Hệ: 1/x + 1/y = 1/6 và 2/x + 3/y = 2/5. Đặt u = 1/x, v = 1/y ⇒ u = 1/10, v = 1/15 ⇒ x = 10h, y = 15h."}, "real_world_problem": {"id": "RW", "prompt": "Một hồ chứa có vòi bơm vào làm đầy hồ trong 4 giờ và một van xả đáy làm cạn hồ đầy trong 12 giờ. Nếu hồ đang cạn mà mở đồng thời cả vòi bơm và van xả thì sau mấy giờ hồ đầy?", "final_answer": "6 giờ", "teacher_solution": "Trong 1 giờ lượng nước thực tế giữ lại được là: 1/4 - 1/12 = 2/12 = 1/6 (hồ) ⇒ Hồ đầy sau 6 giờ."}, "text_notes": {"note1_start": {"title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!", "bullets": ["Coi toàn bộ công việc (hoặc bể nước) là số 1. Làm xong trong x giờ → 1 giờ làm được 1/x công việc!"]}, "note2_watchout": {"title": "2. CẨN THẬN LỖI NÀY!", "bullets": ["Đổi thời gian hỗn số sang phân số trước khi nghịch đảo: 2 giờ 24 phút = 12/5 giờ ⇒ 1 giờ chảy được 5/12 bể."]}, "note3_check": {"title": "3. KIỂM TRA LẠI NHÉ!", "bullets": ["Thời gian hai vòi chảy chung T (2,4 giờ) LUÔN PHẢI NHỎ HƠN thời gian của từng vòi chảy riêng (4h và 6h)."]}, "note4_reflection": {"title": "HÔM NAY MÌNH ĐÃ HIỂU..."}}};
+const WORLDS = {"WARM_STORYBOOK_TACTILE": {"world_id": "WARM_STORYBOOK_TACTILE", "name_vi": "Xưởng Truyện Tranh & Vật Thể Ấm Áp (Storybook Tactile)", "bg_primary": "#FDF8F0", "bg_panel": "#FFFFFF", "ink_primary": "#292524", "accent_main": "#D97706", "accent_secondary": "#059669", "border_color": "#E7E5E4", "mood": "Ấm áp, gần gũi, giảm lo âu Toán học, phù hợp mở đầu trực quan"}, "STEM_COMMAND_3D": {"world_id": "STEM_COMMAND_3D", "name_vi": "Đài Chỉ Huy Kỹ Thuật STEM 3D/2.5D (STEM Command Deck)", "bg_primary": "#0F172A", "bg_panel": "#1E293B", "ink_primary": "#F8FAFC", "accent_main": "#38BDF8", "accent_secondary": "#10B981", "border_color": "#334155", "mood": "Hiện đại, mô phỏng hệ thống kỹ thuật, vận tải, thủy điện & đồ thị"}, "EUCLIDEAN_ATELIER_PRO": {"world_id": "EUCLIDEAN_ATELIER_PRO", "name_vi": "Xưởng Kiến Trúc & Hình Học Chuẩn Xác (Euclidean Atelier)", "bg_primary": "#F8FAFC", "bg_panel": "#FFFFFF", "ink_primary": "#0F172A", "accent_main": "#2563EB", "accent_secondary": "#DC2626", "border_color": "#CBD5E1", "mood": "Chuẩn mực, lưới tọa độ rõ nét, cắt ghép hình học & tia sáng đồng dạng"}, "DATA_OBSERVATORY_LAB": {"world_id": "DATA_OBSERVATORY_LAB", "name_vi": "Đài Quan Sát Dữ Liệu & Mô Phỏng Ngẫu Nhiên (Data Observatory)", "bg_primary": "#F5F3FF", "bg_panel": "#FFFFFF", "ink_primary": "#1E1B4B", "accent_main": "#7C3AED", "accent_secondary": "#0D9488", "border_color": "#DDD6FE", "mood": "Khám phá quy luật số lớn, cân bằng trọng tâm thống kê & tăng trưởng tài chính"}, "REAL_PAPER_HYBRID_V04": {"world_id": "REAL_PAPER_HYBRID_V04", "name_vi": "Phiếu Học Tập Giấy Thật & Giấy Nhớ (Real Paper v0.4)", "bg_primary": "#EFECE6", "bg_panel": "#FFFFFF", "ink_primary": "#111827", "accent_main": "#1D4ED8", "accent_secondary": "#B91C1C", "border_color": "#D1D5DB", "mood": "Đồng bộ 1:1 với vở học sinh và trang in A4 chất lượng cao"}};
+let currentProfile = 'A';
+let currentTrial = parseFloat(ASSET.interactive_engine.default_trial);
+
+function setWorld(worldId) {
+  const w = WORLDS[worldId] || WORLDS['STEM_COMMAND_3D'];
+  document.documentElement.style.setProperty('--bg-main', w.bg_primary);
+  document.documentElement.style.setProperty('--bg-panel', w.bg_panel);
+  document.documentElement.style.setProperty('--ink', w.ink_primary);
+  document.documentElement.style.setProperty('--accent', w.accent_main);
+  document.documentElement.style.setProperty('--accent2', w.accent_secondary);
+  document.documentElement.style.setProperty('--border', w.border_color);
+  document.getElementById('worldSelect').value = worldId;
+  drawSimulation();
+}
+
+function setProfile(p) {
+  currentProfile = p;
+  ['A', 'B', 'C'].forEach(k => {
+    document.getElementById('btnProf' + k).classList.toggle('active', k === p);
+  });
+  document.getElementById('scaffoldText').innerHTML =
+    '<strong>Gợi ý Hồ sơ ' + p + ':</strong> ' + ASSET.learner_scaffolding[p];
+}
+
+function setTrialToDefault() {
+  const v = ASSET.interactive_engine.default_trial;
+  document.getElementById('trialSlider').value = v;
+  onSliderChange(v);
+}
+
+function resetTrial() {
+  const v = ASSET.interactive_engine.default_trial;
+  document.getElementById('trialSlider').value = v;
+  onSliderChange(v);
+}
+
+function checkCausalBalance() {
+  const target = parseFloat(ASSET.interactive_engine.target_solution);
+  const isSol = Math.abs(currentTrial - target) < 0.05;
+  const banner = document.getElementById('statusBanner');
+  if (isSol) {
+    banner.className = 'status-banner status-ok';
+    banner.textContent = '★ XÁC NHẬN CÂN BẰNG! Chúc mừng bạn đã giải mã chính xác mô hình nhân - quả.';
+    const solCard = document.getElementById('unlockedSolutionCard');
+    if (solCard) solCard.style.display = 'block';
+  } else {
+    banner.className = 'status-banner status-warn';
+    banner.textContent = '⚠ CÁN CÂN CHƯA THĂNG BẰNG: Quan sát độ lệch kim chỉ thị và tiếp tục điều chỉnh thanh trượt!';
+  }
+}
+
+function onSliderChange(val) {
+  currentTrial = parseFloat(val);
+  document.getElementById('trialValueDisplay').textContent =
+    currentTrial + ' ' + ASSET.interactive_engine.unit;
+  drawSimulation();
+}
+
+function checkQuickAnswer() {
+  const raw = document.getElementById('selfCheckInput').value.trim().toLowerCase();
+  const ans = ASSET.basic_exercises[0].final_answer.toLowerCase();
+  const fb = document.getElementById('selfCheckFeedback');
+  const numMatch = ans.match(/-?\d+([.,]\d+)?/);
+  const keyNum = numMatch ? numMatch[0].replace(',', '.') : ans;
+  if (raw && (raw.includes(keyNum) || raw === ans)) {
+    fb.style.color = '#10B981';
+    fb.textContent = '✓ Chính xác! Bạn đã tìm ra kết quả đúng.';
+  } else {
+    fb.style.color = '#F59E0B';
+    fb.textContent = '💡 Gợi ý Socratic: ' + ASSET.text_notes.note1_start.bullets[0] + ' Hãy quan sát cán cân và thử lại!';
+  }
+}
+
+function drawPhysicalScene(ctx, x0, y0, w, h, asset, val, isSol) {
+  ctx.save();
+  ctx.fillStyle = '#FFFFFF';
+  ctx.strokeStyle = '#CBD5E1';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  if (ctx.roundRect) ctx.roundRect(x0, y0, w, h, 8);
+  else ctx.rect(x0, y0, w, h);
+  ctx.fill(); ctx.stroke();
+
+  ctx.fillStyle = '#0F172A';
+  ctx.font = 'bold 12px Segoe UI';
+  ctx.fillText('HIỆN TRƯỜNG THỰC TẾ: ' + asset.title.split('(')[0].trim(), x0 + 12, y0 + 20);
+
+  const eng = asset.interactive_engine.engine_type;
+  const p = asset.interactive_engine.parameters;
+
+  if (eng === 'GRID_TILING_GCD') {
+    const d = Math.max(1, Math.round(val));
+    const scale = 11;
+    const cw = p.width * scale, ch = p.height * scale;
+    const ox = x0 + 20, oy = y0 + 35;
+    ctx.strokeStyle = '#78350F'; ctx.lineWidth = 2.5;
+    ctx.strokeRect(ox, oy, cw, ch);
+    const cols = Math.floor(p.width / d), rows = Math.floor(p.height / d);
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < cols; c++) {
+        ctx.fillStyle = (r + c) % 2 === 0 ? '#FDE68A' : '#FCD34D';
+        ctx.fillRect(ox + c * d * scale + 1, oy + r * d * scale + 1, d * scale - 2, d * scale - 2);
+      }
+    }
+    const remW = p.width % d, remH = p.height % d;
+    if (remW > 0) {
+      ctx.fillStyle = 'rgba(239, 68, 68, 0.5)';
+      ctx.fillRect(ox + cols * d * scale, oy, remW * scale, ch);
+    }
+    if (remH > 0) {
+      ctx.fillStyle = 'rgba(239, 68, 68, 0.5)';
+      ctx.fillRect(ox, oy + rows * d * scale, cw, remH * scale);
+    }
+    ctx.fillStyle = isSol ? '#15803D' : '#991B1B';
+    ctx.font = 'bold 11px Segoe UI';
+    ctx.fillText(isSol ? '✓ Lát khít: 4 x 3 = 12 viên (Không cắt)' : '✗ Thừa đỏ: dư ' + remW + 'dm & ' + remH + 'dm (Phải cắt gạch)', ox, oy + ch + 20);
+  } else if (eng === 'RATE_BALANCE_RATIONAL' || asset.asset_id === 'YD-LA-ALG-G8-07') {
+    const numTrucks = Math.max(1, Math.round(60 / val));
+    const ox = x0 + 15, oy = y0 + 35;
+    ctx.fillStyle = '#334155';
+    ctx.fillRect(ox, oy + 70, w - 30, 40);
+    ctx.strokeStyle = '#FDE047'; ctx.setLineDash([10, 8]); ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(ox, oy + 90); ctx.lineTo(ox + w - 30, oy + 90); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = '#0284C7';
+    ctx.fillRect(ox + w - 65, oy + 30, 38, 40);
+    ctx.fillStyle = '#0F172A'; ctx.font = 'bold 9px Segoe UI';
+    ctx.fillText('KHO GẠO 60T', ox + w - 75, oy + 25);
+    const displayTrucks = Math.min(5, numTrucks);
+    for (let t = 0; t < displayTrucks; t++) {
+      const tx = ox + 10 + t * 44;
+      const ty = oy + 76;
+      ctx.fillStyle = isSol ? '#10B981' : '#38BDF8';
+      ctx.fillRect(tx, ty, 30, 16);
+      ctx.fillStyle = '#1E293B';
+      ctx.beginPath(); ctx.arc(tx + 6, ty + 18, 4, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.arc(tx + 22, ty + 18, 4, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#F59E0B';
+      ctx.fillRect(tx + 2, ty - 5, 16, 5);
+    }
+    ctx.fillStyle = '#0F172A'; ctx.font = '11.5px Segoe UI';
+    ctx.fillText('Đội xe dự định: (60/' + val + ') = ' + (60/val).toFixed(1) + ' xe', ox, oy + 145);
+    ctx.fillText('Thực tế thêm 3 xe: (60/' + (val+3) + ') = ' + (60/(val+3)).toFixed(1) + ' xe', ox, oy + 165);
+    ctx.fillStyle = isSol ? '#15803D' : '#B45309'; ctx.font = 'bold 11.5px Segoe UI';
+    ctx.fillText('Độ lệch thời gian thực tế: Δt = ' + (60/val - 60/(val+3)).toFixed(2) + ' ngày', ox, oy + 188);
+  } else if (asset.asset_id === 'YD-LA-GEO-G8-13') {
+    const ox = x0 + 60, oy = y0 + 185;
+    ctx.strokeStyle = '#0F172A'; ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.moveTo(ox - 25, oy); ctx.lineTo(ox + 160, oy); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(ox, oy + 10); ctx.lineTo(ox, oy - 135); ctx.stroke();
+    const groundD = 70, wallH = 95;
+    ctx.strokeStyle = isSol ? '#10B981' : '#E11D48'; ctx.lineWidth = 4.5;
+    ctx.beginPath(); ctx.moveTo(ox, oy - wallH); ctx.lineTo(ox + groundD, oy); ctx.stroke();
+    ctx.fillStyle = '#0F172A'; ctx.font = '11px Segoe UI';
+    ctx.fillText('Tường: 4m', ox + 6, oy - 50);
+    ctx.fillText('Đất: 3m', ox + 20, oy + 16);
+    ctx.fillStyle = isSol ? '#15803D' : '#BE123C'; ctx.font = 'bold 11.5px Segoe UI';
+    ctx.fillText('Thang: L = ' + val + 'm ' + (isSol ? '(Chuẩn khít 5m)' : '(Lệch đỉnh tường)'), ox + 40, oy - 60);
+  } else if (asset.asset_id === 'YD-LA-ALG-G9-09') {
+    const ox = x0 + 175, oy = y0 + 170;
+    ctx.strokeStyle = '#0F172A'; ctx.lineWidth = 2;
+    ctx.fillStyle = '#E0F2FE'; ctx.fillRect(x0 + 10, oy, w - 20, 45);
+    ctx.beginPath(); ctx.strokeStyle = '#0284C7'; ctx.lineWidth = 3.5;
+    for (let px = -110; px <= 110; px += 4) {
+      const py = - (px * px) / 150;
+      if (px === -110) ctx.moveTo(ox + px, oy + py);
+      else ctx.lineTo(ox + px, oy + py);
+    }
+    ctx.stroke();
+    const bx = val * 7.5;
+    ctx.fillStyle = isSol ? '#10B981' : '#F59E0B';
+    ctx.fillRect(ox - bx, oy - 48, bx * 2, 48);
+    ctx.fillStyle = '#0F172A'; ctx.font = 'bold 11px Segoe UI';
+    ctx.fillText('Sà lan mép x = ' + val + 'm', ox - 45, oy - 55);
+  } else {
+    const ox = x0 + 20, oy = y0 + 40;
+    ctx.fillStyle = '#F8FAFC'; ctx.strokeStyle = '#CBD5E1'; ctx.lineWidth = 1;
+    ctx.fillRect(ox, oy, w - 40, 150);
+    ctx.strokeRect(ox, oy, w - 40, 150);
+    ctx.fillStyle = '#0F172A'; ctx.font = 'bold 12.5px Segoe UI';
+    ctx.fillText(asset.title.split('(')[0].trim(), ox + 15, oy + 28);
+    ctx.font = '11.5px Segoe UI'; ctx.fillStyle = '#475569';
+    ctx.fillText('Biến số: ' + asset.interactive_engine.control_label, ox + 15, oy + 60);
+    ctx.fillText('Thử nghiệm: ' + val + ' ' + asset.interactive_engine.unit, ox + 15, oy + 88);
+    ctx.fillStyle = isSol ? '#15803D' : '#D97706'; ctx.font = 'bold 12px Segoe UI';
+    ctx.fillText(isSol ? '✓ Đạt trạng thái cân bằng lý tưởng!' : '→ Đang khảo sát sai số nhân - quả...', ox + 15, oy + 125);
+  }
+  ctx.restore();
+}
+
+function drawCausalBalanceScale(ctx, cx, cy, armL, asset, val, target, isSol) {
+  ctx.save();
+  ctx.fillStyle = '#0F172A';
+  ctx.font = 'bold 12.5px Segoe UI';
+  ctx.fillText('CÁN CÂN THĂNG BẰNG ĐẠI SỐ (EQUILIBRIUM)', cx - 135, cy - 80);
+
+  const diff = val - target;
+  const tiltDeg = isSol ? 0.0 : Math.max(-24.0, Math.min(24.0, diff * 7.0));
+  const tiltRad = tiltDeg * Math.PI / 180;
+
+  // Stand
+  ctx.fillStyle = '#475569';
+  ctx.beginPath();
+  ctx.moveTo(cx - 22, cy + 90);
+  ctx.lineTo(cx + 22, cy + 90);
+  ctx.lineTo(cx + 5, cy);
+  ctx.lineTo(cx - 5, cy);
+  ctx.closePath();
+  ctx.fill();
+
+  // Pivot circle
+  ctx.fillStyle = '#0284C7';
+  ctx.beginPath(); ctx.arc(cx, cy, 8, 0, Math.PI * 2); ctx.fill();
+  ctx.fillStyle = '#FFFFFF';
+  ctx.beginPath(); ctx.arc(cx, cy, 3.5, 0, Math.PI * 2); ctx.fill();
+
+  // Dial Arc
+  ctx.strokeStyle = '#94A3B8'; ctx.lineWidth = 1.8;
+  ctx.beginPath();
+  ctx.arc(cx, cy - 6, 36, -Math.PI * 0.8, -Math.PI * 0.2);
+  ctx.stroke();
+
+  // Green center mark
+  ctx.strokeStyle = '#10B981'; ctx.lineWidth = 3.5;
+  ctx.beginPath();
+  ctx.arc(cx, cy - 6, 36, -Math.PI * 0.53, -Math.PI * 0.47);
+  ctx.stroke();
+
+  // Indicator Needle
+  const needleAngle = -Math.PI / 2 + tiltRad;
+  ctx.strokeStyle = isSol ? '#10B981' : '#EF4444';
+  ctx.lineWidth = 2.2;
+  ctx.beginPath();
+  ctx.moveTo(cx, cy);
+  ctx.lineTo(cx + Math.cos(needleAngle) * 40, cy + Math.sin(needleAngle) * 40);
+  ctx.stroke();
+
+  // Rotating Beam
+  const cosT = Math.cos(tiltRad), sinT = Math.sin(tiltRad);
+  const lx = cx - cosT * armL, ly = cy - sinT * armL;
+  const rx = cx + cosT * armL, ry = cy + sinT * armL;
+
+  ctx.strokeStyle = isSol ? '#10B981' : '#F59E0B';
+  ctx.lineWidth = 5.5;
+  ctx.lineCap = 'round';
+  ctx.beginPath(); ctx.moveTo(lx, ly); ctx.lineTo(rx, ry); ctx.stroke();
+
+  // Pans
+  const panH = 46;
+  ctx.strokeStyle = '#64748B'; ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.moveTo(lx, ly); ctx.lineTo(lx - 18, ly + panH); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(lx, ly); ctx.lineTo(lx + 18, ly + panH); ctx.stroke();
+
+  ctx.fillStyle = isSol ? '#D1FAE5' : '#E0F2FE';
+  ctx.strokeStyle = isSol ? '#10B981' : '#0284C7';
+  ctx.lineWidth = 1.8;
+  ctx.beginPath();
+  if (ctx.roundRect) ctx.roundRect(lx - 42, ly + panH, 84, 32, 5);
+  else ctx.rect(lx - 42, ly + panH, 84, 32);
+  ctx.fill(); ctx.stroke();
+  ctx.fillStyle = '#0F172A'; ctx.font = 'bold 10.5px Segoe UI';
+  ctx.fillText('Vế Thử: ' + val, lx - 34, ly + panH + 15);
+  ctx.font = '9.5px Segoe UI'; ctx.fillStyle = '#0369A1';
+  ctx.fillText(isSol ? '✓ Cân Bằng' : (diff > 0 ? 'Thừa tải' : 'Thiếu tải'), lx - 34, ly + panH + 26);
+
+  ctx.strokeStyle = '#64748B'; ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.moveTo(rx, ry); ctx.lineTo(rx - 18, ry + panH); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(rx, ry); ctx.lineTo(rx + 18, ry + panH); ctx.stroke();
+
+  ctx.fillStyle = isSol ? '#D1FAE5' : '#FEF3C7';
+  ctx.strokeStyle = isSol ? '#10B981' : '#F59E0B';
+  ctx.lineWidth = 1.8;
+  ctx.beginPath();
+  if (ctx.roundRect) ctx.roundRect(rx - 42, ry + panH, 84, 32, 5);
+  else ctx.rect(rx - 42, ry + panH, 84, 32);
+  ctx.fill(); ctx.stroke();
+  ctx.fillStyle = '#0F172A'; ctx.font = 'bold 10.5px Segoe UI';
+  ctx.fillText('Đích Đề Bài', rx - 34, ry + panH + 15);
+  ctx.font = '9.5px Segoe UI'; ctx.fillStyle = isSol ? '#15803D' : '#B45309';
+  ctx.fillText(isSol ? '0.0° Khớp 100%' : 'Chờ cân bằng', rx - 34, ry + panH + 26);
+
+  // Status banner under scale
+  ctx.fillStyle = isSol ? '#ECFDF5' : '#FFFBEB';
+  ctx.strokeStyle = isSol ? '#10B981' : '#F59E0B';
+  ctx.lineWidth = 1.2;
+  ctx.beginPath();
+  if (ctx.roundRect) ctx.roundRect(cx - 125, cy + 82, 250, 22, 4);
+  else ctx.rect(cx - 125, cy + 82, 250, 22);
+  ctx.fill(); ctx.stroke();
+  ctx.fillStyle = isSol ? '#065F46' : '#92400E';
+  ctx.font = 'bold 10.5px Segoe UI';
+  ctx.fillText(isSol ? '★ CÁN CÂN CÂN BẰNG HOÀN TOÀN (0° LỆCH)' : ('⚠ CÁN CÂN LỆCH ' + (diff > 0 ? 'TRÁI' : 'PHẢI') + ' (' + Math.abs(tiltDeg).toFixed(1) + '°)'), cx - 115, cy + 97);
+
+  ctx.restore();
+}
+
+function drawCausalReasoningRibbon(ctx, x, y, w, h, asset, val, target, isSol) {
+  ctx.save();
+  ctx.fillStyle = '#0F172A';
+  ctx.strokeStyle = isSol ? '#10B981' : '#38BDF8';
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  if (ctx.roundRect) ctx.roundRect(x, y, w, h, 7);
+  else ctx.rect(x, y, w, h);
+  ctx.fill(); ctx.stroke();
+
+  ctx.fillStyle = isSol ? '#10B981' : '#38BDF8';
+  ctx.font = 'bold 11px Segoe UI';
+  ctx.fillText('SỔ TAY LẬP LUẬN NHÂN - QUẢ (CAUSAL REASONING LOG):', x + 14, y + 18);
+
+  ctx.fillStyle = '#F8FAFC';
+  ctx.font = '11px Segoe UI';
+  const diff = val - target;
+  let causeText = '▶ Hành động: Thử giá trị = ' + val + ' ' + asset.interactive_engine.unit + '.';
+  let effectText = isSol
+    ? '▶ Hệ quả: Hai vế phương trình đạt thế cân bằng tuyệt đối! Mọi bất biến toán học được thỏa mãn.'
+    : (diff > 0
+        ? '▶ Hệ quả: Giá trị thử nghiệm cao hơn điểm cân bằng, vế trái thừa tải làm cán cân lệch.'
+        : '▶ Hệ quả: Giá trị thử nghiệm thấp hơn điểm cân bằng, vế trái thiếu tải so với yêu cầu.');
+  let invariantText = '▶ Bảo toàn bất biến: Giữ nguyên 100% các điều kiện và hằng số của bài toán.';
+
+  ctx.fillText(causeText + '  ' + effectText, x + 14, y + 36);
+  ctx.fillStyle = '#94A3B8';
+  ctx.font = '10.5px Segoe UI';
+  ctx.fillText(invariantText + ' (Không tự ý biến dạng giả thiết khi thử sai số).', x + 14, y + 52);
+
+  ctx.restore();
+}
+
+function drawSimulation() {
+  const canvas = document.getElementById('simCanvas');
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  ctx.clearRect(0, 0, W, H);
+
+  const target = parseFloat(ASSET.interactive_engine.target_solution);
+  const isSol = Math.abs(currentTrial - target) < 0.05;
+  const banner = document.getElementById('statusBanner');
+  const solCard = document.getElementById('unlockedSolutionCard');
+
+  // Background
+  const bgGrad = ctx.createLinearGradient(0, 0, 0, H);
+  bgGrad.addColorStop(0, '#F8FAFC');
+  bgGrad.addColorStop(1, '#F1F5F9');
+  ctx.fillStyle = bgGrad;
+  ctx.fillRect(0, 0, W, H);
+
+  ctx.strokeStyle = '#E2E8F0';
+  ctx.lineWidth = 1;
+  for (let x = 0; x < W; x += 35) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke(); }
+  for (let y = 0; y < H; y += 35) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); }
+
+  // Divider
+  ctx.strokeStyle = '#CBD5E1'; ctx.lineWidth = 1.5; ctx.setLineDash([4, 4]);
+  ctx.beginPath(); ctx.moveTo(410, 10); ctx.lineTo(410, 265); ctx.stroke();
+  ctx.setLineDash([]);
+
+  // 1. Physical Scene Simulation (Left)
+  drawPhysicalScene(ctx, 35, 15, 360, 250, ASSET, currentTrial, isSol);
+
+  // 2. Dynamic Causal Balance Scale (Right)
+  drawCausalBalanceScale(ctx, 615, 135, 140, ASSET, currentTrial, target, isSol);
+
+  // 3. Bottom Socratic Causal Reasoning Ribbon
+  drawCausalReasoningRibbon(ctx, 20, 275, 780, 65, ASSET, currentTrial, target, isSol);
+
+  // Status Banner & Unlocked Solution Card
+  if (isSol) {
+    banner.className = 'status-banner status-ok';
+    banner.textContent = '★ TRẠNG THÁI CÂN BẰNG ĐẠT ĐƯỢC! Mô hình toán học đã được thỏa mãn tuyệt đối.';
+    if (solCard) solCard.style.display = 'block';
+  } else {
+    banner.className = 'status-banner status-warn';
+    banner.textContent = '⚠ CÁN CÂN ĐANG MẤT CÂN BẰNG: Hãy quan sát độ lệch đĩa cân và tiếp tục điều chỉnh để tìm điểm thăng bằng!';
+    if (solCard) solCard.style.display = 'none';
+  }
+}
+
+setProfile('A');
+setWorld(ASSET.artistic_world);
+onSliderChange(ASSET.interactive_engine.default_trial);
+</script>
+</body>
+</html>

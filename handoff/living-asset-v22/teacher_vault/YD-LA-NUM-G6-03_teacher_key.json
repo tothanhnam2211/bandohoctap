@@ -1,0 +1,35 @@
+{
+  "asset_id": "YD-LA-NUM-G6-03",
+  "skill_id": "S_G06_B25",
+  "grade": 6,
+  "target_interactive_solution": 100,
+  "math_semantics": {
+    "unknown_symbol": "V_them",
+    "domain_constraint": "V_them ≥ 0",
+    "invariant_relation": "V_cam = 25% × 400 = 100 ml (Bất biến khi thêm nước)",
+    "target_equation": "C%_mới = 100 / (400 + 100) × 100% = 20%",
+    "verification_type": "EXACT_ARITHMETIC_VERIFIED"
+  },
+  "basic_answers": [
+    {
+      "id": "B1",
+      "final_answer": "5%",
+      "teacher_solution": "Tỉ số phần trăm của muối là: (10 / 200) × 100% = 5%."
+    },
+    {
+      "id": "B2",
+      "final_answer": "24 học sinh",
+      "teacher_solution": "Số học sinh tham gia CLB STEM là: 40 × (3/5) = 24 (học sinh)."
+    }
+  ],
+  "advanced_answer": {
+    "id": "ADV",
+    "final_answer": "100 g nước",
+    "teacher_solution": "Khối lượng đường bất biến: 300 × 20% = 60 g. Khối lượng dung dịch lúc sau: 60 : 15% = 400 g ⇒ Nước thêm vào: 400 - 300 = 100 g."
+  },
+  "real_world_answer": {
+    "id": "RW",
+    "final_answer": "280 000 đồng",
+    "teacher_solution": "Số tiền sau giảm giá chiếm 100% - 20% = 80% giá niêm yết. Số tiền phải trả: 350 000 × 80% = 280 000 (đồng)."
+  }
+}

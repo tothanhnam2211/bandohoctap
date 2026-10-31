@@ -1,0 +1,88 @@
+{
+  "asset_id": "YD-LA-NUM-G6-01",
+  "asset_no": "01",
+  "skill_id": "S_G06_B09",
+  "grade": 6,
+  "strand_code": "SO_HOC_VA_TAP_HOP",
+  "strand_name": "Số học & Tập hợp",
+  "title": "Kiến Trúc Sư Sân Đình Cổ: Lát Gạch Vuông Không Cắt & Bí Mật ƯCLN",
+  "story_hook": "Bác thợ cả cần lát kín nền sân đình hình chữ nhật dài 24 dm, rộng 18 dm bằng những viên gạch hình vuông nguyên vẹn (không viên nào bị cắt lẻ). Làm sao chọn được cỡ gạch lớn nhất?",
+  "objective": "Hiểu bản chất hình học của Ước chung lớn nhất: cạnh viên gạch vuông lớn nhất lát khít hình chữ nhật a × b chính là ƯCLN(a, b).",
+  "artistic_world": "WARM_STORYBOOK_TACTILE",
+  "primitives_used": [
+    "PRIM_GRID_TILING"
+  ],
+  "interactive_engine": {
+    "engine_type": "GRID_TILING_GCD",
+    "control_label": "Chọn kích thước cạnh viên gạch vuông d (dm):",
+    "min_val": 1,
+    "max_val": 12,
+    "step_val": 1,
+    "default_trial": 5,
+    "unit": "dm"
+  },
+  "learner_scaffolding": {
+    "A": "Mình đừng vội tính nhẩm! Hãy kéo thanh trượt thử viên gạch cạnh 5 dm: bạn sẽ thấy cuối sân bị thừa ra một khe hẹp 4 dm (vết đỏ) phải chặt gạch. Hãy kéo đến khi toàn bộ sân hiện màu vàng khít nhau nhé!",
+    "B": "Để lát kín không cắt gạch, cạnh d phải đồng thời chia hết 24 và 18. Hãy tìm tập hợp ƯC(24, 18) và chọn số lớn nhất.",
+    "C": "Tổng quát hóa: Với sân a × b, vì sao tích diện tích một viên gạch lớn nhất (d²) nhân với số viên gạch luôn bằng a·b?"
+  },
+  "misconceptions": [
+    "Nhầm lẫn giữa ƯCLN (chia nhỏ hình lớn thành các ô vuông bằng nhau) và BCNN (ghép nhiều hình nhỏ thành hình lớn).",
+    "Chọn ước chung d = 2 hoặc d = 3 (lát vừa nhưng quên điều kiện 'cạnh viên gạch lớn nhất')."
+  ],
+  "worked_example": {
+    "problem": "Một mảnh sân hình chữ nhật dài 24 dm, rộng 18 dm. Người ta muốn lát kín sân bằng các viên gạch hình vuông cạnh d (dm, d ∈ ℕ*) sao cho không có viên gạch nào bị cắt. Tìm d lớn nhất và số viên gạch cần dùng.",
+    "steps": [
+      "Bước 1 (Thiết lập điều kiện): Để không phải cắt gạch theo cả chiều dài và chiều rộng, ta phải có 24 ⋮ d và 18 ⋮ d, đồng thời d lớn nhất nên d = ƯCLN(24, 18).",
+      "Bước 2 (Phân tích thừa số nguyên tố): 24 = 2³ · 3; 18 = 2 · 3² ⇒ ƯCLN(24, 18) = 2 · 3 = 6 (dm).",
+      "Bước 3 (Tính số viên gạch): Chiều dài xếp được 24 : 6 = 4 viên; chiều rộng xếp được 18 : 6 = 3 viên ⇒ Tổng số gạch = 4 × 3 = 12 viên."
+    ]
+  },
+  "basic_exercises": [
+    {
+      "id": "B1",
+      "label": "Câu 2a (Cơ bản)",
+      "prompt": "Tìm ƯCLN(36, 24) và cho biết có thể chia một tấm bìa hình chữ nhật 36 cm × 24 cm thành các hình vuông bằng nhau có cạnh lớn nhất là bao nhiêu xăng-ti-mét?"
+    },
+    {
+      "id": "B2",
+      "label": "Câu 2b (Thực hành)",
+      "prompt": "Đội tình nguyện có 48 quyển vở và 32 chiếc bút muốn chia đều vào các túi quà sao cho số túi là nhiều nhất. Hỏi chia được nhiều nhất bao nhiêu túi quà?"
+    }
+  ],
+  "advanced_exercise": {
+    "id": "ADV",
+    "prompt": "Một căn phòng hình chữ nhật kích thước 42 dm × 30 dm. Nếu lát bằng gạch vuông cạnh 6 dm thì hết bao nhiêu viên gạch?"
+  },
+  "real_world_problem": {
+    "id": "RW",
+    "prompt": "Bác An có hai thanh gỗ dài 120 cm và 90 cm. Bác muốn cưa cả hai thanh thành những đoạn bằng nhau dài nhất có thể mà không thừa mẩu gỗ nào. Tìm độ dài mỗi đoạn và tổng số đoạn gỗ thu được."
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Gặp từ khóa 'chia đều lớn nhất', 'cắt hình vuông lớn nhất không dư' → Nghĩ ngay đến ƯCLN(a, b)!",
+        "Phân tích mỗi số ra thừa số nguyên tố rồi chọn các thừa số nguyên tố CHUNG với số mũ NHỎ NHẤT."
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "Đừng lấy tổng diện tích chia cho cạnh d! Số viên gạch phải bằng (Dài : d) × (Rộng : d).",
+        "Tránh nhầm quy tắc: ƯCLN chọn thừa số CHUNG mũ NHỎ; BCNN chọn CHUNG & RIÊNG mũ LỚN."
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Lấy chiều dài và chiều rộng chia thử cho d xem phép chia có dư bằng 0 hay không."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU..."
+    }
+  },
+  "svg_file": "svg_assets/YD-LA-NUM-G6-01.svg",
+  "interactive_html_file": "interactive_experiences/YD-LA-NUM-G6-01.html"
+}

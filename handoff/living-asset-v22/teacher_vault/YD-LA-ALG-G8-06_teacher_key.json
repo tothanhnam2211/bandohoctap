@@ -1,0 +1,35 @@
+{
+  "asset_id": "YD-LA-ALG-G8-06",
+  "skill_id": "S_G08_B25",
+  "grade": 8,
+  "target_interactive_solution": 5.0,
+  "math_semantics": {
+    "unknown_symbol": "x",
+    "domain_constraint": "x ≥ 0",
+    "invariant_relation": "y₁(x) = 12x + 10; y₂(x) = 10x + 20",
+    "target_equation": "12x + 10 = 10x + 20 ⇔ 2x = 10 ⇔ x = 5 (km); y = 70 (nghìn đồng)",
+    "verification_type": "SYMBOLIC_SYMPY_VERIFIED"
+  },
+  "basic_answers": [
+    {
+      "id": "B1",
+      "final_answer": "y = 10; A(0; -2)",
+      "teacher_solution": "Khi x = 4 thì y = 3·4 - 2 = 10. Giao với Oy tại x = 0 ⇒ y = -2, điểm A(0; -2)."
+    },
+    {
+      "id": "B2",
+      "final_answer": "M(3; 7)",
+      "teacher_solution": "Hoành độ giao điểm: 2x + 1 = x + 4 ⇔ x = 3 ⇒ y = 3 + 4 = 7. Giao điểm M(3; 7)."
+    }
+  ],
+  "advanced_answer": {
+    "id": "ADV",
+    "final_answer": "y = 2x + 4",
+    "teacher_solution": "Song song với y = 2x - 5 nên a = 2 và b ≠ -5. Qua K(1; 6) ⇒ 2·1 + b = 6 ⇒ b = 4 (thỏa mãn). Vậy y = 2x + 4."
+  },
+  "real_world_answer": {
+    "id": "RW",
+    "final_answer": "y = 25x + 150; x = 10 phút",
+    "teacher_solution": "Công thức: y = 25x + 150. Khi y = 400 ⇒ 25x + 150 = 400 ⇒ 25x = 250 ⇒ x = 10 (phút)."
+  }
+}

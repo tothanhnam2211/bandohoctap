@@ -1,0 +1,35 @@
+{
+  "asset_id": "YD-LA-STAT-G7-14",
+  "skill_id": "S_G07_B18",
+  "grade": 7,
+  "target_interactive_solution": 28,
+  "math_semantics": {
+    "unknown_symbol": "x_bar",
+    "domain_constraint": "x_1 ≤ x_2 ≤ x_3 ≤ x_4 ≤ x_5",
+    "invariant_relation": "∑(x_i - x̄) = 0 (Cân bằng mô-men lực quanh điểm tựa x̄); M_e = x_3 = 6",
+    "target_equation": "Với dãy {4, 5, 6, 7, 28}: x̄ = (4+5+6+7+28)/5 = 10; Trung vị M_e = 6",
+    "verification_type": "THEORETICAL_DISTRIBUTION_VERIFIED"
+  },
+  "basic_answers": [
+    {
+      "id": "B1",
+      "final_answer": "x̄ = 13; M_e = 12",
+      "teacher_solution": "Sắp xếp: 8; 10; 12; 15; 20 ⇒ Trung vị M_e = 12. Số trung bình: x̄ = (8+10+12+15+20)/5 = 65/5 = 13."
+    },
+    {
+      "id": "B2",
+      "final_answer": "M_e = 8",
+      "teacher_solution": "Vì cỡ mẫu N = 6 (chẵn) nên trung vị là trung bình cộng của hai số đứng giữa (thứ 3 và thứ 4): M_e = (7 + 9)/2 = 8."
+    }
+  ],
+  "advanced_answer": {
+    "id": "ADV",
+    "final_answer": "13",
+    "teacher_solution": "Tổng của 4 số đầu là 4 × 9 = 36. Tổng của 5 số là 36 + 29 = 65 ⇒ Số trung bình mới là 65 : 5 = 13."
+  },
+  "real_world_answer": {
+    "id": "RW",
+    "final_answer": "Dùng Trung vị M_e = 14 giây",
+    "teacher_solution": "Sắp xếp: 12; 13; 14; 15; 36. Do 36 giây là giá trị bất thường nên dùng Trung vị M_e = 14 giây phản ánh đúng hơn số trung bình (18 giây)."
+  }
+}

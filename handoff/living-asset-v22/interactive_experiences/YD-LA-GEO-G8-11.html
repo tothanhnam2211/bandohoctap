@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YD-LA-GEO-G8-11 — Bằng Chứng Không Lời: Trượt 4 Tam Giác Vuông Chứng Minh a² + b² = c² | YOURDREAM Living Asset</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="if(window.renderMathInElement)renderMathInElement(document.body);"></script>
+<style>
+
+/* --- YOURDREAM Mathematical Typography Styles --- */
+.m-math {
+  font-family: "Cambria Math", "Latin Modern Math", "STIX Two Math", "Georgia", serif;
+  font-size: 1.02em;
+  letter-spacing: 0.015em;
+  display: inline-block;
+}
+.m-var {
+  font-family: "Cambria Math", "Latin Modern Math", "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 500;
+  padding: 0 1px;
+}
+.m-op {
+  font-style: normal;
+  font-weight: 600;
+  margin: 0 3px;
+  color: #0F172A;
+}
+.m-set {
+  font-weight: 700;
+  font-family: "Cambria Math", "STIX Two Math", serif;
+}
+.m-frac {
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: -0.48em;
+  text-align: center;
+  padding: 0 2.5px;
+  font-size: 0.88em;
+  line-height: 1.05;
+}
+.m-num {
+  border-bottom: 1.25px solid currentColor;
+  padding-bottom: 1.5px;
+  display: block;
+}
+.m-den {
+  padding-top: 1.5px;
+  display: block;
+}
+.m-root {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: -0.1em;
+  margin: 0 1px;
+}
+.m-radic {
+  font-size: 1.18em;
+  font-family: "Cambria Math", serif;
+  line-height: 1;
+  margin-right: 1px;
+}
+.m-radicand {
+  border-top: 1.25px solid currentColor;
+  padding-top: 1px;
+  display: inline-block;
+}
+
+  :root {
+    --bg-main: #0F172A;
+    --bg-panel: #1E293B;
+    --ink: #F8FAFC;
+    --muted: #94A3B8;
+    --accent: #38BDF8;
+    --accent2: #10B981;
+    --border: #334155;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: var(--bg-main);
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.25s, color 0.25s;
+  }
+  .top-bar {
+    padding: 12px 20px;
+    background: #0F172A;
+    color: #F8FAFC;
+    border-bottom: 2px solid var(--accent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .brand-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .badge {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 800;
+    background: var(--accent);
+    color: #0F172A;
+  }
+  .badge-strand {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    background: rgba(56, 189, 248, 0.18);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+  }
+  .controls-top { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .btn-pill {
+    padding: 6px 12px;
+    border-radius: 7px;
+    border: 1px solid var(--border);
+    background: var(--bg-panel);
+    color: var(--ink);
+    font-size: 12.5px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .btn-pill.active {
+    background: var(--accent);
+    color: #0F172A;
+    border-color: var(--accent);
+  }
+  .workspace {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 18px;
+    padding: 18px;
+    max-width: 1560px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  @media (max-width: 1080px) {
+    .workspace {
+      grid-template-columns: 1fr;
+    }
+  }
+  .stage-column {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-width: 0;
+  }
+  .story-banner {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--accent);
+    border-radius: 12px;
+    padding: 14px 18px;
+  }
+  .story-banner h1 { font-size: 19px; font-weight: 800; margin-bottom: 6px; }
+  .story-banner p { font-size: 13.8px; line-height: 1.5; opacity: 0.92; }
+  .canvas-card {
+    background: var(--bg-panel);
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .canvas-viewport {
+    width: 100%;
+    height: 350px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: 1.5px solid #CBD5E1;
+    overflow: hidden;
+    position: relative;
+  }
+  canvas#simCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .slider-deck {
+    background: rgba(15, 23, 42, 0.06);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+  }
+  .slider-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  input[type=range] {
+    width: 100%;
+    accent-color: var(--accent);
+    cursor: pointer;
+    height: 8px;
+  }
+  .status-banner {
+    padding: 11px 14px;
+    border-radius: 9px;
+    font-weight: 700;
+    font-size: 13.5px;
+    border: 1.5px solid transparent;
+  }
+  .status-ok {
+    background: rgba(16, 185, 129, 0.16);
+    border-color: #10B981;
+    color: #10B981;
+  }
+  .status-warn {
+    background: rgba(245, 158, 11, 0.16);
+    border-color: #F59E0B;
+    color: #F59E0B;
+  }
+  .pedagogy-column {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-width: 0;
+  }
+  .panel-card {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 15px 18px;
+  }
+  .panel-card h3 {
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .math-box {
+    font-family: "Cambria Math", "Segoe UI", serif;
+    font-size: 14.5px;
+    background: rgba(15, 23, 42, 0.22);
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    margin-top: 6px;
+    line-height: 1.55;
+  }
+  .scaffold-box {
+    font-size: 13.5px;
+    line-height: 1.55;
+    padding: 12px;
+    border-radius: 8px;
+    background: rgba(56, 189, 248, 0.1);
+    border-left: 4px solid var(--accent);
+  }
+  .trap-list {
+    padding-left: 18px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .trap-list li { margin-bottom: 6px; }
+  .quiz-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .quiz-input-row {
+    display: flex;
+    gap: 8px;
+  }
+  .quiz-input-row input {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 7px;
+    border: 1px solid var(--border);
+    font-size: 13.5px;
+  }
+</style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="brand-row">
+      <span class="badge">LỚP 8 • YD-LA-GEO-G8-11</span>
+      <span class="badge-strand">Hình học, Đo lường & Không gian</span>
+      <span style="font-size:12.5px; font-weight:700; opacity:0.85;">Kỹ năng: S_G08_B15 (RULE_BOUNDED_GEOMETRY_VERIFIED)</span>
+    </div>
+    <div class="controls-top">
+      <span style="font-size:12px; font-weight:700;">Hồ sơ người học:</span>
+      <button class="btn-pill active" id="btnProfA" onclick="setProfile('A')">Learner A (Mất gốc/Trực quan)</button>
+      <button class="btn-pill" id="btnProfB" onclick="setProfile('B')">Learner B (Chuẩn)</button>
+      <button class="btn-pill" id="btnProfC" onclick="setProfile('C')">Learner C (Mở rộng)</button>
+      <select class="btn-pill" id="worldSelect" onchange="setWorld(this.value)">
+        <option value="WARM_STORYBOOK_TACTILE">Theme: Storybook Ấm Áp</option>
+        <option value="STEM_COMMAND_3D">Theme: Đài Chỉ Huy STEM</option>
+        <option value="EUCLIDEAN_ATELIER_PRO">Theme: Xưởng Hình Học</option>
+        <option value="DATA_OBSERVATORY_LAB">Theme: Đài Dữ Liệu</option>
+        <option value="REAL_PAPER_HYBRID_V04">Theme: Giấy Thật A4</option>
+      </select>
+      <a class="btn-pill" href="../pdf_student/YOURDREAM_LivingAsset_G8_11_YD-LA-GEO-G8-11_HocSinh.pdf" target="_blank" style="background:#10B981; color:#0F172A; border-color:#10B981;">📄 Mở Phiếu A4 (PDF)</a>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <section class="stage-column">
+      <div class="story-banner">
+        <h1>Bằng Chứng Không Lời: Trượt 4 Tam Giác Vuông Chứng Minh a² + b² = c²</h1>
+        <p><strong>Câu chuyện dẫn nhập:</strong> Trong cùng một khung hình vuông cạnh (a + b), khi bạn đặt 4 tam giác vuông bằng nhau theo Cách 1 thì phần trống ở giữa là hình vuông cạnh huyền c². Khi trượt nhẹ 4 tam giác đó về góc theo Cách 2, phần trống tách thành đúng hai hình vuông a² và b²!</p>
+      </div>
+
+      <div class="canvas-card">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+          <span style="font-weight:800; font-size:14px;">MÔ HÌNH NHÂN - QUẢ &amp; CÁN CÂN THĂNG BẰNG (PRIM_GEOMETRY_CUT_FOLD_RAY)</span>
+          <div style="display:flex; gap:6px;">
+            <button class="btn-pill" onclick="setTrialToDefault()">↺ Thử Nghiệm Ban Đầu</button>
+            <button class="btn-pill" onclick="resetTrial()">Đặt Lại</button>
+            <button class="btn-pill" onclick="checkCausalBalance()" style="background:#0284C7; color:#FFFFFF; border-color:#0284C7;">⚖ Kiểm Tra Cân Bằng Cán Cân</button>
+          </div>
+        </div>
+        <div class="canvas-viewport">
+          <canvas id="simCanvas" width="820" height="350"></canvas>
+        </div>
+
+        <div class="slider-deck">
+          <div class="slider-head">
+            <label for="trialSlider">Kéo thanh trượt tịnh tiến 4 tam giác vuông (0% → 100%):</label>
+            <span id="trialValueDisplay" style="font-size:16px; font-weight:800; color:var(--accent);"></span>
+          </div>
+          <input type="range" id="trialSlider"
+                 min="0"
+                 max="100"
+                 step="10"
+                 value="0"
+                 oninput="onSliderChange(this.value)">
+        </div>
+
+        <div id="statusBanner" class="status-banner status-warn"></div>
+      </div>
+
+      <div class="panel-card">
+        <h3>Sơ Đồ Cấu Trúc Chuẩn (Layered Vector SVG)</h3>
+        <div style="background:#FFFFFF; border-radius:10px; padding:8px; border:1px solid #CBD5E1;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" width="100%" height="100%">
+  <g id="art-layer">
+    <rect x="0" y="0" width="560" height="220" rx="12" fill="#F8FAFC" stroke="#2563EB" stroke-width="1.5"/>
+    <!-- Left frame (a+b)^2 with tilted c^2 -->
+    <rect x="45" y="42" width="140" height="140" fill="#DBEAFE" stroke="#1E40AF" stroke-width="2"/>
+    <polygon points="45,102 105,42 185,122 125,182" fill="#FEF08A" stroke="#CA8A04" stroke-width="2.2"/>
+    <!-- Right frame (a+b)^2 with a^2 and b^2 -->
+    <rect x="315" y="42" width="140" height="140" fill="#DBEAFE" stroke="#1E40AF" stroke-width="2"/>
+    <rect x="315" y="42" width="60" height="60" fill="#FCA5A5" stroke="#DC2626" stroke-width="2"/>
+    <rect x="375" y="102" width="80" height="80" fill="#86EFAC" stroke="#16A34A" stroke-width="2"/>
+  </g>
+  <g id="math-layer" font-family="Segoe UI, sans-serif">
+    <text x="115" y="118" font-size="15" font-weight="800" fill="#854D0E" text-anchor="middle">c²</text>
+    <text x="250" y="110" font-size="13" font-weight="800" fill="#1D4ED8" text-anchor="middle">Trượt 4 Δ vuông ⇒</text>
+    <text x="345" y="77" font-size="14" font-weight="800" fill="#991B1B" text-anchor="middle">a²</text>
+    <text x="415" y="147" font-size="14" font-weight="800" fill="#166534" text-anchor="middle">b²</text>
+    <text x="280" y="204" font-size="13" font-weight="800" fill="#0F172A" text-anchor="middle">Cùng khung (a+b)² trừ 4 tam giác vuông ⇒ a² + b² = c²</text>
+  </g>
+</svg>
+        </div>
+      </div>
+    </section>
+
+    <aside class="pedagogy-column">
+      <div class="panel-card">
+        <h3>1. Trợ Lý Sư Phạm Thích Ứng (Learner Profile A / B / C)</h3>
+        <div id="scaffoldText" class="scaffold-box"></div>
+      </div>
+
+      <div class="panel-card">
+        <h3>2. Bất Biến Toán Học &amp; Mô Hình Bài Toán</h3>
+        <div style="font-size:13px; margin-bottom:6px;"><strong>Mục tiêu:</strong> Hiểu tại sao trong mọi tam giác vuông, bình phương cạnh huyền luôn bằng tổng bình phương hai cạnh góc vuông (<span class="m-var">a</span><sup>2</sup> + <span class="m-var">b</span><sup>2</sup> = <span class="m-var">c</span><sup>2</sup>) thông qua bảo toàn diện tích phần trống.</div>
+        <div class="math-box">
+          <div>• <strong>Miền xác định:</strong> <span class="m-math">a, b, c > 0</span></div>
+          <div>• <strong>Quan hệ bất biến:</strong> <span class="m-math">S_trống = (a + b)² - 4·(<span class="m-frac"><span class="m-num">1</span><span class="m-den">2</span></span>·a·b) = <span class="m-var">c</span><sup>2</sup> = <span class="m-var">a</span><sup>2</sup> + <span class="m-var">b</span><sup>2</sup></span></div>
+          <div style="color:#F59E0B; margin-top:5px; font-size:12.8px;">• <strong>Nhiệm vụ:</strong> Điều chỉnh thanh trượt để đưa Cán Cân Nhân - Quả về trạng thái thăng bằng tuyệt đối!</div>
+          <div id="unlockedSolutionCard" style="display:none; margin-top:8px; padding:6px 9px; background:rgba(16,185,129,0.2); border-left:3px solid #10B981; border-radius:4px;">
+            <div style="font-weight:800; color:#10B981; font-size:12.5px;">★ ĐÃ GIẢI MÃ THÀNH CÔNG:</div>
+            <div style="font-size:13px; color:#F8FAFC; margin-top:3px;" class="m-math">Với a = 6, b = 8 <span class="m-op">&rArr;</span> <span class="m-var">c</span><sup>2</sup> = 6² + 8² = 36 + 64 = 100 <span class="m-op">&rArr;</span> c = 10</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-card">
+        <h3>3. Chốt Chặn Sai Lầm Điển Hình</h3>
+        <ul class="trap-list">
+          <li>Nhầm công thức tìm cạnh góc vuông với cạnh huyền: khi tìm cạnh góc vuông a lại lấy <span class="m-var">c</span><sup>2</sup> + <span class="m-var">b</span><sup>2</sup> thay vì <span class="m-var">c</span><sup>2</sup> - <span class="m-var">b</span><sup>2</sup>.</li><li>Quên khai căn bậc hai ở bước cuối (tính ra <span class="m-var">c</span><sup>2</sup> = 100 rồi kết luận luôn c = 100).</li>
+        </ul>
+      </div>
+
+      <div class="panel-card">
+        <h3>4. Thử Thách Tự Kiểm Tra Nhanh</h3>
+        <div class="quiz-box">
+          <div style="font-size:13.2px; font-weight:600;">Cho tam giác ABC vuông tại A có AB = 5 cm, AC = 12 cm. Tính độ dài cạnh huyền BC.</div>
+          <div class="quiz-input-row">
+            <input type="text" id="selfCheckInput" placeholder="Nhập câu trả lời của bạn...">
+            <button class="btn-pill active" onclick="checkQuickAnswer()">Kiểm tra</button>
+          </div>
+          <div id="selfCheckFeedback" style="font-size:13px; font-weight:700; min-height:20px;"></div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+<script>
+const ASSET = {"asset_id": "YD-LA-GEO-G8-11", "asset_no": "11", "skill_id": "S_G08_B15", "grade": 8, "strand_code": "HINH_HOC_VA_DO_LUONG", "strand_name": "Hình học, Đo lường & Không gian", "header_subtitle": "TOÁN 8 • ĐỊNH LÝ PYTHAGORE • CHỨNG MINH KHÔNG LỜI BẰNG BẤT BIẾN DIỆN TÍCH", "title": "Bằng Chứng Không Lời: Trượt 4 Tam Giác Vuông Chứng Minh a² + b² = c²", "story_hook": "Trong cùng một khung hình vuông cạnh (a + b), khi bạn đặt 4 tam giác vuông bằng nhau theo Cách 1 thì phần trống ở giữa là hình vuông cạnh huyền c². Khi trượt nhẹ 4 tam giác đó về góc theo Cách 2, phần trống tách thành đúng hai hình vuông a² và b²!", "objective": "Hiểu tại sao trong mọi tam giác vuông, bình phương cạnh huyền luôn bằng tổng bình phương hai cạnh góc vuông (a² + b² = c²) thông qua bảo toàn diện tích phần trống.", "artistic_world": "EUCLIDEAN_ATELIER_PRO", "primitives_used": ["PRIM_GEOMETRY_CUT_FOLD_RAY"], "interaction_level": 4, "interactive_engine": {"engine_type": "PYTHAGORAS_SLIDE_PROOF", "control_label": "Kéo thanh trượt tịnh tiến 4 tam giác vuông (0% → 100%):", "min_val": 0, "max_val": 100, "step_val": 10, "default_trial": 0, "target_solution": 100, "unit": "%", "parameters": {"leg_a": 6, "leg_b": 8, "hyp_c": 10, "target_solution": 100}}, "math_semantics": {"unknown_symbol": "c", "domain_constraint": "a, b, c > 0", "invariant_relation": "S_trống = (a + b)² - 4·(1/2·a·b) = c² = a² + b²", "target_equation": "Với a = 6, b = 8 ⇒ c² = 6² + 8² = 36 + 64 = 100 ⇒ c = 10", "verification_type": "RULE_BOUNDED_GEOMETRY_VERIFIED"}, "learner_scaffolding": {"A": "Khung gỗ bên ngoài không đổi và 4 miếng gỗ hình tam giác vuông bên trong cũng không đổi! Vậy phần diện tích màu vàng ở trạng thái 1 (c²) BẮT BUỘC phải bằng tổng diện tích hai ô vuông ở trạng thái 2 (a² + b²)!", "B": "Khai triển đại số đồng thời với hình học: (a + b)² - 2ab = a² + b² = c².", "C": "Áp dụng Định lý Pythagore đảo để kiểm tra xem bộ ba đoạn thẳng (a, b, c) bất kỳ có tạo thành góc vuông của người thợ xây hay không."}, "misconceptions": ["Nhầm công thức tìm cạnh góc vuông với cạnh huyền: khi tìm cạnh góc vuông a lại lấy c² + b² thay vì c² - b².", "Quên khai căn bậc hai ở bước cuối (tính ra c² = 100 rồi kết luận luôn c = 100)."], "knowledge_activation": "Trong một tam giác vuông, cạnh đối diện với góc vuông là cạnh lớn nhất và được gọi là cạnh huyền.", "worked_example": {"problem": "Một cánh buồm hình tam giác vuông có hai cạnh góc vuông dài a = 6 m và b = 8 m. Tính độ dài cạnh huyền c của cánh buồm và giải thích bằng bảo toàn diện tích trong hình vuông cạnh (a + b) = 14 m.", "steps": ["Bước 1 (Áp dụng định lý Pythagore): Trong tam giác vuông, ta có c² = a² + b² = 6² + 8² = 36 + 64 = 100.", "Bước 2 (Khai căn bậc hai): Vì c > 0 nên c = √100 = 10 (m).", "Bước 3 (Đối chiếu diện tích khung 14 m × 14 m): Diện tích khung lớn là 14² = 196 m². Tổng diện tích 4 tam giác vuông là 4 × (6×8/2) = 96 m². Phần trống còn lại: 196 - 96 = 100 m² = c² = 36 + 64."]}, "basic_exercises": [{"id": "B1", "label": "Câu 2a (Cơ bản)", "prompt": "Cho tam giác ABC vuông tại A có AB = 5 cm, AC = 12 cm. Tính độ dài cạnh huyền BC.", "final_answer": "BC = 13 cm", "teacher_solution": "BC² = AB² + AC² = 5² + 12² = 25 + 144 = 169 ⇒ BC = √169 = 13 (cm)."}, {"id": "B2", "label": "Câu 2b (Thực hành)", "prompt": "Cho tam giác DEF vuông tại D có cạnh huyền EF = 15 cm và cạnh góc vuông DE = 9 cm. Tính độ dài cạnh DF.", "final_answer": "DF = 12 cm", "teacher_solution": "DF² = EF² - DE² = 15² - 9² = 225 - 81 = 144 ⇒ DF = √144 = 12 (cm)."}], "advanced_exercise": {"id": "ADV", "prompt": "Tam giác có độ dài ba cạnh là 9 cm, 12 cm và 15 cm có phải là tam giác vuông không? Vì sao?", "final_answer": "Là tam giác vuông", "teacher_solution": "Ta có 9² + 12² = 81 + 144 = 225 và 15² = 225. Vì 9² + 12² = 15² nên theo định lý Pythagore đảo, tam giác đó vuông."}, "real_world_problem": {"id": "RW", "prompt": "Một chiếc thang dài 5 m được đặt dựa vào bức tường thẳng đứng. Để an toàn, chân thang phải cách chân tường 3 m. Hỏi đầu trên của thang chạm tường ở độ cao bao nhiêu mét?", "final_answer": "4 m", "teacher_solution": "Áp dụng định lý Pythagore: h² = 5² - 3² = 25 - 9 = 16 ⇒ h = 4 (m)."}, "text_notes": {"note1_start": {"title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!", "bullets": ["Xác định góc vuông trước tiên → Cạnh đối diện góc vuông là CẠNH HUYỀN (dài nhất).", "Tìm cạnh huyền: CỘNG bình phương (c² = a² + b²). Tìm cạnh góc vuông: TRỪ bình phương (a² = c² - b²)."]}, "note2_watchout": {"title": "2. CẨN THẬN LỖI NÀY!", "bullets": ["Tính xong c² nhớ lấy CĂN BẬC HAI √(c²) để ra độ dài cạnh c!"]}, "note3_check": {"title": "3. KIỂM TRA LẠI NHÉ!", "bullets": ["Ghi nhớ 3 bộ số Pythagore vàng: (3; 4; 5), (6; 8; 10), (5; 12; 13)."]}, "note4_reflection": {"title": "HÔM NAY MÌNH ĐÃ HIỂU..."}}};
+const WORLDS = {"WARM_STORYBOOK_TACTILE": {"world_id": "WARM_STORYBOOK_TACTILE", "name_vi": "Xưởng Truyện Tranh & Vật Thể Ấm Áp (Storybook Tactile)", "bg_primary": "#FDF8F0", "bg_panel": "#FFFFFF", "ink_primary": "#292524", "accent_main": "#D97706", "accent_secondary": "#059669", "border_color": "#E7E5E4", "mood": "Ấm áp, gần gũi, giảm lo âu Toán học, phù hợp mở đầu trực quan"}, "STEM_COMMAND_3D": {"world_id": "STEM_COMMAND_3D", "name_vi": "Đài Chỉ Huy Kỹ Thuật STEM 3D/2.5D (STEM Command Deck)", "bg_primary": "#0F172A", "bg_panel": "#1E293B", "ink_primary": "#F8FAFC", "accent_main": "#38BDF8", "accent_secondary": "#10B981", "border_color": "#334155", "mood": "Hiện đại, mô phỏng hệ thống kỹ thuật, vận tải, thủy điện & đồ thị"}, "EUCLIDEAN_ATELIER_PRO": {"world_id": "EUCLIDEAN_ATELIER_PRO", "name_vi": "Xưởng Kiến Trúc & Hình Học Chuẩn Xác (Euclidean Atelier)", "bg_primary": "#F8FAFC", "bg_panel": "#FFFFFF", "ink_primary": "#0F172A", "accent_main": "#2563EB", "accent_secondary": "#DC2626", "border_color": "#CBD5E1", "mood": "Chuẩn mực, lưới tọa độ rõ nét, cắt ghép hình học & tia sáng đồng dạng"}, "DATA_OBSERVATORY_LAB": {"world_id": "DATA_OBSERVATORY_LAB", "name_vi": "Đài Quan Sát Dữ Liệu & Mô Phỏng Ngẫu Nhiên (Data Observatory)", "bg_primary": "#F5F3FF", "bg_panel": "#FFFFFF", "ink_primary": "#1E1B4B", "accent_main": "#7C3AED", "accent_secondary": "#0D9488", "border_color": "#DDD6FE", "mood": "Khám phá quy luật số lớn, cân bằng trọng tâm thống kê & tăng trưởng tài chính"}, "REAL_PAPER_HYBRID_V04": {"world_id": "REAL_PAPER_HYBRID_V04", "name_vi": "Phiếu Học Tập Giấy Thật & Giấy Nhớ (Real Paper v0.4)", "bg_primary": "#EFECE6", "bg_panel": "#FFFFFF", "ink_primary": "#111827", "accent_main": "#1D4ED8", "accent_secondary": "#B91C1C", "border_color": "#D1D5DB", "mood": "Đồng bộ 1:1 với vở học sinh và trang in A4 chất lượng cao"}};
+let currentProfile = 'A';
+let currentTrial = parseFloat(ASSET.interactive_engine.default_trial);
+
+function setWorld(worldId) {
+  const w = WORLDS[worldId] || WORLDS['STEM_COMMAND_3D'];
+  document.documentElement.style.setProperty('--bg-main', w.bg_primary);
+  document.documentElement.style.setProperty('--bg-panel', w.bg_panel);
+  document.documentElement.style.setProperty('--ink', w.ink_primary);
+  document.documentElement.style.setProperty('--accent', w.accent_main);
+  document.documentElement.style.setProperty('--accent2', w.accent_secondary);
+  document.documentElement.style.setProperty('--border', w.border_color);
+  document.getElementById('worldSelect').value = worldId;
+  drawSimulation();
+}
+
+function setProfile(p) {
+  currentProfile = p;
+  ['A', 'B', 'C'].forEach(k => {
+    document.getElementById('btnProf' + k).classList.toggle('active', k === p);
+  });
+  document.getElementById('scaffoldText').innerHTML =
+    '<strong>Gợi ý Hồ sơ ' + p + ':</strong> ' + ASSET.learner_scaffolding[p];
+}
+
+function setTrialToDefault() {
+  const v = ASSET.interactive_engine.default_trial;
+  document.getElementById('trialSlider').value = v;
+  onSliderChange(v);
+}
+
+function resetTrial() {
+  const v = ASSET.interactive_engine.default_trial;
+  document.getElementById('trialSlider').value = v;
+  onSliderChange(v);
+}
+
+function checkCausalBalance() {
+  const target = parseFloat(ASSET.interactive_engine.target_solution);
+  const isSol = Math.abs(currentTrial - target) < 0.05;
+  const banner = document.getElementById('statusBanner');
+  if (isSol) {
+    banner.className = 'status-banner status-ok';
+    banner.textContent = '★ XÁC NHẬN CÂN BẰNG! Chúc mừng bạn đã giải mã chính xác mô hình nhân - quả.';
+    const solCard = document.getElementById('unlockedSolutionCard');
+    if (solCard) solCard.style.display = 'block';
+  } else {
+    banner.className = 'status-banner status-warn';
+    banner.textContent = '⚠ CÁN CÂN CHƯA THĂNG BẰNG: Quan sát độ lệch kim chỉ thị và tiếp tục điều chỉnh thanh trượt!';
+  }
+}
+
+function onSliderChange(val) {
+  currentTrial = parseFloat(val);
+  document.getElementById('trialValueDisplay').textContent =
+    currentTrial + ' ' + ASSET.interactive_engine.unit;
+  drawSimulation();
+}
+
+function checkQuickAnswer() {
+  const raw = document.getElementById('selfCheckInput').value.trim().toLowerCase();
+  const ans = ASSET.basic_exercises[0].final_answer.toLowerCase();
+  const fb = document.getElementById('selfCheckFeedback');
+  const numMatch = ans.match(/-?\d+([.,]\d+)?/);
+  const keyNum = numMatch ? numMatch[0].replace(',', '.') : ans;
+  if (raw && (raw.includes(keyNum) || raw === ans)) {
+    fb.style.color = '#10B981';
+    fb.textContent = '✓ Chính xác! Bạn đã tìm ra kết quả đúng.';
+  } else {
+    fb.style.color = '#F59E0B';
+    fb.textContent = '💡 Gợi ý Socratic: ' + ASSET.text_notes.note1_start.bullets[0] + ' Hãy quan sát cán cân và thử lại!';
+  }
+}
+
+function drawPhysicalScene(ctx, x0, y0, w, h, asset, val, isSol) {
+  ctx.save();
+  ctx.fillStyle = '#FFFFFF';
+  ctx.strokeStyle = '#CBD5E1';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  if (ctx.roundRect) ctx.roundRect(x0, y0, w, h, 8);
+  else ctx.rect(x0, y0, w, h);
+  ctx.fill(); ctx.stroke();
+
+  ctx.fillStyle = '#0F172A';
+  ctx.font = 'bold 12px Segoe UI';
+  ctx.fillText('HIỆN TRƯỜNG THỰC TẾ: ' + asset.title.split('(')[0].trim(), x0 + 12, y0 + 20);
+
+  const eng = asset.interactive_engine.engine_type;
+  const p = asset.interactive_engine.parameters;
+
+  if (eng === 'GRID_TILING_GCD') {
+    const d = Math.max(1, Math.round(val));
+    const scale = 11;
+    const cw = p.width * scale, ch = p.height * scale;
+    const ox = x0 + 20, oy = y0 + 35;
+    ctx.strokeStyle = '#78350F'; ctx.lineWidth = 2.5;
+    ctx.strokeRect(ox, oy, cw, ch);
+    const cols = Math.floor(p.width / d), rows = Math.floor(p.height / d);
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < cols; c++) {
+        ctx.fillStyle = (r + c) % 2 === 0 ? '#FDE68A' : '#FCD34D';
+        ctx.fillRect(ox + c * d * scale + 1, oy + r * d * scale + 1, d * scale - 2, d * scale - 2);
+      }
+    }
+    const remW = p.width % d, remH = p.height % d;
+    if (remW > 0) {
+      ctx.fillStyle = 'rgba(239, 68, 68, 0.5)';
+      ctx.fillRect(ox + cols * d * scale, oy, remW * scale, ch);
+    }
+    if (remH > 0) {
+      ctx.fillStyle = 'rgba(239, 68, 68, 0.5)';
+      ctx.fillRect(ox, oy + rows * d * scale, cw, remH * scale);
+    }
+    ctx.fillStyle = isSol ? '#15803D' : '#991B1B';
+    ctx.font = 'bold 11px Segoe UI';
+    ctx.fillText(isSol ? '✓ Lát khít: 4 x 3 = 12 viên (Không cắt)' : '✗ Thừa đỏ: dư ' + remW + 'dm & ' + remH + 'dm (Phải cắt gạch)', ox, oy + ch + 20);
+  } else if (eng === 'RATE_BALANCE_RATIONAL' || asset.asset_id === 'YD-LA-ALG-G8-07') {
+    const numTrucks = Math.max(1, Math.round(60 / val));
+    const ox = x0 + 15, oy = y0 + 35;
+    ctx.fillStyle = '#334155';
+    ctx.fillRect(ox, oy + 70, w - 30, 40);
+    ctx.strokeStyle = '#FDE047'; ctx.setLineDash([10, 8]); ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(ox, oy + 90); ctx.lineTo(ox + w - 30, oy + 90); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = '#0284C7';
+    ctx.fillRect(ox + w - 65, oy + 30, 38, 40);
+    ctx.fillStyle = '#0F172A'; ctx.font = 'bold 9px Segoe UI';
+    ctx.fillText('KHO GẠO 60T', ox + w - 75, oy + 25);
+    const displayTrucks = Math.min(5, numTrucks);
+    for (let t = 0; t < displayTrucks; t++) {
+      const tx = ox + 10 + t * 44;
+      const ty = oy + 76;
+      ctx.fillStyle = isSol ? '#10B981' : '#38BDF8';
+      ctx.fillRect(tx, ty, 30, 16);
+      ctx.fillStyle = '#1E293B';
+      ctx.beginPath(); ctx.arc(tx + 6, ty + 18, 4, 0, Math.PI * 2); ctx.fill();
+      ctx.beginPath(); ctx.arc(tx + 22, ty + 18, 4, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#F59E0B';
+      ctx.fillRect(tx + 2, ty - 5, 16, 5);
+    }
+    ctx.fillStyle = '#0F172A'; ctx.font = '11.5px Segoe UI';
+    ctx.fillText('Đội xe dự định: (60/' + val + ') = ' + (60/val).toFixed(1) + ' xe', ox, oy + 145);
+    ctx.fillText('Thực tế thêm 3 xe: (60/' + (val+3) + ') = ' + (60/(val+3)).toFixed(1) + ' xe', ox, oy + 165);
+    ctx.fillStyle = isSol ? '#15803D' : '#B45309'; ctx.font = 'bold 11.5px Segoe UI';
+    ctx.fillText('Độ lệch thời gian thực tế: Δt = ' + (60/val - 60/(val+3)).toFixed(2) + ' ngày', ox, oy + 188);
+  } else if (asset.asset_id === 'YD-LA-GEO-G8-13') {
+    const ox = x0 + 60, oy = y0 + 185;
+    ctx.strokeStyle = '#0F172A'; ctx.lineWidth = 2.5;
+    ctx.beginPath(); ctx.moveTo(ox - 25, oy); ctx.lineTo(ox + 160, oy); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(ox, oy + 10); ctx.lineTo(ox, oy - 135); ctx.stroke();
+    const groundD = 70, wallH = 95;
+    ctx.strokeStyle = isSol ? '#10B981' : '#E11D48'; ctx.lineWidth = 4.5;
+    ctx.beginPath(); ctx.moveTo(ox, oy - wallH); ctx.lineTo(ox + groundD, oy); ctx.stroke();
+    ctx.fillStyle = '#0F172A'; ctx.font = '11px Segoe UI';
+    ctx.fillText('Tường: 4m', ox + 6, oy - 50);
+    ctx.fillText('Đất: 3m', ox + 20, oy + 16);
+    ctx.fillStyle = isSol ? '#15803D' : '#BE123C'; ctx.font = 'bold 11.5px Segoe UI';
+    ctx.fillText('Thang: L = ' + val + 'm ' + (isSol ? '(Chuẩn khít 5m)' : '(Lệch đỉnh tường)'), ox + 40, oy - 60);
+  } else if (asset.asset_id === 'YD-LA-ALG-G9-09') {
+    const ox = x0 + 175, oy = y0 + 170;
+    ctx.strokeStyle = '#0F172A'; ctx.lineWidth = 2;
+    ctx.fillStyle = '#E0F2FE'; ctx.fillRect(x0 + 10, oy, w - 20, 45);
+    ctx.beginPath(); ctx.strokeStyle = '#0284C7'; ctx.lineWidth = 3.5;
+    for (let px = -110; px <= 110; px += 4) {
+      const py = - (px * px) / 150;
+      if (px === -110) ctx.moveTo(ox + px, oy + py);
+      else ctx.lineTo(ox + px, oy + py);
+    }
+    ctx.stroke();
+    const bx = val * 7.5;
+    ctx.fillStyle = isSol ? '#10B981' : '#F59E0B';
+    ctx.fillRect(ox - bx, oy - 48, bx * 2, 48);
+    ctx.fillStyle = '#0F172A'; ctx.font = 'bold 11px Segoe UI';
+    ctx.fillText('Sà lan mép x = ' + val + 'm', ox - 45, oy - 55);
+  } else {
+    const ox = x0 + 20, oy = y0 + 40;
+    ctx.fillStyle = '#F8FAFC'; ctx.strokeStyle = '#CBD5E1'; ctx.lineWidth = 1;
+    ctx.fillRect(ox, oy, w - 40, 150);
+    ctx.strokeRect(ox, oy, w - 40, 150);
+    ctx.fillStyle = '#0F172A'; ctx.font = 'bold 12.5px Segoe UI';
+    ctx.fillText(asset.title.split('(')[0].trim(), ox + 15, oy + 28);
+    ctx.font = '11.5px Segoe UI'; ctx.fillStyle = '#475569';
+    ctx.fillText('Biến số: ' + asset.interactive_engine.control_label, ox + 15, oy + 60);
+    ctx.fillText('Thử nghiệm: ' + val + ' ' + asset.interactive_engine.unit, ox + 15, oy + 88);
+    ctx.fillStyle = isSol ? '#15803D' : '#D97706'; ctx.font = 'bold 12px Segoe UI';
+    ctx.fillText(isSol ? '✓ Đạt trạng thái cân bằng lý tưởng!' : '→ Đang khảo sát sai số nhân - quả...', ox + 15, oy + 125);
+  }
+  ctx.restore();
+}
+
+function drawCausalBalanceScale(ctx, cx, cy, armL, asset, val, target, isSol) {
+  ctx.save();
+  ctx.fillStyle = '#0F172A';
+  ctx.font = 'bold 12.5px Segoe UI';
+  ctx.fillText('CÁN CÂN THĂNG BẰNG ĐẠI SỐ (EQUILIBRIUM)', cx - 135, cy - 80);
+
+  const diff = val - target;
+  const tiltDeg = isSol ? 0.0 : Math.max(-24.0, Math.min(24.0, diff * 7.0));
+  const tiltRad = tiltDeg * Math.PI / 180;
+
+  // Stand
+  ctx.fillStyle = '#475569';
+  ctx.beginPath();
+  ctx.moveTo(cx - 22, cy + 90);
+  ctx.lineTo(cx + 22, cy + 90);
+  ctx.lineTo(cx + 5, cy);
+  ctx.lineTo(cx - 5, cy);
+  ctx.closePath();
+  ctx.fill();
+
+  // Pivot circle
+  ctx.fillStyle = '#0284C7';
+  ctx.beginPath(); ctx.arc(cx, cy, 8, 0, Math.PI * 2); ctx.fill();
+  ctx.fillStyle = '#FFFFFF';
+  ctx.beginPath(); ctx.arc(cx, cy, 3.5, 0, Math.PI * 2); ctx.fill();
+
+  // Dial Arc
+  ctx.strokeStyle = '#94A3B8'; ctx.lineWidth = 1.8;
+  ctx.beginPath();
+  ctx.arc(cx, cy - 6, 36, -Math.PI * 0.8, -Math.PI * 0.2);
+  ctx.stroke();
+
+  // Green center mark
+  ctx.strokeStyle = '#10B981'; ctx.lineWidth = 3.5;
+  ctx.beginPath();
+  ctx.arc(cx, cy - 6, 36, -Math.PI * 0.53, -Math.PI * 0.47);
+  ctx.stroke();
+
+  // Indicator Needle
+  const needleAngle = -Math.PI / 2 + tiltRad;
+  ctx.strokeStyle = isSol ? '#10B981' : '#EF4444';
+  ctx.lineWidth = 2.2;
+  ctx.beginPath();
+  ctx.moveTo(cx, cy);
+  ctx.lineTo(cx + Math.cos(needleAngle) * 40, cy + Math.sin(needleAngle) * 40);
+  ctx.stroke();
+
+  // Rotating Beam
+  const cosT = Math.cos(tiltRad), sinT = Math.sin(tiltRad);
+  const lx = cx - cosT * armL, ly = cy - sinT * armL;
+  const rx = cx + cosT * armL, ry = cy + sinT * armL;
+
+  ctx.strokeStyle = isSol ? '#10B981' : '#F59E0B';
+  ctx.lineWidth = 5.5;
+  ctx.lineCap = 'round';
+  ctx.beginPath(); ctx.moveTo(lx, ly); ctx.lineTo(rx, ry); ctx.stroke();
+
+  // Pans
+  const panH = 46;
+  ctx.strokeStyle = '#64748B'; ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.moveTo(lx, ly); ctx.lineTo(lx - 18, ly + panH); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(lx, ly); ctx.lineTo(lx + 18, ly + panH); ctx.stroke();
+
+  ctx.fillStyle = isSol ? '#D1FAE5' : '#E0F2FE';
+  ctx.strokeStyle = isSol ? '#10B981' : '#0284C7';
+  ctx.lineWidth = 1.8;
+  ctx.beginPath();
+  if (ctx.roundRect) ctx.roundRect(lx - 42, ly + panH, 84, 32, 5);
+  else ctx.rect(lx - 42, ly + panH, 84, 32);
+  ctx.fill(); ctx.stroke();
+  ctx.fillStyle = '#0F172A'; ctx.font = 'bold 10.5px Segoe UI';
+  ctx.fillText('Vế Thử: ' + val, lx - 34, ly + panH + 15);
+  ctx.font = '9.5px Segoe UI'; ctx.fillStyle = '#0369A1';
+  ctx.fillText(isSol ? '✓ Cân Bằng' : (diff > 0 ? 'Thừa tải' : 'Thiếu tải'), lx - 34, ly + panH + 26);
+
+  ctx.strokeStyle = '#64748B'; ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.moveTo(rx, ry); ctx.lineTo(rx - 18, ry + panH); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(rx, ry); ctx.lineTo(rx + 18, ry + panH); ctx.stroke();
+
+  ctx.fillStyle = isSol ? '#D1FAE5' : '#FEF3C7';
+  ctx.strokeStyle = isSol ? '#10B981' : '#F59E0B';
+  ctx.lineWidth = 1.8;
+  ctx.beginPath();
+  if (ctx.roundRect) ctx.roundRect(rx - 42, ry + panH, 84, 32, 5);
+  else ctx.rect(rx - 42, ry + panH, 84, 32);
+  ctx.fill(); ctx.stroke();
+  ctx.fillStyle = '#0F172A'; ctx.font = 'bold 10.5px Segoe UI';
+  ctx.fillText('Đích Đề Bài', rx - 34, ry + panH + 15);
+  ctx.font = '9.5px Segoe UI'; ctx.fillStyle = isSol ? '#15803D' : '#B45309';
+  ctx.fillText(isSol ? '0.0° Khớp 100%' : 'Chờ cân bằng', rx - 34, ry + panH + 26);
+
+  // Status banner under scale
+  ctx.fillStyle = isSol ? '#ECFDF5' : '#FFFBEB';
+  ctx.strokeStyle = isSol ? '#10B981' : '#F59E0B';
+  ctx.lineWidth = 1.2;
+  ctx.beginPath();
+  if (ctx.roundRect) ctx.roundRect(cx - 125, cy + 82, 250, 22, 4);
+  else ctx.rect(cx - 125, cy + 82, 250, 22);
+  ctx.fill(); ctx.stroke();
+  ctx.fillStyle = isSol ? '#065F46' : '#92400E';
+  ctx.font = 'bold 10.5px Segoe UI';
+  ctx.fillText(isSol ? '★ CÁN CÂN CÂN BẰNG HOÀN TOÀN (0° LỆCH)' : ('⚠ CÁN CÂN LỆCH ' + (diff > 0 ? 'TRÁI' : 'PHẢI') + ' (' + Math.abs(tiltDeg).toFixed(1) + '°)'), cx - 115, cy + 97);
+
+  ctx.restore();
+}
+
+function drawCausalReasoningRibbon(ctx, x, y, w, h, asset, val, target, isSol) {
+  ctx.save();
+  ctx.fillStyle = '#0F172A';
+  ctx.strokeStyle = isSol ? '#10B981' : '#38BDF8';
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  if (ctx.roundRect) ctx.roundRect(x, y, w, h, 7);
+  else ctx.rect(x, y, w, h);
+  ctx.fill(); ctx.stroke();
+
+  ctx.fillStyle = isSol ? '#10B981' : '#38BDF8';
+  ctx.font = 'bold 11px Segoe UI';
+  ctx.fillText('SỔ TAY LẬP LUẬN NHÂN - QUẢ (CAUSAL REASONING LOG):', x + 14, y + 18);
+
+  ctx.fillStyle = '#F8FAFC';
+  ctx.font = '11px Segoe UI';
+  const diff = val - target;
+  let causeText = '▶ Hành động: Thử giá trị = ' + val + ' ' + asset.interactive_engine.unit + '.';
+  let effectText = isSol
+    ? '▶ Hệ quả: Hai vế phương trình đạt thế cân bằng tuyệt đối! Mọi bất biến toán học được thỏa mãn.'
+    : (diff > 0
+        ? '▶ Hệ quả: Giá trị thử nghiệm cao hơn điểm cân bằng, vế trái thừa tải làm cán cân lệch.'
+        : '▶ Hệ quả: Giá trị thử nghiệm thấp hơn điểm cân bằng, vế trái thiếu tải so với yêu cầu.');
+  let invariantText = '▶ Bảo toàn bất biến: Giữ nguyên 100% các điều kiện và hằng số của bài toán.';
+
+  ctx.fillText(causeText + '  ' + effectText, x + 14, y + 36);
+  ctx.fillStyle = '#94A3B8';
+  ctx.font = '10.5px Segoe UI';
+  ctx.fillText(invariantText + ' (Không tự ý biến dạng giả thiết khi thử sai số).', x + 14, y + 52);
+
+  ctx.restore();
+}
+
+function drawSimulation() {
+  const canvas = document.getElementById('simCanvas');
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  ctx.clearRect(0, 0, W, H);
+
+  const target = parseFloat(ASSET.interactive_engine.target_solution);
+  const isSol = Math.abs(currentTrial - target) < 0.05;
+  const banner = document.getElementById('statusBanner');
+  const solCard = document.getElementById('unlockedSolutionCard');
+
+  // Background
+  const bgGrad = ctx.createLinearGradient(0, 0, 0, H);
+  bgGrad.addColorStop(0, '#F8FAFC');
+  bgGrad.addColorStop(1, '#F1F5F9');
+  ctx.fillStyle = bgGrad;
+  ctx.fillRect(0, 0, W, H);
+
+  ctx.strokeStyle = '#E2E8F0';
+  ctx.lineWidth = 1;
+  for (let x = 0; x < W; x += 35) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke(); }
+  for (let y = 0; y < H; y += 35) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); }
+
+  // Divider
+  ctx.strokeStyle = '#CBD5E1'; ctx.lineWidth = 1.5; ctx.setLineDash([4, 4]);
+  ctx.beginPath(); ctx.moveTo(410, 10); ctx.lineTo(410, 265); ctx.stroke();
+  ctx.setLineDash([]);
+
+  // 1. Physical Scene Simulation (Left)
+  drawPhysicalScene(ctx, 35, 15, 360, 250, ASSET, currentTrial, isSol);
+
+  // 2. Dynamic Causal Balance Scale (Right)
+  drawCausalBalanceScale(ctx, 615, 135, 140, ASSET, currentTrial, target, isSol);
+
+  // 3. Bottom Socratic Causal Reasoning Ribbon
+  drawCausalReasoningRibbon(ctx, 20, 275, 780, 65, ASSET, currentTrial, target, isSol);
+
+  // Status Banner & Unlocked Solution Card
+  if (isSol) {
+    banner.className = 'status-banner status-ok';
+    banner.textContent = '★ TRẠNG THÁI CÂN BẰNG ĐẠT ĐƯỢC! Mô hình toán học đã được thỏa mãn tuyệt đối.';
+    if (solCard) solCard.style.display = 'block';
+  } else {
+    banner.className = 'status-banner status-warn';
+    banner.textContent = '⚠ CÁN CÂN ĐANG MẤT CÂN BẰNG: Hãy quan sát độ lệch đĩa cân và tiếp tục điều chỉnh để tìm điểm thăng bằng!';
+    if (solCard) solCard.style.display = 'none';
+  }
+}
+
+setProfile('A');
+setWorld(ASSET.artistic_world);
+onSliderChange(ASSET.interactive_engine.default_trial);
+</script>
+</body>
+</html>

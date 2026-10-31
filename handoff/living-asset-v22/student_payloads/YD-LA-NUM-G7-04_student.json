@@ -1,0 +1,88 @@
+{
+  "asset_id": "YD-LA-NUM-G7-04",
+  "asset_no": "04",
+  "skill_id": "S_G07_B05",
+  "grade": 7,
+  "strand_code": "SO_HOC_VA_TAP_HOP",
+  "strand_name": "Số học & Tập hợp",
+  "title": "Bí Ẩn Đường Chéo Hình Vuông Đơn Vị & Sự Ra Đời Của Số Vô Tỉ √2",
+  "story_hook": "Ghép hai hình vuông nhỏ cạnh 1 dm (diện tích 1 dm²) bằng cách cắt theo đường chéo thành 4 tam giác vuông rồi xếp lại thành một hình vuông lớn diện tích 2 dm². Cạnh của hình vuông lớn chính là đường chéo d của hình vuông nhỏ: d² = 2 ⇒ d = √2!",
+  "objective": "Hiểu ý nghĩa hình học cụ thể của số vô tỉ √2 (cạnh hình vuông có diện tích bằng 2) và cách biểu diễn chính xác điểm √2 trên trục số bằng compa.",
+  "artistic_world": "EUCLIDEAN_ATELIER_PRO",
+  "primitives_used": [
+    "PRIM_GEOMETRY_CUT_FOLD_RAY",
+    "PRIM_NUMBER_LINE_VECTOR"
+  ],
+  "interactive_engine": {
+    "engine_type": "SQRT2_COMPASS_ZOOM",
+    "control_label": "Thử nghiệm cạnh hình vuông d để diện tích d² tiệm cận 2:",
+    "min_val": 1.0,
+    "max_val": 2.0,
+    "step_val": 0.05,
+    "default_trial": 1.4,
+    "unit": "dm"
+  },
+  "learner_scaffolding": {
+    "A": "Đừng sợ ký hiệu √2! Nó chỉ đơn giản là độ dài đường chéo của một viên gạch vuông cạnh 1 dm. Khi lấy compa quay đường chéo đó xuống trục số, kim compa chạm đúng điểm √2 ≈ 1,414...",
+    "B": "Hai hình vuông diện tích 1 dm² cắt ghép thành hình vuông lớn có diện tích S = 2 dm². Vì S = d² = 2 nên cạnh hình vuông lớn là d = √2.",
+    "C": "Chứng minh phản chứng cổ điển: Vì sao không tồn tại phân số tối giản m/n nào thỏa mãn (m/n)² = 2?"
+  },
+  "misconceptions": [
+    "Tưởng nhầm √2 bằng đúng 1,4 hoặc 1,41 (thực chất 1,4² = 1,96 < 2 và 1,41² = 1,9881 < 2).",
+    "Gộp nhầm căn bậc hai số học: viết √9 = ±3 (chuẩn SGK Toán 7: căn bậc hai số học của a ≥ 0 là số KHÔNG ÂM)."
+  ],
+  "worked_example": {
+    "problem": "Cắt hai hình vuông cạnh 1 dm dọc theo đường chéo thành 4 tam giác vuông bằng nhau rồi ghép thành một hình vuông lớn. Tính diện tích và độ dài cạnh của hình vuông lớn (làm tròn đến chữ số thập phân thứ hai).",
+    "steps": [
+      "Bước 1 (Bảo toàn diện tích): Diện tích mỗi hình vuông nhỏ là 1² = 1 (dm²). Hình vuông lớn ghép từ hai hình vuông nhỏ nên có diện tích S = 1 + 1 = 2 (dm²).",
+      "Bước 2 (Thiết lập quan hệ cạnh): Gọi độ dài cạnh hình vuông lớn là d (d > 0). Ta có d² = 2 ⇒ d = √2 (dm).",
+      "Bước 3 (Xấp xỉ thập phân): Vì √2 = 1,4142... nên làm tròn đến chữ số thập phân thứ hai ta được d ≈ 1,41 (dm)."
+    ]
+  },
+  "basic_exercises": [
+    {
+      "id": "B1",
+      "label": "Câu 2a (Cơ bản)",
+      "prompt": "Tính giá trị biểu thức: M = √49 + √25 - 2·√9."
+    },
+    {
+      "id": "B2",
+      "label": "Câu 2b (Thực hành)",
+      "prompt": "Một tấm thảm hình vuông có diện tích 81 m². Tính độ dài cạnh và chu vi của tấm thảm đó."
+    }
+  ],
+  "advanced_exercise": {
+    "id": "ADV",
+    "prompt": "So sánh hai số thực không dùng máy tính: A = 5 và B = √23."
+  },
+  "real_world_problem": {
+    "id": "RW",
+    "prompt": "Sân trường có một bồn hoa hình vuông diện tích 18 m². Bác bảo vệ muốn căng dây đèn trang trí dọc theo cạnh bồn hoa. Hỏi mỗi cạnh bồn hoa dài khoảng bao nhiêu mét (làm tròn đến hàng phần mười)?"
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Biết diện tích hình vuông S → Cạnh hình vuông luôn bằng √S (với S ≥ 0).",
+        "Muốn so sánh số nguyên k với √a, hãy đưa k vào trong căn: k = √(k²)."
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "Căn bậc hai số học √a LUÔN KHÔNG ÂM: √16 = 4 (tuyệt đối không viết √16 = -4)."
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Bình phương lại kết quả vừa tìm được xem có bằng đúng số dưới dấu căn hay không."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU..."
+    }
+  },
+  "svg_file": "svg_assets/YD-LA-NUM-G7-04.svg",
+  "interactive_html_file": "interactive_experiences/YD-LA-NUM-G7-04.html"
+}

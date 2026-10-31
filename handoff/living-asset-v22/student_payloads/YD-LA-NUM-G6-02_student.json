@@ -1,0 +1,87 @@
+{
+  "asset_id": "YD-LA-NUM-G6-02",
+  "asset_no": "02",
+  "skill_id": "S_G06_B14",
+  "grade": 6,
+  "strand_code": "SO_HOC_VA_TAP_HOP",
+  "strand_name": "Số học & Tập hợp",
+  "title": "Tàu Ngầm Thám Hiểm Rãnh Mariana: Vì Sao Trừ Đi Số Âm Lại Là Cộng?",
+  "story_hook": "Tàu ngầm đang ở độ sâu -120 m so với mực nước biển. Khi thuyền trưởng ra lệnh 'Thả bỏ 3 quả tạ chì' (mỗi quả tạ từng kéo tàu chìm -15 m), tàu sẽ nổi lên hay chìm xuống?",
+  "objective": "Trực quan hóa quy tắc trừ số nguyên a - (-b) = a + b thông qua cơ chế tháo bỏ vật nặng trên trục số thẳng đứng.",
+  "artistic_world": "EUCLIDEAN_ATELIER_PRO",
+  "primitives_used": [
+    "PRIM_NUMBER_LINE_VECTOR"
+  ],
+  "interactive_engine": {
+    "engine_type": "SUBMARINE_VECTOR_LINE",
+    "control_label": "Số quả tạ chì (-15m/quả) được tháo bỏ khỏi tàu:",
+    "min_val": -2,
+    "max_val": 6,
+    "step_val": 1,
+    "default_trial": 1,
+    "unit": "quả tạ"
+  },
+  "learner_scaffolding": {
+    "A": "Mỗi quả tạ chì giống như một số âm (-15) kéo tàu xuống đáy biển. Khi mình BỚT ĐI (phép trừ) 3 quả tạ chì, tàu nhẹ đi và NỔI LÊN (+45 m)!",
+    "B": "Biểu diễn trên trục số thẳng đứng: Bắt đầu tại -120, thực hiện phép trừ (-45) tương đương dịch chuyển 45 đơn vị theo chiều dương (hướng lên mặt biển).",
+    "C": "Chứng minh tính chất đối xứng: a - b = a + (-b) với mọi a, b ∈ ℤ trên không gian vector một chiều."
+  },
+  "misconceptions": [
+    "Nhìn thấy hai số âm trong (-120) - (-45) liền cộng hai giá trị tuyệt đối thành -165.",
+    "Quên dấu âm biểu thị độ sâu dưới mực nước biển khi kết luận."
+  ],
+  "worked_example": {
+    "problem": "Tàu ngầm đang ở độ cao -120 m so với mực nước biển. Tàu tháo bỏ một khối lượng dằn tương đương độ chìm -45 m (tức là thực hiện phép tính (-120) - (-45)). Hỏi tàu ngầm ở độ cao mới là bao nhiêu mét?",
+    "steps": [
+      "Bước 1 (Chuyển phép trừ thành cộng số đối): Số đối của (-45) là +45, nên (-120) - (-45) = (-120) + 45.",
+      "Bước 2 (Cộng hai số nguyên trái dấu): Ta lấy số lớn trừ số nhỏ: 120 - 45 = 75, rồi đặt dấu của số có phần tự nhiên lớn hơn (dấu '-' của -120).",
+      "Bước 3 (Kết luận): Độ cao mới của tàu ngầm là -75 m (tức là tàu đã nổi lên cao hơn 45 m)."
+    ]
+  },
+  "basic_exercises": [
+    {
+      "id": "B1",
+      "label": "Câu 2a (Cơ bản)",
+      "prompt": "Thực hiện phép tính: A = (-85) - (-35) + (-20)."
+    },
+    {
+      "id": "B2",
+      "label": "Câu 2b (Thực hành)",
+      "prompt": "Nhiệt độ buổi tối tại Sa Pa là -2°C, đến nửa đêm giảm thêm 4°C nữa. Hỏi nhiệt độ lúc nửa đêm là bao nhiêu độ C?"
+    }
+  ],
+  "advanced_exercise": {
+    "id": "ADV",
+    "prompt": "Tìm số nguyên x biết: x - (-28) = -12."
+  },
+  "real_world_problem": {
+    "id": "RW",
+    "prompt": "Một thiết bị khảo sát biển lặn từ độ cao -30 m xuống thêm 50 m, sau đó nổi lên 25 m. Tính độ cao cuối cùng của thiết bị so với mực nước biển."
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Gặp hai dấu trừ đứng liền nhau '- (-b)' → Đổi ngay thành dấu cộng '+ b'!",
+        "Hãy tưởng tượng trục số thẳng đứng: Cộng số dương là đi LÊN, cộng số âm là đi XUỐNG."
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "Cộng hai số trái dấu: Lấy phần số lớn TRỪ phần số bé, mang dấu của bên lớn hơn."
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Ở độ sâu -120 m mà nổi lên 45 m thì phải gần mặt biển hơn (-75 m lớn hơn -120 m)."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU..."
+    }
+  },
+  "svg_file": "svg_assets/YD-LA-NUM-G6-02.svg",
+  "interactive_html_file": "interactive_experiences/YD-LA-NUM-G6-02.html"
+}

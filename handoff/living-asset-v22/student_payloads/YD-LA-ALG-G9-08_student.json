@@ -1,0 +1,87 @@
+{
+  "asset_id": "YD-LA-ALG-G9-08",
+  "asset_no": "08",
+  "skill_id": "S_G09_B03",
+  "grade": 9,
+  "strand_code": "DAI_SO_VA_HAM_SO",
+  "strand_name": "Đại số, Phương trình & Hàm số",
+  "title": "Hệ Thống Hồ Chứa Thủy Điện: Bài Toán Hai Vòi Nước Cùng Chảy (1/x + 1/y = 1/T)",
+  "story_hook": "Vòi I chảy riêng đầy bể trong 4 giờ, vòi II chảy riêng đầy bể trong 6 giờ. Nếu mở cả hai vòi cùng lúc thì sau bao lâu đầy bể? Vì sao không bao giờ được lấy 4 + 6 = 10 giờ?",
+  "objective": "Hiểu sâu sắc bản chất bài toán công việc chung–riêng: ta không cộng thời gian hoàn thành (x + y), mà phải quy về cộng NĂNG SUẤT trong 1 đơn vị thời gian (1/x + 1/y = 1/T).",
+  "artistic_world": "STEM_COMMAND_3D",
+  "primitives_used": [
+    "PRIM_DUAL_FLOW_ACCUMULATOR",
+    "PRIM_RATE_BALANCE_3D"
+  ],
+  "interactive_engine": {
+    "engine_type": "DUAL_PIPE_HARMONIC",
+    "control_label": "Điều chỉnh thời gian vòi II chảy một mình đầy bể y (giờ):",
+    "min_val": 2,
+    "max_val": 12,
+    "step_val": 1,
+    "default_trial": 8,
+    "unit": "giờ"
+  },
+  "learner_scaffolding": {
+    "A": "Nếu một mình vòi I chảy mất 4 giờ đã đầy bể, thì khi có thêm vòi II phụ giúp, bể PHẢI ĐẦY NHANH HƠN 4 GIỜ (chứ không thể lâu tới 4 + 6 = 10 giờ!). Hãy nhìn vạch nước trong 1 giờ: vòi I chảy 1/4 bể, vòi II chảy 1/6 bể.",
+    "B": "Coi toàn bộ bể nước là 1 đơn vị. Trong 1 giờ: vòi I chảy được 1/x (bể), vòi II chảy được 1/y (bể), cả hai vòi chảy được 1/T (bể) ⇒ Phương trình: 1/x + 1/y = 1/T.",
+    "C": "Liên hệ Trung bình điều hòa (Harmonic Mean) và giải hệ phương trình đặt ẩn phụ u = 1/x, v = 1/y khi hai vòi mở lệch thời gian t₁·u + t₂·v = k."
+  },
+  "misconceptions": [
+    "Cộng trực tiếp thời gian hoàn thành của hai vòi: x + y = T.",
+    "Tìm được năng suất chung trong 1 giờ là 5/12 (bể) nhưng quên nghịch đảo lại để ra thời gian T = 12/5 giờ."
+  ],
+  "worked_example": {
+    "problem": "Hai vòi nước cùng chảy vào một bể cạn thì sau 2 giờ 24 phút (tức 12/5 giờ) đầy bể. Nếu chảy riêng thì vòi thứ nhất làm đầy bể nhanh hơn vòi thứ hai là 2 giờ. Hỏi nếu chảy riêng thì mỗi vòi chảy bao lâu đầy bể?",
+    "steps": [
+      "Bước 1 (Chọn ẩn & ĐKXĐ): Gọi thời gian vòi I chảy riêng đầy bể là x (giờ, x > 12/5). Thời gian vòi II chảy riêng đầy bể là x + 2 (giờ).",
+      "Bước 2 (Quy về năng suất 1 giờ): Trong 1 giờ, vòi I chảy được 1/x (bể), vòi II chảy được 1/(x+2) (bể), cả hai vòi chảy được 1 : (12/5) = 5/12 (bể). Ta có phương trình: 1/x + 1/(x + 2) = 5/12.",
+      "Bước 3 (Giải & Kết luận): Quy đồng khử mẫu: 12(2x + 2) = 5x(x + 2) ⇔ 5x² - 14x - 24 = 0 ⇒ x = 4 (nhận) hoặc x = -6/5 (loại). Vậy vòi I chảy 4 giờ, vòi II chảy 6 giờ."
+    ]
+  },
+  "basic_exercises": [
+    {
+      "id": "B1",
+      "label": "Câu 2a (Cơ bản)",
+      "prompt": "Vòi A chảy riêng 3 giờ đầy bể, vòi B chảy riêng 6 giờ đầy bể. Hỏi cả hai vòi cùng chảy thì sau mấy giờ đầy bể?"
+    },
+    {
+      "id": "B2",
+      "label": "Câu 2b (Thực hành)",
+      "prompt": "Hai tổ công nhân cùng làm một công việc trong 4 giờ thì xong. Nếu tổ I làm một mình mất 12 giờ mới xong thì tổ II làm một mình mất bao lâu?"
+    }
+  ],
+  "advanced_exercise": {
+    "id": "ADV",
+    "prompt": "Hai vòi nước cùng chảy vào bể sau 6 giờ thì đầy. Nếu mở vòi I chảy trong 2 giờ rồi mở tiếp vòi II chảy trong 3 giờ thì được 2/5 bể. Tìm thời gian mỗi vòi chảy riêng đầy bể."
+  },
+  "real_world_problem": {
+    "id": "RW",
+    "prompt": "Một hồ chứa có vòi bơm vào làm đầy hồ trong 4 giờ và một van xả đáy làm cạn hồ đầy trong 12 giờ. Nếu hồ đang cạn mà mở đồng thời cả vòi bơm và van xả thì sau mấy giờ hồ đầy?"
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Coi toàn bộ công việc (hoặc bể nước) là số 1. Làm xong trong x giờ → 1 giờ làm được 1/x công việc!"
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "Đổi thời gian hỗn số sang phân số trước khi nghịch đảo: 2 giờ 24 phút = 12/5 giờ ⇒ 1 giờ chảy được 5/12 bể."
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Thời gian hai vòi chảy chung T (2,4 giờ) LUÔN PHẢI NHỎ HƠN thời gian của từng vòi chảy riêng (4h và 6h)."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU..."
+    }
+  },
+  "svg_file": "svg_assets/YD-LA-ALG-G9-08.svg",
+  "interactive_html_file": "interactive_experiences/YD-LA-ALG-G9-08.html"
+}

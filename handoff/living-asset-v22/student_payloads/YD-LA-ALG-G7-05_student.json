@@ -1,0 +1,88 @@
+{
+  "asset_id": "YD-LA-ALG-G7-05",
+  "asset_no": "05",
+  "skill_id": "S_G07_B12",
+  "grade": 7,
+  "strand_code": "DAI_SO_VA_HAM_SO",
+  "strand_name": "Đại số, Phương trình & Hàm số",
+  "title": "Trạm Phối Trộn Hợp Kim Đồng – Kẽm & Bản Chất Dãy Tỉ Số Bằng Nhau",
+  "story_hook": "Để đúc một chiếc chuông đồng thanh vang nặng 150 gam, nghệ nhân phối trộn Đồng (x) và Kẽm (y) theo tỉ lệ 3 phần Đồng đi với 2 phần Kẽm. Mỗi 'phần bằng nhau' nặng bao nhiêu gam?",
+  "objective": "Hiểu giá trị chung k của dãy tỉ số bằng nhau x/a = y/b = (x+y)/(a+b) = k chính là khối lượng của MỘT PHẦN ĐƠN VỊ.",
+  "artistic_world": "WARM_STORYBOOK_TACTILE",
+  "primitives_used": [
+    "PRIM_RATIO_MIXTURE_LAB",
+    "PRIM_RATE_BALANCE_3D"
+  ],
+  "interactive_engine": {
+    "engine_type": "PROPORTION_UNIT_BLOCKS",
+    "control_label": "Thử nghiệm khối lượng 1 phần đơn vị k (gam/phần):",
+    "min_val": 10,
+    "max_val": 50,
+    "step_val": 5,
+    "default_trial": 20,
+    "unit": "g/phần"
+  },
+  "learner_scaffolding": {
+    "A": "Nhìn 3 thanh Đồng màu cam và 2 thanh Kẽm màu xanh: tất cả có 3 + 2 = 5 thanh bằng nhau nặng tổng cộng 150 gam. Vậy mỗi thanh nặng đúng 150 : 5 = 30 gam!",
+    "B": "Viết dãy tỉ số x/3 = y/2 và áp dụng tính chất dãy tỉ số bằng nhau với tổng x + y = 150.",
+    "C": "Mở rộng khi đề bài cho hiệu (x - y = 30) hoặc cho điều kiện có hệ số (2x + 3y = 360): biến đổi tử và mẫu tương ứng 2x/6 = 3y/6."
+  },
+  "misconceptions": [
+    "Viết ngược tỉ số: 'x và y tỉ lệ với 3 và 2' nhưng lại viết 3x = 2y (đúng phải là x/3 = y/2).",
+    "Cộng tử số x + y nhưng dưới mẫu lại lấy tích 3 × 2 hoặc hiệu 3 - 2."
+  ],
+  "worked_example": {
+    "problem": "Để làm một khối hợp kim đồng thau nặng 150 gam, người ta trộn khối lượng Đồng (x) và khối lượng Kẽm (y) tỉ lệ với 3 và 2. Tính khối lượng Đồng và Kẽm cần dùng.",
+    "steps": [
+      "Bước 1 (Lập tỉ lệ thức và tổng): Theo đề bài ta có x/3 = y/2 và x + y = 150 (x, y > 0).",
+      "Bước 2 (Áp dụng tính chất dãy tỉ số bằng nhau): x/3 = y/2 = (x + y)/(3 + 2) = 150/5 = 30.",
+      "Bước 3 (Tìm từng đại lượng): x = 30 × 3 = 90 (gam Đồng); y = 30 × 2 = 60 (gam Kẽm)."
+    ]
+  },
+  "basic_exercises": [
+    {
+      "id": "B1",
+      "label": "Câu 2a (Cơ bản)",
+      "prompt": "Tìm hai số x và y biết: x/4 = y/5 và x + y = 36."
+    },
+    {
+      "id": "B2",
+      "label": "Câu 2b (Thực hành)",
+      "prompt": "Số cây trồng được của hai lớp 7A và 7B tỉ lệ với 5 và 7. Biết lớp 7B trồng nhiều hơn lớp 7A là 18 cây. Tính số cây mỗi lớp đã trồng."
+    }
+  ],
+  "advanced_exercise": {
+    "id": "ADV",
+    "prompt": "Ba chi đội 7A, 7B, 7C quyên góp được tổng cộng 240 quyển sách tỉ lệ với 3; 4; 5. Tính số sách mỗi chi đội quyên góp."
+  },
+  "real_world_problem": {
+    "id": "RW",
+    "prompt": "Một mảnh vườn hình chữ nhật có chu vi 80 m, tỉ số giữa chiều rộng và chiều dài là 3/5. Tính diện tích mảnh vườn đó."
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "'x, y tỉ lệ thuận với a, b' → Viết ngay x/a = y/b.",
+        "Giá trị chung k = (x+y)/(a+b) chính là độ lớn của 1 phần đơn vị!"
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "Với bài toán hình chữ nhật cho CHU VI, nhớ chia đôi chu vi để lấy NỬA CHU VI (Dài + Rộng = P/2) trước khi áp dụng dãy tỉ số!"
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Cộng lại x + y xem có đúng bằng tổng đề bài cho (90 + 60 = 150) và tỉ số 90:60 có rút gọn về 3:2 không."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU..."
+    }
+  },
+  "svg_file": "svg_assets/YD-LA-ALG-G7-05.svg",
+  "interactive_html_file": "interactive_experiences/YD-LA-ALG-G7-05.html"
+}

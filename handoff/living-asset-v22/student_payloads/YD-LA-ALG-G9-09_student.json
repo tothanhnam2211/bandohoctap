@@ -1,0 +1,86 @@
+{
+  "asset_id": "YD-LA-ALG-G9-09",
+  "asset_no": "09",
+  "skill_id": "S_G09_B18",
+  "grade": 9,
+  "strand_code": "DAI_SO_VA_HAM_SO",
+  "strand_name": "Đại số, Phương trình & Hàm số",
+  "title": "Kỹ Sư Thiết Kế Vòm Cầu Parabol y = ax² & Kiểm Thử Độ Thoáng Tàu Hàng",
+  "story_hook": "Vòm cầu có dạng Parabol y = ax² cao 9 m, nhịp cầu tại mặt nước rộng 24 m. Một tàu chở hàng rộng 8 m và cao 6 m tính từ mặt nước có đi lọt qua gầm cầu an toàn hay không?",
+  "objective": "Gắn hệ tọa độ Oxy vào đỉnh Parabol y = ax², xác định hệ số a từ điểm biên thực tế và kiểm tra bất đẳng thức độ cao an toàn.",
+  "artistic_world": "STEM_COMMAND_3D",
+  "primitives_used": [
+    "PRIM_FUNCTION_GRAPH_PORTAL"
+  ],
+  "interactive_engine": {
+    "engine_type": "PARABOLA_ARCH_CLEARANCE",
+    "control_label": "Điều chỉnh bề rộng tàu chở hàng W (m) đi chính giữa cầu:",
+    "min_val": 2,
+    "max_val": 20,
+    "step_val": 2,
+    "default_trial": 8,
+    "unit": "m"
+  },
+  "learner_scaffolding": {
+    "A": "Đặt gốc tọa độ O(0; 0) ngay tại đỉnh cao nhất của vòm cầu! Vì cầu rộng 24 m và đối xứng hai bên nên chân cầu ở x = 12 m và x = -12 m. Kéo thử tàu rộng 8 m (mép tàu ở x = 4 m), bạn sẽ thấy trần cầu vẫn còn cách nóc tàu 2 m!",
+    "B": "Thay tọa độ chân cầu B(12; -9) vào phương trình y = ax² để tìm a = -9/144 = -1/16. Sau đó tính tung độ y tại x = 4.",
+    "C": "Bài toán ngược: Với tàu cao 6 m, chiều rộng tối đa W_max của tàu là bao nhiêu để vừa khít gầm cầu (9 - x²/16 = 6)?"
+  },
+  "misconceptions": [
+    "Thay cả chiều rộng nhịp cầu x = 24 vào công thức y = ax² thay vì nửa chiều rộng x = 12.",
+    "Quên trừ độ hạ của vòm Parabol khỏi chiều cao đỉnh cầu 9 m."
+  ],
+  "worked_example": {
+    "problem": "Một vòm cầu có hình dạng Parabol y = ax² (gốc O tại đỉnh vòm, trục Oy hướng thẳng đứng lên trên). Chiều cao từ mặt nước lên đỉnh vòm là 9 m, khoảng cách giữa hai chân vòm tại mặt nước là 24 m. Một sà lan rộng 8 m, cao 6 m đi chính giữa gầm cầu có qua được không?",
+    "steps": [
+      "Bước 1 (Xác định tọa độ chân vòm & tìm a): Do tính đối xứng qua Oy, chân vòm phía phải có hoành độ x = 24 : 2 = 12 (m) và tung độ y = -9 (m). Thay vào y = ax²: -9 = a · 12² ⇒ a = -1/16.",
+      "Bước 2 (Tính độ cao vòm tại mép sà lan): Sà lan rộng 8 m đi chính giữa nên mép sà lan có hoành độ x = 8 : 2 = 4 (m). Khi đó y = (-1/16) · 4² = -1 (m).",
+      "Bước 3 (So sánh độ cao an toàn): Khoảng cách từ mặt nước lên vòm cầu tại x = 4 là 9 - 1 = 8 (m) > 6 (m). Vậy sà lan đi qua cầu an toàn."
+    ]
+  },
+  "basic_exercises": [
+    {
+      "id": "B1",
+      "label": "Câu 2a (Cơ bản)",
+      "prompt": "Xác định hệ số a của hàm số y = ax² biết đồ thị của nó đi qua điểm M(2; 12)."
+    },
+    {
+      "id": "B2",
+      "label": "Câu 2b (Thực hành)",
+      "prompt": "Cho Parabol (P): y = 2x². Tìm tọa độ các điểm thuộc (P) có tung độ bằng 18."
+    }
+  ],
+  "advanced_exercise": {
+    "id": "ADV",
+    "prompt": "Tìm tọa độ giao điểm của Parabol (P): y = x² và đường thẳng (d): y = 2x + 3."
+  },
+  "real_world_problem": {
+    "id": "RW",
+    "prompt": "Một cổng chào hình Parabol cao 8 m và khoảng cách giữa hai chân cổng là 8 m. Người ta muốn treo một tấm băng rôn ngang dài 4 m chính giữa cổng. Hỏi băng rôn phải treo ở độ cao bao nhiêu mét tính từ mặt đất để hai đầu băng rôn chạm đúng thành cổng?"
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Gặp cổng vòm/cầu Parabol: Vì trục Oy chia đôi cổng nên hoành độ chân cổng luôn bằng NỬA CHIỀU RỘNG (x = Rộng : 2)!"
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "Nếu đặt gốc O tại ĐỈNH vòm thì phần cổng hướng xuống dưới mặt đất mang tung độ ÂM (y < 0)."
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Tại x = 0 (chính giữa cầu), độ cao phải bằng đúng chiều cao đỉnh vòm (9 m)."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU..."
+    }
+  },
+  "svg_file": "svg_assets/YD-LA-ALG-G9-09.svg",
+  "interactive_html_file": "interactive_experiences/YD-LA-ALG-G9-09.html"
+}

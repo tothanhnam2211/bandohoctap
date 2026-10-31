@@ -1,0 +1,87 @@
+{
+  "asset_id": "YD-LA-GEO-G9-13",
+  "asset_no": "13",
+  "skill_id": "S_G09_B30",
+  "grade": 9,
+  "strand_code": "HINH_HOC_VA_DO_LUONG",
+  "strand_name": "Hình học, Đo lường & Không gian",
+  "title": "Xưởng Bao Bì Sáng Tạo: Mở Phẳng Hình Trụ 3D Thành Hình Chữ Nhật 2D",
+  "story_hook": "Khi bóc nhãn giấy bao quanh một hộp sữa hình trụ có bán kính đáy R = 4 cm, chiều cao h = 10 cm rồi trải phẳng ra bàn, nhãn giấy có hình gì và chiều dài của nó bằng đúng đại lượng nào của đáy?",
+  "objective": "Nhìn thấy trực tiếp mặt xung quanh của hình trụ khi trải phẳng là một hình chữ nhật có chiều rộng bằng đường cao h và chiều dài bằng đúng CHU VI ĐÁY 2πR ⇒ S_xq = 2πRh.",
+  "artistic_world": "EUCLIDEAN_ATELIER_PRO",
+  "primitives_used": [
+    "PRIM_GEOMETRY_CUT_FOLD_RAY"
+  ],
+  "interactive_engine": {
+    "engine_type": "CYLINDER_NET_UNROLL",
+    "control_label": "Kéo thanh trượt mở phẳng mặt xung quanh hình trụ (0% → 100%):",
+    "min_val": 0,
+    "max_val": 100,
+    "step_val": 10,
+    "default_trial": 50,
+    "unit": "%"
+  },
+  "learner_scaffolding": {
+    "A": "Đừng học thuộc lòng công thức khô khan! Hãy kéo thanh trượt mở chiếc lon ra: vỏ lon biến thành tờ giấy hình chữ nhật. Cạnh đứng là chiều cao h = 10 cm, còn cạnh ngang vừa ôm trọn một vòng đáy nên dài đúng bằng chu vi hình tròn 2πR!",
+    "B": "Từ hình trải phẳng: S_xq = Dài × Rộng = (2πR) × h; Diện tích toàn phần S_tp = S_xq + 2·S_đáy = 2πRh + 2πR².",
+    "C": "So sánh với khai triển mặt xung quanh hình nón (hình quạt tròn có độ dài cung bằng 2πR và bán kính quạt là đường sinh l ⇒ S_xq_nón = πRl)."
+  },
+  "misconceptions": [
+    "Nhầm công thức chu vi đáy (2πR) với diện tích đáy (πR²) khi tính diện tích xung quanh.",
+    "Đề bài cho ĐƯỜNG KÍNH d = 8 cm nhưng quên chia đôi để lấy bán kính R = 4 cm."
+  ],
+  "worked_example": {
+    "problem": "Một hộp sữa hình trụ có bán kính đáy R = 4 cm và chiều cao h = 10 cm. Tính diện tích nhãn giấy dán kín mặt xung quanh hộp sữa (bỏ qua mép dán) và thể tích của hộp sữa theo π.",
+    "steps": [
+      "Bước 1 (Trải phẳng mặt xung quanh): Nhãn giấy trải phẳng là hình chữ nhật có chiều dài bằng chu vi đáy C = 2πR = 8π (cm) và chiều rộng h = 10 (cm).",
+      "Bước 2 (Tính diện tích xung quanh): S_xq = 2πRh = 8π × 10 = 80π ≈ 251,33 (cm²).",
+      "Bước 3 (Tính thể tích hình trụ): V = S_đáy · h = πR²h = π · 4² · 10 = 160π ≈ 502,65 (cm³)."
+    ]
+  },
+  "basic_exercises": [
+    {
+      "id": "B1",
+      "label": "Câu 2a (Cơ bản)",
+      "prompt": "Cho hình trụ có bán kính đáy R = 5 cm và chiều cao h = 8 cm. Tính diện tích xung quanh và diện tích toàn phần của hình trụ theo π."
+    },
+    {
+      "id": "B2",
+      "label": "Câu 2b (Thực hành)",
+      "prompt": "Một chiếc cốc hình trụ có đường kính đáy d = 6 cm, chiều cao h = 12 cm. Tính thể tích chiếc cốc theo π."
+    }
+  ],
+  "advanced_exercise": {
+    "id": "ADV",
+    "prompt": "Một tấm tôn hình chữ nhật dài 12π cm, rộng 10 cm được cuộn tròn lại vừa khít (ghép hai cạnh 10 cm) để làm mặt xung quanh của một chiếc thùng hình trụ cao 10 cm. Tính bán kính đáy của chiếc thùng đó."
+  },
+  "real_world_problem": {
+    "id": "RW",
+    "prompt": "Một con lăn sơn tường hình trụ có đường kính 10 cm và chiều dài trục lăn 25 cm. Khi con lăn quay đúng 10 vòng trên tường phẳng thì diện tích mặt tường được phủ sơn là bao nhiêu cm² (tính theo π)?"
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Mặt xung quanh hình trụ trải phẳng = Hình chữ nhật (Dài = 2πR, Rộng = h) → S_xq = 2πRh.",
+        "Thể tích hình trụ = Diện tích đáy × Chiều cao → V = πR²h."
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "Đọc kỹ đề bài cho BÁN KÍNH R hay ĐƯỜNG KÍNH d! Nếu cho đường kính d thì phải tính R = d : 2 ngay dòng đầu tiên."
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Thứ nguyên đơn vị: Diện tích mang bậc hai (cm²), Thể tích mang bậc ba (cm³)."
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU..."
+    }
+  },
+  "svg_file": "svg_assets/YD-LA-GEO-G9-13.svg",
+  "interactive_html_file": "interactive_experiences/YD-LA-GEO-G9-13.html"
+}

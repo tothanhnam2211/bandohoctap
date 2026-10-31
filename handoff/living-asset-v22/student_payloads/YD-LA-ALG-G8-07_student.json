@@ -1,0 +1,86 @@
+{
+  "asset_id": "YD-LA-ALG-G8-07",
+  "asset_no": "07",
+  "skill_id": "S_G08_B23",
+  "grade": 8,
+  "strand_code": "DAI_SO_VA_HAM_SO",
+  "strand_name": "Đại số, Phương trình & Hàm số",
+  "title": "Tổng Công Trình Sư Vận Tải & Trồng Cây: Cân Lập Luận Phương Trình Hữu Tỉ",
+  "story_hook": "Đội xe dự định chở 60 tấn hàng chia đều cho x chiếc xe. Khi khởi hành, đội được bổ sung thêm 3 xe nên mỗi xe chở nhẹ hơn dự định đúng 1 tấn. Làm sao cân bằng đại lượng để tìm x?",
+  "objective": "Thiết lập phương trình chứa ẩn ở mẫu Q/x - Q/(x+k) = Δ từ bài toán năng suất/phân phối, quy đồng khử mẫu về phương trình bậc hai và loại nghiệm âm ngoại lai.",
+  "artistic_world": "STEM_COMMAND_3D",
+  "primitives_used": [
+    "PRIM_RATE_BALANCE_3D"
+  ],
+  "interactive_engine": {
+    "engine_type": "RATE_BALANCE_RATIONAL",
+    "control_label": "Thử nghiệm số xe dự định ban đầu x (chiếc):",
+    "min_val": 4,
+    "max_val": 20,
+    "step_val": 1,
+    "default_trial": 10,
+    "unit": "xe"
+  },
+  "learner_scaffolding": {
+    "A": "Hãy thử kéo thanh trượt tới x = 10 xe: Dự định mỗi xe chở 60:10 = 6 tấn, thực tế 13 xe chở 60:13 ≈ 4,62 tấn, lệch tới 1,38 tấn ≠ 1 tấn (Cán cân bị nghiêng!). Kéo tới đúng x = 12 xe, cán cân thăng bằng hoàn hảo: 5 - 4 = 1 tấn!",
+    "B": "Lập bảng 3 cột (Tổng hàng Q | Số xe | Tải trọng mỗi xe = Q/Số xe). Lấy tải trọng lúc ít xe (60/x) trừ tải trọng lúc nhiều xe (60/(x+3)) bằng đúng độ giảm Δ = 1.",
+    "C": "Khử mẫu đưa về phương trình bậc hai x² + 3x - 180 = 0, phân tích thành nhân tử (x - 12)(x + 15) = 0 và giải thích ý nghĩa vật lý vì sao nghiệm đại số x₂ = -15 bị loại bỏ."
+  },
+  "misconceptions": [
+    "Lấy phân thức nhỏ trừ phân thức lớn: viết 60/(x+3) - 60/x = 1 dẫn đến nghiệm dương bị đảo dấu.",
+    "Giải phương trình bậc hai ra hai nghiệm nhưng quên đối chiếu điều kiện x > 0 để loại nghiệm âm x₂ = -15."
+  ],
+  "worked_example": {
+    "problem": "Một đội xe dự định dùng một số xe cùng loại để chở hết 60 tấn hàng cứu trợ. Lúc sắp khởi hành, đội được bổ sung thêm 3 xe cùng loại nên mỗi xe chở ít hơn dự định 1 tấn hàng. Hỏi lúc đầu đội có bao nhiêu xe?",
+    "steps": [
+      "Bước 1 (Chọn ẩn và đặt ĐKXĐ): Gọi số xe lúc đầu của đội là x (chiếc, x ∈ ℕ*). Số xe thực tế là x + 3 (chiếc).",
+      "Bước 2 (Biểu diễn theo ẩn và lập phương trình): Dự định mỗi xe chở 60/x (tấn), thực tế mỗi xe chở 60/(x+3) (tấn). Vì mỗi xe chở ít hơn dự định 1 tấn nên: 60/x - 60/(x+3) = 1.",
+      "Bước 3 (Khử mẫu & Lọc nghiệm): Quy đồng khử mẫu: 60(x + 3) - 60x = x(x + 3) ⇔ x² + 3x - 180 = 0 ⇔ (x - 12)(x + 15) = 0 ⇒ x = 12 (nhận) hoặc x = -15 (loại). Vậy lúc đầu đội có 12 xe."
+    ]
+  },
+  "basic_exercises": [
+    {
+      "id": "B1",
+      "label": "Câu 2a (Cơ bản)",
+      "prompt": "Giải phương trình chứa ẩn ở mẫu: 30/x - 30/(x + 5) = 1 (với x > 0)."
+    },
+    {
+      "id": "B2",
+      "label": "Câu 2b (Thực hành)",
+      "prompt": "Một chi đoàn dự định trồng 300 cây xanh. Đến ngày lao động có 5 bạn báo vắng nên mỗi bạn đi học phải trồng thêm 2 cây. Tính số đoàn viên ban đầu."
+    }
+  ],
+  "advanced_exercise": {
+    "id": "ADV",
+    "prompt": "Một phân xưởng may 360 chiếc áo. Nhờ cải tiến kỹ thuật, mỗi ngày phân xưởng may thêm được 4 áo nên hoàn thành sớm hơn dự định 1 ngày. Tính số áo may mỗi ngày theo dự định."
+  },
+  "real_world_problem": {
+    "id": "RW",
+    "prompt": "Một ca nô xuôi dòng 40 km rồi ngược dòng 40 km trên dòng sông có vận tốc dòng nước 2 km/h hết tổng cộng 4 giờ 30 phút (9/2 giờ). Tính vận tốc riêng của ca nô."
+  },
+  "text_notes": {
+    "note1_start": {
+      "title": "1. BẮT ĐẦU Ở ĐÂY NHÉ!",
+      "bullets": [
+        "Quy tắc Vàng trên Cán cân: Luôn lấy PHÂN THỨC LỚN (mẫu nhỏ) trừ PHÂN THỨC BÉ (mẫu lớn) = Độ chênh lệch dương Δ."
+      ]
+    },
+    "note2_watchout": {
+      "title": "2. CẨN THẬN LỖI NÀY!",
+      "bullets": [
+        "Sau khi giải phương trình bậc hai, BẮT BUỘC phải đối chiếu ĐKXĐ (x > 0, x ∈ ℕ*) để gạch bỏ nghiệm âm ngoại lai!"
+      ]
+    },
+    "note3_check": {
+      "title": "3. KIỂM TRA LẠI NHÉ!",
+      "bullets": [
+        "Thay x = 12 vào đề bài: Lúc đầu 60:12 = 5 tấn/xe; lúc sau 60:15 = 4 tấn/xe → Giảm đúng 5 - 4 = 1 tấn!"
+      ]
+    },
+    "note4_reflection": {
+      "title": "HÔM NAY MÌNH ĐÃ HIỂU..."
+    }
+  },
+  "svg_file": "svg_assets/YD-LA-ALG-G8-07.svg",
+  "interactive_html_file": "interactive_experiences/YD-LA-ALG-G8-07.html"
+}

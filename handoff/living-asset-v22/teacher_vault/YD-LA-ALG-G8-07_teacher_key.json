@@ -1,0 +1,35 @@
+{
+  "asset_id": "YD-LA-ALG-G8-07",
+  "skill_id": "S_G08_B23",
+  "grade": 8,
+  "target_interactive_solution": 12,
+  "math_semantics": {
+    "unknown_symbol": "x",
+    "domain_constraint": "x ∈ ℕ*",
+    "invariant_relation": "60/x - 60/(x + 3) = 1 (Giả thiết Δ = 1 khóa cố định)",
+    "target_equation": "60/x - 60/(x+3) = 1 ⇒ x² + 3x - 180 = 0 ⇒ x₁ = 12 (Nhận); x₂ = -15 (Loại)",
+    "verification_type": "SYMBOLIC_SYMPY_VERIFIED"
+  },
+  "basic_answers": [
+    {
+      "id": "B1",
+      "final_answer": "x = 10",
+      "teacher_solution": "30(x+5) - 30x = x(x+5) ⇔ x² + 5x - 150 = 0 ⇔ (x - 10)(x + 15) = 0. Vì x > 0 nên nhận x = 10."
+    },
+    {
+      "id": "B2",
+      "final_answer": "30 đoàn viên",
+      "teacher_solution": "Phương trình: 300/(x - 5) - 300/x = 2 ⇔ x² - 5x - 750 = 0 ⇒ x = 30 (nhận) hoặc x = -25 (loại)."
+    }
+  ],
+  "advanced_answer": {
+    "id": "ADV",
+    "final_answer": "36 áo/ngày",
+    "teacher_solution": "360/x - 360/(x+4) = 1 ⇔ x² + 4x - 1440 = 0 ⇔ (x - 36)(x + 40) = 0 ⇒ x = 36 (áo/ngày)."
+  },
+  "real_world_answer": {
+    "id": "RW",
+    "final_answer": "18 km/h",
+    "teacher_solution": "40/(x+2) + 40/(x-2) = 9/2 ⇔ 80x · 2 = 9(x² - 4) ⇔ 9x² - 160x - 36 = 0 ⇒ x = 18 (km/h, nhận)."
+  }
+}

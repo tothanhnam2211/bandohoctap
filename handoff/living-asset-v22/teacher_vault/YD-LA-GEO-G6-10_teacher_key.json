@@ -1,0 +1,35 @@
+{
+  "asset_id": "YD-LA-GEO-G6-10",
+  "skill_id": "S_G06_B20",
+  "grade": 6,
+  "target_interactive_solution": 4,
+  "math_semantics": {
+    "unknown_symbol": "c",
+    "domain_constraint": "0 < c < 10",
+    "invariant_relation": "P_chữ_L = (12 - c) + c + c + (10 - c) + 12 + 10 = 44 m (Không phụ thuộc c!)",
+    "target_equation": "S = 12×10 - 4×4 = 104 (m²); P = 2×(12 + 10) = 44 (m)",
+    "verification_type": "RULE_BOUNDED_GEOMETRY_VERIFIED"
+  },
+  "basic_answers": [
+    {
+      "id": "B1",
+      "final_answer": "Chu vi 46 cm; Diện tích 120 cm²",
+      "teacher_solution": "Chu vi P = 2 × (15 + 8) = 46 (cm). Diện tích S = 15 × 8 = 120 (cm²)."
+    },
+    {
+      "id": "B2",
+      "final_answer": "Diện tích 111 cm²; Chu vi 46 cm",
+      "teacher_solution": "Diện tích mới: 120 - 3² = 111 (cm²). Chu vi giữ nguyên không đổi: P = 46 (cm)."
+    }
+  ],
+  "advanced_answer": {
+    "id": "ADV",
+    "final_answer": "400 cm",
+    "teacher_solution": "Tổng các đoạn ngang của 4 bậc bằng đáy 120 cm; tổng các đoạn dọc của 4 bậc bằng chiều cao 80 cm ⇒ Chu vi P = 2 × (120 + 80) = 400 (cm)."
+  },
+  "real_world_answer": {
+    "id": "RW",
+    "final_answer": "17 m²",
+    "teacher_solution": "Phần sân còn lại là hình chữ nhật dài 10 - 1 = 9 m, rộng 8 - 1 = 7 m (diện tích 63 m²). Diện tích lối đi: 10×8 - 9×7 = 80 - 63 = 17 (m²)."
+  }
+}

@@ -1,0 +1,5 @@
+# YOURDREAM — Living Mathematical Asset Factory v2.2 Dependencies
+# Python >= 3.10 required
+sympy>=1.12
+pymupdf>=1.23.0
+playwright>=1.40.0
