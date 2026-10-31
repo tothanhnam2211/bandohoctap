@@ -1,0 +1,114 @@
+{
+  "total_benchmarks": 4,
+  "synthesized_count": 3,
+  "unsupported_honestly_declined_count": 1,
+  "benchmarks": [
+    {
+      "synthesis_status": "EXPERIENCE_SYNTHESIZED_FROM_PRIMITIVES",
+      "spec_id": "YD-TRANSFER-A-HYDRO-LEAK",
+      "title": "Hồ Chứa Nước Có Van Xả: Hai Vòi Bơm Vào & Một Van Rò Rỉ",
+      "grade": 9,
+      "family_id": "FAM_ALG_JOINT_WORK_AND_SYSTEMS",
+      "artistic_world": "STEM_COMMAND_3D",
+      "composed_primitives": [
+        "PRIM_DUAL_FLOW_ACCUMULATOR",
+        "PRIM_RATE_BALANCE_3D"
+      ],
+      "composed_actions": [
+        "SET_PIPE_TIMES",
+        "RUN_1HOUR_SLICE",
+        "COMPARE_SUM_TIMES_VS_RATES",
+        "SOLVE_HARMONIC",
+        "TRIAL_UNKNOWN_X",
+        "TILT_BALANCE_SCALE",
+        "REDUCE_TO_QUADRATIC",
+        "FILTER_EXTRANEOUS_ROOT"
+      ],
+      "invariant_bound": "1/t1 + 1/t2 - 1/t_leak = 1/T",
+      "domain_guard": "t1, t2, t_leak > 0; 1/t1 + 1/t2 > 1/t_leak",
+      "target_equation": "1/4 + 1/6 - 1/12 = 1/T  <=>  4/12 = 1/T  <=>  T = 3 (giờ)",
+      "expected_solution": "3",
+      "counterexample_rules": [
+        "Bác bỏ sai lầm T = x + y: hai vòi cùng chảy phải đầy nhanh hơn từng vòi chảy riêng (T < x và T < y).",
+        "Giữ nguyên giả thiết delta_fixed; thử x sai làm nghiêng đĩa cân; thử nghiệm âm x2 < 0 bị chặn bởi miền xác định thực tế."
+      ],
+      "benchmark_id": "TRANSFER_TEST_A_SAME_FAMILY_NEW_STRUCTURE",
+      "test_category": "Test A — Cùng mạch Đại số nhưng khác cấu trúc phương trình (Hai vòi chảy + Rò rỉ đáy)"
+    },
+    {
+      "synthesis_status": "EXPERIENCE_SYNTHESIZED_FROM_PRIMITIVES",
+      "spec_id": "YD-TRANSFER-B-POOL-WALKWAY",
+      "title": "Thiết Kế Hồ Bơi Sinh Thái Có Đường Dạo Bộ Lát Đá Bốn Phía",
+      "grade": 9,
+      "family_id": "FAM_COMP_GEO_QUADRATIC",
+      "artistic_world": "WARM_STORYBOOK_TACTILE",
+      "composed_primitives": [
+        "PRIM_GEOMETRY_CUT_FOLD_RAY",
+        "PRIM_RATE_BALANCE_3D"
+      ],
+      "composed_actions": [
+        "SLIDE_TRIANGLES",
+        "TRANSLATE_CORNER_EDGES",
+        "ADJUST_SUN_ANGLE",
+        "UNROLL_3D_SURFACE",
+        "TRIAL_UNKNOWN_X",
+        "TILT_BALANCE_SCALE",
+        "REDUCE_TO_QUADRATIC",
+        "FILTER_EXTRANEOUS_ROOT"
+      ],
+      "invariant_bound": "(L - 2x)*(W - 2x) = S_inner",
+      "domain_guard": "0 < x < 10",
+      "target_equation": "(30 - 2x)(20 - 2x) = 336 <=> x^2 - 25x + 66 = 0",
+      "expected_solution": "3 (Loại x2 = 22 vì 2x < 20 => x < 10)",
+      "counterexample_rules": [
+        "Khi cắt góc hình chữ nhật, diện tích giảm nhưng 2 cạnh mới bù đúng 2 cạnh mất đi nên chu vi không giảm.",
+        "Giữ nguyên giả thiết delta_fixed; thử x sai làm nghiêng đĩa cân; thử nghiệm âm x2 < 0 bị chặn bởi miền xác định thực tế."
+      ],
+      "benchmark_id": "TRANSFER_TEST_B_CROSS_FAMILY_COMPOSITION",
+      "test_category": "Test B — Kết hợp Đa Họ (Hình học Lối đi Vườn H07 + Đại số Phương trình Bậc hai + Cân Chi phí)"
+    },
+    {
+      "synthesis_status": "EXPERIENCE_SYNTHESIZED_FROM_PRIMITIVES",
+      "spec_id": "YD-TRANSFER-C-SOLAR_VS_GRID",
+      "title": "Bài Toán Quyết Định Năng Lượng: Lắp Điện Mặt Trời Hay Dùng Điện Lưới?",
+      "grade": 8,
+      "family_id": "FAM_ALG_DYNAMIC_FUNCTION_PORTAL",
+      "artistic_world": "STEM_COMMAND_3D",
+      "composed_primitives": [
+        "PRIM_FUNCTION_GRAPH_PORTAL"
+      ],
+      "composed_actions": [
+        "DRAG_DISTANCE_X",
+        "FIND_INTERSECTION_POINT",
+        "ADJUST_PARABOLA_A",
+        "TEST_BOAT_CLEARANCE"
+      ],
+      "invariant_bound": "C_A(t) = 18 + 0.5*t; C_B(t) = 2.0*t",
+      "domain_guard": "t >= 0 (tháng)",
+      "target_equation": "18 + 0.5*t = 2.0*t <=> 1.5*t = 18 <=> t = 12 (tháng)",
+      "expected_solution": "12",
+      "counterexample_rules": [
+        "Khi thuyền có nửa chiều rộng w/2 tạo độ cao chạm vòm Parabol, cảnh báo va chạm đỏ tại tọa độ (w/2, h_boat)."
+      ],
+      "benchmark_id": "TRANSFER_TEST_C_NEW_REPRESENTATION_MODALITY",
+      "test_category": "Test C — Chuyển đổi Biểu diễn (Từ Đại số Tỉ lệ sang Đồ thị Giao điểm Tuyến tính + Bảng Quyết định)"
+    },
+    {
+      "synthesis_status": "UNSUPPORTED_STRUCTURE_HONESTLY_DECLINED",
+      "spec_id": "YD-TRANSFER-D-UNSUPPORTED-CALCULUS",
+      "title": "Tính Thể Tích Khối Tròn Xoay Bằng Tích Phân Xác Định ∫ π f(x)² dx",
+      "diagnostics": {
+        "supported": false,
+        "status": "UNSUPPORTED_STRUCTURE",
+        "requested_structure": "SYMBOLIC_RIEMANN_INTEGRAL_3D_SURFACE_OF_REVOLUTION",
+        "reason": "Cấu trúc toán học 'SYMBOLIC_RIEMANN_INTEGRAL_3D_SURFACE_OF_REVOLUTION' vượt ngoài tập 8 Primitive K12 THCS hiện tại (ví dụ: Giải tích vi tích phân, Hình học phi Euclid hoặc Xác suất liên tục). Hệ thống trung thực từ chối sinh cảnh giả tạo.",
+        "missing_capabilities": [
+          "PRIM_RIEMANN_SLICE_INTEGRATOR_G12",
+          "PRIM_SYMBOLIC_ANTIDERIVATIVE_STEPPER"
+        ]
+      },
+      "benchmark_id": "TRANSFER_TEST_D_UNSUPPORTED_HONEST_RECOGNITION",
+      "test_category": "Test D — Nhận diện Trung thực Cấu trúc Chưa Hỗ trợ (Giải tích Tích phân / Hình học Vi phân)"
+    }
+  ]
+}

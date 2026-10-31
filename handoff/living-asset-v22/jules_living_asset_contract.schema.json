@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "YOURDREAM_Jules_Living_Asset_Contract_v2_2",
+  "description": "Hợp đồng dữ liệu & hành vi giữa Living Mathematical Asset Factory và hệ thống tích hợp Jules.",
+  "type": "object",
+  "required": [
+    "asset_id",
+    "skill_id",
+    "grade",
+    "strand_code",
+    "title",
+    "story_hook",
+    "objective",
+    "artistic_world",
+    "primitives_used",
+    "interactive_engine",
+    "learner_scaffolding",
+    "text_notes",
+    "svg_file",
+    "interactive_html_file"
+  ],
+  "security_boundary": "Client payloads in student_payloads/ MUST NEVER contain final_answer, teacher_solution, or target_solution fields."
+}

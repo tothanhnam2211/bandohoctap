@@ -1,0 +1,16 @@
+{
+  "suite": "YOURDREAM_LIVING_ASSET_QA_AND_SDK_CONSUMER_SUITE",
+  "total_sdk_assets": 20,
+  "flagship_assets": 16,
+  "strands_verified": [
+    "DAI_SO_VA_HAM_SO",
+    "HINH_HOC_VA_DO_LUONG",
+    "SO_HOC_VA_TAP_HOP",
+    "THONG_KE_VA_XAC_SUAT"
+  ],
+  "zero_hypothesis_mutation_verified": true,
+  "zero_student_answer_leak_verified": true,
+  "generative_synthesis_verified": true,
+  "unsupported_honest_decline_verified": true,
+  "status": "ALL_TESTS_PASSED"
+}

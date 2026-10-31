@@ -1,0 +1,857 @@
+{
+  "manifest_version": "2.2.0",
+  "generated_at": "2026-10-31T05:35:42.790505+00:00",
+  "total_files": 170,
+  "files": [
+    {
+      "relative_path": "assets/sticky_notes_v01/MANIFEST_QA_DRAFT.json",
+      "size_bytes": 1388,
+      "sha256": "0e7e548c6bac239ea87a9d7c2416204f1c2685727b7e058c293a9697d518e18a"
+    },
+    {
+      "relative_path": "assets/sticky_notes_v01/YD_NOTE_blue_BLANK_ALPHA_v01.png",
+      "size_bytes": 1604249,
+      "sha256": "de1c568a99608105d298a04a9d7d7c5eed041b79ee78638bb3a84b0d584e8205"
+    },
+    {
+      "relative_path": "assets/sticky_notes_v01/YD_NOTE_pink_BLANK_ALPHA_v01.png",
+      "size_bytes": 1676803,
+      "sha256": "1a22289e316cd7c0ae329a05b5fc076f7ead7bac2500a091c464eaea7404a33a"
+    },
+    {
+      "relative_path": "assets/sticky_notes_v01/YD_NOTE_sage_BLANK_ALPHA_v01.png",
+      "size_bytes": 1716769,
+      "sha256": "c06a1ff02502ef94a840acc81c8a1e8b2442f269fc302f5822be0e1f2125145f"
+    },
+    {
+      "relative_path": "assets/sticky_notes_v01/YD_NOTE_yellow_BLANK_ALPHA_v01.png",
+      "size_bytes": 1452567,
+      "sha256": "eeba32fa8c3cc563649ca39cc7b4f31ed2a93a63c8afb1d452634e79bce0e415"
+    },
+    {
+      "relative_path": "baseline/de_toan_nang_suat_gdpt2018.json",
+      "size_bytes": 15821,
+      "sha256": "12d154a6cfb115fb5def1fcaa1571f62ade13d1d063bfbda35ba9dd93f403f19"
+    },
+    {
+      "relative_path": "baseline/nang_suat.html",
+      "size_bytes": 223893,
+      "sha256": "26d267cb5e229739fe4d484aec71ca7f1a55ab20c2d6fde7376915b017b15cbc"
+    },
+    {
+      "relative_path": "baseline/run_baseline_experience.py",
+      "size_bytes": 21254,
+      "sha256": "239d5d1ad0193262d43d71a6784ca038b36683f88e219fe76284a73a033f87e1"
+    },
+    {
+      "relative_path": "baseline/verify_baseline_math_sympy.py",
+      "size_bytes": 7702,
+      "sha256": "54d157b0fca45a42ef5fad2a52c6464e3e2ec42318222c9f18837cb5762de0d0"
+    },
+    {
+      "relative_path": "baseline/YD_OWNER_BASELINE_STEM_NANG_SUAT_20261030.html",
+      "size_bytes": 223893,
+      "sha256": "26d267cb5e229739fe4d484aec71ca7f1a55ab20c2d6fde7376915b017b15cbc"
+    },
+    {
+      "relative_path": "data/living_asset_326_skills_semantic_map.json",
+      "size_bytes": 242780,
+      "sha256": "bb89ab4741096ad9f21d324959684f5b549b96122b5f7ff6b6cf1e188149174b"
+    },
+    {
+      "relative_path": "data/living_asset_pedagogical_catalog.json",
+      "size_bytes": 110668,
+      "sha256": "ce773765bba2a7a39b0d38ba54212cf0d7c19bc54e39248e8b56e3a0580f5466"
+    },
+    {
+      "relative_path": "data/living_asset_verification_ledger.json",
+      "size_bytes": 6957,
+      "sha256": "4ed6b6079f549809c7ad4ffe43707fb8e80bc16bb07eea98fb283dd334b35389"
+    },
+    {
+      "relative_path": "data/thcs_326_skills_master_registry.json",
+      "size_bytes": 4181690,
+      "sha256": "8eece5107d6ced950953aef49e2c24c4f7e201f404682d41437f8045d7a4ecc5"
+    },
+    {
+      "relative_path": "data/thcs_326_skills_textnote_packs.json",
+      "size_bytes": 742963,
+      "sha256": "63935f0651f80763bd03f5bf72621a785cb9fde07f23f710dd6da89a9b1d2832"
+    },
+    {
+      "relative_path": "engine/__init__.py",
+      "size_bytes": 491,
+      "sha256": "69030d1b8edf154950882944c8444669d5163f6ff0a1ef041be2c9b559a7d5f1"
+    },
+    {
+      "relative_path": "engine/__pycache__/__init__.cpython-311.pyc",
+      "size_bytes": 652,
+      "sha256": "82fc73088836825849dcd739f54d403675a0247ce3a5c6f59bfaa38ab8fa4db6"
+    },
+    {
+      "relative_path": "engine/__pycache__/causal_interaction_engine.cpython-311.pyc",
+      "size_bytes": 46578,
+      "sha256": "3d166381a397e48e46fa9f38fd8c6761c9f8bf55f3236b693df08c970bce6ee9"
+    },
+    {
+      "relative_path": "engine/__pycache__/curated_living_assets_part1.cpython-311.pyc",
+      "size_bytes": 43673,
+      "sha256": "93ce60b5e0d6bc645cbb3ce67ad037bf2797f692764a81db3d2e665ee2a6eeca"
+    },
+    {
+      "relative_path": "engine/__pycache__/curated_living_assets_part2.cpython-311.pyc",
+      "size_bytes": 46297,
+      "sha256": "1018bf5a4c01984fc82acb6e4efd63b8ee6c6fb500428134cc895b0bc438a737"
+    },
+    {
+      "relative_path": "engine/__pycache__/living_asset_sdk.cpython-311.pyc",
+      "size_bytes": 27369,
+      "sha256": "b2ecdf66255a55afdb44697ad7df8742cbc708cf20ba0079722e98e4746994f1"
+    },
+    {
+      "relative_path": "engine/__pycache__/mod1_source_semantics.cpython-311.pyc",
+      "size_bytes": 13160,
+      "sha256": "841d62ac8c9e96c444f3e6f11f1084b2c29138a2544eab250afd8685250594a5"
+    },
+    {
+      "relative_path": "engine/__pycache__/mod2_creative_asset_generator.cpython-311.pyc",
+      "size_bytes": 38655,
+      "sha256": "429e3cfcbdf5f542acc9d486fba9beff91aabdbf58a356f6140fe77d4eab8a10"
+    },
+    {
+      "relative_path": "engine/__pycache__/mod3_behavior_composer.cpython-311.pyc",
+      "size_bytes": 18596,
+      "sha256": "62745aa0945d63eef11e9488074df7a5037c7b8de6dbf44f75f0b79dfd0f3df2"
+    },
+    {
+      "relative_path": "engine/__pycache__/mod4_pedagogy_engine.cpython-311.pyc",
+      "size_bytes": 4779,
+      "sha256": "fa41eda4ebba95b0560f9e08106bd60557fad5315440036fe92a5ee7c4b8acbc"
+    },
+    {
+      "relative_path": "engine/causal_interaction_engine.py",
+      "size_bytes": 40847,
+      "sha256": "2096d9f6e4815727e5a78b81f9710d08a58f9e7f9455ea49c5ae82c8505b9b36"
+    },
+    {
+      "relative_path": "engine/curated_living_assets_part1.py",
+      "size_bytes": 56513,
+      "sha256": "a6a50f1ab4c0aa3271947647f84b187fc41a41eb3681a28838a01ab2ab8276ea"
+    },
+    {
+      "relative_path": "engine/curated_living_assets_part2.py",
+      "size_bytes": 59147,
+      "sha256": "a38730e773256ae328881d6a745f2f844953bd5bb3f741849913707fa69fe7e7"
+    },
+    {
+      "relative_path": "engine/living_asset_sdk.py",
+      "size_bytes": 20381,
+      "sha256": "4a6f6cf3523efc31e41e0867881af84b7fe55040b4ee2ac9e22861438c5d5f2e"
+    },
+    {
+      "relative_path": "engine/math_typography.py",
+      "size_bytes": 9929,
+      "sha256": "e282f5f60851e9847c41b23bae31b2fe825316d52e3143b880b48f974e3f02f0"
+    },
+    {
+      "relative_path": "engine/mod1_source_semantics.py",
+      "size_bytes": 12903,
+      "sha256": "bf9df4b6dfa1aa80fbf55eb201f2304c79b36e53c5caa2b6eb6349da8e3c908f"
+    },
+    {
+      "relative_path": "engine/mod2_creative_asset_generator.py",
+      "size_bytes": 36357,
+      "sha256": "aa318f61d60e1732ca59e5aa3e882938ced452b6554cfd220faa3cad7f7dd527"
+    },
+    {
+      "relative_path": "engine/mod3_behavior_composer.py",
+      "size_bytes": 17348,
+      "sha256": "b8b40127147a1b404dda4789a82e50f4896c2b5a9b1f4929843a3b0bdd461b19"
+    },
+    {
+      "relative_path": "engine/mod4_pedagogy_engine.py",
+      "size_bytes": 3377,
+      "sha256": "71680336e868d9fdf5ff781077b292fc7dd3241417ebd4919b34d38e472daddf"
+    },
+    {
+      "relative_path": "engine/mod5_truth_verifier.py",
+      "size_bytes": 10749,
+      "sha256": "8451db2b6c505d4f6663c2cb4a657793e2cc2bd610669a6d35a40e3cea45744d"
+    },
+    {
+      "relative_path": "engine/mod6_multiformat_renderer.py",
+      "size_bytes": 48128,
+      "sha256": "754041928789a1ffe9dd8b101deeea47a02d736c87dab8775386a12c2702528d"
+    },
+    {
+      "relative_path": "engine/mod7_studio_and_jules_handoff.py",
+      "size_bytes": 51591,
+      "sha256": "2e0b593edf6174bd282d9a523dde438a0bb2e0e281b2b2ba051a2785f998412f"
+    },
+    {
+      "relative_path": "generative_transfer_benchmarks.json",
+      "size_bytes": 5601,
+      "sha256": "fc7039e61e2b0a41296d3eecb9da436485fc782d6a8e92dbd85816c084254eca"
+    },
+    {
+      "relative_path": "interactive_experiences/YD-LA-ALG-G7-05.html",
+      "size_bytes": 40648,
+      "sha256": "a80ccbcc5504d08269b4ff27d6c35c94ff5236110e10ceb770270ba915f7097a"
+    },
+    {
+      "relative_path": "interactive_experiences/YD-LA-ALG-G8-06.html",
+      "size_bytes": 40679,
+      "sha256": "215829cbe1430fe6c5f7ec2acca66197ad402d329584f7196564c46c6ce0955d"
+    },
+    {
+      "relative_path": "interactive_experiences/YD-LA-ALG-G8-07.html",
+      "size_bytes": 41668,
+      "sha256": "cdffd6dc8e6295f11e426558d90c89a9e2f2a87ec1eb701b36dd13f7dadc162a"
+    },
+    {
+      "relative_path": "interactive_experiences/YD-LA-ALG-G9-08.html",
+      "size_bytes": 42045,
+      "sha256": "273558661ef75ce210d91e73beaca71c03d6801f6c6e297959905ee456d03152"
+    },
+    {
+      "relative_path": "interactive_experiences/YD-LA-ALG-G9-09.html",
+      "size_bytes": 40689,
+      "sha256": "4965bdf612a49dd8cf12eefb805cf976e58ce5365d256c5770e6ea6a71ee1901"
+    },
+    {
+      "relative_path": "interactive_experiences/YD-LA-APPL-G9-16.html",
+      "size_bytes": 41327,
+      "sha256": "48b24d03e294b13c2915b4d55435f7f08301b862f24af4989b76c02061f65d53"
+    },
+    {
+      "relative_path": "interactive_experiences/YD-LA-GEO-G6-10.html",
+      "size_bytes": 40777,
+      "sha256": "3ef68ea0e7301650e0299219aed91d8d0c8e19f3a974219d197e51c6d98632c3"
+    },
+    {
+      "relative_path": "interactive_experiences/YD-LA-GEO-G8-11.html",
+      "size_bytes": 40515,
+      "sha256": "98224ceb4ae4ade7fec09b51527807ad8ee4bf679556746f22d6c5c80a7b6d89"
+    },
+    {
+      "relative_path": "interactive_experiences/YD-LA-GEO-G8-12.html",
+      "size_bytes": 40325,
+      "sha256": "bd16b81b182fe176e382247e6a4d30bee426e5702c7fcc4ea3ff9d19d9b607fc"
+    },
+    {
+      "relative_path": "interactive_experiences/YD-LA-GEO-G9-13.html",
+      "size_bytes": 40341,
+      "sha256": "d4c4ee3544b62b006acc00a863757779031ced7acb48431d14edc594cdc91fed"
+    },
+    {
+      "relative_path": "interactive_experiences/YD-LA-NUM-G6-01.html",
+      "size_bytes": 41813,
+      "sha256": "0b61277545d847c143ab9657f2b92d6e143a4b207d6558741cdc8609c789d89b"
+    },
+    {
+      "relative_path": "interactive_experiences/YD-LA-NUM-G6-02.html",
+      "size_bytes": 40083,
+      "sha256": "719ff6c2e21b2b0f53540f66c6218463f631b1acfc5f9faa17ea12a73edbcdd6"
+    },
+    {
+      "relative_path": "interactive_experiences/YD-LA-NUM-G6-03.html",
+      "size_bytes": 40970,
+      "sha256": "1add685f4fdb172ac79f683948b54cdcf804f6337eb20acab800989da02a6d1d"
+    },
+    {
+      "relative_path": "interactive_experiences/YD-LA-NUM-G7-04.html",
+      "size_bytes": 41132,
+      "sha256": "c7c26bbc5c6b6e860b8e493929d5b007713eb10a289949682b258797802d6e3a"
+    },
+    {
+      "relative_path": "interactive_experiences/YD-LA-STAT-G7-14.html",
+      "size_bytes": 41219,
+      "sha256": "319a242031fa9e3848ca87f56a7b612874e0a4e066088bb2997ca38e30d5f57e"
+    },
+    {
+      "relative_path": "interactive_experiences/YD-LA-STAT-G8-15.html",
+      "size_bytes": 41004,
+      "sha256": "832b1bef00b6b55e2ccadc1d2b18d6c7d9986fe6998db8d87facbb984ab09ebc"
+    },
+    {
+      "relative_path": "jules_living_asset_contract.schema.json",
+      "size_bytes": 730,
+      "sha256": "09486371956bd21b1dd359df750d9c7d4b1f3f169b07655070a6fc7fe507ff7a"
+    },
+    {
+      "relative_path": "JULES_LIVING_ASSET_TASK_QUEUE.json",
+      "size_bytes": 2894,
+      "sha256": "004ddfec9619f50f1f16e6916a63c762ee1f4ba7a4b99496e1d85eacdef6bffa"
+    },
+    {
+      "relative_path": "JULES_LIVING_ASSET_TASK_QUEUE.md",
+      "size_bytes": 2450,
+      "sha256": "5cc4f8273e74aa69bf46feb232dc44afe4742d1e601fa536a98faa6cd942bbaf"
+    },
+    {
+      "relative_path": "KNOWN_BUGS_AND_LIMITATIONS.md",
+      "size_bytes": 3916,
+      "sha256": "d1a5f115c3058354d1e7327b2504e580e0eed91aeaace26de7e8a8086912f2a1"
+    },
+    {
+      "relative_path": "living_asset_326_skills_semantic_map.json",
+      "size_bytes": 242780,
+      "sha256": "bb89ab4741096ad9f21d324959684f5b549b96122b5f7ff6b6cf1e188149174b"
+    },
+    {
+      "relative_path": "living_asset_verification_ledger.json",
+      "size_bytes": 6957,
+      "sha256": "4ed6b6079f549809c7ad4ffe43707fb8e80bc16bb07eea98fb283dd334b35389"
+    },
+    {
+      "relative_path": "nha_may_living_asset_toan6_9.py",
+      "size_bytes": 9030,
+      "sha256": "2e7c7186b172bbbcb16aeb1f222ed540d02bd6c95c5fad46449d2465cb5dc7e7"
+    },
+    {
+      "relative_path": "pdf_student/YOURDREAM_LivingAsset_G6_01_YD-LA-NUM-G6-01_HocSinh.pdf",
+      "size_bytes": 249300,
+      "sha256": "14676975b2b152ef945d5bbef0a0b2b5a9202a324aa5f61e180df51b1d7545fd"
+    },
+    {
+      "relative_path": "pdf_student/YOURDREAM_LivingAsset_G6_02_YD-LA-NUM-G6-02_HocSinh.pdf",
+      "size_bytes": 201660,
+      "sha256": "6330ec6ad73e4289710641930b18e63be2cf962a22274358741c7b5829b2a2c4"
+    },
+    {
+      "relative_path": "pdf_student/YOURDREAM_LivingAsset_G6_03_YD-LA-NUM-G6-03_HocSinh.pdf",
+      "size_bytes": 202259,
+      "sha256": "1fcf14a415b4598cea61fb4f96463935fc5e93e30b7085ed3c2e2aec2b81e2e2"
+    },
+    {
+      "relative_path": "pdf_student/YOURDREAM_LivingAsset_G6_10_YD-LA-GEO-G6-10_HocSinh.pdf",
+      "size_bytes": 208863,
+      "sha256": "7defce27873a90fbed87adccc7f6483a689fc58e35b7317d04520285675e812b"
+    },
+    {
+      "relative_path": "pdf_student/YOURDREAM_LivingAsset_G7_04_YD-LA-NUM-G7-04_HocSinh.pdf",
+      "size_bytes": 239934,
+      "sha256": "8398f71e995ed50ce965d5c86d53720f3cb63ff55a64b1758e13409df01ef817"
+    },
+    {
+      "relative_path": "pdf_student/YOURDREAM_LivingAsset_G7_05_YD-LA-ALG-G7-05_HocSinh.pdf",
+      "size_bytes": 229319,
+      "sha256": "c8c551322214849801cb5bb5fa659ff707538bd1ce6d9043a8ff9f15bfa40534"
+    },
+    {
+      "relative_path": "pdf_student/YOURDREAM_LivingAsset_G7_14_YD-LA-STAT-G7-14_HocSinh.pdf",
+      "size_bytes": 202608,
+      "sha256": "9c1b896fd3a058f45d226feb4769ed0ba0086ca52018dcc04fe7986b87c1f2eb"
+    },
+    {
+      "relative_path": "pdf_student/YOURDREAM_LivingAsset_G8_06_YD-LA-ALG-G8-06_HocSinh.pdf",
+      "size_bytes": 218574,
+      "sha256": "4ff0e7cd8b156de760ca1d1257fccaa717d885acbada39375a417b39f0f395e6"
+    },
+    {
+      "relative_path": "pdf_student/YOURDREAM_LivingAsset_G8_07_YD-LA-ALG-G8-07_HocSinh.pdf",
+      "size_bytes": 257908,
+      "sha256": "0b8fbdfcda4c6f913bc2d0057ad2940706a76738cdf50e188fc9c240de2b7230"
+    },
+    {
+      "relative_path": "pdf_student/YOURDREAM_LivingAsset_G8_11_YD-LA-GEO-G8-11_HocSinh.pdf",
+      "size_bytes": 223199,
+      "sha256": "fedbf46fdc18e1d83d69b5402b7423eb33dc9e35b22297ea9219c7ed6c3c9966"
+    },
+    {
+      "relative_path": "pdf_student/YOURDREAM_LivingAsset_G8_12_YD-LA-GEO-G8-12_HocSinh.pdf",
+      "size_bytes": 215530,
+      "sha256": "1ab381bade241e8d8e6e721c76b6b16eee8c06d9eeea5e34bc0898652a8f6675"
+    },
+    {
+      "relative_path": "pdf_student/YOURDREAM_LivingAsset_G9_08_YD-LA-ALG-G9-08_HocSinh.pdf",
+      "size_bytes": 246030,
+      "sha256": "5879bd3cb8e7b242b8d74d427fdc535e444222f12d66739972d188409fb1d8f0"
+    },
+    {
+      "relative_path": "pdf_student/YOURDREAM_LivingAsset_G9_09_YD-LA-ALG-G9-09_HocSinh.pdf",
+      "size_bytes": 238216,
+      "sha256": "a6efdac6dc7838c59eaf4fa387cd8a631db5a0f92b51a13d39d2aeb566ae963c"
+    },
+    {
+      "relative_path": "pdf_student/YOURDREAM_LivingAsset_G9_13_YD-LA-GEO-G9-13_HocSinh.pdf",
+      "size_bytes": 229321,
+      "sha256": "158d05a1f591423f8c5c4a8ee28c1144fead4802e8b32e14dc5c666705a4efbf"
+    },
+    {
+      "relative_path": "pdf_student/YOURDREAM_LivingAsset_G9_15_YD-LA-STAT-G8-15_HocSinh.pdf",
+      "size_bytes": 212497,
+      "sha256": "66ae58f44b540d317b94a2fde3c6cd05eabab956100676eeae419cc403358470"
+    },
+    {
+      "relative_path": "pdf_student/YOURDREAM_LivingAsset_G9_16_YD-LA-APPL-G9-16_HocSinh.pdf",
+      "size_bytes": 237672,
+      "sha256": "cdd3aee00fae5211897efc1be46b4af9fc31745b2e45e0ae147d48b6f14f152c"
+    },
+    {
+      "relative_path": "pdf_teacher/YOURDREAM_LivingAsset_G6_01_YD-LA-NUM-G6-01_GiaoVien.pdf",
+      "size_bytes": 235890,
+      "sha256": "b2b3bf68a760ae427c9abcad66123b599ffe51ffa2ffc8f62acb2bc7a4b44020"
+    },
+    {
+      "relative_path": "pdf_teacher/YOURDREAM_LivingAsset_G6_02_YD-LA-NUM-G6-02_GiaoVien.pdf",
+      "size_bytes": 194837,
+      "sha256": "5185c69810df00a192fa907491071d4b5ea0cc15ebd0c469196c72b281283fe5"
+    },
+    {
+      "relative_path": "pdf_teacher/YOURDREAM_LivingAsset_G6_03_YD-LA-NUM-G6-03_GiaoVien.pdf",
+      "size_bytes": 196963,
+      "sha256": "5463d2b6509d0e3934c060f0a42320b6d165723cc6f6ac3977e8cc0cdd18b629"
+    },
+    {
+      "relative_path": "pdf_teacher/YOURDREAM_LivingAsset_G6_10_YD-LA-GEO-G6-10_GiaoVien.pdf",
+      "size_bytes": 195061,
+      "sha256": "6c3143d5c6a86134e8872f98007d499165db85fc7704b75924888f7fe1db00ae"
+    },
+    {
+      "relative_path": "pdf_teacher/YOURDREAM_LivingAsset_G7_04_YD-LA-NUM-G7-04_GiaoVien.pdf",
+      "size_bytes": 237248,
+      "sha256": "9c753f796951a0c7f5c2d520a2d1a321296ef07a82b2ab13226f8df519e3d333"
+    },
+    {
+      "relative_path": "pdf_teacher/YOURDREAM_LivingAsset_G7_05_YD-LA-ALG-G7-05_GiaoVien.pdf",
+      "size_bytes": 226770,
+      "sha256": "d8eeeaea63664e298e62ae149994e20219563d34be6e8edbdd2adac951abf53c"
+    },
+    {
+      "relative_path": "pdf_teacher/YOURDREAM_LivingAsset_G7_14_YD-LA-STAT-G7-14_GiaoVien.pdf",
+      "size_bytes": 197579,
+      "sha256": "142ac8def3bec0fc3619ca910ec8d8448f0e0f97fe05e05829d0c27fdfddea4c"
+    },
+    {
+      "relative_path": "pdf_teacher/YOURDREAM_LivingAsset_G8_06_YD-LA-ALG-G8-06_GiaoVien.pdf",
+      "size_bytes": 206327,
+      "sha256": "c5871cceb36ba146664fc31c73d6ae7ba19445bb6b5c902dfc95e2ebfeaace31"
+    },
+    {
+      "relative_path": "pdf_teacher/YOURDREAM_LivingAsset_G8_07_YD-LA-ALG-G8-07_GiaoVien.pdf",
+      "size_bytes": 248812,
+      "sha256": "09fedfe956e496047b05f35da686b1d58cfb726ee8f64dc75e079429cd4cd087"
+    },
+    {
+      "relative_path": "pdf_teacher/YOURDREAM_LivingAsset_G8_11_YD-LA-GEO-G8-11_GiaoVien.pdf",
+      "size_bytes": 222426,
+      "sha256": "24c774d0609c08abf732f37d2328222f34d2088185966363d7f2165f7a2f45e6"
+    },
+    {
+      "relative_path": "pdf_teacher/YOURDREAM_LivingAsset_G8_12_YD-LA-GEO-G8-12_GiaoVien.pdf",
+      "size_bytes": 210604,
+      "sha256": "2abd3174d3e432c7f1643d5f07510d9e10d5e1687bd399d7f6eebcdff2753bbf"
+    },
+    {
+      "relative_path": "pdf_teacher/YOURDREAM_LivingAsset_G9_08_YD-LA-ALG-G9-08_GiaoVien.pdf",
+      "size_bytes": 239276,
+      "sha256": "76bd879640069084085f0498227dda8a293512ba59ab4075f18a9537dfceda65"
+    },
+    {
+      "relative_path": "pdf_teacher/YOURDREAM_LivingAsset_G9_09_YD-LA-ALG-G9-09_GiaoVien.pdf",
+      "size_bytes": 229837,
+      "sha256": "a824a9b5abefc4163064b3b84359fbb481529c5a898daa834dd1fbf0d085def1"
+    },
+    {
+      "relative_path": "pdf_teacher/YOURDREAM_LivingAsset_G9_13_YD-LA-GEO-G9-13_GiaoVien.pdf",
+      "size_bytes": 216417,
+      "sha256": "9df1f12d1171ac71bae2d9b8c122f79b7a2cfbfafb9357bddb9c1cc3706a9a55"
+    },
+    {
+      "relative_path": "pdf_teacher/YOURDREAM_LivingAsset_G9_15_YD-LA-STAT-G8-15_GiaoVien.pdf",
+      "size_bytes": 199409,
+      "sha256": "a60374b7e460570ba59e3d290a9b55d0d33209ef3e070d869b967af4c69c5468"
+    },
+    {
+      "relative_path": "pdf_teacher/YOURDREAM_LivingAsset_G9_16_YD-LA-APPL-G9-16_GiaoVien.pdf",
+      "size_bytes": 225392,
+      "sha256": "32ae8aafe55d0446f656faaf0f599a16a45555d010417a834fda5c4bad41867d"
+    },
+    {
+      "relative_path": "png_previews/YD-LA-ALG-G7-05_HocSinh_150dpi.png",
+      "size_bytes": 211827,
+      "sha256": "27713dfefcae8688f2069011395fb678e3ce892e3b1e2b1bd753557cf8c29861"
+    },
+    {
+      "relative_path": "png_previews/YD-LA-ALG-G8-06_HocSinh_150dpi.png",
+      "size_bytes": 223517,
+      "sha256": "8a9aa5deb7191bec8e22939da4f2243c3dea70b9266a5e5dcb6356e797861e6f"
+    },
+    {
+      "relative_path": "png_previews/YD-LA-ALG-G8-07_HocSinh_150dpi.png",
+      "size_bytes": 235389,
+      "sha256": "4e771398ffd434196dbb02d2c42b034063015475b08b606df58e4441c114331b"
+    },
+    {
+      "relative_path": "png_previews/YD-LA-ALG-G9-08_HocSinh_150dpi.png",
+      "size_bytes": 238392,
+      "sha256": "a9368dae39fa8d3a6a0f848f6d23fb3e1f857b4aa758858c9814190acf866651"
+    },
+    {
+      "relative_path": "png_previews/YD-LA-ALG-G9-09_HocSinh_150dpi.png",
+      "size_bytes": 227214,
+      "sha256": "9fa1ae10839f84f19039721335c48935b5a562f639f63ed01c4929532d1d9cc6"
+    },
+    {
+      "relative_path": "png_previews/YD-LA-APPL-G9-16_HocSinh_150dpi.png",
+      "size_bytes": 234821,
+      "sha256": "650ecb5f4833f5ad4c058f827647d4cfb0b824d5c1f188ecd5cc5e9dfcec23dd"
+    },
+    {
+      "relative_path": "png_previews/YD-LA-GEO-G6-10_HocSinh_150dpi.png",
+      "size_bytes": 228828,
+      "sha256": "b2e5d932f1f2a9ccee948312d4782e8ffa0371f5abed322aa414d214d9c1f7b0"
+    },
+    {
+      "relative_path": "png_previews/YD-LA-GEO-G8-11_HocSinh_150dpi.png",
+      "size_bytes": 206940,
+      "sha256": "2ec892ba09a651b1d76f51f7df2a233e689be95cf83145d2f31bf3658fefc623"
+    },
+    {
+      "relative_path": "png_previews/YD-LA-GEO-G8-12_HocSinh_150dpi.png",
+      "size_bytes": 218651,
+      "sha256": "d6d9282ca49673753a62beab43f72447150e10ce0ebb0cf0fa4911d862974d13"
+    },
+    {
+      "relative_path": "png_previews/YD-LA-GEO-G9-13_HocSinh_150dpi.png",
+      "size_bytes": 221972,
+      "sha256": "a9cae6ce91c4f3b2ae39d2b10d4f5f831d1ac61c10f99f565af1fc06f311960e"
+    },
+    {
+      "relative_path": "png_previews/YD-LA-NUM-G6-01_HocSinh_150dpi.png",
+      "size_bytes": 237389,
+      "sha256": "6f33810980ff4bac51d71138d7a32422ef5fcb993f83272504439bb5d412d821"
+    },
+    {
+      "relative_path": "png_previews/YD-LA-NUM-G6-02_HocSinh_150dpi.png",
+      "size_bytes": 211149,
+      "sha256": "4c46ba931af5b795d2a108c90e1436cf95a94d8e32c149449845cc3d83c719fd"
+    },
+    {
+      "relative_path": "png_previews/YD-LA-NUM-G6-03_HocSinh_150dpi.png",
+      "size_bytes": 226574,
+      "sha256": "4f790fbebad7bb6e5a77d7d5f41abbc929b47d112de82737391eee17204c440b"
+    },
+    {
+      "relative_path": "png_previews/YD-LA-NUM-G7-04_HocSinh_150dpi.png",
+      "size_bytes": 204813,
+      "sha256": "882d101f58e5f3c1563067a8755ee8efb6267e50b1ae6e94053749144052eb23"
+    },
+    {
+      "relative_path": "png_previews/YD-LA-STAT-G7-14_HocSinh_150dpi.png",
+      "size_bytes": 225415,
+      "sha256": "377f728b31aac33d6e11a4ce29b3cacd0bc45b3a43affdcecdfc4442c140087b"
+    },
+    {
+      "relative_path": "png_previews/YD-LA-STAT-G8-15_HocSinh_150dpi.png",
+      "size_bytes": 244984,
+      "sha256": "ea9b7304162c47c4b5bb5c1eb9bc2e0bde80fd1ff193eb4070bb08e1b2103a04"
+    },
+    {
+      "relative_path": "qa_verification_report.json",
+      "size_bytes": 474,
+      "sha256": "dd148f7ddbdd23e8bbadc56277ca0ab73334c8e571fcce60c3aeb5feacb8cada"
+    },
+    {
+      "relative_path": "README.md",
+      "size_bytes": 5789,
+      "sha256": "924206f0bcddfcad9ee1581aa6038b93403fe4c484e2603282548f959934163b"
+    },
+    {
+      "relative_path": "REPRODUCIBILITY.md",
+      "size_bytes": 5297,
+      "sha256": "ee8c847d30cf4b3201f6bd116418a067cf711e2d280e47343f835b27740e443a"
+    },
+    {
+      "relative_path": "requirements.txt",
+      "size_bytes": 141,
+      "sha256": "15f1c623181e0177d6c3349d0630f0bc59191f11a6715e3eb57233482725354c"
+    },
+    {
+      "relative_path": "sdk/living_asset_sdk.py",
+      "size_bytes": 20381,
+      "sha256": "4a6f6cf3523efc31e41e0867881af84b7fe55040b4ee2ac9e22861438c5d5f2e"
+    },
+    {
+      "relative_path": "student_payloads/index_16_student_living_assets.json",
+      "size_bytes": 83362,
+      "sha256": "46d2f492cd17259da97d39d083570d9fc73cf92aad75b71845a888aa34c0fce0"
+    },
+    {
+      "relative_path": "student_payloads/YD-LA-ALG-G7-05_student.json",
+      "size_bytes": 4485,
+      "sha256": "bd46537ddc254c23a18f3e9ec8f5a7b0543c448999b0cac982564e2847c01c01"
+    },
+    {
+      "relative_path": "student_payloads/YD-LA-ALG-G8-06_student.json",
+      "size_bytes": 4894,
+      "sha256": "7fe444bb81f8db12f6838cceae86e7ed2648da889c8634fa0d653e22c72c01b0"
+    },
+    {
+      "relative_path": "student_payloads/YD-LA-ALG-G8-07_student.json",
+      "size_bytes": 5301,
+      "sha256": "d0d559678e55cc70ef4fd0a9d88c58187a0abee7087f0a0432bfc75117189639"
+    },
+    {
+      "relative_path": "student_payloads/YD-LA-ALG-G9-08_student.json",
+      "size_bytes": 5341,
+      "sha256": "82408b497b90f55f1fc34bfd204e62beadfa14051fd29d03f6548cff0a2eb709"
+    },
+    {
+      "relative_path": "student_payloads/YD-LA-ALG-G9-09_student.json",
+      "size_bytes": 4942,
+      "sha256": "ad904ebb15ea9e09cd44b365c47568b6dac1780d65cd15d3aad6233af1234c42"
+    },
+    {
+      "relative_path": "student_payloads/YD-LA-APPL-G9-16_student.json",
+      "size_bytes": 5480,
+      "sha256": "84f4097bc9a8f20111f331049c4c81390e8ad5b7c61156495ab40f5ac8959028"
+    },
+    {
+      "relative_path": "student_payloads/YD-LA-GEO-G6-10_student.json",
+      "size_bytes": 5181,
+      "sha256": "a4500575d1fdf651feac314b4d8c43f204516069e6d7a2c58b58211cec05b43f"
+    },
+    {
+      "relative_path": "student_payloads/YD-LA-GEO-G8-11_student.json",
+      "size_bytes": 4798,
+      "sha256": "f0c5db60899105114817bf8a3544b68faf61fd56d14952a48fab52812d1911c1"
+    },
+    {
+      "relative_path": "student_payloads/YD-LA-GEO-G8-12_student.json",
+      "size_bytes": 4935,
+      "sha256": "cad7593964c48965ba6195928df45eb24bbcd195860f3bc73a682af8e35b486f"
+    },
+    {
+      "relative_path": "student_payloads/YD-LA-GEO-G9-13_student.json",
+      "size_bytes": 5015,
+      "sha256": "4edda651976e9cdfe1406feb1f3aa31a7d7209cfe1bbecf47888a01d472f2430"
+    },
+    {
+      "relative_path": "student_payloads/YD-LA-NUM-G6-01_student.json",
+      "size_bytes": 5209,
+      "sha256": "c4e69646af06b12c00973ad005a8cc438b406e5a8275edeb9bca4d12ac18ba4c"
+    },
+    {
+      "relative_path": "student_payloads/YD-LA-NUM-G6-02_student.json",
+      "size_bytes": 4513,
+      "sha256": "317a1b08710788803359336def89dee0109a9474b28cec640e15e3f18b12d4cb"
+    },
+    {
+      "relative_path": "student_payloads/YD-LA-NUM-G6-03_student.json",
+      "size_bytes": 4830,
+      "sha256": "276ca50a3c0c39dfb13b3b58db1e22cdec72ef9f422e4794587da6bd19e1dc5e"
+    },
+    {
+      "relative_path": "student_payloads/YD-LA-NUM-G7-04_student.json",
+      "size_bytes": 4845,
+      "sha256": "bfcb5b5d2ab42782b8ddf6e29186f7e027d4d702e00e739beb04b79874fbfe4f"
+    },
+    {
+      "relative_path": "student_payloads/YD-LA-STAT-G7-14_student.json",
+      "size_bytes": 5324,
+      "sha256": "7039b0346bb917045c1b4334b5aff265cd230bf237f2160f3ad1640986733617"
+    },
+    {
+      "relative_path": "student_payloads/YD-LA-STAT-G8-15_student.json",
+      "size_bytes": 5434,
+      "sha256": "8c9a3cf2b9f7c50b3adc8da8f5a111735a4dfe4f6c304860f404a7123a970839"
+    },
+    {
+      "relative_path": "studio/living_asset_studio.html",
+      "size_bytes": 231472,
+      "sha256": "820354bb7c0509c5c7b613b478ec14953adbdd8acfdfc6a24c0ee6a9c240b60c"
+    },
+    {
+      "relative_path": "svg_assets/YD-LA-ALG-G7-05.svg",
+      "size_bytes": 1926,
+      "sha256": "312f30d5058a38755d1c698ff3514dc9f7ff076abcfe3e67a86568a34142f64b"
+    },
+    {
+      "relative_path": "svg_assets/YD-LA-ALG-G8-06.svg",
+      "size_bytes": 2105,
+      "sha256": "38c0198de4bfc49e7cb7f1200e685cc7b9da0064cd44b6405a6d84eb120a1362"
+    },
+    {
+      "relative_path": "svg_assets/YD-LA-ALG-G8-07.svg",
+      "size_bytes": 1855,
+      "sha256": "d6500d43b1094dddefb4965ff0bc827f2159d1ca9740d8757ffeb82ebe3891bc"
+    },
+    {
+      "relative_path": "svg_assets/YD-LA-ALG-G9-08.svg",
+      "size_bytes": 1804,
+      "sha256": "71c97fbd3d41c2754ad3026715617de4194cef96bf76ec512533a1a853e07760"
+    },
+    {
+      "relative_path": "svg_assets/YD-LA-ALG-G9-09.svg",
+      "size_bytes": 1813,
+      "sha256": "8408e7de083fabe08deb7c0c2d744d706c6dea086e6e9f1c7b6fddfd6a2ea11a"
+    },
+    {
+      "relative_path": "svg_assets/YD-LA-APPL-G9-16.svg",
+      "size_bytes": 1681,
+      "sha256": "049f20d4b29f86e998dd3b38d892a28152aa3f25c9c327cce0052224e1b08d96"
+    },
+    {
+      "relative_path": "svg_assets/YD-LA-GEO-G6-10.svg",
+      "size_bytes": 1767,
+      "sha256": "966c58b1edac2452ca2587c2497e5c6a686738a6da32b3a6b9a0bf5a46681e99"
+    },
+    {
+      "relative_path": "svg_assets/YD-LA-GEO-G8-11.svg",
+      "size_bytes": 1528,
+      "sha256": "d64062b068588699e7e1ea6fffb2199f41c3aa4634495c4c59c7bac6ab96eecc"
+    },
+    {
+      "relative_path": "svg_assets/YD-LA-GEO-G8-12.svg",
+      "size_bytes": 1786,
+      "sha256": "3e623f92e8062cac3899433941f76c967b6dc4af022ee5deb77eff36eba0524a"
+    },
+    {
+      "relative_path": "svg_assets/YD-LA-GEO-G9-13.svg",
+      "size_bytes": 1549,
+      "sha256": "74417f98e8eb26af95f052e6791a7506a69d092a9afbfe0976ee35bba79b676c"
+    },
+    {
+      "relative_path": "svg_assets/YD-LA-NUM-G6-01.svg",
+      "size_bytes": 2829,
+      "sha256": "877bb39d839f887748b761654494317e6cd922c246705cee88d501fd6dded8e3"
+    },
+    {
+      "relative_path": "svg_assets/YD-LA-NUM-G6-02.svg",
+      "size_bytes": 2491,
+      "sha256": "51fd96cfda14435e9d459897176735a5a827473935b6e0d45fe604c7765796b1"
+    },
+    {
+      "relative_path": "svg_assets/YD-LA-NUM-G6-03.svg",
+      "size_bytes": 2492,
+      "sha256": "043f7613ccc3713cd8af988df392f9a9b1cf1a5b3aa350bd1f3b8eff7a90abf4"
+    },
+    {
+      "relative_path": "svg_assets/YD-LA-NUM-G7-04.svg",
+      "size_bytes": 2077,
+      "sha256": "8c9ae2da2c105c5004aea596b151ca9041409b3aecb773cbc1c634a2bfce1ed0"
+    },
+    {
+      "relative_path": "svg_assets/YD-LA-STAT-G7-14.svg",
+      "size_bytes": 1569,
+      "sha256": "81d8f7e75f67ca7b2386684c29e6ead0488dcb1b561a0ca898a08d80d0735a4f"
+    },
+    {
+      "relative_path": "svg_assets/YD-LA-STAT-G8-15.svg",
+      "size_bytes": 1272,
+      "sha256": "92966c06f45f49cad40b992e7ede3747398d8e05c565f4a74ab7d95a9ac66668"
+    },
+    {
+      "relative_path": "teacher_vault/index_16_teacher_keys.json",
+      "size_bytes": 22184,
+      "sha256": "ad9f531b374320fb73f4cf55b124067a7cb6a4d5f1ed45ffedb143c163aaea14"
+    },
+    {
+      "relative_path": "teacher_vault/YD-LA-ALG-G7-05_teacher_key.json",
+      "size_bytes": 1225,
+      "sha256": "5ee1e64705fd68ceffaee193d1860402cfa029281b8d1f7f11ad6f1cf3eba5d4"
+    },
+    {
+      "relative_path": "teacher_vault/YD-LA-ALG-G8-06_teacher_key.json",
+      "size_bytes": 1303,
+      "sha256": "4756ab8e1910bc9fe37403496945a52030ed8e5fc9bd0fd6a425d862fb3d3b83"
+    },
+    {
+      "relative_path": "teacher_vault/YD-LA-ALG-G8-07_teacher_key.json",
+      "size_bytes": 1333,
+      "sha256": "e0e8d0144861865ca38b257365c02b9feb27231e4f27244ffae6962cc7ad27c4"
+    },
+    {
+      "relative_path": "teacher_vault/YD-LA-ALG-G9-08_teacher_key.json",
+      "size_bytes": 1359,
+      "sha256": "ec19d702accbd5b638c8f9757cc5eab22a7236b81c56f68b55c5eeab9ba7d6e5"
+    },
+    {
+      "relative_path": "teacher_vault/YD-LA-ALG-G9-09_teacher_key.json",
+      "size_bytes": 1369,
+      "sha256": "0ef66a14489f19b7c9b87638ae3fef8ff4ae97b7af94490bf3137e4333e6c555"
+    },
+    {
+      "relative_path": "teacher_vault/YD-LA-APPL-G9-16_teacher_key.json",
+      "size_bytes": 1362,
+      "sha256": "0798f04f09b84c16c42d11160b9052fcd33d806cc9772bc4f39052276fea8f6a"
+    },
+    {
+      "relative_path": "teacher_vault/YD-LA-GEO-G6-10_teacher_key.json",
+      "size_bytes": 1463,
+      "sha256": "347d4538bccc224216693cfa01b8211c3a0eeb16d476ffce514d1cd46292703a"
+    },
+    {
+      "relative_path": "teacher_vault/YD-LA-GEO-G8-11_teacher_key.json",
+      "size_bytes": 1274,
+      "sha256": "fac1241e57a22fd7139be715c6031f346b367de5bfe777e1cdd259bd8ad701c2"
+    },
+    {
+      "relative_path": "teacher_vault/YD-LA-GEO-G8-12_teacher_key.json",
+      "size_bytes": 1123,
+      "sha256": "c553f28dd2f0c561f5ded5fe851ce5eeffa7a7b433a6295c7151bb6a15131d22"
+    },
+    {
+      "relative_path": "teacher_vault/YD-LA-GEO-G9-13_teacher_key.json",
+      "size_bytes": 1348,
+      "sha256": "8c88830171c6c42f9022dabe3b60189941a0f8ee8593423920cb2df731aeed34"
+    },
+    {
+      "relative_path": "teacher_vault/YD-LA-NUM-G6-01_teacher_key.json",
+      "size_bytes": 1309,
+      "sha256": "7fbbd4d8f0b7b397f7495703958dbb2067964447352ad3b2f9ef057dc3cc2678"
+    },
+    {
+      "relative_path": "teacher_vault/YD-LA-NUM-G6-02_teacher_key.json",
+      "size_bytes": 1043,
+      "sha256": "e37fbb713eef19ea4da1feec9c0cd77f34c808b02b17093dd75478732487ac86"
+    },
+    {
+      "relative_path": "teacher_vault/YD-LA-NUM-G6-03_teacher_key.json",
+      "size_bytes": 1315,
+      "sha256": "e0656db366ac1b2a9fef9a1ce38e02d71b45904dede735f7ac622ae63c42c861"
+    },
+    {
+      "relative_path": "teacher_vault/YD-LA-NUM-G7-04_teacher_key.json",
+      "size_bytes": 1175,
+      "sha256": "9ed0eebcdd4d53870996e8ba4e7e164966ea37701c30d51c6b6c036a5f2d5103"
+    },
+    {
+      "relative_path": "teacher_vault/YD-LA-STAT-G7-14_teacher_key.json",
+      "size_bytes": 1536,
+      "sha256": "e871c9c05c8db44e7621a9ae7a2f1ce33f1c091f1c6e5ed4d2cb5ecbfd2f1d24"
+    },
+    {
+      "relative_path": "teacher_vault/YD-LA-STAT-G8-15_teacher_key.json",
+      "size_bytes": 1476,
+      "sha256": "20f399e060d693e6d789e426fe7349775ecebe7bb46288051fa8f24a390de26b"
+    },
+    {
+      "relative_path": "test_jules_living_asset_qa.py",
+      "size_bytes": 4650,
+      "sha256": "a54e8e0cc3af04fe7026fae5fe5370198530db663128a3dfeeedc2b7dc2a9d7f"
+    },
+    {
+      "relative_path": "tests/test_factory_and_jules_handoff.py",
+      "size_bytes": 5489,
+      "sha256": "7d40e0a82ec0d321b1ecc99450a981d985277be73e27b37da37b67b70647d03f"
+    },
+    {
+      "relative_path": "tests/verify_studio_browser.py",
+      "size_bytes": 4641,
+      "sha256": "f636207ec805c577af2e86ee3c14e385240bdc687d67bd5a33ff6b572b93fbcc"
+    },
+    {
+      "relative_path": "YOURDREAM_LIVING_ASSET_FACTORY_v2.2_REPRODUCIBLE_KIT.zip",
+      "size_bytes": 14608038,
+      "sha256": "105157ed59d6317db63c1a559c0bacb8704aa80c247372fea80096413c5a9180"
+    },
+    {
+      "relative_path": "YOURDREAM_Living_Asset_Studio.html",
+      "size_bytes": 231178,
+      "sha256": "98f560535a2a45328dff8782f5e58787af3e0991ab35b55c2ffd9e9a664b70f9"
+    }
+  ]
+}
