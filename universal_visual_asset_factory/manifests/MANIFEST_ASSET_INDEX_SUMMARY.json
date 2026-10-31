@@ -1,0 +1,97 @@
+{
+  "factory_name": "YOURDREAM Universal Mathematical Visual Asset Factory",
+  "version": "1.0.0",
+  "timestamp": "2026-10-31",
+  "total_families": 166,
+  "total_variants": 7636,
+  "total_images_rendered_on_disk": 30544,
+  "disk_archive_root": "D:\\YOURDREAM.VN\\VISUAL_ASSET_FACTORY\\output",
+  "by_grade": {
+    "6": 1426,
+    "7": 1288,
+    "8": 1196,
+    "9": 1058,
+    "10": 874,
+    "11": 966,
+    "12": 828
+  },
+  "by_strand": {
+    "GIAI_TICH_HINH_HOC": 598,
+    "HINH_HOC_DO_LUONG": 2898,
+    "SO_HOC_DAI_SO": 2300,
+    "STEM_THUC_TIEN": 874,
+    "THONG_KE_XAC_SUAT": 966
+  },
+  "representative_samples": [
+    {
+      "variant_id": "FAM_G06_GEO_TRIANGLE_EQUILATERAL_VAR_01",
+      "grade": 6,
+      "strand": "HINH_HOC_DO_LUONG"
+    },
+    {
+      "variant_id": "FAM_G06_GEO_SQUARE_RECTANGLE_VAR_01",
+      "grade": 6,
+      "strand": "HINH_HOC_DO_LUONG"
+    },
+    {
+      "variant_id": "FAM_G07_GEO_ADJACENT_VERTICAL_ANGLES_VAR_01",
+      "grade": 7,
+      "strand": "HINH_HOC_DO_LUONG"
+    },
+    {
+      "variant_id": "FAM_G07_GEO_PARALLEL_ALTERNATE_INT_VAR_01",
+      "grade": 7,
+      "strand": "HINH_HOC_DO_LUONG"
+    },
+    {
+      "variant_id": "FAM_G08_GEO_QUAD_TRAPEZOID_MID_VAR_01",
+      "grade": 8,
+      "strand": "HINH_HOC_DO_LUONG"
+    },
+    {
+      "variant_id": "FAM_G08_GEO_PARALLELOGRAM_PROPERTIES_VAR_01",
+      "grade": 8,
+      "strand": "HINH_HOC_DO_LUONG"
+    },
+    {
+      "variant_id": "FAM_G09_GEO_RIGHT_TRI_METRIC_SYS_VAR_01",
+      "grade": 9,
+      "strand": "HINH_HOC_DO_LUONG"
+    },
+    {
+      "variant_id": "FAM_G09_GEO_TRIG_RATIOS_SIN_COS_VAR_01",
+      "grade": 9,
+      "strand": "HINH_HOC_DO_LUONG"
+    },
+    {
+      "variant_id": "FAM_G10_GEO_VECTOR_SUM_PARALLELOGRAM_VAR_01",
+      "grade": 10,
+      "strand": "HINH_HOC_DO_LUONG"
+    },
+    {
+      "variant_id": "FAM_G10_GEO_COSINE_SINE_LAW_TRI_VAR_01",
+      "grade": 10,
+      "strand": "HINH_HOC_DO_LUONG"
+    },
+    {
+      "variant_id": "FAM_G11_GEO3D_PARALLEL_LINE_PLANE_VAR_01",
+      "grade": 11,
+      "strand": "HINH_HOC_DO_LUONG"
+    },
+    {
+      "variant_id": "FAM_G11_GEO3D_PARALLEL_PLANES_VAR_01",
+      "grade": 11,
+      "strand": "HINH_HOC_DO_LUONG"
+    },
+    {
+      "variant_id": "FAM_G12_CALC_CUBIC_FUNCTION_SHAPES_VAR_01",
+      "grade": 12,
+      "strand": "GIAI_TICH_HINH_HOC"
+    },
+    {
+      "variant_id": "FAM_G12_CALC_QUARTIC_BIQUADRATIC_VAR_01",
+      "grade": 12,
+      "strand": "GIAI_TICH_HINH_HOC"
+    }
+  ]
+}

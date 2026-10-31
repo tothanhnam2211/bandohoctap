@@ -1,0 +1,1662 @@
+[
+  {
+    "family_id": "FAM_G06_NUM_SET_VENN",
+    "grade": 6,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 1",
+    "topic_vi": "Tập hợp & Biểu đồ Venn",
+    "generator_type": "set_venn",
+    "math_invariant": "A cap B, A cup B",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_NUM_LINE_NATURAL",
+    "grade": 6,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 1",
+    "topic_vi": "Tia số tự nhiên & Phép đếm",
+    "generator_type": "number_line_nat",
+    "math_invariant": "x in N",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_NUM_PRIME_FACTOR_TREE",
+    "grade": 6,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 2",
+    "topic_vi": "Cây phân tích thừa số nguyên tố",
+    "generator_type": "prime_factor_tree",
+    "math_invariant": "n = p1^a * p2^b",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_NUM_GCD_LCM_GRID",
+    "grade": 6,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 2",
+    "topic_vi": "Lát gạch ƯCLN & Chu kỳ BCNN",
+    "generator_type": "gcd_lcm_grid",
+    "math_invariant": "d = gcd(a, b)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_NUM_LINE_INTEGER",
+    "grade": 6,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 3",
+    "topic_vi": "Trục số nguyên âm & số đối",
+    "generator_type": "number_line_int",
+    "math_invariant": "-x < 0 < x",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_NUM_INTEGER_CHIP_MODEL",
+    "grade": 6,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 3",
+    "topic_vi": "Mô hình chip âm dương triệt tiêu",
+    "generator_type": "integer_chips",
+    "math_invariant": "(+1) + (-1) = 0",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_NUM_INTEGER_ELEVATOR_TEMP",
+    "grade": 6,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 3",
+    "topic_vi": "Nhiệt kế & Thang máy số nguyên",
+    "generator_type": "vertical_integer_scale",
+    "math_invariant": "T_final = T0 + Delta_T",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_NUM_FRACTION_PIE",
+    "grade": 6,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 6",
+    "topic_vi": "Phân số hình quạt tròn",
+    "generator_type": "fraction_pie",
+    "math_invariant": "a/b sector",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_NUM_FRACTION_BAR_TAPE",
+    "grade": 6,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 6",
+    "topic_vi": "Phân số băng giấy & Băng đo",
+    "generator_type": "fraction_tape",
+    "math_invariant": "a/b length bar",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_NUM_FRACTION_EQUIVALENT",
+    "grade": 6,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 6",
+    "topic_vi": "Bảng phân số bằng nhau",
+    "generator_type": "fraction_grid_equiv",
+    "math_invariant": "a/b = (a*k)/(b*k)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_NUM_DECIMAL_PLACE_VALUE",
+    "grade": 6,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 7",
+    "topic_vi": "Bảng giá trị hàng số thập phân",
+    "generator_type": "decimal_blocks",
+    "math_invariant": "10 base system",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_NUM_PERCENTAGE_SQUARE",
+    "grade": 6,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 7",
+    "topic_vi": "Lưới 100 ô vuông tỉ số phần trăm",
+    "generator_type": "percentage_100_grid",
+    "math_invariant": "p% = p/100",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_GEO_TRIANGLE_EQUILATERAL",
+    "grade": 6,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 4",
+    "topic_vi": "Tam giác đều & Lưới tam giác",
+    "generator_type": "geom_regular_triangle",
+    "math_invariant": "AB=BC=CA, 60 deg",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_GEO_SQUARE_RECTANGLE",
+    "grade": 6,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 4",
+    "topic_vi": "Hình vuông, Chữ nhật & Chu vi",
+    "generator_type": "geom_quad_basic",
+    "math_invariant": "P = 2(a+b), S = a*b",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_GEO_RHOMBUS_PARALLEL",
+    "grade": 6,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 4",
+    "topic_vi": "Hình thoi & Hình bình hành",
+    "generator_type": "geom_rhombus_parallel",
+    "math_invariant": "S = (d1*d2)/2",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_GEO_TRAPEZOID_ISOSCELES",
+    "grade": 6,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 4",
+    "topic_vi": "Hình thang cân & Lát mặt phẳng",
+    "generator_type": "geom_trapezoid_iso",
+    "math_invariant": "S = (a+b)*h/2",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_GEO_SYMMETRY_AXIS",
+    "grade": 6,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 5",
+    "topic_vi": "Trục đối xứng hình tự nhiên/hoa",
+    "generator_type": "geom_symmetry_axis",
+    "math_invariant": "Mirror reflect line",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_GEO_SYMMETRY_CENTER",
+    "grade": 6,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 5",
+    "topic_vi": "Tâm đối xứng & Chong chóng",
+    "generator_type": "geom_symmetry_center",
+    "math_invariant": "180 deg rotation",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_GEO_POINT_LINE_RAY",
+    "grade": 6,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 8",
+    "topic_vi": "Điểm, Đường thẳng, Tia, Đoạn thẳng",
+    "generator_type": "geom_point_line_ray",
+    "math_invariant": "C in AB",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_GEO_MIDPOINT_SEGMENT",
+    "grade": 6,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 8",
+    "topic_vi": "Trung điểm đoạn thẳng & Cây thước",
+    "generator_type": "geom_midpoint_segment",
+    "math_invariant": "MA = MB = AB/2",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_GEO_ANGLE_PROTRACTOR",
+    "grade": 6,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 8",
+    "topic_vi": "Góc & Thước đo góc độ",
+    "generator_type": "geom_angle_protractor",
+    "math_invariant": "0 < angle <= 180",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_STAT_TALLY_CHART",
+    "grade": 6,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 9",
+    "topic_vi": "Bảng kiểm đếm & Thu thập dữ liệu",
+    "generator_type": "stat_tally_chart",
+    "math_invariant": "Sum tally = N",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_STAT_PICTOGRAPH",
+    "grade": 6,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 9",
+    "topic_vi": "Biểu đồ tranh (Pictograph)",
+    "generator_type": "stat_pictograph",
+    "math_invariant": "1 icon = k units",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_STAT_BAR_CHART",
+    "grade": 6,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 9",
+    "topic_vi": "Biểu đồ cột đơn giản",
+    "generator_type": "stat_bar_chart",
+    "math_invariant": "height prop to freq",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_STAT_DOUBLE_BAR",
+    "grade": 6,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 9",
+    "topic_vi": "Biểu đồ cột kép so sánh",
+    "generator_type": "stat_double_bar",
+    "math_invariant": "Grouped comparison",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_STAT_CHANCE_SPINNER",
+    "grade": 6,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 9",
+    "topic_vi": "Vòng quay xác suất may mắn",
+    "generator_type": "prob_spinner",
+    "math_invariant": "P = angle/360",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_STAT_DICE_EXPERIMENT",
+    "grade": 6,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 9",
+    "topic_vi": "Mô phỏng gieo xúc xắc & Đồng xu",
+    "generator_type": "prob_dice_coin",
+    "math_invariant": "P = n(A)/N",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_STEM_COURTYARD_TILING",
+    "grade": 6,
+    "strand": "STEM_THUC_TIEN",
+    "chapter": "Thực hành",
+    "topic_vi": "Lát sân gạch chữ nhật thực tiễn",
+    "generator_type": "stem_tile_pattern",
+    "math_invariant": "a % d == 0, b % d == 0",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_STEM_RECIPE_RATIO",
+    "grade": 6,
+    "strand": "STEM_THUC_TIEN",
+    "chapter": "Thực hành",
+    "topic_vi": "Tỉ lệ pha chế nước ép/nấu ăn",
+    "generator_type": "stem_mixing_ratio",
+    "math_invariant": "Water : Juice = a : b",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_STEM_BUDGET_SAVINGS",
+    "grade": 6,
+    "strand": "STEM_THUC_TIEN",
+    "chapter": "Thực hành",
+    "topic_vi": "Heo đất & Kế hoạch chi tiêu",
+    "generator_type": "stem_piggy_budget",
+    "math_invariant": "Income - Expense = Net",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G06_STEM_SCALE_MAP_DISTANCE",
+    "grade": 6,
+    "strand": "STEM_THUC_TIEN",
+    "chapter": "Thực hành",
+    "topic_vi": "Bản đồ địa hình tỉ lệ xích",
+    "generator_type": "stem_map_scale",
+    "math_invariant": "Actual = Map * Scale",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_NUM_RATIONAL_NUMBERLINE",
+    "grade": 7,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 1",
+    "topic_vi": "Số hữu tỉ trên trục số & số đối",
+    "generator_type": "number_line_rational",
+    "math_invariant": "q = a/b in Q",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_NUM_EXPONENT_POWER",
+    "grade": 7,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 1",
+    "topic_vi": "Lũy thừa với số mũ tự nhiên",
+    "generator_type": "math_power_tree",
+    "math_invariant": "a^m * a^n = a^(m+n)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_NUM_REAL_SQUARE_ROOT",
+    "grade": 7,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 2",
+    "topic_vi": "Căn bậc hai số học trên trục số",
+    "generator_type": "math_square_root_spiral",
+    "math_invariant": "x^2 = S, x = sqrt(S)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_ALG_PROPORTION_BAR",
+    "grade": 7,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 6",
+    "topic_vi": "Tỉ lệ thức & Dãy tỉ số bằng nhau",
+    "generator_type": "algebra_proportion_scale",
+    "math_invariant": "a/b = c/d = (a+c)/(b+d)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_ALG_DIRECT_INVERSE_GRAPH",
+    "grade": 7,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 6",
+    "topic_vi": "Đồ thị đại lượng tỉ lệ thuận & nghịch",
+    "generator_type": "algebra_direct_inverse_plot",
+    "math_invariant": "y = kx vs y = a/x",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_ALG_POLYNOMIAL_TILES",
+    "grade": 7,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 7",
+    "topic_vi": "Gạch đại số biểu diễn đa thức 1 biến",
+    "generator_type": "algebra_poly_tiles",
+    "math_invariant": "c1*x^2 + c2*x + c3",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_ALG_POLYNOMIAL_ADD_SUB",
+    "grade": 7,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 7",
+    "topic_vi": "Cột đặt tính cộng trừ đa thức",
+    "generator_type": "algebra_poly_column",
+    "math_invariant": "P(x) +- Q(x)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_GEO_ADJACENT_VERTICAL_ANGLES",
+    "grade": 7,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 3",
+    "topic_vi": "Góc kề bù & Góc đối đỉnh",
+    "generator_type": "geom_vertical_angles",
+    "math_invariant": "alpha + beta = 180",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_GEO_PARALLEL_ALTERNATE_INT",
+    "grade": 7,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 3",
+    "topic_vi": "Góc so le trong & Đồng vị",
+    "generator_type": "geom_parallel_transversal",
+    "math_invariant": "a // b => Alternate equal",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_GEO_PERPENDICULAR_BISECTOR",
+    "grade": 7,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 3",
+    "topic_vi": "Đường trung trực của đoạn thẳng",
+    "generator_type": "geom_perp_bisector",
+    "math_invariant": "MA = MB for all M",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_GEO_TRIANGLE_CONGRUENCE_SSS",
+    "grade": 7,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 4",
+    "topic_vi": "Tam giác bằng nhau (C-C-C)",
+    "generator_type": "geom_congruent_sss",
+    "math_invariant": "a1=a2, b1=b2, c1=c2",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_GEO_TRIANGLE_CONGRUENCE_SAS",
+    "grade": 7,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 4",
+    "topic_vi": "Tam giác bằng nhau (C-G-C)",
+    "generator_type": "geom_congruent_sas",
+    "math_invariant": "Side-Angle-Side",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_GEO_TRIANGLE_CONGRUENCE_ASA",
+    "grade": 7,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 4",
+    "topic_vi": "Tam giác bằng nhau (G-C-G)",
+    "generator_type": "geom_congruent_asa",
+    "math_invariant": "Angle-Side-Angle",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_GEO_TRIANGLE_ISOSCELES",
+    "grade": 7,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 4",
+    "topic_vi": "Tam giác cân & Tính chất đối xứng",
+    "generator_type": "geom_triangle_isosceles",
+    "math_invariant": "AB=AC, Angle B=C",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_GEO_TRIANGLE_INEQUALITY",
+    "grade": 7,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 9",
+    "topic_vi": "Bất đẳng thức tam giác",
+    "generator_type": "geom_triangle_inequality",
+    "math_invariant": "|b-c| < a < b+c",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_GEO_TRIANGLE_CENTROID",
+    "grade": 7,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 9",
+    "topic_vi": "Trọng tâm & 3 đường trung tuyến",
+    "generator_type": "geom_triangle_centroid",
+    "math_invariant": "AG = 2/3 AM",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_GEO_TRIANGLE_ORTHOCENTER",
+    "grade": 7,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 9",
+    "topic_vi": "Trực tâm & 3 đường cao",
+    "generator_type": "geom_triangle_orthocenter",
+    "math_invariant": "H intersection of heights",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_GEO_TRIANGLE_INCENTER",
+    "grade": 7,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 9",
+    "topic_vi": "Tâm đường tròn nội tiếp (Phân giác)",
+    "generator_type": "geom_triangle_incenter",
+    "math_invariant": "Equidistant 3 sides",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_GEO_TRIANGLE_CIRCUMCENTER",
+    "grade": 7,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 9",
+    "topic_vi": "Tâm đường tròn ngoại tiếp (Trung trực)",
+    "generator_type": "geom_triangle_circumcenter",
+    "math_invariant": "OA = OB = OC = R",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_GEO_SOLID_PRISM_TRI",
+    "grade": 7,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 10",
+    "topic_vi": "Hình lăng trụ đứng tam giác",
+    "generator_type": "geom_solid_prism_tri",
+    "math_invariant": "V = S_base * h",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_GEO_SOLID_PRISM_QUAD",
+    "grade": 7,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 10",
+    "topic_vi": "Hình lăng trụ đứng tứ giác & Hộp sữa",
+    "generator_type": "geom_solid_prism_quad",
+    "math_invariant": "V = a*b*h",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_GEO_SOLID_NET_UNFOLD",
+    "grade": 7,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 10",
+    "topic_vi": "Hình khai triển lăng trụ & gấp nếp",
+    "generator_type": "geom_solid_net_unfold",
+    "math_invariant": "Flat unfold of prism",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_STAT_PERCENT_PIE_CHART",
+    "grade": 7,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 5",
+    "topic_vi": "Biểu đồ hình quạt tròn tỉ lệ",
+    "generator_type": "stat_pie_chart",
+    "math_invariant": "Sum pct = 100%",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_STAT_LINE_GRAPH_TREND",
+    "grade": 7,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 5",
+    "topic_vi": "Biểu đồ đoạn thẳng theo dõi xu thế",
+    "generator_type": "stat_line_trend",
+    "math_invariant": "Time series curve",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_STAT_EVENT_PROBABILITY",
+    "grade": 7,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 8",
+    "topic_vi": "Biến cố ngẫu nhiên & Thước đo xác suất",
+    "generator_type": "stat_probability_gauge",
+    "math_invariant": "P in [0, 1]",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_STEM_GEAR_RATIO",
+    "grade": 7,
+    "strand": "STEM_THUC_TIEN",
+    "chapter": "Thực hành",
+    "topic_vi": "Bánh răng truyền động & Tỉ lệ vòng quay",
+    "generator_type": "stem_gears_ratio",
+    "math_invariant": "N1*omega1 = N2*omega2",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_STEM_SPEED_DISTANCE_TIME",
+    "grade": 7,
+    "strand": "STEM_THUC_TIEN",
+    "chapter": "Thực hành",
+    "topic_vi": "Sơ đồ chuyển động đều 2 xe ngược chiều",
+    "generator_type": "stem_motion_meeting",
+    "math_invariant": "v1*t + v2*t = S",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G07_STEM_LEVER_EQUILIBRIUM",
+    "grade": 7,
+    "strand": "STEM_THUC_TIEN",
+    "chapter": "Thực hành",
+    "topic_vi": "Đòn bẩy Archimedes cân bằng lực",
+    "generator_type": "stem_lever_torque",
+    "math_invariant": "F1 * d1 = F2 * d2",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_ALG_ALGEBRA_TILES_MULT",
+    "grade": 8,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 1",
+    "topic_vi": "Gạch diện tích nhân đa thức (x+a)(x+b)",
+    "generator_type": "algebra_area_mult",
+    "math_invariant": "(x+a)(x+b) area",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_ALG_IDENTITY_DIFF_SQUARES",
+    "grade": 8,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 2",
+    "topic_vi": "Hiệu hai bình phương a^2 - b^2",
+    "generator_type": "algebra_geom_diff_squares",
+    "math_invariant": "a^2 - b^2 = (a-b)(a+b)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_ALG_IDENTITY_PERFECT_SQUARE",
+    "grade": 8,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 2",
+    "topic_vi": "Bình phương một tổng & một hiệu",
+    "generator_type": "algebra_geom_sq_sum",
+    "math_invariant": "(a+b)^2 = a^2+2ab+b^2",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_ALG_IDENTITY_CUBE_SUM_DIFF",
+    "grade": 8,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 2",
+    "topic_vi": "Lập phương một tổng / hiệu (Khối hộp 3D)",
+    "generator_type": "algebra_geom_cube_sum",
+    "math_invariant": "(a+b)^3 volume components",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_ALG_RATIONAL_FRACTION_SIMP",
+    "grade": 8,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 6",
+    "topic_vi": "Phân thức đại số & Rút gọn nhân tử",
+    "generator_type": "algebra_frac_simplification",
+    "math_invariant": "P(x)/Q(x)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_ALG_LINEAR_EQUATION_BALANCE",
+    "grade": 8,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 7",
+    "topic_vi": "Cán cân giải phương trình bậc nhất",
+    "generator_type": "algebra_linear_balance",
+    "math_invariant": "ax + b = c",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_ALG_LINEAR_FUNCTION_SLOPE",
+    "grade": 8,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 7",
+    "topic_vi": "Đồ thị hàm bậc nhất y = ax + b (Hệ số góc)",
+    "generator_type": "algebra_linear_slope_intercept",
+    "math_invariant": "m = Delta y / Delta x",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_ALG_PARALLEL_INTERSECT_LINES",
+    "grade": 8,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 7",
+    "topic_vi": "Vị trí tương đối 2 đường thẳng y = ax+b",
+    "generator_type": "algebra_lines_rel_pos",
+    "math_invariant": "a=a' parallel vs a*a'=-1",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_GEO_QUAD_TRAPEZOID_MID",
+    "grade": 8,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 3",
+    "topic_vi": "Đường trung bình của tam giác & hình thang",
+    "generator_type": "geom_midsegment_trap",
+    "math_invariant": "MN = (a+b)/2",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_GEO_PARALLELOGRAM_PROPERTIES",
+    "grade": 8,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 3",
+    "topic_vi": "Hình bình hành & Giao điểm 2 đường chéo",
+    "generator_type": "geom_parallelogram_diags",
+    "math_invariant": "Diagonals bisect",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_GEO_RECTANGLE_RHOMBUS_SQUARE",
+    "grade": 8,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 3",
+    "topic_vi": "Cây phả hệ tứ giác đặc biệt",
+    "generator_type": "geom_quad_family_tree",
+    "math_invariant": "Quad -> Trap -> Para -> Rect/Rhom -> Sq",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_GEO_THALES_BASIC",
+    "grade": 8,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 4",
+    "topic_vi": "Định lí Thales thuận và đảo",
+    "generator_type": "geom_thales_tri",
+    "math_invariant": "AM/MB = AN/NC",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_GEO_THALES_HOURGLASS",
+    "grade": 8,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 4",
+    "topic_vi": "Định lí Thales cấu hình đồng hồ cát",
+    "generator_type": "geom_thales_hourglass",
+    "math_invariant": "OA/OA' = OB/OB'",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_GEO_ANGLE_BISECTOR_THEOREM",
+    "grade": 8,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 4",
+    "topic_vi": "Tính chất đường phân giác tam giác",
+    "generator_type": "geom_bisector_ratio",
+    "math_invariant": "DB/DC = AB/AC",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_GEO_SIMILAR_TRIANGLES_SSS",
+    "grade": 8,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 9",
+    "topic_vi": "Tam giác đồng dạng (c.c.c)",
+    "generator_type": "geom_similar_sss",
+    "math_invariant": "a1/a2 = b1/b2 = c1/c2 = k",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_GEO_SIMILAR_TRIANGLES_SAS",
+    "grade": 8,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 9",
+    "topic_vi": "Tam giác đồng dạng (c.g.c)",
+    "generator_type": "geom_similar_sas",
+    "math_invariant": "Side ratio + Included angle",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_GEO_SIMILAR_TRIANGLES_AA",
+    "grade": 8,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 9",
+    "topic_vi": "Tam giác đồng dạng (g.g)",
+    "generator_type": "geom_similar_aa",
+    "math_invariant": "Two equal angles",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_GEO_SHADOW_RECKONING_PYRAMID",
+    "grade": 8,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 9",
+    "topic_vi": "Thales đo chiều cao kim tự tháp qua bóng nắng",
+    "generator_type": "geom_shadow_thales",
+    "math_invariant": "H/h = S/s",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_GEO_SOLID_PYRAMID_TRI",
+    "grade": 8,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 10",
+    "topic_vi": "Hình chóp tam giác đều & Mặt nón",
+    "generator_type": "geom_pyramid_tri",
+    "math_invariant": "V = 1/3 * S_base * h",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_GEO_SOLID_PYRAMID_QUAD",
+    "grade": 8,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 10",
+    "topic_vi": "Hình chóp tứ giác đều (Kim tự tháp Louvre)",
+    "generator_type": "geom_pyramid_quad",
+    "math_invariant": "S_xq + S_base",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_STAT_HISTOGRAM_FREQUENCY",
+    "grade": 8,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 5",
+    "topic_vi": "Biểu đồ tần số ghép lớp (Histogram)",
+    "generator_type": "stat_histogram",
+    "math_invariant": "Continuous intervals",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_STAT_FREQUENCY_POLYGON",
+    "grade": 8,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 5",
+    "topic_vi": "Đường gấp khúc tần số",
+    "generator_type": "stat_freq_polygon",
+    "math_invariant": "Midpoint line",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_STAT_PROBABILITY_TREE",
+    "grade": 8,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 8",
+    "topic_vi": "Sơ đồ cây xác suất 2 giai đoạn",
+    "generator_type": "stat_tree_diagram",
+    "math_invariant": "Multiply branch probs",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_STEM_WORK_RATE_CONVOY",
+    "grade": 8,
+    "strand": "STEM_THUC_TIEN",
+    "chapter": "Thực hành",
+    "topic_vi": "Cân lập luận bài toán năng suất đội xe tải",
+    "generator_type": "stem_work_convoy",
+    "math_invariant": "Q/x - Q/(x+k) = Delta",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_STEM_RIVER_BOAT_VELOCITY",
+    "grade": 8,
+    "strand": "STEM_THUC_TIEN",
+    "chapter": "Thực hành",
+    "topic_vi": "Ca nô xuôi dòng & ngược dòng",
+    "generator_type": "stem_boat_river",
+    "math_invariant": "v_xuoi = v + v_n, v_nguoc = v - v_n",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G08_STEM_CIRCUIT_OHM_LAW",
+    "grade": 8,
+    "strand": "STEM_THUC_TIEN",
+    "chapter": "Thực hành",
+    "topic_vi": "Mạch điện song song & Điện trở tương đương",
+    "generator_type": "stem_ohm_circuit",
+    "math_invariant": "1/R = 1/R1 + 1/R2",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_ALG_LINEAR_SYSTEM_2VAR_GEO",
+    "grade": 9,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 1",
+    "topic_vi": "Hệ phương trình bậc nhất 2 ẩn (Giao điểm)",
+    "generator_type": "algebra_sys2_geo",
+    "math_invariant": "d1 cap d2 = (x0, y0)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_ALG_INEQUALITY_NUMBER_LINE",
+    "grade": 9,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 2",
+    "topic_vi": "Bất đẳng thức & Tập nghiệm trên trục số",
+    "generator_type": "algebra_ineq_numberline",
+    "math_invariant": "x > a (shaded left)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_ALG_RADICAL_SPIRAL_THEODORUS",
+    "grade": 9,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 3",
+    "topic_vi": "Vòng xoắn căn bậc hai Theodorus",
+    "generator_type": "algebra_theodorus_spiral",
+    "math_invariant": "sqrt(1), sqrt(2)...",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_ALG_RADICAL_SIMPLIFY_GEO",
+    "grade": 9,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 3",
+    "topic_vi": "Khử mẫu căn thức bậc hai & Liên hợp",
+    "generator_type": "algebra_radical_geo",
+    "math_invariant": "sqrt(A^2) = |A|",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_ALG_QUADRATIC_PARABOLA_VERTEX",
+    "grade": 9,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 6",
+    "topic_vi": "Parabol y = ax^2 (Đỉnh O, trục đối xứng)",
+    "generator_type": "algebra_parabola_basic",
+    "math_invariant": "y = ax^2",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_ALG_QUADRATIC_ROOTS_DISCRIM",
+    "grade": 9,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 6",
+    "topic_vi": "Phương trình bậc hai & Biệt thức Delta",
+    "generator_type": "algebra_quad_delta",
+    "math_invariant": "Delta = b^2 - 4ac",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_ALG_VIETE_RELATION_GEO",
+    "grade": 9,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 6",
+    "topic_vi": "Định lí Viète (Tổng S & Tích P hình chữ nhật)",
+    "generator_type": "algebra_viete_geom",
+    "math_invariant": "x1+x2=-b/a, x1*x2=c/a",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_ALG_PARABOLA_LINE_INTERSECT",
+    "grade": 9,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 6",
+    "topic_vi": "Sự tương giao Parabol (P) & Đường thẳng (d)",
+    "generator_type": "algebra_parabola_line",
+    "math_invariant": "ax^2 = mx + n",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_GEO_RIGHT_TRI_METRIC_SYS",
+    "grade": 9,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 4",
+    "topic_vi": "Hệ thức lượng trong tam giác vuông (h^2=b'c')",
+    "generator_type": "geom_right_tri_metric",
+    "math_invariant": "h^2 = b'*c', b^2 = a*b'",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_GEO_TRIG_RATIOS_SIN_COS",
+    "grade": 9,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 4",
+    "topic_vi": "Tỉ số lượng giác góc nhọn (sin, cos, tan, cot)",
+    "generator_type": "geom_trig_right_tri",
+    "math_invariant": "sin = doi/huyen",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_GEO_CLINOMETER_SURVEY",
+    "grade": 9,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 4",
+    "topic_vi": "Giác kế đo chiều cao tòa nhà / ngọn hải đăng",
+    "generator_type": "geom_clinometer_survey",
+    "math_invariant": "H = d*tan(alpha) + h0",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_GEO_CIRCLE_TANGENT_SECANT",
+    "grade": 9,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 5",
+    "topic_vi": "Đường tròn, Tiếp tuyến & Bán kính vuông góc",
+    "generator_type": "geom_circle_tangent",
+    "math_invariant": "d(O, d) = R",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_GEO_TWO_TANGENTS_INTERSECT",
+    "grade": 9,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 5",
+    "topic_vi": "Tính chất hai tiếp tuyến cắt nhau",
+    "generator_type": "geom_two_tangents_meet",
+    "math_invariant": "MA = MB, MO is bisector",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_GEO_INSCRIBED_CENTRAL_ANGLE",
+    "grade": 9,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 5",
+    "topic_vi": "Góc ở tâm & Góc nội tiếp cùng chắn một cung",
+    "generator_type": "geom_inscribed_central",
+    "math_invariant": "Angle_ins = 1/2 Angle_cent",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_GEO_CYCLIC_QUADRILATERAL",
+    "grade": 9,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 5",
+    "topic_vi": "Tứ giác nội tiếp đường tròn (Tổng góc đối 180)",
+    "generator_type": "geom_cyclic_quad",
+    "math_invariant": "Angle A + C = 180",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_GEO_SOLID_CYLINDER",
+    "grade": 9,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 10",
+    "topic_vi": "Hình trụ tròn xoay & Thùng chứa",
+    "generator_type": "geom_solid_cylinder",
+    "math_invariant": "V = pi * R^2 * h",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_GEO_SOLID_CONE",
+    "grade": 9,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 10",
+    "topic_vi": "Hình nón & Nón lá truyền thống",
+    "generator_type": "geom_solid_cone",
+    "math_invariant": "V = 1/3 pi R^2 h, l^2=h^2+R^2",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_GEO_SOLID_SPHERE",
+    "grade": 9,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 10",
+    "topic_vi": "Hình cầu & Quả địa cầu",
+    "generator_type": "geom_solid_sphere",
+    "math_invariant": "V = 4/3 pi R^3, S = 4 pi R^2",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_STAT_FREQUENCY_TABLE_PIE",
+    "grade": 9,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 7",
+    "topic_vi": "Bảng tần số tương đối & Biểu đồ hình quạt",
+    "generator_type": "stat_rel_freq_pie",
+    "math_invariant": "f_i = m_i / N * 100%",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_STAT_EMPIRICAL_PROB_DICE",
+    "grade": 9,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 8",
+    "topic_vi": "Xác suất thực nghiệm tiến dần xác suất lý thuyết",
+    "generator_type": "stat_large_numbers_law",
+    "math_invariant": "P_n -> P as n -> inf",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_STEM_PARABOLIC_ARCH_BRIDGE",
+    "grade": 9,
+    "strand": "STEM_THUC_TIEN",
+    "chapter": "Thực hành",
+    "topic_vi": "Cầu vòm Parabol & Khẩu độ nhịp cầu",
+    "generator_type": "stem_parabolic_arch",
+    "math_invariant": "y = -k * x^2 + H",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_STEM_SUBMARINE_BUOYANCY",
+    "grade": 9,
+    "strand": "STEM_THUC_TIEN",
+    "chapter": "Thực hành",
+    "topic_vi": "Tàu ngầm lặn nổi & Cân bằng Archimedes",
+    "generator_type": "stem_submarine_depth",
+    "math_invariant": "F_A = d*V_disp, P = d*h",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G09_STEM_WATER_TANK_INFLOW",
+    "grade": 9,
+    "strand": "STEM_THUC_TIEN",
+    "chapter": "Thực hành",
+    "topic_vi": "Bể nước 2 vòi chảy chung - chảy riêng",
+    "generator_type": "stem_tank_flow_harmonic",
+    "math_invariant": "1/t1 + 1/t2 = 1/T",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G10_ALG_SET_INTERVAL_NUMBERLINE",
+    "grade": 10,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 1",
+    "topic_vi": "Khoảng, đoạn, nửa khoảng trên trục số thực",
+    "generator_type": "alg_intervals_real",
+    "math_invariant": "[a, b), (c, d)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G10_ALG_LINEAR_INEQ_REGION_2VAR",
+    "grade": 10,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 2",
+    "topic_vi": "Miền nghiệm bất phương trình ax + by <= c",
+    "generator_type": "alg_half_plane_ineq",
+    "math_invariant": "ax + by <= c half-plane",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G10_ALG_LINEAR_PROGRAMMING_POLY",
+    "grade": 10,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 2",
+    "topic_vi": "Quy hoạch tuyến tính (Miền đa giác lồi & Min/Max)",
+    "generator_type": "alg_linprog_polygon",
+    "math_invariant": "Max F = ax + by on Poly",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G10_ALG_QUADRATIC_FUNCTION_STUDY",
+    "grade": 10,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 6",
+    "topic_vi": "Khảo sát hàm số bậc hai y = ax^2 + bx + c",
+    "generator_type": "alg_quad_full_study",
+    "math_invariant": "Vertex (-b/2a, -Delta/4a)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G10_ALG_QUADRATIC_SIGN_INTERVALS",
+    "grade": 10,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 6",
+    "topic_vi": "Bảng xét dấu tam thức bậc hai (Trong trái ngoài cùng)",
+    "generator_type": "alg_quad_sign_table",
+    "math_invariant": "Sign of f(x) vs Delta",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G10_ALG_NEWTON_BINOMIAL_EXPAND",
+    "grade": 10,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 8",
+    "topic_vi": "Tam giác Pascal & Khai triển Nhị thức Newton",
+    "generator_type": "alg_pascal_triangle",
+    "math_invariant": "(a+b)^n = sum C_n^k a^(n-k)b^k",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G10_GEO_COSINE_SINE_LAW_TRI",
+    "grade": 10,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 3",
+    "topic_vi": "Định lí Côsin & Sin giải tam giác bất kỳ",
+    "generator_type": "geom_cosine_sine_law",
+    "math_invariant": "a^2 = b^2+c^2 - 2bc cos A",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G10_GEO_VECTOR_SUM_PARALLELOGRAM",
+    "grade": 10,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 4",
+    "topic_vi": "Quy tắc hình bình hành cộng vectơ",
+    "generator_type": "geom_vector_addition",
+    "math_invariant": "u + v = w (diag)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G10_GEO_VECTOR_DOT_PRODUCT",
+    "grade": 10,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 4",
+    "topic_vi": "Tích vô hướng hai vectơ & Góc giữa 2 vectơ",
+    "generator_type": "geom_vector_dot_prod",
+    "math_invariant": "u . v = |u||v| cos theta",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G10_GEO_LINE_PARAMETRIC_NORMAL",
+    "grade": 10,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 7",
+    "topic_vi": "Phương trình đường thẳng (Pháp tuyến & Chỉ phương)",
+    "generator_type": "geom_coord_line",
+    "math_invariant": "ax + by + c = 0",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G10_GEO_DISTANCE_POINT_LINE",
+    "grade": 10,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 7",
+    "topic_vi": "Khoảng cách từ điểm đến đường thẳng",
+    "generator_type": "geom_dist_point_line",
+    "math_invariant": "d = |ax0+by0+c|/sqrt(a^2+b^2)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G10_GEO_CIRCLE_EQUATION_TANGENT",
+    "grade": 10,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 7",
+    "topic_vi": "Đường tròn trong Oxy & Tiếp tuyến tại điểm",
+    "generator_type": "geom_circle_analytic",
+    "math_invariant": "(x-a)^2 + (y-b)^2 = R^2",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G10_GEO_CONIC_ELLIPSE",
+    "grade": 10,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 7",
+    "topic_vi": "Đường Elip (Tiêu điểm, Tiêu cự, Bán trục lớn)",
+    "generator_type": "geom_conic_ellipse",
+    "math_invariant": "x^2/a^2 + y^2/b^2 = 1",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G10_GEO_CONIC_HYPERBOLA",
+    "grade": 10,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 7",
+    "topic_vi": "Đường Hypebol (Đường tiệm cận & Tiêu điểm)",
+    "generator_type": "geom_conic_hyperbola",
+    "math_invariant": "x^2/a^2 - y^2/b^2 = 1",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G10_GEO_CONIC_PARABOLA_FOCUS",
+    "grade": 10,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 7",
+    "topic_vi": "Đường Parabol chính tắc (Tiêu điểm & Đường chuẩn)",
+    "generator_type": "geom_conic_parabola",
+    "math_invariant": "y^2 = 2px",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G10_STAT_BOX_PLOT_OUTLIER",
+    "grade": 10,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 5",
+    "topic_vi": "Biểu đồ hộp (Box-and-Whisker) & Giá trị ngoại lệ",
+    "generator_type": "stat_box_plot",
+    "math_invariant": "Q1, Med, Q3, IQR",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G10_STAT_SCATTER_PLOT_CORR",
+    "grade": 10,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 5",
+    "topic_vi": "Biểu đồ phân tán & Đường xu hướng hồi quy",
+    "generator_type": "stat_scatter_trend",
+    "math_invariant": "Linear correlation r",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G10_STEM_PROJECTILE_MOTION",
+    "grade": 10,
+    "strand": "STEM_THUC_TIEN",
+    "chapter": "Thực hành",
+    "topic_vi": "Quỹ đạo chuyển động ném xiên (Vật lý 10)",
+    "generator_type": "stem_projectile_parabola",
+    "math_invariant": "y = x tan alpha - gx^2/(2v0^2 cos^2 alpha)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G10_STEM_REFLECTIVE_SATELLITE_DISH",
+    "grade": 10,
+    "strand": "STEM_THUC_TIEN",
+    "chapter": "Thực hành",
+    "topic_vi": "Chảo vệ tinh Parabol hội tụ sóng tại tiêu điểm",
+    "generator_type": "stem_parabolic_dish",
+    "math_invariant": "Rays focus at F(p/2, 0)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_TRIG_UNIT_CIRCLE_FULL",
+    "grade": 11,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 1",
+    "topic_vi": "Vòng tròn lượng giác đơn vị đầy đủ giá trị đặc biệt",
+    "generator_type": "trig_unit_circle",
+    "math_invariant": "x^2 + y^2 = 1, (cos, sin)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_TRIG_SINE_WAVE_OSCILLATION",
+    "grade": 11,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 1",
+    "topic_vi": "Đồ thị sóng hình sin y = A sin(omega t + phi)",
+    "generator_type": "trig_sine_graph",
+    "math_invariant": "Period T = 2pi / omega",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_TRIG_COSINE_TANGENT_GRAPHS",
+    "grade": 11,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 1",
+    "topic_vi": "Đồ thị hàm số y = cos x và y = tan x",
+    "generator_type": "trig_cos_tan_graph",
+    "math_invariant": "Asymptotes at x = pi/2 + k pi",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_ALG_ARITHMETIC_PROGRESSION",
+    "grade": 11,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 2",
+    "topic_vi": "Cấp số cộng (Bậc thang số học & Tổng S_n)",
+    "generator_type": "alg_arithmetic_seq",
+    "math_invariant": "u_n = u1 + (n-1)d",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_ALG_GEOMETRIC_PROGRESSION",
+    "grade": 11,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 2",
+    "topic_vi": "Cấp số nhân (Tăng trưởng hàm mũ & Fractal)",
+    "generator_type": "alg_geometric_seq",
+    "math_invariant": "u_n = u1 * q^(n-1)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_CALC_LIMIT_SEQUENCE_CONVERGE",
+    "grade": 11,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 5",
+    "topic_vi": "Giới hạn dãy số & Dải kẹp epsilon",
+    "generator_type": "calc_limit_seq",
+    "math_invariant": "lim u_n = L, |u_n - L| < eps",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_CALC_FUNCTION_CONTINUITY",
+    "grade": 11,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 5",
+    "topic_vi": "Hàm số liên tục & Định lí giá trị trung gian",
+    "generator_type": "calc_continuity_ivt",
+    "math_invariant": "f(a)*f(b) < 0 => exists c",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_ALG_EXPONENTIAL_LOG_CURVES",
+    "grade": 11,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 6",
+    "topic_vi": "Đồ thị hàm số Mũ y = a^x & Logarit y = log_a x",
+    "generator_type": "alg_exp_log_graphs",
+    "math_invariant": "Inverse symmetric over y=x",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_CALC_DERIVATIVE_TANGENT_SLOPE",
+    "grade": 11,
+    "strand": "SO_HOC_DAI_SO",
+    "chapter": "Chương 9",
+    "topic_vi": "Ý nghĩa hình học của đạo hàm (Tiếp tuyến cát tuyến)",
+    "generator_type": "calc_secant_to_tangent",
+    "math_invariant": "f'(x0) = lim Delta y / Delta x",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_GEO3D_PARALLEL_LINE_PLANE",
+    "grade": 11,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 4",
+    "topic_vi": "Đường thẳng song song mặt phẳng trong không gian",
+    "generator_type": "geom3d_line_parallel_plane",
+    "math_invariant": "d // a, a subset (P)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_GEO3D_PARALLEL_PLANES",
+    "grade": 11,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 4",
+    "topic_vi": "Hai mặt phẳng song song & Định lí Thales không gian",
+    "generator_type": "geom3d_parallel_planes",
+    "math_invariant": "(P) // (Q)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_GEO3D_PYRAMID_CROSS_SECTION",
+    "grade": 11,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 4",
+    "topic_vi": "Thiết diện hình chóp cắt bởi mặt phẳng",
+    "generator_type": "geom3d_pyramid_cross_section",
+    "math_invariant": "Polygon section of pyramid",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_GEO3D_LINE_PERP_PLANE",
+    "grade": 11,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 7",
+    "topic_vi": "Đường thẳng vuông góc với mặt phẳng",
+    "generator_type": "geom3d_line_perp_plane",
+    "math_invariant": "d perp a, d perp b",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_GEO3D_TWO_PERP_PLANES",
+    "grade": 11,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 7",
+    "topic_vi": "Hai mặt phẳng vuông góc",
+    "generator_type": "geom3d_two_perp_planes",
+    "math_invariant": "(P) perp (Q)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_GEO3D_DISTANCE_POINT_PLANE",
+    "grade": 11,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 7",
+    "topic_vi": "Khoảng cách từ điểm đến mặt phẳng",
+    "generator_type": "geom3d_dist_point_plane",
+    "math_invariant": "d(M, (P)) = MH",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_GEO3D_SKEW_LINES_DISTANCE",
+    "grade": 11,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 7",
+    "topic_vi": "Khoảng cách giữa hai đường thẳng chéo nhau",
+    "generator_type": "geom3d_skew_lines_dist",
+    "math_invariant": "Common perpendicular segment",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_GEO3D_DIHEDRAL_ANGLE",
+    "grade": 11,
+    "strand": "HINH_HOC_DO_LUONG",
+    "chapter": "Chương 7",
+    "topic_vi": "Góc nhị diện (Góc giữa hai mặt phẳng)",
+    "generator_type": "geom3d_dihedral_angle",
+    "math_invariant": "Angle between two normal rays",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_STAT_GROUPED_MEDIAN_QUART",
+    "grade": 11,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 3",
+    "topic_vi": "Trung vị & Tứ phân vị mẫu số liệu ghép nhóm",
+    "generator_type": "stat_grouped_median_ogive",
+    "math_invariant": "Ogive cumulative curve",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_STAT_INDEPENDENT_EVENTS_VENN",
+    "grade": 11,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 8",
+    "topic_vi": "Biến cố độc lập & Biến cố xung khắc (Venn & Cây)",
+    "generator_type": "stat_indep_venn_tree",
+    "math_invariant": "P(A cap B) = P(A)*P(B)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_STEM_RADIOACTIVE_DECAY",
+    "grade": 11,
+    "strand": "STEM_THUC_TIEN",
+    "chapter": "Thực hành",
+    "topic_vi": "Phân rã phóng xạ bán rã & Hàm số mũ (Vật lý 11)",
+    "generator_type": "stem_half_life_decay",
+    "math_invariant": "N(t) = N0 * e^(-lambda t)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G11_STEM_PENDULUM_SHM",
+    "grade": 11,
+    "strand": "STEM_THUC_TIEN",
+    "chapter": "Thực hành",
+    "topic_vi": "Con lắc đơn dao động điều hòa & Đồ thị pha",
+    "generator_type": "stem_simple_pendulum",
+    "math_invariant": "x = A cos(omega t + phi)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G12_CALC_CUBIC_FUNCTION_SHAPES",
+    "grade": 12,
+    "strand": "GIAI_TICH_HINH_HOC",
+    "chapter": "Chương 1",
+    "topic_vi": "Đồ thị hàm bậc ba y = ax^3 + bx^2 + cx + d (6 dạng)",
+    "generator_type": "calc_cubic_6shapes",
+    "math_invariant": "f'(x) roots & extrema",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G12_CALC_QUARTIC_BIQUADRATIC",
+    "grade": 12,
+    "strand": "GIAI_TICH_HINH_HOC",
+    "chapter": "Chương 1",
+    "topic_vi": "Đồ thị hàm trùng phương y = ax^4 + bx^2 + c (W & U)",
+    "generator_type": "calc_quartic_shapes",
+    "math_invariant": "3 extrema vs 1 extremum",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G12_CALC_RATIONAL_HOMOGRAPHIC",
+    "grade": 12,
+    "strand": "GIAI_TICH_HINH_HOC",
+    "chapter": "Chương 1",
+    "topic_vi": "Đồ thị hàm nhất biến y = (ax+b)/(cx+d) & Tiệm cận",
+    "generator_type": "calc_homographic_asymptotes",
+    "math_invariant": "x = -d/c, y = a/c",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G12_CALC_OBLIQUE_ASYMPTOTE",
+    "grade": 12,
+    "strand": "GIAI_TICH_HINH_HOC",
+    "chapter": "Chương 1",
+    "topic_vi": "Tiệm cận xiên của hàm phân thức bậc 2 trên bậc 1",
+    "generator_type": "calc_oblique_asymptote",
+    "math_invariant": "y = ax + b + r/(cx+d)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G12_CALC_OPTIMIZATION_CAN_BOX",
+    "grade": 12,
+    "strand": "GIAI_TICH_HINH_HOC",
+    "chapter": "Chương 1",
+    "topic_vi": "Bài toán tối ưu hóa thể tích hộp không nắp",
+    "generator_type": "calc_optim_box_unfold",
+    "math_invariant": "V(x) = x(a-2x)(b-2x) -> Max",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G12_CALC_INTEGRAL_AREA_CURVES",
+    "grade": 12,
+    "strand": "GIAI_TICH_HINH_HOC",
+    "chapter": "Chương 4",
+    "topic_vi": "Diện tích hình phẳng giới hạn bởi đồ thị (Phần tô đậm)",
+    "generator_type": "calc_integral_shaded_area",
+    "math_invariant": "S = int_a^b |f(x) - g(x)| dx",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G12_CALC_SOLID_REVOLUTION_3D",
+    "grade": 12,
+    "strand": "GIAI_TICH_HINH_HOC",
+    "chapter": "Chương 4",
+    "topic_vi": "Thể tích khối tròn xoay quay quanh trục hoành",
+    "generator_type": "calc_revolution_solid_3d",
+    "math_invariant": "V = pi int_a^b f(x)^2 dx",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G12_GEO3D_OXYZ_COORDINATE_FRAME",
+    "grade": 12,
+    "strand": "GIAI_TICH_HINH_HOC",
+    "chapter": "Chương 2",
+    "topic_vi": "Hệ trục tọa độ Oxyz & Điểm M(x, y, z)",
+    "generator_type": "geom_oxyz_axes_point",
+    "math_invariant": "OM = x i + y j + z k",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G12_GEO3D_VECTOR_CROSS_PRODUCT",
+    "grade": 12,
+    "strand": "GIAI_TICH_HINH_HOC",
+    "chapter": "Chương 2",
+    "topic_vi": "Tích có hướng hai vectơ & Vectơ pháp tuyến",
+    "generator_type": "geom_oxyz_cross_product",
+    "math_invariant": "[u, v] perp u, v",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G12_GEO3D_PLANE_EQUATION_NORMAL",
+    "grade": 12,
+    "strand": "GIAI_TICH_HINH_HOC",
+    "chapter": "Chương 5",
+    "topic_vi": "Phương trình mặt phẳng (P): Ax + By + Cz + D = 0",
+    "generator_type": "geom_oxyz_plane",
+    "math_invariant": "n = (A, B, C)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G12_GEO3D_LINE_PARAMETRIC_SPACE",
+    "grade": 12,
+    "strand": "GIAI_TICH_HINH_HOC",
+    "chapter": "Chương 5",
+    "topic_vi": "Phương trình đường thẳng tham số trong không gian",
+    "generator_type": "geom_oxyz_line_space",
+    "math_invariant": "x = x0 + at, y = y0 + bt",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G12_GEO3D_SPHERE_CENTER_RADIUS",
+    "grade": 12,
+    "strand": "GIAI_TICH_HINH_HOC",
+    "chapter": "Chương 5",
+    "topic_vi": "Phương trình mặt cầu (S) & Tiếp diện mặt cầu",
+    "generator_type": "geom_oxyz_sphere_plane",
+    "math_invariant": "(x-a)^2+(y-b)^2+(z-c)^2 = R^2",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G12_GEO3D_REL_POS_TWO_LINES_3D",
+    "grade": 12,
+    "strand": "GIAI_TICH_HINH_HOC",
+    "chapter": "Chương 5",
+    "topic_vi": "Vị trí tương đối 2 đường thẳng trong Oxyz",
+    "generator_type": "geom_oxyz_rel_lines",
+    "math_invariant": "Parallel, intersect, skew",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G12_STAT_VARIANCE_STD_DEV_BOX",
+    "grade": 12,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 3",
+    "topic_vi": "Phương sai & Độ lệch chuẩn ghép nhóm",
+    "generator_type": "stat_variance_std_bell",
+    "math_invariant": "s^2 = 1/n sum m_i (x_i - bar_x)^2",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G12_STAT_CONDITIONAL_PROB_TREE",
+    "grade": 12,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 6",
+    "topic_vi": "Xác suất có điều kiện P(A|B) & Sơ đồ cây nhánh",
+    "generator_type": "stat_bayes_tree",
+    "math_invariant": "P(A|B) = P(A cap B) / P(B)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G12_STAT_TOTAL_PROB_BAYES",
+    "grade": 12,
+    "strand": "THONG_KE_XAC_SUAT",
+    "chapter": "Chương 6",
+    "topic_vi": "Công thức xác suất toàn phần & Định lí Bayes",
+    "generator_type": "stat_bayes_theorem_venn",
+    "math_invariant": "P(B) = sum P(A_i)*P(B|A_i)",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G12_STEM_EPIDEMIC_LOGISTIC_CURVE",
+    "grade": 12,
+    "strand": "STEM_THUC_TIEN",
+    "chapter": "Chương 1",
+    "topic_vi": "Mô hình dịch bệnh & Tăng trưởng Logistic (Đường cong chữ S)",
+    "generator_type": "stem_logistic_growth",
+    "math_invariant": "N(t) = K / (1 + A e^(-rt))",
+    "variants_count": 46
+  },
+  {
+    "family_id": "FAM_G12_STEM_RADAR_AIRSPACE_OXYZ",
+    "grade": 12,
+    "strand": "STEM_THUC_TIEN",
+    "chapter": "Chương 5",
+    "topic_vi": "Radar hàng không quét máy bay trong không gian Oxyz",
+    "generator_type": "stem_radar_airspace_3d",
+    "math_invariant": "Spherical coordinates tracking",
+    "variants_count": 46
+  }
+]
